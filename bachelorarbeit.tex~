@@ -192,8 +192,6 @@ Net :=
 cut :=
 connectivity :=
 quality :=
-population :=
-individual :=
 \chapter{Related Work}
 The Hypergraph Partitioner KaHyPar uses a multilevel approach for partition. The original Hypergraph $H$ is coarsened by contracting two nodes $u,v$ using 
 a selection strategy until a certain limit is passed. %TODO explain node selection for coarsening 
@@ -206,28 +204,8 @@ The memetic Graph Partitioner KaHiP uses evolutionary actions to increase soluti
 %KaHiP 
 %edge-frequency
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{KaHyParE}
+\chapter{Your Algorithm}
 \section{Overview}
-
-\section{Population}
-We manage a Population $P$ which is the resource for the partitions.
-An individual $I$ is a member of the population, if it is a valid solution
-for the given Hypergraph $H$
-\section{Diversity}
-We define diversity as 
-\section{Selection Strategies}
-
-\section{Combine operations}
-\subsection{Basic Combine}
-The basic combine uses two parent partitions $P_1$ $P_2$ in order to create a child individual $C$
-\subsection{Cross Combine}
-\subsection{Edge Frequency Multicombine}
-\subsection{Basic Combine + Edge Frequency Information}
-\section{Mutation operations}
-\subsection{VCycle}
-\subsection{VCycle + New Initial Partitioning}
-\subsection{Stable Nets}
-\section{Replacement Strategies}
 %.....
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Experimental Evaluation}
