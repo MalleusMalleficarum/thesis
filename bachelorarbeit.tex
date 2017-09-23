@@ -194,6 +194,8 @@ connectivity :=
 quality :=
 population :=
 individual :=
+solution := 
+imbalance:= 
 \chapter{Related Work}
 The Hypergraph Partitioner KaHyPar uses a multilevel approach for partition. The original Hypergraph $H$ is coarsened by contracting two nodes $u,v$ using 
 a selection strategy until a certain limit is passed. %TODO explain node selection for coarsening 
@@ -208,18 +210,20 @@ The memetic Graph Partitioner KaHiP uses evolutionary actions to increase soluti
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{KaHyParE}
 \section{Overview}
-
+The main objective of the algorithm is to optimize solution quality within bounded time. The algorithm will produce multiple solutions 
 \section{Population}
 We manage a Population $P$ which is the resource for the partitions.
 An individual $I$ is a member of the population, if it is a valid solution
-for the given Hypergraph $H$
+for the given Hypergraph $H$. 
 \section{Diversity}
 We define diversity as 
 \section{Selection Strategies}
 
 \section{Combine operations}
 \subsection{Basic Combine}
-The basic combine uses two parent partitions $P_1$ $P_2$ in order to create a child individual $C$
+The basic combine uses two parent partitions $P_1$ $P_2$ in order to create a child individual $C$. This is achieved by only allowing contractions of nodes $u, v$ when these nodes are not placed in different partitions in either parent. Afterwards we do not perform an initial partitioning, instead we consider the coarsened Hypergraph and see which of the parents gives the better objective on said graph. 
+Since the contraction condition is rather strong and we do not need to do an initial partitioning, we can remove the coarsening limit $s$ 
+to allow for more contractions. The uncoarsening and application of local search algorithms which guarantee to atleast maintain solution quality in combination with using the better partition of the two parents ensures that the child solution is at least as good as the best parent solution. It is imporant to note that the combine operation is more powerful the more diverse the parent individuals are. This will be important in the replacement strategy which will insert the child into the population. 
 \subsection{Cross Combine}
 \subsection{Edge Frequency Multicombine}
 \subsection{Basic Combine + Edge Frequency Information}
