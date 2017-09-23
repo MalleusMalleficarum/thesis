@@ -13,8 +13,8 @@
 \contentsline {section}{\numberline {4.2}Population}{7}{section.4.2}
 \contentsline {section}{\numberline {4.3}Diversity}{7}{section.4.3}
 \contentsline {section}{\numberline {4.4}Selection Strategies}{7}{section.4.4}
-\contentsline {section}{\numberline {4.5}Combine operations}{7}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}Basic Combine}{7}{subsection.4.5.1}
+\contentsline {section}{\numberline {4.5}Combine operations}{8}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Basic Combine}{8}{subsection.4.5.1}
 \contentsline {subsection}{\numberline {4.5.2}Cross Combine}{8}{subsection.4.5.2}
 \contentsline {subsection}{\numberline {4.5.3}Edge Frequency Multicombine}{8}{subsection.4.5.3}
 \contentsline {subsection}{\numberline {4.5.4}Basic Combine + Edge Frequency Information}{8}{subsection.4.5.4}
