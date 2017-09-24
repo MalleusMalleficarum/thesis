@@ -15,22 +15,21 @@
 \BOOKMARK [2][-]{subsection.4.5.1}{Basic Combine}{section.4.5}% 15
 \BOOKMARK [2][-]{subsection.4.5.2}{Cross Combine}{section.4.5}% 16
 \BOOKMARK [2][-]{subsection.4.5.3}{Edge Frequency Multicombine}{section.4.5}% 17
-\BOOKMARK [2][-]{subsection.4.5.4}{Basic Combine + Edge Frequency Information}{section.4.5}% 18
-\BOOKMARK [1][-]{section.4.6}{Mutation operations}{chapter.4}% 19
-\BOOKMARK [2][-]{subsection.4.6.1}{VCycle}{section.4.6}% 20
-\BOOKMARK [2][-]{subsection.4.6.2}{VCycle + New Initial Partitioning}{section.4.6}% 21
-\BOOKMARK [2][-]{subsection.4.6.3}{Stable Nets}{section.4.6}% 22
-\BOOKMARK [1][-]{section.4.7}{Replacement Strategies}{chapter.4}% 23
-\BOOKMARK [0][-]{chapter.5}{Experimental Evaluation}{}% 24
-\BOOKMARK [1][-]{section.5.1}{Implementation}{chapter.5}% 25
-\BOOKMARK [1][-]{section.5.2}{Experimental Setup}{chapter.5}% 26
-\BOOKMARK [2][-]{subsection.5.2.1}{Environment}{section.5.2}% 27
-\BOOKMARK [2][-]{subsection.5.2.2}{Tuning Parameters}{section.5.2}% 28
-\BOOKMARK [2][-]{subsection.5.2.3}{Instances}{section.5.2}% 29
-\BOOKMARK [1][-]{section.5.3}{Your Experiment Headline}{chapter.5}% 30
-\BOOKMARK [0][-]{chapter.6}{Discussion}{}% 31
-\BOOKMARK [1][-]{section.6.1}{Conclusion}{chapter.6}% 32
-\BOOKMARK [1][-]{section.6.2}{Future Work}{chapter.6}% 33
-\BOOKMARK [0][-]{appendix.A}{Implementation Details}{}% 34
-\BOOKMARK [1][-]{section.A.1}{Software}{appendix.A}% 35
-\BOOKMARK [1][-]{section.A.2}{Hardware}{appendix.A}% 36
+\BOOKMARK [1][-]{section.4.6}{Mutation operations}{chapter.4}% 18
+\BOOKMARK [2][-]{subsection.4.6.1}{VCycle}{section.4.6}% 19
+\BOOKMARK [2][-]{subsection.4.6.2}{VCycle + New Initial Partitioning}{section.4.6}% 20
+\BOOKMARK [2][-]{subsection.4.6.3}{Stable Nets}{section.4.6}% 21
+\BOOKMARK [1][-]{section.4.7}{Replacement Strategies}{chapter.4}% 22
+\BOOKMARK [0][-]{chapter.5}{Experimental Evaluation}{}% 23
+\BOOKMARK [1][-]{section.5.1}{Implementation}{chapter.5}% 24
+\BOOKMARK [1][-]{section.5.2}{Experimental Setup}{chapter.5}% 25
+\BOOKMARK [2][-]{subsection.5.2.1}{Environment}{section.5.2}% 26
+\BOOKMARK [2][-]{subsection.5.2.2}{Tuning Parameters}{section.5.2}% 27
+\BOOKMARK [2][-]{subsection.5.2.3}{Instances}{section.5.2}% 28
+\BOOKMARK [1][-]{section.5.3}{Your Experiment Headline}{chapter.5}% 29
+\BOOKMARK [0][-]{chapter.6}{Discussion}{}% 30
+\BOOKMARK [1][-]{section.6.1}{Conclusion}{chapter.6}% 31
+\BOOKMARK [1][-]{section.6.2}{Future Work}{chapter.6}% 32
+\BOOKMARK [0][-]{appendix.A}{Implementation Details}{}% 33
+\BOOKMARK [1][-]{section.A.1}{Software}{appendix.A}% 34
+\BOOKMARK [1][-]{section.A.2}{Hardware}{appendix.A}% 35

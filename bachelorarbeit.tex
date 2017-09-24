@@ -228,9 +228,9 @@ A population $P$ is a collection of Individuals.
 %solution := 
 %mbalance:= 
 \chapter{Related Work}
-The Hypergraph Partitioner KaHyPar uses a multilevel approach for partition. The original Hypergraph $H$ is coarsened by contracting two nodes $u,v$ using 
-a selection strategy until a certain limit is passed. %TODO explain node selection for coarsening 
-On the coarsened Hypergraph a simpler partitioning algorithm is chosen to generate an initial partitioning. Afterwards to contraction operations will be reverted and 
+The Hypergraph Partitioner KaHyPar uses a multilevel approach for partition. The original Hypergraph $H$ is coarsened by repeadeatly contracting nodes $u,v$ until either no more contractions are possible due to the size of the contracted nodes or that the minimum amount of nodes required to be in the coarsened Hypergraph $H_c$ has been reached. During each step of the coarsening only one pair of nodes $u, v$ is contracted. Nodes for contraction are chosen to contract multiple high weight edges to emphasize that $u,v$ should most likely share the same partition. 
+%TODO explain node selection for coarsening 
+On $H_c$ partitioning algorithm is chosen to generate an initial partitioning. Contracted nodes acquire the partition of their corresponding representing node.  Afterwards to contraction operations will be reverted and 
 during each step of the uncoarsening phase local search algorithms are used to improve the current connectivity of $H$. The local search is based on the principle of
 Fiduccia-Mattheysis algorithm where operations of decreasing quality are considered, but only executed if the sum of operations results in a net gain.
 \newline
@@ -244,7 +244,8 @@ The memetic Graph Partitioner KaHiP uses evolutionary actions to increase soluti
 \chapter{KaHyParE}
 \section{Overview}
 The objective of the algorithm is to optimize solution quality of a k-way partition of $H$ within bounded time. During this time
-the algorithm will operate on already existing solutions in order to generate improved solutions. 
+the algorithm will operate on already existing solutions in order to generate improved solutions. Most operators introduced in this 
+thesis are using the multilevel approach of KaHyPar as black box, with some alterations towards the general procedure.  
 \section{Population}
 The algorithm will produce multiple individuals, which are inserted and removed from the population. At any given time only a finite amount of
 individuals are $alive$ which is the maximum population size. Furhter individuals have to compete for a place in the population. 
@@ -260,21 +261,29 @@ in close proximity considering the solution space or convergent. A high diversit
 larger portion of the solution space.  
 \section{Selection Strategies}
 For an evolutionary algorithm we attempt to generate new, improved solutions by using existing solutions. A logical conclusion is that good individuals probably will generate solutions
-close to the original individual and as such good. We select our individuals using tournament selection %TODO explain tournament selection 
+close to the original individual and as such good. We select our individuals using tournament selection. By first selecting two random individuals and using the one with the better solution quality we can extract one individual while ensuring that better solutions are more likely to be used by the algorithm. For operators requiring two seperate Individuals we can simply redo this step. In the unlikely case that the two selected individuals are the same we instead use the worse individual from the second tournament selection. 
 \section{Combine operations}
 \subsection{Basic Combine}
 The basic combine uses two parent partitions $P_1$ $P_2$ in order to create a child individual $C$. This is achieved by only allowing contractions of nodes $u, v$ when these nodes are not placed in different partitions in either parent. Afterwards we do not perform an initial partitioning, instead we consider the coarsened Hypergraph and see which of the parents gives the better objective on said graph. 
 Since the contraction condition is rather strong and we do not need to do an initial partitioning, we can remove the coarsening limit $s$ used by KaHyPar
-to allow for more contractions. The uncoarsening and application of local search algorithms which guarantee to atleast maintain solution quality in combination with using the better partition of the two parents ensures that the child solution is at least as good as the best parent solution. It is imporant to note that the combine operation is more powerful the more diverse the parent individuals are, since similar parents are essentially just a vcycle. This will be important in the replacement strategy which will insert the child into the population. 
+to allow for more contractions. The uncoarsening and application of local search algorithms which guarantee to atleast maintain solution quality in combination with using the better partition of the two parents ensures that the child solution is at least as good as the best parent solution. It is imporant to note that the combine operation is more powerful the more diverse the parent individuals are, since similar parents are essentially just a vcycle. This will be important in the replacement strategy which will insert the child into the population and is the reason why the selection strategy is avoiding using the same individual. 
 \subsection{Cross Combine}
 
 \subsection{Edge Frequency Multicombine}
-\subsection{Basic Combine + Edge Frequency Information}
+We also introduce a multi-combine operator, capable of combining multiple individuals $I_1.. I_n, n \le |P|$ into a new child individual. By analyzing whether an edge $e$ is a cut edge in $I_1 ..I_n$ we can calculate the edge frequency of $e$ by $f(e) := \sum_{i=1}^n cut(e,I_i)$. We use the best $n = \sqrt{|P|}$ individuals from $P$ for determining edge frequency. As such, edges with a high frequency are more likely to be cut edges in equally good solutions. Therefore we penalize contractions of nodes incident to a high frequency edge during the multilevel partition approach by using this formula $\frac{1}{(w(u)w(v))^{1.2}}*e^{-\gamma*f(e)}$ to disincentivize early contractions of nodes in edges of high probability. Since these contractions are most likely not improving the quality and will make other, perhaps more favorable contractions invalid. Unlike the other combine operators edge frequency does not set any of the input partitions $I_i$ as current partition of $H$ during the iteration. The only step that differentiates this operator from a regular iteration using KaHyPar is that the rating function during the coarsening is adapted by the penality formula above. It is necessary that an initial partitioning is generated for the coarsened Hypergraph.
+%\subsection{Basic Combine + Edge Frequency Information}
 \section{Mutation operations}
+Mutations are performed on randomly chosen individuals instead of tournament selection.
 \subsection{VCycle}
+A Vcycle is an iteration in the regular KaHyPar procedure with the difference that $H$ is already partitioned. During the coarsening nodes $u,v$ may only be contracted if $part(u) = part(v)$. Since the Graph is already partitioned there is no need for initial partitioning. The main benefit comes from the refinement during the uncoarsening. This operation takes one individual $I$ and the result is a similar individual $I_c$. Due to the fact that neither refinement nor coarsening worsen the quality of the solution the quality of $I_c$ will also not be worse than $I$. This is a weak mutation and the difference of $I$ and $I_c$ are small. This operation will also cause convergence, as multiple applications of a vcycle will eventually no longer be able to generate improvement and are unable to escape the local optima due to the fact that worse solutions can not be generated.   
 \subsection{VCycle + New Initial Partitioning}
+Similar to a vcycle we can coarsen $H$ with a set partition, but if the partition is dropped after the coarsening, and a new initial partitioning is performed we have an operation generating a more pertubed solution, while applying the information of the original partition during the coarsening. This operation also takes one individual $I$ and produces an offspring $I_c$. Since the partition is
+dropped the algorithm used to generate a new partition might produce a worse solution as before. Therefore this operator can create worse solutions. This operation explores more solution space than regular vcycles.  
 \subsection{Stable Nets}
+Opposed to edge frequeny where edges of high probability of being in the cut are penalized because these edges are most likely being in the cut regardless, stable net removal attempts to broaden the solution scope by forcefully removing these edges out of the cut. Again the $\sqrt{|P|}$ best individuals are analyzed, regarding edges most frequent in these solutions. These edges are then attempted to be forced into the block with the smallest amount of nodes in order to keep the balance criterion met. Forcefully moved nodes may not be reassigned through another stable net. These solutions have most likely siginficantly worse quality. Due to the nature of our selection strategy these solutions are very unlikely to be used in any combine operator. In order to keep these solutions competitive we also perform a vcycle after removing the stable nets. 
 \section{Replacement Strategies}
+Regardless of the operator, the generated individual $I_c$ has to be inserted into the population in order to be used in upcoming iterations. 
+The naive approach is to remove the worst element from the population and insert $I_c$ in its place, with the intention to ensure a vast majority of the best generated solutions. The consequence is that the population is rapidly converging towards a local optima and only covering a small amount of the solution space. Another approach is to replace the element used in the operator. This strategy was originally used for mutations, as the theory behind evolutionary algorithms is to pertubate an existing solution. Instead trying to merge two objectives for the replacement strategy, quality and diversity, there is a compromise strategy which replaces the most similar element to $I_c$ that is also worse than $I_c$ in terms of quality. The most natural approach towards this problem is to use the difference metric to the corresponding quality metric. As a result incompetitive solutions are removed entirely and the replaced element is in relatively close neighborhood towards the newly generated solution which ensures more granular steps through the solution space. 
 %.....
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Experimental Evaluation}
@@ -288,6 +297,8 @@ to allow for more contractions. The uncoarsening and application of local search
 \chapter{Discussion}
 \section{Conclusion}
 \section{Future Work}
+Vcycles härter
+Kreativere auswahlstrategie
 
 \clearpage
 \begin{appendix}
