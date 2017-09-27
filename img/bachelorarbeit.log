@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.29)  27 SEP 2017 13:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.29)  25 SEP 2017 19:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**bachelorarbeit.tex
-(./bachelorarbeit.tex
+**../bachelorarbeit.tex
+(../bachelorarbeit.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrbook.cls
@@ -1242,57 +1242,60 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip70
 )
-(./algorithm2e.sty
-Package: algorithm2e 2008/00/00 v3.10 algorithms environments
+(/usr/share/texlive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+Package: algorithm2e 2013/01/06 v5.00 algorithms environments
 \c@AlgoLine=\count137
- (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
+\algocf@hangindent=\skip71
+
 (/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
 ********************************************************
-Package `algorithm2e' Release 4.01 -- december 14 2009 --
+Package `algorithm2e' Release 5.1 -- october 19 2015 --
 - algorithm2e-announce@lirmm.fr mailing list for announcement about releases
 - algorithm2e-discussion@lirmm.fr mailing list for discussion about package
 subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
-- Author: Christophe Fiorio (fiorio@lirmm.fr)
+- Author: Christophe Fiorio (christophe.fiorio@umontpellier.fr)
 ********************************************************
-\skiptotal=\skip71
-\skiplinenumber=\skip72
-\skiprule=\skip73
-\skiphlne=\skip74
-\skiptext=\skip75
-\skiplength=\skip76
-\algomargin=\skip77
-\skipalgocfslide=\skip78
+\skiptotal=\skip72
+\skiplinenumber=\skip73
+\skiprule=\skip74
+\skiphlne=\skip75
+\skiptext=\skip76
+\skiplength=\skip77
+\algomargin=\skip78
+\skipalgocfslide=\skip79
 \algowidth=\dimen178
 \inoutsize=\dimen179
-\inoutline=\dimen180
+\inoutindent=\dimen180
 \interspacetitleruled=\dimen181
 \interspacealgoruled=\dimen182
 \interspacetitleboxruled=\dimen183
+\algocf@ruledwidth=\skip80
 \algocf@inoutbox=\box41
 \algocf@inputbox=\box42
-\AlCapSkip=\skip79
-\AlCapHSkip=\skip80
+\AlCapSkip=\skip81
+\AlCapHSkip=\skip82
+\algoskipindent=\skip83
 \algocf@nlbox=\box43
 \algocf@hangingbox=\box44
-\algocf@capbox=\box45
-\algoheightruledefault=\skip81
-\algoheightrule=\skip82
-\algotitleheightruledefault=\skip83
-\algotitleheightrule=\skip84
+\algocf@untilbox=\box45
+\algocf@skipuntil=\skip84
+\algocf@capbox=\box46
+\algoheightruledefault=\skip85
+\algoheightrule=\skip86
+\algotitleheightruledefault=\skip87
+\algotitleheightrule=\skip88
 \c@algocfline=\count138
 \c@algocfproc=\count139
 \c@algocf=\count140
-\algocf@algoframe=\box46
-\algocf@algobox=\box47
-) (./bachelorarbeit.aux
-
-LaTeX Warning: Label `fig:img.png' multiply defined.
-
-)
+\algocf@algoframe=\box47
+\algocf@algobox=\box48
+) (./bachelorarbeit.aux)
 \openout1 = `bachelorarbeit.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
@@ -1309,7 +1312,8 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 74.
 LaTeX Font Info:    ... okay on input line 74.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 74.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 74.
- (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 74.
@@ -1320,7 +1324,7 @@ LaTeX Font Info:    ... okay on input line 74.
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count141
 \scratchdimen=\dimen184
-\scratchbox=\box48
+\scratchbox=\box49
 \nofMPsegments=\count142
 \nofMParguments=\count143
 \everyMPshowfont=\toks42
@@ -1330,7 +1334,7 @@ LaTeX Font Info:    ... okay on input line 74.
 \makeMPintoPDFobject=\count146
 \everyMPtoPDFconversion=\toks43
 ) ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box49
+\AtBeginShipoutBox=\box50
 Package hyperref Info: Link coloring OFF on input line 74.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -1350,237 +1354,31 @@ LaTeX Info: Redefining \nameref on input line 74.
 \openout4 = `bachelorarbeit.out'.
 
 
-<kit_logo_de.pdf, id=146, 196.91566pt x 90.6587pt>
-File: kit_logo_de.pdf Graphic file (type pdf)
- <use kit_logo_de.pdf>
-Package pdftex.def Info: kit_logo_de.pdf used on input line 86.
-(pdftex.def)             Requested size: 105.06189pt x 48.36967pt.
+
+LaTeX Warning: File `kit_logo_de.pdf' not found on input line 86.
 
 
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 99.
+! Package pdftex.def Error: File `kit_logo_de.pdf' not found.
 
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 99.
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 99.
-LaTeX Font Info:    Try loading font information for U+lasy on input line 112.
-(/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
-File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-)
-LaTeX Font Info:    Try loading font information for U+msa on input line 112.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 112.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 133.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 133.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 133.
- [1
-
-
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./kit_logo_de.pdf>]
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 140.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 140.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 140.
- [2]
-LaTeX Font Info:    Try loading font information for T1+phv on input line 143.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
-File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
-)
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 143.
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 143.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 146.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 146.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 146.
- [3
-
-] [4
-
-] [5
-
-] [6
-
-
-]
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 172.
-
-(./bachelorarbeit.toc [7])
-\tf@toc=\write5
-\openout5 = `bachelorarbeit.toc'.
-
- [8]
-chapter 1.
-[1
-
-
-
-
-
-] [2
-
-]
-chapter 2.
-<Ipe/img.png, id=232, 413.545pt x 185.69376pt>
-File: Ipe/img.png Graphic file (type png)
- <use Ipe/img.png>
-Package pdftex.def Info: Ipe/img.png used on input line 223.
-(pdftex.def)             Requested size: 346.55592pt x 155.61617pt.
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 224.
- [3] [4 <./Ipe/img.png>]
-chapter 3.
-<Ipe/iteration.png, id=256, 625.33624pt x 361.35pt>
-File: Ipe/iteration.png Graphic file (type png)
- <use Ipe/iteration.png>
-Package pdftex.def Info: Ipe/iteration.png used on input line 250.
-(pdftex.def)             Requested size: 346.55592pt x 200.2594pt.
-
-[5
-
- <./Ipe/iteration.png>] [6
-
-]
-chapter 4.
-
-Underfull \vbox (badness 1348) has occurred while \output is active []
-
- [7]
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 284.
-
-[8] [9] [10]
-chapter 5.
-
-LaTeX Warning: File `img/edge frequency.png' not found on input line 311.
-
-<img/edge frequency.png, id=285, 307.1475pt x 294.34969pt>
-File: img/edge frequency.png Graphic file (type png)
-
-<use img/edge frequency.png>
-Package pdftex.def Info: img/edge frequency.png used on input line 311.
-(pdftex.def)             Requested size: 346.55592pt x 332.13516pt.
-
-<img/forced_nonforced_mutation.png, id=286, 553.31718pt x 294.34969pt>
-File: img/forced_nonforced_mutation.png Graphic file (type png)
-
-<use img/forced_nonforced_mutation.png>
-Package pdftex.def Info: img/forced_nonforced_mutation.png used on input line 3
-12.
-(pdftex.def)             Requested size: 346.55592pt x 184.35884pt.
-
-<img/newip_tuning.png, id=287, 307.1475pt x 294.34969pt>
-File: img/newip_tuning.png Graphic file (type png)
-
-<use img/newip_tuning.png>
-Package pdftex.def Info: img/newip_tuning.png used on input line 321.
-(pdftex.def)             Requested size: 346.55592pt x 332.13516pt.
-
-
-LaTeX Warning: File `img/edge frequency.png' not found on input line 322.
-
-File: img/edge frequency.png Graphic file (type png)
-<use img/edge frequency.png>
-Package pdftex.def Info: img/edge frequency.png used on input line 322.
-(pdftex.def)             Requested size: 346.55592pt x 332.13516pt.
-
-
-LaTeX Warning: Float too large for page by 67.70872pt on input line 326.
-
-
-LaTeX Warning: File `img/cross combines.png' not found on input line 331.
-
-<img/cross combines.png, id=288, 307.1475pt x 294.34969pt>
-File: img/cross combines.png Graphic file (type png)
-
-<use img/cross combines.png>
-Package pdftex.def Info: img/cross combines.png used on input line 331.
-(pdftex.def)             Requested size: 346.55592pt x 332.13516pt.
- [11
-
-] [12 <./img/edge frequency.png (PNG copy)> <./img/forced_nonforced_mutation.pn
-g (PNG copy)>] [13 <./img/newip_tuning.png (PNG copy)>] [14 <./img/cross combin
-es.png (PNG copy)>]
-chapter 6.
-[15
-
-] [16
-
-
-]
-chapter A.
-No file bachelorarbeit.bbl.
-[17]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 358.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 358.
- (./bachelorarbeit.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 358.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 358.
-Package rerunfilecheck Info: File `bachelorarbeit.out' has not changed.
-(rerunfilecheck)             Checksum: A1210C4E279DE40D9DACAF72F336E5F9;2121.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 358.
- ) 
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.86 ...ludegraphics[height=17mm]{kit_logo_de.pdf}
+                                                   \hfill
+? X
+ 
 Here is how much of TeX's memory you used:
- 21489 strings out of 493033
- 382508 string characters out of 6136455
- 529108 words of memory out of 5000000
- 24550 multiletter control sequences out of 15000+600000
- 50551 words of font info for 86 fonts, out of 8000000 for 9000
+ 20957 strings out of 493033
+ 378007 string characters out of 6136455
+ 513561 words of memory out of 5000000
+ 24140 multiletter control sequences out of 15000+600000
+ 7990 words of font info for 18 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,13n,66p,1293b,543s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
-rw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a
-.pfb>
-Output written on bachelorarbeit.pdf (25 pages, 395178 bytes).
+ 64i,1n,66p,419b,195s stack positions out of 5000i,500n,10000p,200000b,80000s
+No pages of output.
 PDF statistics:
- 393 PDF objects out of 1000 (max. 8388607)
- 68 named destinations out of 1000 (max. 500000)
- 328 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 25 PDF objects out of 1000 (max. 8388607)
+ 5 named destinations out of 1000 (max. 500000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

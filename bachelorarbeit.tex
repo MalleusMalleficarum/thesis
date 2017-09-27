@@ -84,6 +84,7 @@
   \begin{center}\large
   \begin{flushleft}
     \quad\includegraphics[height=17mm]{kit_logo_de.pdf} \hfill
+     
   \end{flushleft}
     %\includegraphics[height=20mm]{grouplogo-algo-blue.pdf}\quad\null
 
@@ -216,6 +217,15 @@ The difference of two individuals $I_1, I_2$ is $diff(I_1, I_2) := cut(I_1) \omi
 The connectivity difference of two individuals $I_1, I_2$ is $strongdiff(I_1, I_2) := conn(I_1) \ominus conn(I_2)$
 A population $P$ is a collection of Individuals.
 
+\begin{figure}[t!] 
+    \vspace*{-.25cm}
+  \centering
+   \includegraphics[width=.8\textwidth]{Ipe/img.png}
+  \caption{An example of a contraction. Note that the Hyperedges of the reduced node $v$ are rearranged to contain $u$.}\label{fig:img.png}
+    \vspace*{-.5cm}
+\end{figure}
+
+
 %Hypergraph := (H;V;E;C)
 %Node contraction := 
 %Node uncontraction := 
@@ -234,6 +244,14 @@ On $H_c$ partitioning algorithm is chosen to generate an initial partitioning. C
 during each step of the uncoarsening phase local search algorithms are used to improve the current connectivity of $H$. The local search is based on the principle of
 Fiduccia-Mattheysis algorithm where operations of decreasing quality are considered, but only executed if the sum of operations results in a net gain.
 \newline
+\begin{figure}[t!] 
+    \vspace*{-.25cm}
+  \centering
+   \includegraphics[width=.8\textwidth]{Ipe/iteration.png}
+  \caption{An example of an iteration. Coarsening, Initial Partitioning and Refinement}\label{fig:img.png}
+    \vspace*{-.5cm}
+\end{figure}
+
 The memetic Graph Partitioner KaHiP uses evolutionary actions to increase solution quality and is the main inspiration for the operations implemented in KaHyParE.
 %KaHyPar
 %KaHiP 
@@ -287,6 +305,33 @@ The naive approach is to remove the worst element from the population and insert
 %.....
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Experimental Evaluation}
+\begin{figure}[t!] 
+    \vspace*{-.25cm}
+  \centering
+   \includegraphics[width=.8\textwidth]{img/edge frequency.png}
+   \includegraphics[width=.8\textwidth]{img/forced_nonforced_mutation.png}
+
+  \caption{Caption}
+    \vspace*{-.5cm}
+\end{figure}
+\begin{figure}[t!] 
+    \vspace*{-.25cm}
+  \centering
+
+   \includegraphics[width=.8\textwidth]{img/newip_tuning.png}
+   \includegraphics[width=.8\textwidth]{img/edge frequency.png}
+
+  \caption{Caption}
+    \vspace*{-.5cm}
+\end{figure}
+\begin{figure}[t!] 
+    \vspace*{-.25cm}
+  \centering
+
+   \includegraphics[width=.8\textwidth]{img/cross combines.png}
+  \caption{Caption}
+    \vspace*{-.5cm}
+\end{figure}
 \section{Implementation}
 \section{Experimental Setup}
 \subsection{Environment}
