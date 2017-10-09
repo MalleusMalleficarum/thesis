@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.29)  9 OCT 2017 19:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.29)  4 OCT 2017 18:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**bachelorarbeit.tex
-(./bachelorarbeit.tex
+**Plot.tex
+(./Plot.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrbook.cls
@@ -1242,52 +1242,59 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip70
 )
-(./algorithm2e.sty
-Package: algorithm2e 2008/00/00 v3.10 algorithms environments
+(/usr/share/texlive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+Package: algorithm2e 2013/01/06 v5.00 algorithms environments
 \c@AlgoLine=\count137
- (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
+\algocf@hangindent=\skip71
+
 (/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
 ********************************************************
-Package `algorithm2e' Release 4.01 -- december 14 2009 --
+Package `algorithm2e' Release 5.1 -- october 19 2015 --
 - algorithm2e-announce@lirmm.fr mailing list for announcement about releases
 - algorithm2e-discussion@lirmm.fr mailing list for discussion about package
 subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
-- Author: Christophe Fiorio (fiorio@lirmm.fr)
+- Author: Christophe Fiorio (christophe.fiorio@umontpellier.fr)
 ********************************************************
-\skiptotal=\skip71
-\skiplinenumber=\skip72
-\skiprule=\skip73
-\skiphlne=\skip74
-\skiptext=\skip75
-\skiplength=\skip76
-\algomargin=\skip77
-\skipalgocfslide=\skip78
+\skiptotal=\skip72
+\skiplinenumber=\skip73
+\skiprule=\skip74
+\skiphlne=\skip75
+\skiptext=\skip76
+\skiplength=\skip77
+\algomargin=\skip78
+\skipalgocfslide=\skip79
 \algowidth=\dimen178
 \inoutsize=\dimen179
-\inoutline=\dimen180
+\inoutindent=\dimen180
 \interspacetitleruled=\dimen181
 \interspacealgoruled=\dimen182
 \interspacetitleboxruled=\dimen183
+\algocf@ruledwidth=\skip80
 \algocf@inoutbox=\box41
 \algocf@inputbox=\box42
-\AlCapSkip=\skip79
-\AlCapHSkip=\skip80
+\AlCapSkip=\skip81
+\AlCapHSkip=\skip82
+\algoskipindent=\skip83
 \algocf@nlbox=\box43
 \algocf@hangingbox=\box44
-\algocf@capbox=\box45
-\algoheightruledefault=\skip81
-\algoheightrule=\skip82
-\algotitleheightruledefault=\skip83
-\algotitleheightrule=\skip84
+\algocf@untilbox=\box45
+\algocf@skipuntil=\skip84
+\algocf@capbox=\box46
+\algoheightruledefault=\skip85
+\algoheightrule=\skip86
+\algotitleheightruledefault=\skip87
+\algotitleheightrule=\skip88
 \c@algocfline=\count138
 \c@algocfproc=\count139
 \c@algocf=\count140
-\algocf@algoframe=\box46
-\algocf@algobox=\box47
+\algocf@algoframe=\box47
+\algocf@algobox=\box48
 ) (/usr/share/R/share/texmf/tex/latex/Sweave.sty
 Package: Sweave 
 
@@ -1298,7 +1305,7 @@ Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix
 <2008/02/07> (tvz)
 \FV@CodeLineNo=\count141
 \FV@InFile=\read2
-\FV@TabBox=\box48
+\FV@TabBox=\box49
 \c@FancyVerbLine=\count142
 \FV@StepNumber=\count143
 \FV@OutFile=\write4
@@ -1323,12 +1330,12 @@ LaTeX Font Info:    Try loading font information for T1+aer on input line 105.
 
 (/usr/share/texlive/texmf-dist/tex/latex/ae/t1aer.fd
 File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
-)))) (./bachelorarbeit.aux
+)))) (./Plot.aux
 
 LaTeX Warning: Label `fig:img.png' multiply defined.
 
 )
-\openout1 = `bachelorarbeit.aux'.
+\openout1 = `Plot.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 75.
 LaTeX Font Info:    ... okay on input line 75.
@@ -1355,7 +1362,7 @@ LaTeX Font Info:    ... okay on input line 75.
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count144
 \scratchdimen=\dimen184
-\scratchbox=\box49
+\scratchbox=\box50
 \nofMPsegments=\count145
 \nofMParguments=\count146
 \everyMPshowfont=\toks42
@@ -1365,7 +1372,7 @@ LaTeX Font Info:    ... okay on input line 75.
 \makeMPintoPDFobject=\count149
 \everyMPtoPDFconversion=\toks43
 ) ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box50
+\AtBeginShipoutBox=\box51
 Package hyperref Info: Link coloring OFF on input line 75.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -1380,17 +1387,31 @@ LaTeX Info: Redefining \ref on input line 75.
 LaTeX Info: Redefining \pageref on input line 75.
 LaTeX Info: Redefining \nameref on input line 75.
 
-(./bachelorarbeit.out) (./bachelorarbeit.out)
+(./Plot.out) (./Plot.out)
 \@outlinefile=\write5
-\openout5 = `bachelorarbeit.out'.
+\openout5 = `Plot.out'.
 
- (./bachelorarbeit-concordance.tex) <kit_logo_de.pdf, id=147, 196.91566pt x 90.
-6587pt>
-File: kit_logo_de.pdf Graphic file (type pdf)
- <use kit_logo_de.pdf>
-Package pdftex.def Info: kit_logo_de.pdf used on input line 88.
-(pdftex.def)             Requested size: 346.56963pt x 48.3698pt.
+ (./Plot-concordance.tex)
 
+LaTeX Warning: File `kit_logo_de.pdf' not found on input line 88.
+
+
+! Package pdftex.def Error: File `kit_logo_de.pdf' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.88 ...ludegraphics[height=17mm]{kit_logo_de.pdf}
+                                                   \hfill
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+LaTeX Font Info:    Try loading font information for T1+aett on input line 88.
+(/usr/share/texlive/texmf-dist/tex/latex/ae/t1aett.fd
+File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
+)
 
 Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              You should note, that in 1994 font command `\bf' has
@@ -1429,7 +1450,7 @@ Package babel Info: Redefining german shorthand "~
 
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./kit_logo_de.pdf>]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 142.
 Package babel Info: Redefining german shorthand "|
@@ -1459,9 +1480,9 @@ Package babel Info: Redefining german shorthand "~
 
 
 ]
-(./bachelorarbeit.toc [7])
+(./Plot.toc [7])
 \tf@toc=\write6
-\openout6 = `bachelorarbeit.toc'.
+\openout6 = `Plot.toc'.
 
  [8]
 chapter 1.
@@ -1475,105 +1496,170 @@ chapter 1.
 
 ]
 chapter 2.
-<Ipe/Coarsening_Example.pdf, id=233, 412.97185pt x 184.87871pt>
-File: Ipe/Coarsening_Example.pdf Graphic file (type pdf)
 
-<use Ipe/Coarsening_Example.pdf>
-Package pdftex.def Info: Ipe/Coarsening_Example.pdf used on input line 226.
-(pdftex.def)             Requested size: 346.55592pt x 155.1447pt.
- [3] [4 <./Ipe/Coarsening_Example.pdf>]
+LaTeX Warning: File `Ipe/img.png' not found on input line 226.
+
+
+! Package pdftex.def Error: File `Ipe/img.png' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.226 ...graphics[width=.8\textwidth]{Ipe/img.png}
+                                                   %TODO PDF
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[3] [4]
 chapter 3.
-<Ipe/Memetic_process.pdf, id=265, 583.54327pt x 401.59033pt>
-File: Ipe/Memetic_process.pdf Graphic file (type pdf)
 
-<use Ipe/Memetic_process.pdf>
-Package pdftex.def Info: Ipe/Memetic_process.pdf used on input line 253.
-(pdftex.def)             Requested size: 346.55592pt x 238.49881pt.
- [5
+LaTeX Warning: File `Ipe/iteration.png' not found on input line 253.
 
- <./Ipe/Memetic_process.pdf>] [6
 
-]
+! Package pdftex.def Error: File `Ipe/iteration.png' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.253 ...cs[width=.8\textwidth]{Ipe/iteration.png}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[5
+
+] [6]
 chapter 4.
-[7] [8] [9] [10]
+[7
+
+] [8] [9] [10]
 chapter 5.
-<bachelorarbeit-test2.pdf, id=310, 433.62pt x 433.62pt>
-File: bachelorarbeit-test2.pdf Graphic file (type pdf)
 
-<use bachelorarbeit-test2.pdf>
-Package pdftex.def Info: bachelorarbeit-test2.pdf used on input line 326.
-(pdftex.def)             Requested size: 346.55592pt x 346.57227pt.
+LaTeX Warning: File `img/edge frequency.png' not found on input line 321.
 
-<bachelorarbeit-test3.pdf, id=311, 433.62pt x 433.62pt>
-File: bachelorarbeit-test3.pdf Graphic file (type pdf)
 
-<use bachelorarbeit-test3.pdf>
-Package pdftex.def Info: bachelorarbeit-test3.pdf used on input line 334.
-(pdftex.def)             Requested size: 346.55592pt x 346.57227pt.
+! Package pdftex.def Error: File `img/edge frequency.png' not found.
 
-<bachelorarbeit-test4.pdf, id=312, 433.62pt x 433.62pt>
-File: bachelorarbeit-test4.pdf Graphic file (type pdf)
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.321 ...dth=.8\textwidth]{img/edge frequency.png}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
-<use bachelorarbeit-test4.pdf>
-Package pdftex.def Info: bachelorarbeit-test4.pdf used on input line 341.
-(pdftex.def)             Requested size: 346.55592pt x 346.57227pt.
 
-<bachelorarbeit-test5.pdf, id=313, 433.62pt x 433.62pt>
-File: bachelorarbeit-test5.pdf Graphic file (type pdf)
+LaTeX Warning: File `img/forced_nonforced_mutation.png' not found on input line
+ 322.
 
-<use bachelorarbeit-test5.pdf>
-Package pdftex.def Info: bachelorarbeit-test5.pdf used on input line 348.
-(pdftex.def)             Requested size: 346.55592pt x 346.57227pt.
 
-<bachelorarbeit-test6.pdf, id=314, 433.62pt x 433.62pt>
-File: bachelorarbeit-test6.pdf Graphic file (type pdf)
+! Package pdftex.def Error: File `img/forced_nonforced_mutation.png' not found.
 
-<use bachelorarbeit-test6.pdf>
-Package pdftex.def Info: bachelorarbeit-test6.pdf used on input line 356.
-(pdftex.def)             Requested size: 346.55592pt x 346.57227pt.
 
-<bachelorarbeit-test7.pdf, id=315, 433.62pt x 433.62pt>
-File: bachelorarbeit-test7.pdf Graphic file (type pdf)
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.322 ...width]{img/forced_nonforced_mutation.png}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
-<use bachelorarbeit-test7.pdf>
-Package pdftex.def Info: bachelorarbeit-test7.pdf used on input line 362.
-(pdftex.def)             Requested size: 346.55592pt x 346.57227pt.
- [11
 
-] [12 <./bachelorarbeit-test2.pdf>] [13 <./bachelorarbeit-test3.pdf>] [14 <./ba
-chelorarbeit-test4.pdf>] [15 <./bachelorarbeit-test5.pdf>] [16 <./bachelorarbei
-t-test6.pdf>] [17 <./bachelorarbeit-test7.pdf>] [18
+LaTeX Warning: Float too large for page by 96.47107pt on input line 326.
 
-]
+
+LaTeX Warning: File `img/newip_tuning.png' not found on input line 331.
+
+
+! Package pdftex.def Error: File `img/newip_tuning.png' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.331 ...width=.8\textwidth]{img/newip_tuning.png}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `img/edge frequency.png' not found on input line 332.
+
+
+! Package pdftex.def Error: File `img/edge frequency.png' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.332 ...dth=.8\textwidth]{img/edge frequency.png}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Float too large for page by 96.47107pt on input line 336.
+
+
+LaTeX Warning: File `img/cross combines.png' not found on input line 341.
+
+
+! Package pdftex.def Error: File `img/cross combines.png' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.341 ...dth=.8\textwidth]{img/cross combines.png}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[11
+
+] [12] [13] [14]
 chapter 6.
-[19] [20
+[15
+
+] [16
 
 
 ]
 chapter A.
-No file bachelorarbeit.bbl.
-[21]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 392.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 392.
- (./bachelorarbeit.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 392.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 392.
-Package rerunfilecheck Info: File `bachelorarbeit.out' has not changed.
+No file Plot.bbl.
+[17]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 368.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 368.
+ (./Plot.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 368.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 368.
+Package rerunfilecheck Info: File `Plot.out' has not changed.
 (rerunfilecheck)             Checksum: A1210C4E279DE40D9DACAF72F336E5F9;2121.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 392.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 368.
  ) 
 Here is how much of TeX's memory you used:
- 21971 strings out of 493033
- 390888 string characters out of 6136455
- 537238 words of memory out of 5000000
- 24977 multiletter control sequences out of 15000+600000
- 47909 words of font info for 108 fonts, out of 8000000 for 9000
+ 21773 strings out of 493033
+ 390255 string characters out of 6136455
+ 528831 words of memory out of 5000000
+ 24772 multiletter control sequences out of 15000+600000
+ 49605 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,13n,66p,1293b,543s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,13n,66p,1283b,543s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/
@@ -1589,10 +1675,11 @@ m/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on bachelorarbeit.pdf (29 pages, 834887 bytes).
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Plot.pdf (25 pages, 249660 bytes).
 PDF statistics:
- 462 PDF objects out of 1000 (max. 8388607)
- 69 named destinations out of 1000 (max. 500000)
- 342 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 385 PDF objects out of 1000 (max. 8388607)
+ 68 named destinations out of 1000 (max. 500000)
+ 297 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -71,9 +71,8 @@
 \def\listalgorithmcfname{Algorithmenverzeichnis}
 \def\algorithmautorefname{Algorithmus}
 
-\usepackage{Sweave}
 \begin{document}
-\input{bachelorarbeit-concordance}
+\SweaveOpts{concordance=TRUE}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -323,7 +322,39 @@ is the new value appended to the averaged improvements with($(avg(a), t_n)$. Sim
 
 \begin{figure}
 \begin{center}
-\includegraphics{bachelorarbeit-test2}
+<<test2, fig=TRUE, echo=FALSE>>=
+source("/home/andre/server-home/paper/evolutionary_hypergraphpartitioning/R/plot_functions.R")
+#source("/home/andre/server-home/paper/evolutionary_hypergraphpartitioning/R/final_preprocessing.R")
+newip_10percent = read.csv(file="/home/andre/server-home/Hypergraphs/unicluster_results_after_paper/newip_tuning/10_clean.txt", header=TRUE, sep=" ")
+newip_20percent = read.csv(file="/home/andre/server-home/Hypergraphs/unicluster_results_after_paper/newip_tuning/20_clean.txt", header=TRUE, sep=" ")
+newip_30percent = read.csv(file="/home/andre/server-home/Hypergraphs/unicluster_results_after_paper/newip_tuning/30_clean.txt", header=TRUE, sep=" ")
+newip_40percent = read.csv(file="/home/andre/server-home/Hypergraphs/unicluster_results_after_paper/newip_tuning/40_clean.txt", header=TRUE, sep=" ")
+newip_50percent = read.csv(file="/home/andre/server-home/Hypergraphs/unicluster_results_after_paper/newip_tuning/50_clean.txt", header=TRUE, sep=" ")
+newip_60percent = read.csv(file="/home/andre/server-home/Hypergraphs/unicluster_results_after_paper/newip_tuning/60_clean.txt", header=TRUE, sep=" ")
+newip_70percent = read.csv(file="/home/andre/server-home/Hypergraphs/unicluster_results_after_paper/newip_tuning/70_clean.txt", header=TRUE, sep=" ")
+newip_80percent = read.csv(file="/home/andre/server-home/Hypergraphs/unicluster_results_after_paper/newip_tuning/80_clean.txt", header=TRUE, sep=" ")
+newip_90percent = read.csv(file="/home/andre/server-home/Hypergraphs/unicluster_results_after_paper/newip_tuning/90_clean.txt", header=TRUE, sep=" ")
+newip_100percent = read.csv(file="/home/andre/server-home/Hypergraphs/unicluster_results_after_paper/newip_tuning/100_clean.txt", header=TRUE, sep=" ")
+traditional_combine = read.csv(file="/home/andre/server-home/Hypergraphs/tuning/results/2hour_restart_dynamic_population/clean/traditional_combine_clean.txt", header=TRUE, sep=" ")
+basline_dt = computeSequentialBaselineTime(traditional_combine)
+data = automaticPlot(list("0%" = traditional_combine,
+                          "10%" = newip_10percent,
+                          "20%" = newip_20percent,
+                          "30%" = newip_30percent,
+                          "40%" = newip_40percent,
+                          "50%" = newip_50percent,
+                          "60%" = newip_60percent,
+                          "70%" = newip_70percent,
+                          "80%" = newip_80percent,
+                          "90%" = newip_90percent,
+                          "z100%" = newip_100percent, 
+                          "e0%" = traditional_combine),
+                     computeSequentialBaselineTime(traditional_combine))
+ggplot(data, aes(x=t, y=best, color=algorithm)) +
+  geom_line() +
+  scale_x_continuous(trans = "log", breaks = c(1,2,5,10,20,50,100,200,500,1000,2000,5000)) +
+  scale_y_continuous(breaks = pretty_breaks(n=5))
+@
 \end{center}
 In this graph you can see clearly that optimizing stuff does things. 
 \end{figure}
@@ -331,21 +362,96 @@ In this graph you can see clearly that optimizing stuff does things.
 
 \begin{figure}
 \begin{center}
-\includegraphics{bachelorarbeit-test3}
+<<test3, fig=TRUE, echo=FALSE>>=
+source("/home/andre/server-home/paper/evolutionary_hypergraphpartitioning/R/plot_functions.R")
+#source("/home/andre/server-home/paper/evolutionary_hypergraphpartitioning/R/final_preprocessing.R")
+edge_10percent =  read.csv(file="/home/andre/server-home/Hypergraphs/unicluster_results_after_paper/edge-chance-tuning/10percent_clean.txt", header=TRUE, sep=" ")
+edge_20percent =  read.csv(file="/home/andre/server-home/Hypergraphs/unicluster_results_after_paper/edge-chance-tuning/20percent_clean.txt", header=TRUE, sep=" ")
+edge_30percent =  read.csv(file="/home/andre/server-home/Hypergraphs/unicluster_results_after_paper/edge-chance-tuning/30percent_clean.txt", header=TRUE, sep=" ")
+edge_40percent =  read.csv(file="/home/andre/server-home/Hypergraphs/unicluster_results_after_paper/edge-chance-tuning/40percent_clean.txt", header=TRUE, sep=" ")
+edge_50percent =  read.csv(file="/home/andre/server-home/Hypergraphs/unicluster_results_after_paper/edge-chance-tuning/50percent_clean.txt", header=TRUE, sep=" ")
+edge_60percent =  read.csv(file="/home/andre/server-home/Hypergraphs/unicluster_results_after_paper/edge-chance-tuning/60percent_clean.txt", header=TRUE, sep=" ")
+edge_70percent =  read.csv(file="/home/andre/server-home/Hypergraphs/unicluster_results_after_paper/edge-chance-tuning/70percent_clean.txt", header=TRUE, sep=" ")
+edge_80percent =  read.csv(file="/home/andre/server-home/Hypergraphs/unicluster_results_after_paper/edge-chance-tuning/80percent_clean.txt", header=TRUE, sep=" ")
+edge_90percent =  read.csv(file="/home/andre/server-home/Hypergraphs/unicluster_results_after_paper/edge-chance-tuning/90percent_clean.txt", header=TRUE, sep=" ")
+edge_0percent =  read.csv(file="/home/andre/server-home/Hypergraphs/unicluster_results_after_paper/edge-chance-tuning/0percent_clean.txt", header=TRUE, sep=" ")
+edge_100percent =  read.csv(file="/home/andre/server-home/Hypergraphs/unicluster_results_after_paper/edge-chance-tuning/100percent_clean.txt", header=TRUE, sep=" ")
+
+
+traditional_combine = read.csv(file="/home/andre/server-home/Hypergraphs/tuning/results/2hour_restart_dynamic_population/clean/traditional_combine_clean.txt", header=TRUE, sep=" ")
+basline_dt = computeSequentialBaselineTime(traditional_combine)
+
+data = automaticPlot(list("0%" = traditional_combine,
+                          "10%" = edge_10percent,
+                          "20%" = edge_20percent,
+                          "30%" = edge_30percent,
+                          "40%" = edge_40percent,
+                          "50%" = edge_50percent,
+                          "60%" = edge_60percent,
+                          "70%" = edge_70percent,
+                          "80%" = edge_80percent,
+                          "90%" = edge_90percent,
+                          "01%" = edge_0percent,
+                          "z100%" = edge_100percent),
+                     computeSequentialBaselineTime(traditional_combine))
+ggplot(data, aes(x=t, y=best, color=algorithm)) +
+  geom_line() +
+  scale_x_continuous(trans = "log", breaks = c(1,2,5,10,20,50,100,200,500,1000,2000,5000)) +
+  scale_y_continuous(breaks = pretty_breaks(n=5))
+@
 \end{center}
 \end{figure}
 
 %Cross combines
 \begin{figure}
 \begin{center}
-\includegraphics{bachelorarbeit-test4}
+<<test4, fig=TRUE, echo=FALSE>>=
+source("/home/andre/server-home/paper/evolutionary_hypergraphpartitioning/R/plot_functions.R")
+traditional_combine = read.csv(file="/home/andre/server-home/Hypergraphs/tuning/results/2hour_restart_dynamic_population/clean/traditional_combine_clean.txt", header=TRUE, sep=" ")
+
+k_crosscombine = read.csv(file="/home/andre/server-global_data/schlag/in_out/robin_local_results/cross-combine-debug/clean/k_clean.txt", header=TRUE, sep=" ")
+epsilon_crosscombine = read.csv(file="/home/andre/server-global_data/schlag/in_out/robin_local_results/cross-combine-debug/clean/epsilon_clean.txt", header=TRUE, sep=" ")
+mode_crosscombine = read.csv(file="/home/andre/server-global_data/schlag/in_out/robin_local_results/cross-combine-debug/clean/mode_clean.txt", header=TRUE, sep=" ")
+objective_crosscombine = read.csv(file="/home/andre/server-global_data/schlag/in_out/robin_local_results/cross-combine-debug/clean/objective_clean.txt", header=TRUE, sep=" ")
+louvain_crosscombine = read.csv(file="/home/andre/server-global_data/schlag/in_out/robin_local_results/cross-combine-debug/clean/louvain_clean.txt", header=TRUE, sep=" ")
+data = automaticPlot(list("K" = k_crosscombine,
+                          "Epsilon" = epsilon_crosscombine,
+                          "mode" = mode_crosscombine,
+                          "objective" = objective_crosscombine,
+                          "louvain" = louvain_crosscombine,
+                          "traditional" = traditional_combine),
+                     computeSequentialBaselineTime(traditional_combine))
+ggplot(data, aes(x=t, y=best, color=algorithm)) +
+  geom_line() +
+  scale_x_continuous(trans = "log", breaks = c(1,2,5,10,20,50,100,200,500,1000,2000,5000)) +
+  scale_y_continuous(breaks = pretty_breaks(n=5))
+@
 \end{center}
 \end{figure}
 
 %Vcycle Mutations
 \begin{figure}
 \begin{center}
-\includegraphics{bachelorarbeit-test5}
+<<test5, fig=TRUE, echo=FALSE>>=
+source("/home/andre/server-home/paper/evolutionary_hypergraphpartitioning/R/plot_functions.R")
+mutation_nonforced_insertion_random_vcycles = read.csv(file="/home/andre/server-global_data/schlag/in_out/robin_local_results/mutation-uses-insertion-strategy/clean/mutation_uses_insertion_strategy_clean.txt", header=TRUE, sep=" ")
+mutation_forced_insertion_random_vcycles = read.csv(file="/home/andre/server-global_data/schlag/in_out/robin_local_results/traditional_combine_and_vcycles/clean/random_vcycles_clean.txt", header=TRUE, sep=" ")
+edge_frequency = read.csv(file="/home/andre/server-home/Hypergraphs/tuning/results/2hour_restart_dynamic_population/clean/random_combine_clean.txt", header=TRUE, sep=" ")
+mutation_forced_insertion_vcycle = read.csv(file="/home/andre/server-global_data/schlag/in_out/robin_local_results/traditional_combine_and_vcycles/clean/traditional_combine_vcycle_clean.txt", header=TRUE, sep=" ")
+mutation_forced_insertion_newip = read.csv(file="/home/andre/server-global_data/schlag/in_out/robin_local_results/traditional_combine_and_vcycles/clean/new_initial_partition_vcycle_clean.txt", header=TRUE, sep=" ")
+basline_dt = computeSequentialBaselineTime(mutation_nonforced_insertion_random_vcycles)
+data = automaticPlot(list("Mutation nonforced" = mutation_nonforced_insertion_random_vcycles,
+                                   "Mutation forced" = mutation_forced_insertion_random_vcycles,
+                                   "edge-frequency" = edge_frequency,
+                                   "vcycle" = mutation_forced_insertion_vcycle,
+                                   "newip" = mutation_forced_insertion_newip),
+                              computeSequentialBaselineTime(mutation_nonforced_insertion_random_vcycles))
+
+ggplot(data, aes(x=t, y=best, color=algorithm)) +
+  geom_line() +
+  scale_x_continuous(trans = "log", breaks = c(1,2,5,10,20,50,100,200,500,1000,2000,5000)) +
+  scale_y_continuous(breaks = pretty_breaks(n=5))
+@
 \end{center}
 \end{figure}
 
@@ -353,13 +459,41 @@ In this graph you can see clearly that optimizing stuff does things.
 %stable net
 \begin{figure}
 \begin{center}
-\includegraphics{bachelorarbeit-test6}
+<<test6, fig=TRUE, echo=FALSE>>=
+source("/home/andre/server-home/paper/evolutionary_hypergraphpartitioning/R/plot_functions.R")
+population_stable_net_traditional_combine_forced = read.csv(file="/home/andre/server-global_data/schlag/in_out/robin_local_results/random_combine_mutation_and_stable_nets/clean/traditional_combine_population_stable_net_clean.txt", header=TRUE, sep=" ")
+traditional_combine = read.csv(file="/home/andre/server-home/Hypergraphs/tuning/results/2hour_restart_dynamic_population/clean/traditional_combine_clean.txt", header=TRUE, sep=" ")
+basline_dt = computeSequentialBaselineTime(traditional_combine)
+data = automaticPlot(list("traditional" = traditional_combine,
+                                          "population stable net" = population_stable_net_traditional_combine_forced),
+                              computeSequentialBaselineTime(mutation_nonforced_insertion_random_vcycles))
+ggplot(data, aes(x=t, y=best, color=algorithm)) +
+  geom_line() +
+  scale_x_continuous(trans = "log", breaks = c(1,2,5,10,20,50,100,200,500,1000,2000,5000)) +
+  scale_y_continuous(breaks = pretty_breaks(n=5))
+@
 \end{center}
 \end{figure}
 %base with nonevo and random combines
 \begin{figure}
 \begin{center}
-\includegraphics{bachelorarbeit-test7}
+<<test7, fig=TRUE, echo=FALSE>>=
+source("/home/andre/server-home/paper/evolutionary_hypergraphpartitioning/R/plot_functions.R")
+nonevolutionary = read.csv(file="/home/andre/server-home/Hypergraphs/tuning/results/2hour_restart_dynamic_population/clean/nonevolutionary_clean.txt", header=TRUE, sep=" ")
+nonevolutionary_vcycles = read.csv(file="/home/andre/server-home/Hypergraphs/tuning/results/2hour_restart_dynamic_population/clean/nonevolutionary_vcycles_clean.txt", header=TRUE, sep=" ")
+random_combine = read.csv(file="/home/andre/server-home/Hypergraphs/tuning/results/2hour_restart_dynamic_population/clean/random_combine_clean.txt", header=TRUE, sep=" ")
+traditional_combine = read.csv(file="/home/andre/server-home/Hypergraphs/tuning/results/2hour_restart_dynamic_population/clean/traditional_combine_clean.txt", header=TRUE, sep=" ")
+basline_dt = computeSequentialBaselineTime(traditional_combine)
+data = automaticPlot(list("traditional" = traditional_combine,
+                                          "KaHyPar - nonevolutionary" = nonevolutionary,
+                                          "KaHyPar - nonevolutionary + vcycles" = nonevolutionary_vcycles,
+                                          "edge frequency random combine" = random_combine),
+                              computeSequentialBaselineTime(mutation_nonforced_insertion_random_vcycles))
+ggplot(data, aes(x=t, y=best, color=algorithm)) +
+  geom_line() +
+  scale_x_continuous(trans = "log", breaks = c(1,2,5,10,20,50,100,200,500,1000,2000,5000)) +
+  scale_y_continuous(breaks = pretty_breaks(n=5))
+@
 \end{center}
 \end{figure}
 

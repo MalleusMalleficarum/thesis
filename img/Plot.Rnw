@@ -71,9 +71,8 @@
 \def\listalgorithmcfname{Algorithmenverzeichnis}
 \def\algorithmautorefname{Algorithmus}
 
-\usepackage{Sweave}
 \begin{document}
-\input{bachelorarbeit-concordance}
+\SweaveOpts{concordance=TRUE}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -223,7 +222,7 @@ A population $P$ is a collection of Individuals.
 \begin{figure}[t!] 
     \vspace*{-.25cm}
   \centering
-   \includegraphics[width=.8\textwidth]{Ipe/Coarsening_Example.pdf} %TODO PDF
+   \includegraphics[width=.8\textwidth]{Ipe/img.png} %TODO PDF
   \caption{An example of a contraction. Note that the Hyperedges of the reduced node $v$ are rearranged to contain $u$.}\label{fig:img.png}
     \vspace*{-.5cm}
 \end{figure}
@@ -250,7 +249,7 @@ Fiduccia-Mattheysis algorithm where operations of decreasing quality are conside
 \begin{figure}[t!] 
     \vspace*{-.25cm}
   \centering
-   \includegraphics[width=.8\textwidth]{Ipe/Memetic_process.pdf}
+   \includegraphics[width=.8\textwidth]{Ipe/iteration.png}
   \caption{An example of an iteration. Coarsening, Initial Partitioning and Refinement}\label{fig:img.png} %TODO u nicht gestrichelt; pünktchen
     \vspace*{-.5cm}
 \end{figure}
@@ -315,57 +314,33 @@ As such our datasets contain multiple tuples of $(H, k, s, t, \lambda)$ where $H
 The main interest is the best solution over time compared to other partitioning algorithms. Unfortunately most graphs vary drastically in solution quality and time required to perform one iteration. We solve the time differences by not using the measured time, but rather the normalized time. 
 In order to do so we choose one of the partitioning algorithms $p$ as baseline and determine the average duration $t_I$ of an iteration for each $I$. Afterwards for each $I$ the normalized time $t_n$ is calculated by $t_n = \frac{t}{t_I}$. We then generate a list for each instance containing $(s, t_n, \lambda)$ sorted by $t_n$. Now we generate the averaged improvements for $I$. For each seed $s$ a value $a_s$ is reserved and the list is read in. When $(s, t_n, \lambda)$ is better than the reserved value for $s$ the average over all $a_s$ 
 is the new value appended to the averaged improvements with($(avg(a), t_n)$. Similarly we now reserve a value $a_I$ for each Instance of averaged improvements and calculate a new list of general improvements by calculating the geometric mean over all $a_I$. 
-%#<<test, fig=TRUE, echo=FALSE>>=
-%#x = rnorm(100)
-%#y = rnorm(100)
-%#plot(x,y)
-%#@
+\begin{figure}[t!] 
+    \vspace*{-.25cm}
+  \centering
+   \includegraphics[width=.8\textwidth]{img/edge frequency.png}
+   \includegraphics[width=.8\textwidth]{img/forced_nonforced_mutation.png}
 
-\begin{figure}
-\begin{center}
-\includegraphics{bachelorarbeit-test2}
-\end{center}
-In this graph you can see clearly that optimizing stuff does things. 
+  \caption{Caption}
+    \vspace*{-.5cm}
 \end{figure}
+\begin{figure}[t!] 
+    \vspace*{-.25cm}
+  \centering
 
+   \includegraphics[width=.8\textwidth]{img/newip_tuning.png}
+   \includegraphics[width=.8\textwidth]{img/edge frequency.png}
 
-\begin{figure}
-\begin{center}
-\includegraphics{bachelorarbeit-test3}
-\end{center}
+  \caption{Caption}
+    \vspace*{-.5cm}
 \end{figure}
+\begin{figure}[t!] 
+    \vspace*{-.25cm}
+  \centering
 
-%Cross combines
-\begin{figure}
-\begin{center}
-\includegraphics{bachelorarbeit-test4}
-\end{center}
+   \includegraphics[width=.8\textwidth]{img/cross combines.png}
+  \caption{Caption}
+    \vspace*{-.5cm}
 \end{figure}
-
-%Vcycle Mutations
-\begin{figure}
-\begin{center}
-\includegraphics{bachelorarbeit-test5}
-\end{center}
-\end{figure}
-
-
-%stable net
-\begin{figure}
-\begin{center}
-\includegraphics{bachelorarbeit-test6}
-\end{center}
-\end{figure}
-%base with nonevo and random combines
-\begin{figure}
-\begin{center}
-\includegraphics{bachelorarbeit-test7}
-\end{center}
-\end{figure}
-
-
-
-
 \section{Implementation}
 \section{Experimental Setup}
 \subsection{Environment}
