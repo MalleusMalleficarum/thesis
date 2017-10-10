@@ -319,10 +319,74 @@ is the new value appended to the averaged improvements with($(avg(a), t_n)$. Sim
 %#y = rnorm(100)
 %#plot(x,y)
 %#@
+%Vcycle Mutations
+All following plots are using KaHyPar for generating an initial population and perform some of the mentioned operators.
+%base with nonevo and random combines
+\begin{figure}
+\caption{Comparing KaHyParE to KaHyPar}
+\begin{center}
+<<basiccomparation, fig=TRUE, echo=FALSE, height=4, width=6>>=
+source("/home/andre/server-home/paper/evolutionary_hypergraphpartitioning/R/plot_functions.R")
+nonevolutionary = read.csv(file="/home/andre/server-home/Hypergraphs/tuning/results/2hour_restart_dynamic_population/clean/nonevolutionary_clean.txt", header=TRUE, sep=" ")
+nonevolutionary_vcycles = read.csv(file="/home/andre/server-home/Hypergraphs/tuning/results/2hour_restart_dynamic_population/clean/nonevolutionary_vcycles_clean.txt", header=TRUE, sep=" ")
+random_combine = read.csv(file="/home/andre/server-home/Hypergraphs/tuning/results/2hour_restart_dynamic_population/clean/random_combine_clean.txt", header=TRUE, sep=" ")
+traditional_combine = read.csv(file="/home/andre/server-home/Hypergraphs/tuning/results/2hour_restart_dynamic_population/clean/traditional_combine_clean.txt", header=TRUE, sep=" ")
+basline_dt = computeSequentialBaselineTime(traditional_combine)
+data = automaticPlot(list("tra" = traditional_combine,
+                                          "KaHyPar-CA" = nonevolutionary,
+                                          "KaHyPar-CA+ vcycle" = nonevolutionary_vcycles,
+                                          "randomcomb" = random_combine),
+                              computeSequentialBaselineTime(traditional_combine))
+ggplot(data, aes(x=t, y=best, color=algorithm)) +
+  geom_line() +
+  scale_x_continuous(trans = "log", breaks = c(1,2,5,10,20,50,100,200,500,1000,2000,5000)) +
+  scale_y_continuous(breaks = pretty_breaks(n=5))
+@
+\end{center}
+In this plot we evaluate the results of KaHyParE using only basic combines as evolutionary operation against repeated repetitions of KaHyPar-CA and KaHyPar-CA + vcycles. Notably the evolutionary aspect is performing well.
+\end{figure}
+
+
+
+
+
+
+
 
 \begin{figure}
+\caption{Different Mutation Operations}
 \begin{center}
-<<test2, fig=TRUE, echo=FALSE>>=
+<<differentoperatos, fig=TRUE, echo=FALSE, height=4, width=6>>=
+source("/home/andre/server-home/paper/evolutionary_hypergraphpartitioning/R/plot_functions.R")
+mutation_nonforced_insertion_random_vcycles = read.csv(file="/home/andre/server-global_data/schlag/in_out/robin_local_results/mutation-uses-insertion-strategy/clean/mutation_uses_insertion_strategy_clean.txt", header=TRUE, sep=" ")
+mutation_forced_insertion_random_vcycles = read.csv(file="/home/andre/server-global_data/schlag/in_out/robin_local_results/traditional_combine_and_vcycles/clean/random_vcycles_clean.txt", header=TRUE, sep=" ")
+edge_frequency = read.csv(file="/home/andre/server-home/Hypergraphs/tuning/results/2hour_restart_dynamic_population/clean/random_combine_clean.txt", header=TRUE, sep=" ")
+mutation_forced_insertion_vcycle = read.csv(file="/home/andre/server-global_data/schlag/in_out/robin_local_results/traditional_combine_and_vcycles/clean/traditional_combine_vcycle_clean.txt", header=TRUE, sep=" ")
+mutation_forced_insertion_newip = read.csv(file="/home/andre/server-global_data/schlag/in_out/robin_local_results/traditional_combine_and_vcycles/clean/new_initial_partition_vcycle_clean.txt", header=TRUE, sep=" ")
+basline_dt = computeSequentialBaselineTime(mutation_nonforced_insertion_random_vcycles)
+data = automaticPlot(list("Mutation nonforced" = mutation_nonforced_insertion_random_vcycles,
+                                   "Mutation forced" = mutation_forced_insertion_random_vcycles,
+                                   "edge-frequency" = edge_frequency,
+                                   "vcycle" = mutation_forced_insertion_vcycle,
+                                   "newip" = mutation_forced_insertion_newip,
+                                   "basic combine only" = traditional_combine),
+                              computeSequentialBaselineTime(mutation_nonforced_insertion_random_vcycles))
+
+ggplot(data, aes(x=t, y=best, color=algorithm)) +
+  geom_line() +
+  scale_x_continuous(trans = "log", breaks = c(1,2,5,10,20,50,100,200,500,1000,2000,5000)) +
+  scale_y_continuous(breaks = pretty_breaks(n=5))
+@
+\end{center}
+In this figure the different operations are compared against each other. We use different approaches for selecting the operators. The following operator combinations are plotted. Baseline is using 
+\end{figure}
+
+
+
+\begin{figure}
+\caption{New initial partitioning mutation chance}
+\begin{center}
+<<newipmutationchance, fig=TRUE, echo=FALSE, height=4, width=6>>=
 source("/home/andre/server-home/paper/evolutionary_hypergraphpartitioning/R/plot_functions.R")
 #source("/home/andre/server-home/paper/evolutionary_hypergraphpartitioning/R/final_preprocessing.R")
 newip_10percent = read.csv(file="/home/andre/server-home/Hypergraphs/unicluster_results_after_paper/newip_tuning/10_clean.txt", header=TRUE, sep=" ")
@@ -337,7 +401,7 @@ newip_90percent = read.csv(file="/home/andre/server-home/Hypergraphs/unicluster_
 newip_100percent = read.csv(file="/home/andre/server-home/Hypergraphs/unicluster_results_after_paper/newip_tuning/100_clean.txt", header=TRUE, sep=" ")
 traditional_combine = read.csv(file="/home/andre/server-home/Hypergraphs/tuning/results/2hour_restart_dynamic_population/clean/traditional_combine_clean.txt", header=TRUE, sep=" ")
 basline_dt = computeSequentialBaselineTime(traditional_combine)
-data = automaticPlot(list("0%" = traditional_combine,
+data = automaticPlot(list("0% mutation chance" = traditional_combine,
                           "10%" = newip_10percent,
                           "20%" = newip_20percent,
                           "30%" = newip_30percent,
@@ -347,8 +411,7 @@ data = automaticPlot(list("0%" = traditional_combine,
                           "70%" = newip_70percent,
                           "80%" = newip_80percent,
                           "90%" = newip_90percent,
-                          "z100%" = newip_100percent, 
-                          "e0%" = traditional_combine),
+                          "only new_ip" = newip_100percent),
                      computeSequentialBaselineTime(traditional_combine))
 ggplot(data, aes(x=t, y=best, color=algorithm)) +
   geom_line() +
@@ -356,13 +419,14 @@ ggplot(data, aes(x=t, y=best, color=algorithm)) +
   scale_y_continuous(breaks = pretty_breaks(n=5))
 @
 \end{center}
-In this graph you can see clearly that optimizing stuff does things. 
+In this plot the different mutation chances are represented. The percentages represent the chance of performing a new initial partitioning vcycle. If not performing a new initial partitioning a basic combine is performed. It is visible that choosing either 0\% mutation chance or 100\% mutation chance are both not viable for generating good solutions. A combination of both operators is increasing solution quality. As seen in this experiment a mutation chance of 40\% for new initial partitioning is generating the best solution. This experiment was performed on the tuning subset to generate values for the run on the benchmark subset. 
 \end{figure}
 
 
 \begin{figure}
+\caption{Edge frequency chance}
 \begin{center}
-<<test3, fig=TRUE, echo=FALSE>>=
+<<edgefrequencytuning, fig=TRUE, echo=FALSE, height=4, width=6>>=
 source("/home/andre/server-home/paper/evolutionary_hypergraphpartitioning/R/plot_functions.R")
 #source("/home/andre/server-home/paper/evolutionary_hypergraphpartitioning/R/final_preprocessing.R")
 edge_10percent =  read.csv(file="/home/andre/server-home/Hypergraphs/unicluster_results_after_paper/edge-chance-tuning/10percent_clean.txt", header=TRUE, sep=" ")
@@ -400,12 +464,14 @@ ggplot(data, aes(x=t, y=best, color=algorithm)) +
   scale_y_continuous(breaks = pretty_breaks(n=5))
 @
 \end{center}
+
 \end{figure}
 
 %Cross combines
 \begin{figure}
+\caption{cross combines are bad}
 \begin{center}
-<<test4, fig=TRUE, echo=FALSE>>=
+<<badcrosscombines, fig=TRUE, echo=FALSE, height=4, width=6>>=
 source("/home/andre/server-home/paper/evolutionary_hypergraphpartitioning/R/plot_functions.R")
 traditional_combine = read.csv(file="/home/andre/server-home/Hypergraphs/tuning/results/2hour_restart_dynamic_population/clean/traditional_combine_clean.txt", header=TRUE, sep=" ")
 
@@ -431,20 +497,34 @@ ggplot(data, aes(x=t, y=best, color=algorithm)) +
 
 %Vcycle Mutations
 \begin{figure}
+\caption{Insertion strategy}
 \begin{center}
-<<test5, fig=TRUE, echo=FALSE>>=
+<<insertnewip, fig=TRUE, echo=FALSE, height=4, width=6>>=
 source("/home/andre/server-home/paper/evolutionary_hypergraphpartitioning/R/plot_functions.R")
-mutation_nonforced_insertion_random_vcycles = read.csv(file="/home/andre/server-global_data/schlag/in_out/robin_local_results/mutation-uses-insertion-strategy/clean/mutation_uses_insertion_strategy_clean.txt", header=TRUE, sep=" ")
-mutation_forced_insertion_random_vcycles = read.csv(file="/home/andre/server-global_data/schlag/in_out/robin_local_results/traditional_combine_and_vcycles/clean/random_vcycles_clean.txt", header=TRUE, sep=" ")
-edge_frequency = read.csv(file="/home/andre/server-home/Hypergraphs/tuning/results/2hour_restart_dynamic_population/clean/random_combine_clean.txt", header=TRUE, sep=" ")
-mutation_forced_insertion_vcycle = read.csv(file="/home/andre/server-global_data/schlag/in_out/robin_local_results/traditional_combine_and_vcycles/clean/traditional_combine_vcycle_clean.txt", header=TRUE, sep=" ")
-mutation_forced_insertion_newip = read.csv(file="/home/andre/server-global_data/schlag/in_out/robin_local_results/traditional_combine_and_vcycles/clean/new_initial_partition_vcycle_clean.txt", header=TRUE, sep=" ")
+
+basline_dt = computeSequentialBaselineTime(newip_50percent)
+data = automaticPlot(list(   "newip" = mutation_forced_insertion_newip,
+                             "nonforced" = newip_50percent),
+                              computeSequentialBaselineTime(newip_50percent))
+
+ggplot(data, aes(x=t, y=best, color=algorithm)) +
+  geom_line() +
+  scale_x_continuous(trans = "log", breaks = c(1,2,5,10,20,50,100,200,500,1000,2000,5000)) +
+  scale_y_continuous(breaks = pretty_breaks(n=5))
+@
+\end{center}
+Text for confusiong
+\end{figure}
+
+\begin{figure}
+\caption{Insertion strategy random}
+\begin{center}
+<<insertrandom, fig=TRUE, echo=FALSE, height=4, width=6>>=
+source("/home/andre/server-home/paper/evolutionary_hypergraphpartitioning/R/plot_functions.R")
+
 basline_dt = computeSequentialBaselineTime(mutation_nonforced_insertion_random_vcycles)
-data = automaticPlot(list("Mutation nonforced" = mutation_nonforced_insertion_random_vcycles,
-                                   "Mutation forced" = mutation_forced_insertion_random_vcycles,
-                                   "edge-frequency" = edge_frequency,
-                                   "vcycle" = mutation_forced_insertion_vcycle,
-                                   "newip" = mutation_forced_insertion_newip),
+data = automaticPlot(list(   "forced" = mutation_forced_insertion_random_vcycles,
+                             "nonforced" = mutation_nonforced_insertion_random_vcycles),
                               computeSequentialBaselineTime(mutation_nonforced_insertion_random_vcycles))
 
 ggplot(data, aes(x=t, y=best, color=algorithm)) +
@@ -453,13 +533,15 @@ ggplot(data, aes(x=t, y=best, color=algorithm)) +
   scale_y_continuous(breaks = pretty_breaks(n=5))
 @
 \end{center}
-\end{figure}
+even more confusion
 
+\end{figure}
 
 %stable net
 \begin{figure}
+\caption{population stable net}
 \begin{center}
-<<test6, fig=TRUE, echo=FALSE>>=
+<<test6, fig=TRUE, echo=FALSE, height=4, width=6>>=
 source("/home/andre/server-home/paper/evolutionary_hypergraphpartitioning/R/plot_functions.R")
 population_stable_net_traditional_combine_forced = read.csv(file="/home/andre/server-global_data/schlag/in_out/robin_local_results/random_combine_mutation_and_stable_nets/clean/traditional_combine_population_stable_net_clean.txt", header=TRUE, sep=" ")
 traditional_combine = read.csv(file="/home/andre/server-home/Hypergraphs/tuning/results/2hour_restart_dynamic_population/clean/traditional_combine_clean.txt", header=TRUE, sep=" ")
@@ -474,28 +556,7 @@ ggplot(data, aes(x=t, y=best, color=algorithm)) +
 @
 \end{center}
 \end{figure}
-%base with nonevo and random combines
-\begin{figure}
-\begin{center}
-<<test7, fig=TRUE, echo=FALSE>>=
-source("/home/andre/server-home/paper/evolutionary_hypergraphpartitioning/R/plot_functions.R")
-nonevolutionary = read.csv(file="/home/andre/server-home/Hypergraphs/tuning/results/2hour_restart_dynamic_population/clean/nonevolutionary_clean.txt", header=TRUE, sep=" ")
-nonevolutionary_vcycles = read.csv(file="/home/andre/server-home/Hypergraphs/tuning/results/2hour_restart_dynamic_population/clean/nonevolutionary_vcycles_clean.txt", header=TRUE, sep=" ")
-random_combine = read.csv(file="/home/andre/server-home/Hypergraphs/tuning/results/2hour_restart_dynamic_population/clean/random_combine_clean.txt", header=TRUE, sep=" ")
-traditional_combine = read.csv(file="/home/andre/server-home/Hypergraphs/tuning/results/2hour_restart_dynamic_population/clean/traditional_combine_clean.txt", header=TRUE, sep=" ")
-basline_dt = computeSequentialBaselineTime(traditional_combine)
-data = automaticPlot(list("traditional" = traditional_combine,
-                                          "KaHyPar - nonevolutionary" = nonevolutionary,
-                                          "KaHyPar - nonevolutionary + vcycles" = nonevolutionary_vcycles,
-                                          "edge frequency random combine" = random_combine),
-                              computeSequentialBaselineTime(mutation_nonforced_insertion_random_vcycles))
-ggplot(data, aes(x=t, y=best, color=algorithm)) +
-  geom_line() +
-  scale_x_continuous(trans = "log", breaks = c(1,2,5,10,20,50,100,200,500,1000,2000,5000)) +
-  scale_y_continuous(breaks = pretty_breaks(n=5))
-@
-\end{center}
-\end{figure}
+
 
 
 

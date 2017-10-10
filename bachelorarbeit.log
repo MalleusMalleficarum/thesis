@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.29)  9 OCT 2017 19:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.29)  10 OCT 2017 18:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1497,52 +1497,79 @@ Package pdftex.def Info: Ipe/Memetic_process.pdf used on input line 253.
 chapter 4.
 [7] [8] [9] [10]
 chapter 5.
-<bachelorarbeit-test2.pdf, id=310, 433.62pt x 433.62pt>
-File: bachelorarbeit-test2.pdf Graphic file (type pdf)
+<bachelorarbeit-basiccomparation.pdf, id=310, 433.62pt x 289.08pt>
+File: bachelorarbeit-basiccomparation.pdf Graphic file (type pdf)
 
-<use bachelorarbeit-test2.pdf>
-Package pdftex.def Info: bachelorarbeit-test2.pdf used on input line 326.
-(pdftex.def)             Requested size: 346.55592pt x 346.57227pt.
+<use bachelorarbeit-basiccomparation.pdf>
+Package pdftex.def Info: bachelorarbeit-basiccomparation.pdf used on input line
+ 329.
+(pdftex.def)             Requested size: 346.55592pt x 231.04816pt.
 
-<bachelorarbeit-test3.pdf, id=311, 433.62pt x 433.62pt>
-File: bachelorarbeit-test3.pdf Graphic file (type pdf)
+<bachelorarbeit-differentoperatos.pdf, id=311, 433.62pt x 289.08pt>
+File: bachelorarbeit-differentoperatos.pdf Graphic file (type pdf)
 
-<use bachelorarbeit-test3.pdf>
-Package pdftex.def Info: bachelorarbeit-test3.pdf used on input line 334.
-(pdftex.def)             Requested size: 346.55592pt x 346.57227pt.
+<use bachelorarbeit-differentoperatos.pdf>
+Package pdftex.def Info: bachelorarbeit-differentoperatos.pdf used on input lin
+e 344.
+(pdftex.def)             Requested size: 346.55592pt x 231.04816pt.
 
-<bachelorarbeit-test4.pdf, id=312, 433.62pt x 433.62pt>
-File: bachelorarbeit-test4.pdf Graphic file (type pdf)
+<bachelorarbeit-newipmutationchance.pdf, id=312, 433.62pt x 289.08pt>
+File: bachelorarbeit-newipmutationchance.pdf Graphic file (type pdf)
 
-<use bachelorarbeit-test4.pdf>
-Package pdftex.def Info: bachelorarbeit-test4.pdf used on input line 341.
-(pdftex.def)             Requested size: 346.55592pt x 346.57227pt.
+<use bachelorarbeit-newipmutationchance.pdf>
+Package pdftex.def Info: bachelorarbeit-newipmutationchance.pdf used on input l
+ine 354.
+(pdftex.def)             Requested size: 346.55592pt x 231.04816pt.
 
-<bachelorarbeit-test5.pdf, id=313, 433.62pt x 433.62pt>
-File: bachelorarbeit-test5.pdf Graphic file (type pdf)
+<bachelorarbeit-edgefrequencytuning.pdf, id=313, 433.62pt x 289.08pt>
+File: bachelorarbeit-edgefrequencytuning.pdf Graphic file (type pdf)
 
-<use bachelorarbeit-test5.pdf>
-Package pdftex.def Info: bachelorarbeit-test5.pdf used on input line 348.
-(pdftex.def)             Requested size: 346.55592pt x 346.57227pt.
+<use bachelorarbeit-edgefrequencytuning.pdf>
+Package pdftex.def Info: bachelorarbeit-edgefrequencytuning.pdf used on input l
+ine 363.
+(pdftex.def)             Requested size: 346.55592pt x 231.04816pt.
 
-<bachelorarbeit-test6.pdf, id=314, 433.62pt x 433.62pt>
+<bachelorarbeit-badcrosscombines.pdf, id=314, 433.62pt x 289.08pt>
+File: bachelorarbeit-badcrosscombines.pdf Graphic file (type pdf)
+
+<use bachelorarbeit-badcrosscombines.pdf>
+Package pdftex.def Info: bachelorarbeit-badcrosscombines.pdf used on input line
+ 372.
+(pdftex.def)             Requested size: 346.55592pt x 231.04816pt.
+
+<bachelorarbeit-insertnewip.pdf, id=315, 433.62pt x 289.08pt>
+File: bachelorarbeit-insertnewip.pdf Graphic file (type pdf)
+
+<use bachelorarbeit-insertnewip.pdf>
+Package pdftex.def Info: bachelorarbeit-insertnewip.pdf used on input line 380.
+
+(pdftex.def)             Requested size: 346.55592pt x 231.04816pt.
+
+<bachelorarbeit-insertrandom.pdf, id=316, 433.62pt x 289.08pt>
+File: bachelorarbeit-insertrandom.pdf Graphic file (type pdf)
+
+<use bachelorarbeit-insertrandom.pdf>
+Package pdftex.def Info: bachelorarbeit-insertrandom.pdf used on input line 388
+.
+(pdftex.def)             Requested size: 346.55592pt x 231.04816pt.
+
+<bachelorarbeit-test6.pdf, id=317, 433.62pt x 289.08pt>
 File: bachelorarbeit-test6.pdf Graphic file (type pdf)
 
 <use bachelorarbeit-test6.pdf>
-Package pdftex.def Info: bachelorarbeit-test6.pdf used on input line 356.
-(pdftex.def)             Requested size: 346.55592pt x 346.57227pt.
+Package pdftex.def Info: bachelorarbeit-test6.pdf used on input line 398.
+(pdftex.def)             Requested size: 346.55592pt x 231.04816pt.
 
-<bachelorarbeit-test7.pdf, id=315, 433.62pt x 433.62pt>
-File: bachelorarbeit-test7.pdf Graphic file (type pdf)
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<use bachelorarbeit-test7.pdf>
-Package pdftex.def Info: bachelorarbeit-test7.pdf used on input line 362.
-(pdftex.def)             Requested size: 346.55592pt x 346.57227pt.
  [11
 
-] [12 <./bachelorarbeit-test2.pdf>] [13 <./bachelorarbeit-test3.pdf>] [14 <./ba
-chelorarbeit-test4.pdf>] [15 <./bachelorarbeit-test5.pdf>] [16 <./bachelorarbei
-t-test6.pdf>] [17 <./bachelorarbeit-test7.pdf>] [18
+]
+[12 <./bachelorarbeit-basiccomparation.pdf>] [13 <./bachelorarbeit-differentope
+ratos.pdf>] [14 <./bachelorarbeit-newipmutationchance.pdf>] [15 <./bachelorarbe
+it-edgefrequencytuning.pdf> <./bachelorarbeit-badcrosscombines.pdf>] [16 <./bac
+helorarbeit-insertnewip.pdf> <./bachelorarbeit-insertrandom.pdf>] [17 <./bachel
+orarbeit-test6.pdf>] [18
 
 ]
 chapter 6.
@@ -1553,24 +1580,24 @@ chapter 6.
 chapter A.
 No file bachelorarbeit.bbl.
 [21]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 392.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 392.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 429.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 429.
  (./bachelorarbeit.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 392.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 392.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 429.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 429.
 Package rerunfilecheck Info: File `bachelorarbeit.out' has not changed.
 (rerunfilecheck)             Checksum: A1210C4E279DE40D9DACAF72F336E5F9;2121.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 392.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 429.
  ) 
 Here is how much of TeX's memory you used:
- 21971 strings out of 493033
- 390888 string characters out of 6136455
- 537238 words of memory out of 5000000
- 24977 multiletter control sequences out of 15000+600000
+ 21989 strings out of 493033
+ 391621 string characters out of 6136455
+ 540238 words of memory out of 5000000
+ 24985 multiletter control sequences out of 15000+600000
  47909 words of font info for 108 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,13n,66p,1293b,543s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1590,9 +1617,9 @@ m/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on bachelorarbeit.pdf (29 pages, 834887 bytes).
+Output written on bachelorarbeit.pdf (29 pages, 871577 bytes).
 PDF statistics:
- 462 PDF objects out of 1000 (max. 8388607)
- 69 named destinations out of 1000 (max. 500000)
- 342 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 484 PDF objects out of 1000 (max. 8388607)
+ 77 named destinations out of 1000 (max. 500000)
+ 352 words of extra memory for PDF output out of 10000 (max. 10000000)
 

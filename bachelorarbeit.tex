@@ -320,48 +320,85 @@ is the new value appended to the averaged improvements with($(avg(a), t_n)$. Sim
 %#y = rnorm(100)
 %#plot(x,y)
 %#@
+%Vcycle Mutations
+All following plots are using KaHyPar for generating an initial population and perform some of the mentioned operators.
+%base with nonevo and random combines
+\begin{figure}
+\caption{Comparing KaHyParE to KaHyPar}
+\begin{center}
+\includegraphics{bachelorarbeit-basiccomparation}
+\end{center}
+In this plot we evaluate the results of KaHyParE using only basic combines as evolutionary operation against repeated repetitions of KaHyPar-CA and KaHyPar-CA + vcycles. Notably the evolutionary aspect is performing well.
+\end{figure}
+
+
+
+
+
+
+
 
 \begin{figure}
+\caption{Different Mutation Operations}
 \begin{center}
-\includegraphics{bachelorarbeit-test2}
+\includegraphics{bachelorarbeit-differentoperatos}
 \end{center}
-In this graph you can see clearly that optimizing stuff does things. 
+In this figure the different operations are compared against each other. We use different approaches for selecting the operators. The following operator combinations are plotted. Baseline is using 
+\end{figure}
+
+
+
+\begin{figure}
+\caption{New initial partitioning mutation chance}
+\begin{center}
+\includegraphics{bachelorarbeit-newipmutationchance}
+\end{center}
+In this plot the different mutation chances are represented. The percentages represent the chance of performing a new initial partitioning vcycle. If not performing a new initial partitioning a basic combine is performed. It is visible that choosing either 0\% mutation chance or 100\% mutation chance are both not viable for generating good solutions. A combination of both operators is increasing solution quality. As seen in this experiment a mutation chance of 40\% for new initial partitioning is generating the best solution. This experiment was performed on the tuning subset to generate values for the run on the benchmark subset. 
 \end{figure}
 
 
 \begin{figure}
+\caption{Edge frequency chance}
 \begin{center}
-\includegraphics{bachelorarbeit-test3}
+\includegraphics{bachelorarbeit-edgefrequencytuning}
 \end{center}
+
 \end{figure}
 
 %Cross combines
 \begin{figure}
+\caption{cross combines are bad}
 \begin{center}
-\includegraphics{bachelorarbeit-test4}
+\includegraphics{bachelorarbeit-badcrosscombines}
 \end{center}
 \end{figure}
 
 %Vcycle Mutations
 \begin{figure}
+\caption{Insertion strategy}
 \begin{center}
-\includegraphics{bachelorarbeit-test5}
+\includegraphics{bachelorarbeit-insertnewip}
 \end{center}
+Text for confusiong
 \end{figure}
 
+\begin{figure}
+\caption{Insertion strategy random}
+\begin{center}
+\includegraphics{bachelorarbeit-insertrandom}
+\end{center}
+even more confusion
+
+\end{figure}
 
 %stable net
 \begin{figure}
+\caption{population stable net}
 \begin{center}
 \includegraphics{bachelorarbeit-test6}
 \end{center}
 \end{figure}
-%base with nonevo and random combines
-\begin{figure}
-\begin{center}
-\includegraphics{bachelorarbeit-test7}
-\end{center}
-\end{figure}
+
 
 
 
