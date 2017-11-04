@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70206" creator="Ipe 7.2.7">
-<info created="D:20170925181510" modified="D:20171012154058"/>
+<info created="D:20171103170133" modified="D:20171103170133"/>
 <ipestyle name="basic">
 <symbol name="arrow/arc(spx)">
 <path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
@@ -252,108 +252,97 @@ h
 <tiling name="rising" angle="30" step="4" width="1"/>
 </ipestyle>
 <page>
-<layer name="beta"/>
 <layer name="alpha"/>
-<view layers="beta alpha" active="beta"/>
-<path layer="beta" matrix="1 0 0 1 -56 -8" stroke="black" fill="orange" opacity="50%">
-268 368
-256 280
-276 156
-160 272
-244 396 u
+<view layers="alpha" active="alpha"/>
+<path layer="alpha" stroke="black" fill="orange" opacity="30%">
+64 704
+84 704
+144 600
+84 624
+60 648 u
 </path>
-<path layer="alpha" matrix="1 0 0 1 -56 0" stroke="black" fill="purple" opacity="50%">
-252 304
-252 216
-384 216
-372 308 u
+<path matrix="1 0 0 1 12 4" stroke="black" fill="black">
+4 0 0 4 64 688 e
 </path>
-<path matrix="1 0 0 1 -56 0" stroke="black" fill="green" opacity="50%">
-336 244
-224 244
-228 192
-356 232 u
+<path matrix="1 0 0 1 48 0" stroke="black" fill="black">
+4 0 0 4 64 688 e
 </path>
-<path matrix="1 0 0 1 -56 0" stroke="black" fill="yellow" opacity="50%">
-204 372
-356 372
-356 320
-204 328 u
+<path matrix="1 0 0 1 24 -52" stroke="black" fill="black">
+4 0 0 4 64 688 e
 </path>
-<path matrix="1 0 0 1 -16 16" stroke="black" fill="black">
-8 0 0 8 208 336 e
+<path matrix="1 0 0 1 48 -48" stroke="black" fill="black">
+4 0 0 4 64 688 e
 </path>
-<path matrix="1 0 0 1 40 16" stroke="black" fill="black">
-8 0 0 8 208 336 e
+<path matrix="1 0 0 1 12 -28" stroke="black" fill="black">
+4 0 0 4 64 688 e
 </path>
-<path matrix="1 0 0 1 -36 -52" stroke="black" fill="black">
-8 0 0 8 208 336 e
+<path matrix="1 0 0 1 80 -24" stroke="black" fill="black">
+4 0 0 4 64 688 e
 </path>
-<path matrix="1 0 0 1 16 -56" stroke="black" fill="black">
-8 0 0 8 208 336 e
+<path stroke="black">
+144 680
+160 660
+108 620
+96 644 u
 </path>
-<path matrix="1 0 0 1 80 -56" stroke="black" fill="black">
-8 0 0 8 208 336 e
+<path stroke="black">
+64 704
+124 700
+124 672
+60 684 u
 </path>
-<path matrix="1 0 0 1 -12 -108" stroke="black" fill="black">
-8 0 0 8 208 336 e
+<path matrix="1 0 0 1 184 4" stroke="black" fill="black">
+4 0 0 4 64 688 e
 </path>
-<path matrix="1 0 0 1 48 -104" stroke="black" fill="black" fillrule="wind">
-8 0 0 8 208 336 e
+<path matrix="1 0 0 1 220 0" stroke="black" fill="black">
+4 0 0 4 64 688 e
 </path>
-<path layer="beta" matrix="1 0 0 1 188 -8" stroke="black" fill="orange" opacity="50%">
-268 368
-256 280
-276 156
-160 272
-244 396 u
+<path matrix="1 0 0 1 196 -52" stroke="black" fill="black">
+4 0 0 4 64 688 e
 </path>
-<path stroke="black" fill="purple" opacity="50%">
-432 300
-380 164
-544 224
-560 308 u
+<path matrix="1 0 0 1 220 -48" stroke="black" fill="black">
+4 0 0 4 64 688 e
 </path>
-<path stroke="black" fill="green" opacity="50%">
-440 244
-416 220
-440 196
-468 220 u
+<path matrix="1 0 0 1 184 -28" stroke="black" fill="black">
+4 0 0 4 64 688 e
 </path>
-<path matrix="1 0 0 1 188 0" stroke="black" fill="yellow" opacity="50%">
-204 372
-356 372
-356 320
-204 328 u
+<path matrix="1 0 0 1 252 -24" stroke="black" fill="black">
+4 0 0 4 64 688 e
 </path>
-<path matrix="1 0 0 1 228 16" stroke="black" fill="black">
-8 0 0 8 208 336 e
+<path matrix="1 0 0 1 172 0" stroke="black" fill="orange" opacity="30%">
+64 704
+84 704
+144 600
+84 624
+60 648 u
 </path>
-<path matrix="1 0 0 1 284 16" stroke="black" fill="black">
-8 0 0 8 208 336 e
+<path matrix="1 0 0 1 172 0" stroke="black">
+144 680
+160 660
+108 620
+96 644 u
 </path>
-<path matrix="1 0 0 1 208 -52" stroke="black" fill="black">
-8 0 0 8 208 336 e
+<path matrix="1 0 0 1 172 0" stroke="black">
+64 704
+124 700
+124 672
+60 684 u
 </path>
-<path matrix="1 0 0 1 260 -56" stroke="black" fill="black">
-8 0 0 8 208 336 e
+<path stroke="black">
+260 728 m
+276 592 l
 </path>
-<path matrix="1 0 0 1 324 -56" stroke="black" fill="black">
-8 0 0 8 208 336 e
+<path stroke="black">
+336 652 m
+200 648 l
 </path>
-<path matrix="1 0 0 1 0 -8" stroke="black" fill="black">
-12 0 0 12 440 228 e
+<path stroke="black">
+72 720 m
+148 612 l
 </path>
-<path stroke="black" pen="ultrafat" arrow="normal/normal">
-328 288 m
-356 288 l
+<path stroke="black">
+160 720 m
+52 620 l
 </path>
-<path stroke="black" arrow="normal/normal">
-264 212 m
-208 200 l
-</path>
-<text matrix="1 0 0 1 4 0" transformations="translations" pos="188 212" stroke="black" type="label" width="5.535" height="4.289" depth="0" valign="baseline">u</text>
-<text matrix="1 0 0 1 0 -4" transformations="translations" pos="252 216" stroke="black" type="label" width="5.258" height="4.289" depth="0" valign="baseline">v</text>
-<text matrix="1 0 0 1 -16 0" transformations="translations" pos="440 200" stroke="black" type="label" width="5.535" height="4.289" depth="0" valign="baseline">u</text>
 </page>
 </ipe>

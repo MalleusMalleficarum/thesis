@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: bachelorarbeit.aux
+The style file: gerplain.bst
+Database file #1: literatur.bib
+Warning--I didn't find a database entry for "holtgrewe2010engineering"
+You've used 27 entries,
+            2343 wiz_defined-function locations,
+            707 strings with 9961 characters,
+and the built_in function-call counts, 12249 in all, are:
+= -- 1325
+> -- 436
+< -- 19
++ -- 181
+- -- 144
+* -- 901
+:= -- 1744
+add.period$ -- 69
+call.type$ -- 27
+change.case$ -- 125
+chr.to.int$ -- 0
+cite$ -- 27
+duplicate$ -- 580
+empty$ -- 1039
+format.name$ -- 144
+if$ -- 2857
+int.to.chr$ -- 0
+int.to.str$ -- 27
+missing$ -- 37
+newline$ -- 111
+num.names$ -- 54
+pop$ -- 196
+preamble$ -- 1
+purify$ -- 125
+quote$ -- 0
+skip$ -- 454
+stack$ -- 0
+substring$ -- 795
+swap$ -- 274
+text.length$ -- 19
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 104
+warning$ -- 0
+while$ -- 119
+width$ -- 29
+write$ -- 286
+(There was 1 warning)
