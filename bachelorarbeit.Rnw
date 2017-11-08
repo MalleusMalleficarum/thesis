@@ -621,18 +621,18 @@ Translating the results onto the big data set.
 \begin{figure}
 \caption{Benchmark subset results}
 \begin{center}
-<<full evaluation, fig=TRUE, echo=FALSE, height=4, width=6>>=
-source("/home/andre/server-home/temppap/R/plot_functions.R")
-source("/home/andre/server-home/temppap/R/final_preprocessing.R")
+%<<full evaluation, fig=TRUE, echo=FALSE, height=4, width=6>>=
+%source("/home/andre/server-home/temppap/R/plot_functions.R")
+%source("/home/andre/server-home/temppap/R/final_preprocessing.R")
 
-data = 
-convergencePlot(automaticPlot(list("C1" = traditional_combine,
-                                   "C1C2" = random_combine,
-                                   "KaHyPar-CA" = kahypar_ca,
-                                   "KaHyPar-CA-V" = kahypar_ca_vcycle,
-                                   "C1M1M2" = trad_vcycle_mutate),
-                              baselineTime(traditional_combine)))
-@
+%data = 
+%convergencePlot(automaticPlot(list("C1" = traditional_combine,
+%                                   "C1C2" = random_combine,
+%                                   "KaHyPar-CA" = kahypar_ca,
+%                                   "KaHyPar-CA-V" = kahypar_ca_vcycle,
+%                                   "C1M1M2" = trad_vcycle_mutate),
+%                              baselineTime(traditional_combine)))
+%@
 \end{center}
 The results for the big dataset should be described HERE
 \end{figure}
@@ -640,20 +640,19 @@ The results for the big dataset should be described HERE
 \begin{figure}
 \caption{Benchmark subset split by k}
 \begin{center}
-<<full evaluation, fig=TRUE, echo=FALSE, height=4, width=6>>=
-
-ks = c(2,4,8,16,32,64,128)
-for (k in ks) {
-  print(paste("k=",k))
-  data = automaticPlot(list("C1" = traditional_combine[traditional_combine$k == k,],
-                            "C1C2" = random_combine[random_combine$k == k,],
-                            "KaHyPar-CA" = kahypar_ca[kahypar_ca$k == k,],
-                            "KaHyPar-CA-V" = kahypar_ca_vcycle[kahypar_ca_vcycle$k == k,],
-                            "C1M1M2" = trad_vcycle_mutate[trad_vcycle_mutate$k == k,]),
-                       baselineTime(traditional_combine[traditional_combine$k == k,]))
-  print(convergencePlot(data,k))
-}
-@
+%<<full evaluation, fig=TRUE, echo=FALSE, height=4, width=6>>=
+%ks = c(2,4,8,16,32,64,128)
+%for (k in ks) {
+%  print(paste("k=",k))
+%  data = automaticPlot(list("C1" = traditional_combine[traditional_combine$k == k,],
+%                            "C1C2" = random_combine[random_combine$k == k,],
+%                            "KaHyPar-CA" = kahypar_ca[kahypar_ca$k == k,],
+%                            "KaHyPar-CA-V" = kahypar_ca_vcycle[kahypar_ca_vcycle$k == k,],
+%                            "C1M1M2" = trad_vcycle_mutate[trad_vcycle_mutate$k == k,]),
+%                       baselineTime(traditional_combine[traditional_combine$k == k,]))
+%  print(convergencePlot(data,k))
+%}
+%@
 \end{center}
 The results for the specific k values should be described HERE
 \end{figure}

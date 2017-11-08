@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.29)  7 NOV 2017 22:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.29)  8 NOV 2017 02:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1296,7 +1296,7 @@ subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
 \c@algocf=\count141
 \algocf@algoframe=\box48
 \algocf@algobox=\box49
-) (/usr/share/R/share/texmf/tex/latex/Sweave.sty
+) (/usr/share/texmf/tex/latex/R/tex/latex/Sweave.sty
 Package: Sweave 
 
 (/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
@@ -1390,12 +1390,13 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 76.
 LaTeX Info: Redefining \pageref on input line 76.
 LaTeX Info: Redefining \nameref on input line 76.
+
+(./bachelorarbeit.out) (./bachelorarbeit.out)
 \@outlinefile=\write5
 \openout5 = `bachelorarbeit.out'.
 
-
-(./bachelorarbeit-concordance.tex)
-<kit_logo_de.pdf, id=7, 196.91566pt x 90.6587pt>
+ (./bachelorarbeit-concordance.tex) <kit_logo_de.pdf, id=119, 196.91566pt x 90.
+6587pt>
 File: kit_logo_de.pdf Graphic file (type pdf)
  <use kit_logo_de.pdf>
 Package pdftex.def Info: kit_logo_de.pdf used on input line 89.
@@ -1469,11 +1470,16 @@ Package babel Info: Redefining german shorthand "~
 
 
 ]
-(./bachelorarbeit.toc [7])
+(./bachelorarbeit.toc)
 \tf@toc=\write6
 \openout6 = `bachelorarbeit.toc'.
 
- [8]
+ [7] [8
+
+
+
+
+]
 chapter 1.
 
 Class scrbook Warning: \float@addtolists detected!
@@ -1490,52 +1496,82 @@ Class scrbook Warning: \float@addtolists detected!
 (scrbook)              a package that still implements the
 (scrbook)              deprecated \float@addtolist interface .
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.186 ...onal/physics/integrated_circuit/history/}
-                                                   Therefore the component s...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+
+LaTeX Warning: Citation `boese1992high' on page 1 undefined on input line 186.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
 l.186 ...onal/physics/integrated_circuit/history/}
                                                    Therefore the component s...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.186 ...onal/physics/integrated_circuit/history/}
+                                                   Therefore the component s...
+
+? 
+
+LaTeX Warning: Citation `garey2002computers' on page 1 undefined on input line 
+187.
+
+
+LaTeX Warning: Citation `bulucc2016recent' on page 1 undefined on input line 18
+7.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [1
 
-
-
-
-
 ]
 [2]
 chapter 2.
-<Ipe/Coarsening_Example.pdf, id=142, 412.97185pt x 184.87871pt>
+<Ipe/Coarsening_Example.pdf, id=178, 412.97185pt x 184.87871pt>
 File: Ipe/Coarsening_Example.pdf Graphic file (type pdf)
 
 <use Ipe/Coarsening_Example.pdf>
 Package pdftex.def Info: Ipe/Coarsening_Example.pdf used on input line 233.
 (pdftex.def)             Requested size: 346.55592pt x 155.1447pt.
 
+
+LaTeX Warning: Citation `cong1993parallel' on page 3 undefined on input line 25
+3.
+
+
 Underfull \vbox (badness 5578) has occurred while \output is active []
 
  [3
 
 ]
-Overfull \hbox (9.3637pt too wide) in paragraph at lines 255--256
+
+LaTeX Warning: Citation `catalyurek1999hypergraph' on page 4 undefined on input
+ line 255.
+
+
+LaTeX Warning: Citation `karypis1999multilevel' on page 4 undefined on input li
+ne 255.
+
+
+Overfull \hbox (3.9998pt too wide) in paragraph at lines 255--256
 \T1/aer/m/n/12 paradigm and try to im-prove so-lu-tion qual-ity by us-ing v-cyc
 le op-er-a-tions like hMetis[[]]. 
  []
 
-<Ipe/Memetic_process.pdf, id=162, 583.54327pt x 401.59033pt>
+
+LaTeX Warning: Citation `akhremtsev2017engineering' on page 4 undefined on inpu
+t line 257.
+
+
+LaTeX Warning: Citation `schlag2016k' on page 4 undefined on input line 257.
+
+
+LaTeX Warning: Citation `fiduccia1988linear' on page 4 undefined on input line 
+261.
+
+<Ipe/Memetic_process.pdf, id=192, 583.54327pt x 401.59033pt>
 File: Ipe/Memetic_process.pdf Graphic file (type pdf)
 
 <use Ipe/Memetic_process.pdf>
@@ -1549,16 +1585,74 @@ Underfull \hbox (badness 10000) in paragraph at lines 257--270
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [4 <./Ipe/Coarsening_Example.pdf>] [5 <./Ipe/Memetic_process.pdf>]
+ [4 <./Ipe/Coarsening_Example.pdf>]
+
+LaTeX Warning: Citation `heuer2017improving' on page 5 undefined on input line 
+271.
+
+
+LaTeX Warning: Citation `saab1989evolution' on page 5 undefined on input line 2
+74.
+
+
+LaTeX Warning: Citation `hulin1990circuit' on page 5 undefined on input line 27
+4.
+
+
+LaTeX Warning: Citation `bui1994fast' on page 5 undefined on input line 274.
+
+
+LaTeX Warning: Citation `fiduccia1988linear' on page 5 undefined on input line 
+274.
+
+
+LaTeX Warning: Citation `chan1995systolic' on page 5 undefined on input line 27
+6.
+
+
+LaTeX Warning: Citation `areibi2000integrated' on page 5 undefined on input lin
+e 277.
+
+
+LaTeX Warning: Citation `sanchis1989multiple' on page 5 undefined on input line
+ 277.
+
+
+LaTeX Warning: Citation `kim2004hybrid' on page 5 undefined on input line 278.
+
+
+LaTeX Warning: Citation `kim2004lock' on page 5 undefined on input line 278.
+
+
+LaTeX Warning: Citation `sait2006evolutionary' on page 5 undefined on input lin
+e 279.
+
+
+LaTeX Warning: Citation `armstrong2010investigation' on page 5 undefined on inp
+ut line 280.
+
+[5 <./Ipe/Memetic_process.pdf>]
+
+LaTeX Warning: Citation `sanders2012distributed' on page 6 undefined on input l
+ine 284.
+
 
 LaTeX Warning: Citation `holtgrewe2010engineering' on page 6 undefined on input
  line 284.
 
 [6]
 chapter 3.
+
+LaTeX Warning: Citation `chen2012large' on page 7 undefined on input line 306.
+
 [7
 
-] <Ipe/connexample.pdf, id=243, 285.46649pt x 136.9115pt>
+]
+
+LaTeX Warning: Citation `back1996evolutionary' on page 8 undefined on input lin
+e 315.
+
+<Ipe/connexample.pdf, id=240, 285.46649pt x 136.9115pt>
 File: Ipe/connexample.pdf Graphic file (type pdf)
 
 <use Ipe/connexample.pdf>
@@ -1568,8 +1662,28 @@ Package pdftex.def Info: Ipe/connexample.pdf used on input line 326.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8]
-[9 <./Ipe/connexample.pdf>] [10] [11] [12]
-<Ipe/diverse_example.pdf, id=283, 385.84149pt x 144.9415pt>
+
+LaTeX Warning: Citation `blickle1996comparison' on page 9 undefined on input li
+ne 337.
+
+[9 <./Ipe/connexample.pdf>]
+
+LaTeX Warning: Citation `wichlund1998multilevel' on page 10 undefined on input 
+line 351.
+
+
+LaTeX Warning: Citation `delling2011graph' on page 10 undefined on input line 3
+51.
+
+
+LaTeX Warning: Citation `wichlund1998multilevel' on page 10 undefined on input 
+line 360.
+
+[10] [11]
+
+LaTeX Warning: Citation `lim1997large' on page 12 undefined on input line 371.
+
+[12] <Ipe/diverse_example.pdf, id=269, 385.84149pt x 144.9415pt>
 File: Ipe/diverse_example.pdf Graphic file (type pdf)
 
 <use Ipe/diverse_example.pdf>
@@ -1579,7 +1693,7 @@ Package pdftex.def Info: Ipe/diverse_example.pdf used on input line 384.
 
 ]
 chapter 4.
-<Ipe/seed_averaging_example.pdf, id=355, 397.63556pt x 276.44179pt>
+<Ipe/seed_averaging_example.pdf, id=341, 397.63556pt x 276.44179pt>
 File: Ipe/seed_averaging_example.pdf Graphic file (type pdf)
 
 <use Ipe/seed_averaging_example.pdf>
@@ -1590,7 +1704,11 @@ Package pdftex.def Info: Ipe/seed_averaging_example.pdf used on input line 430.
 Underfull \vbox (badness 4726) has occurred while \output is active []
 
  [15]
-<bachelorarbeit-newipmutationchance.pdf, id=361, 433.62pt x 289.08pt>
+
+LaTeX Warning: Citation `sanders2012distributed' on page 16 undefined on input 
+line 437.
+
+<bachelorarbeit-newipmutationchance.pdf, id=346, 433.62pt x 289.08pt>
 File: bachelorarbeit-newipmutationchance.pdf Graphic file (type pdf)
 
 <use bachelorarbeit-newipmutationchance.pdf>
@@ -1601,7 +1719,7 @@ ine 441.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [16 <./Ipe/seed_averaging_example.pdf>]
-<bachelorarbeit-edgefrequencytuning.pdf, id=475, 433.62pt x 289.08pt>
+<bachelorarbeit-edgefrequencytuning.pdf, id=460, 433.62pt x 289.08pt>
 File: bachelorarbeit-edgefrequencytuning.pdf Graphic file (type pdf)
 
 <use bachelorarbeit-edgefrequencytuning.pdf>
@@ -1612,7 +1730,11 @@ ine 451.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [17 <./bachelorarbeit-newipmutationchance.pdf>]
-<bachelorarbeit-basiccomparation.pdf, id=488, 433.62pt x 289.08pt>
+
+LaTeX Warning: Citation `wichlund1998multilevel' on page 18 undefined on input 
+line 455.
+
+<bachelorarbeit-basiccomparation.pdf, id=472, 433.62pt x 289.08pt>
 File: bachelorarbeit-basiccomparation.pdf Graphic file (type pdf)
 
 <use bachelorarbeit-basiccomparation.pdf>
@@ -1621,7 +1743,7 @@ Package pdftex.def Info: bachelorarbeit-basiccomparation.pdf used on input line
 (pdftex.def)             Requested size: 346.55592pt x 231.04816pt.
  [18 <./bachelorarbeit-edgefrequencytuning.pdf>] [19 <./bachelorarbeit-basiccom
 paration.pdf>] [20]
-<bachelorarbeit-differentoperatos.pdf, id=515, 433.62pt x 289.08pt>
+<bachelorarbeit-differentoperatos.pdf, id=499, 433.62pt x 289.08pt>
 File: bachelorarbeit-differentoperatos.pdf Graphic file (type pdf)
 
 <use bachelorarbeit-differentoperatos.pdf>
@@ -1636,34 +1758,76 @@ Overfull \vbox (25.47601pt too high) has occurred while \output is active []
 
 
 [22 <./bachelorarbeit-differentoperatos.pdf>]
-<bachelorarbeit-insertrandom.pdf, id=530, 433.62pt x 289.08pt>
+<bachelorarbeit-insertrandom.pdf, id=514, 433.62pt x 289.08pt>
 File: bachelorarbeit-insertrandom.pdf Graphic file (type pdf)
 
 <use bachelorarbeit-insertrandom.pdf>
 Package pdftex.def Info: bachelorarbeit-insertrandom.pdf used on input line 492
 .
 (pdftex.def)             Requested size: 346.55592pt x 231.04816pt.
-LaTeX Font Info:    Try loading font information for T1+aett on input line 506.
+ [23 <./bachelorarbeit-insertrandom.pdf>]
+[24]
+chapter 5.
+[25
+
+] [26
 
 
-(/usr/share/texlive/texmf-dist/tex/latex/ae/t1aett.fd
-File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
-)
-! TeX capacity exceeded, sorry [main memory size=5000000].
-\FV@Space ->\ 
-              
-l.29504 ...                       ISPD98_ibm15.hgr
-                                                  
-If you really absolutely need more capacity,
-you can ask a wizard to enlarge me.
+]
+chapter A.
+(./bachelorarbeit.bbl) [27]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 594.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 594.
+ (./bachelorarbeit.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 594.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 594.
 
- 
+
+Package rerunfilecheck Warning: File `bachelorarbeit.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `bachelorarbeit.out':
+(rerunfilecheck)             Before: 6F3FD95D5C5B6CFCA2E7B3124269EAB1;1767
+(rerunfilecheck)             After:  96893086E8E2C2D539086B704FE54225;2099.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 594.
+ ) 
 Here is how much of TeX's memory you used:
- 22107 strings out of 493033
- 393503 string characters out of 6136455
- 5000000 words of memory out of 5000000
- 25057 multiletter control sequences out of 15000+600000
- 60378 words of font info for 128 fonts, out of 8000000 for 9000
+ 22108 strings out of 493033
+ 393241 string characters out of 6136455
+ 540243 words of memory out of 5000000
+ 25074 multiletter control sequences out of 15000+600000
+ 59405 words of font info for 125 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,13n,66p,2551b,538s stack positions out of 5000i,500n,10000p,200000b,80000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 64i,13n,66p,2551b,379s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/symbols/msbm10.pfb>
+Output written on bachelorarbeit.pdf (35 pages, 964862 bytes).
+PDF statistics:
+ 634 PDF objects out of 1000 (max. 8388607)
+ 86 named destinations out of 1000 (max. 500000)
+ 296 words of extra memory for PDF output out of 10000 (max. 10000000)
+
