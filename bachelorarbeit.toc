@@ -34,3 +34,4 @@
 \contentsline {chapter}{\numberline {A}Implementation Details}{27}{appendix.A}
 \contentsline {section}{\numberline {A.1}Software}{27}{section.A.1}
 \contentsline {section}{\numberline {A.2}Hardware}{27}{section.A.2}
+\contentsline {chapter}{\nonumberline Bibliography}{29}{chapter*.4}
