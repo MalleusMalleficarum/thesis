@@ -1,19 +1,19 @@
 This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: bachelorarbeit.aux
-White space in argument---line 122 of file bachelorarbeit.aux
+The top-level auxiliary file: bachelorarbeitKopie.aux
+White space in argument---line 119 of file bachelorarbeitKopie.aux
  : \citation{SPM
  :               colection}
 I'm skipping whatever remains of this command
-White space in argument---line 125 of file bachelorarbeit.aux
+White space in argument---line 122 of file bachelorarbeitKopie.aux
  : \citation{row
  :               net model}
 I'm skipping whatever remains of this command
-White space in argument---line 126 of file bachelorarbeit.aux
+White space in argument---line 123 of file bachelorarbeitKopie.aux
  : \citation{ein
  :               schlag paper}
 I'm skipping whatever remains of this command
-White space in argument---line 128 of file bachelorarbeit.aux
+White space in argument---line 125 of file bachelorarbeitKopie.aux
  : \citation{The
  :               work that uses local search unbounded}
 I'm skipping whatever remains of this command
@@ -24,7 +24,7 @@ Warning--I didn't find a database entry for "DAC"
 Warning--I didn't find a database entry for "SAT"
 You've used 37 entries,
             2343 wiz_defined-function locations,
-            771 strings with 11702 characters,
+            771 strings with 11712 characters,
 and the built_in function-call counts, 15985 in all, are:
 = -- 1706
 > -- 615

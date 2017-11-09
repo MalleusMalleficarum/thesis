@@ -8,12 +8,7 @@
 \documentclass[a4paper,12pt,titlepage, BCOR7mm,headsepline]{scrbook}
 % Diese (und weitere) Eingabedateien sind in UTF-8
 \usepackage[utf8]{inputenc}
-\usepackage{multirow}
-\usepackage{longtable}
-\usepackage{tabularx}
-\usepackage{numprint}
-\usepackage{adjustbox}
-\usepackage{graphicx}
+
 \usepackage[T1]{fontenc}
 \usepackage{times}
 \usepackage{float}
@@ -203,7 +198,7 @@ A Hypergraph $H = (V, E, c, w)$ is defined as a set of vertices $V$, a set of hy
 
 The weight of a vertex is measured by $c: V \rightarrow  \mathbb R_{\ge 0}$. Similarly the weight of a hyperedge is defined by $w: E \rightarrow  \mathbb R_{\ge 0}$. 
 The set extension of $c$ and $w$ are defined as $c($V'$) = \sum_{v \in V'} c(v)$ and $w($E'$) = \sum_{e \in E'} w(e)$. 
-Two verticies $u, v$ are adjacent if $\exists\ e \in E\ |\ u, v \in e$. The vertices in $e$ are called pins A vertex $u$ is incident to a hyperedge $e$ if $ u \in e$.$I(u)$ is the set of all incident hyperedges of node $u$. The size $|e|$ of a hyperedge $e$ is the number pins in $e$. A k-way partition of a hypergraph $H$ is a partition of $V$ into k disjoint blocks $V_1, .., V_k$. $part(u): V \rightarrow [1, k]$ is a function mapping the vertex $u$ into the corresponding partition block.
+Two verticies $u, v$ are adjacent if $\exists\ e \in E\ |\ u, v \in e$. A vertex $u$ is incident to a hyperedge $e$ if $ u \in e$.$I(u)$ is the set of all incident hyperedges of node $u$. The size $|e|$ of a hyperedge $e$ is the number of vertices contained in $e$. A k-way partition of a hypergraph $H$ is a partition of $V$ into k disjoint blocks $V_1, .., V_k$. $part(u): V \rightarrow [1, k]$ is a function mapping the vertex $u$ into the corresponding partition block.
 A k-way partition is balanced when $\forall\  1 \le i \le k\ |\ c(V_i) \le (1 + \epsilon) \lceil \frac{c(V)}{k} \rceil $ for a balance constraint $\epsilon$.
 A valid solution is a balanced k-way partition. An invalid solution is a partition where the balance criterion is not met.
 The number of vertices in a hyperedge that are located in $V_i$ are measured by $\Psi(e,V_i) := |\{v \in V_i \ |\ v \in e \}|$. Given a partition P the connectivity set of a hyperedge e is $\Phi(e, $P$) :=  \{V_i\ |\ \Psi(e, V_i) > 0\}$. 
@@ -321,7 +316,6 @@ vary greatly in time required to partition, using a fixed population size will m
 individuals for the initial population. Evaluating the value calculated above we spend approximately 15\% of the alloted time towards creating the initial population and consequently the population size is determined by $0.15*\frac{t_{total}}{t_1}$.
 However we introduce lower and upper bounds for the population size to ensure a proper size for evolutionary operators and convergence. That being said the population size has to be at least 3 and 50 at most.
 \section{Diversity}
-\label{sec:diversity}
 %By measuring the difference between two individuals we can gain some knowledge over their internal structure and similarities.
 In biological evolution a population with a highly miscellaneous gene pool is considered healty, because the variation between the individuals ensures that no characteristic is carried by every individual and a high perturbation of the gene pool is assured. In that case bad characteristics can be removed through means of reproduction. As reverse conclusion bad characteristics will not be removed if each individual shares said characteristics. 
 The same principle is applicable to evolutionary algorithms in a sense that bad characteristics are unable to be removed if they are shared by all solutions. For the hypergraph partitioning problem such a characteristic would be a hyperedge that is also a cut edge in every solution. 
@@ -437,7 +431,7 @@ All following plots are using KaHyPar for generating an initial population and p
 
 
 \section{Experimental Setup}
-We use two benchmark sets for evaluation. Both sets are using instances from the benchmark set of Heuer and Schlag \cite{heuer2017improving}, which consists of various hypergraphs from the ISPD98 benchmark \cite{ISPD98}, Sparse Matrices \cite{SPM colection}, the DAC benchmark \cite{DAC} and Sat instances \cite{SAT}. The sparse matrices are converted by row-net model \cite{row net model}, whereas the SAT instances are converted to hypergraphs using three approaches \cite{}
+We use two benchmark sets for evaluation. Both sets are using instances from the benchmark set of Heuer and Schlag \{cite KaHyPar E}, which consists of various hypergraphs from the ISPD98 benchmark \cite{ISPD98}, Sparse Matrices \cite{SPM colection}, the DAC benchmark \cite{DAC} and Sat instances \cite{SAT}. The sparse matrices are converted by row-net model \cite{row net model}, whereas the SAT instances are converted to hypergraphs using three approaches \cite{}
 %Describe the tuning benchmark set
 The first set is called the tuning subset. It consists of 25 Hypergraph instances. The instances were chosen to accurately represent the complete benchmark set. However no instance requiring a high partition time was chosen. This was done to ensure that the instances of the tuning subset can display the effects of the evolutionary algorithm within a smaller time window. The running time for partitions on the tuning subset is 2 hours. The instances were partitioned for $k = 32$ and $\epsilon = 0.03$. Each partitioning run of the tuning subset is repeated 3 times with a different seed for the randomization. This results in 150 CPU-hours required for each data set produced on the tuning subset.
 %Describe the benchmark set
@@ -454,255 +448,41 @@ We compare against KaHyPar-CA, which is an abbrevation for community aware KaHyP
 %Describe why KaHyPar has to use repeated repetitions
 Neither KaHyPar-CA nor KaHyPar-CA+V are designed to produce multiple solutions within a fixed time. In order to allow a fair comparison with the evolutionary algorithm on the benchmark sets, both KaHyPar-CA and KaHyPar-CA+V are restarted repeadeatly to ensure a proper usage of the running time.
 %Reference KaHyPar papers to show that we only have to compare against KaHyPar
-\section{Instances \& Methodology}
+\section{Instances & Methodology}
 %Table of instances of the tuning subset
-\begin{table}[H]
-        \caption{Hypergraph properties of the tuning subset.}
-\label{tbl:instancessmall}
-
-\centering
-\begin{adjustbox}{max width=\textwidth}
-\begin{tabular}{lrrr||l|rrr}
-hypergraph & $n$& $m$ & $p$ & hypergraph & $n$ & $m$ & $p$\\
-                         \cline{1-4}
-                         \cline{5-8}
-                         \cline{5-8}
-                         \cline{1-4}
-                         \cline{1-4}
-                         \multicolumn{4}{c||}{ISPD98}          & \multicolumn{4}{c}{SAT14Primal} \\
-                         \cline{5-8}
-                         \cline{5-8}
-                         \cline{1-4}
-                         \cline{1-4}
-
-                         ibm06                                 & 32498   & 34826  & 128182 & 6s153                                                & 85646   & 245440 & 572692            \\
-                         ibm07                                 & 45926   & 48117  & 175639& aaai10-planning-ipc5              & 53919   & 308235 & 690466   \\
-                         ibm08                                 & 51309   & 50513  & 204890& atco\_enc2\_opt1\_05\_21                             & 56533   & 526872 & 2097393  \\
-                         ibm09                                 & 53395   & 60902  & 222088& dated-10-11-u                                        & 141860  & 629461 & 1429872  \\
-                         ibm10                                 & 69429   & 75196  & 297567& hwmcc10-timeframe & 163622  & 488120 & 1138944  \\
-                         \cline{1-4}
-                         \cline{1-4}
-                         \cline{5-8}
-                         \cline{5-8}
-                         \multicolumn{4}{c||}{SAT14Dual} & \multicolumn{4}{c}{SPM} \\
-                         \cline{5-8}
-                         \cline{5-8}
-                         \cline{1-4}
-                         \cline{1-4}
-
-                         6s133                                 & 140968  & 48215  & 328924  &laminar\_duct3D                                      & 67173   & 67173  & 3833077 \\
-                         6s153                                 & 245440  & 85646  & 572692  &mixtank\_new                                         & 29957   & 29957  & 1995041 \\
-                         6s9                                   & 100384  & 34317  & 234228  &mult\_dcop\_01                                       & 25187   & 25187  & 193276  \\
-                         dated-10-11-u                         & 629461  & 141860 & 1429872 &RFdevice                                             & 74104   & 74104  & 365580  \\
-                         dated-10-17-u                         & 1070757 & 229544 & 2471122 &vibrobox                                             & 12328   & 12328  & 342828  \\
-                         \cline{1-4}
-                         \cline{5-8}
-                         \cline{5-8}
-                         \cline{1-4}
-                         \multicolumn{4}{c||}{SAT14Literal} \\
-                         \cline{1-4}
-                         \cline{1-4}
-                         6s133                                 & 96430   & 140968 & 328924  \\
-                         6s153                                 & 171292  & 245440 & 572692  \\
-                         aaai10-planning-ipc5                  & 107838  & 308235 & 690466  \\
-                         atco\_enc2\_opt1\_05\_21              & 112732  & 526872 & 2097393 \\
-                         dated-10-11-u                         & 283720  & 629461 & 1429872 \\
-                         \hline\hline
-        \end{tabular}
-        \end{adjustbox}
-        \end{table}
-        
-Table \ref{tbl:instancessmall} displays the instances in the tuning subset, as well as their basic properties. $n$ is the number of vertices, $m$ ist the number of hyperedges and $p$ is the number of pins. The instances are sorted by their respective classes.
 %Table of instances of the benchmark subset
-\begin{table}[H]\caption{Hypergraph properties of the benchmark subset.}
-\label{tbl:instanceslarge}
-
-\centering
-\begin{adjustbox}{max width=\textwidth}
-\begin{tabular}{lrrr||l|rrr}
-hypergraph & $n$& $m$ & $p$ & hypergraph & $n$ & $m$ & $p$\\
-                         \cline{1-4}
-                         \cline{5-8}
-                         \cline{5-8}
-                         \cline{1-4}
-                         \cline{1-4}
-                         \multicolumn{4}{c||}{DAC2012}    & \multicolumn{4}{c}{SAT14Primal} \\
-                         \cline{1-4}
-                         \cline{1-4}
-                         \cline{5-8}
-                         \cline{5-8}
-                         superblue19                     & \numprint{522482}                  & \numprint{511685} & \numprint{1713796} & AProVE07-27               & \numprint{7729}   & \numprint{29194}   & \numprint{77124}\\
-                         superblue13                     & \numprint{630802}                  & \numprint{619815} & \numprint{2048903} & countbitssrl032           & \numprint{18607}  & \numprint{55724}   & \numprint{130020}\\
-                         superblue14                     & \numprint{698339}                  & \numprint{697458} & \numprint{2280417} & 6s184                     & \numprint{33365}  & \numprint{97516}   & \numprint{227536}\\
-                         superblue3                      & \numprint{917944}                  & \numprint{898001} & \numprint{3109446} & 6s9                       & \numprint{34317}  & \numprint{100384}  & \numprint{234228}\\
-                         \cline{1-4}
-                         \cline{1-4}
-                         \multicolumn{4}{c||}{ISPD98}    & 6s133                   & \numprint{48215}  & \numprint{140968}  & \numprint{328924}\\
-                         \cline{1-4}
-                         \cline{1-4}
-                         ibm09                           & \numprint{53395}                   & \numprint{60902}  & \numprint{222088}  & 6s153                     & \numprint{85646}  & \numprint{245440}  & \numprint{572692}\\
-                         ibm11                           & \numprint{70558}                   & \numprint{81454}  & \numprint{280786}  & atco\_enc1\_opt2\_10\_16  & \numprint{9643}   & \numprint{152744}  & \numprint{641139}\\
-                         ibm10                           & \numprint{69429}                   & \numprint{75196}  & \numprint{297567}  & aaai10-planning-ipc5      & \numprint{53919}  & \numprint{308235}  & \numprint{690466}\\
-                         ibm12                           & \numprint{71076}                   & \numprint{77240}  & \numprint{317760}  & hwmcc10-timeframe         & \numprint{163622} & \numprint{488120}  & \numprint{1138944}\\
-                         ibm13                           & \numprint{84199}                   & \numprint{99666}  & \numprint{357075}  & itox\_vc1130              & \numprint{152256} & \numprint{441729}  & \numprint{1143974}\\
-                         ibm14                           & \numprint{147605}                  & \numprint{152772} & \numprint{546816}  & dated-10-11-u             & \numprint{141860} & \numprint{629461}  & \numprint{1429872}\\
-                         ibm15                           & \numprint{161570}                  & \numprint{186608} & \numprint{715823}  & atco\_enc1\_opt2\_05\_4   & \numprint{14636}  & \numprint{386163}  & \numprint{1652800}\\
-                         ibm16                           & \numprint{183484}                  & \numprint{190048} & \numprint{778823}  & manol-pipe-c8nidw         & \numprint{269048} & \numprint{799867}  & \numprint{1866355}\\
-                         ibm18                           & \numprint{210613}                  & \numprint{201920} & \numprint{819697}  & atco\_enc2\_opt1\_05\_21  & \numprint{56533}  & \numprint{526872}  & \numprint{2097393}\\
-                         ibm17                           & \numprint{185495}                  & \numprint{189581} & \numprint{860036}  & dated-10-17-u             & \numprint{229544} & \numprint{1070757} & \numprint{2471122}\\
-                         \cline{1-4}
-                         \cline{1-4}
-                         \multicolumn{4}{c||}{SAT14Dual} & ACG-20-5p0              & \numprint{324716} & \numprint{1390931} & \numprint{3269132}\\
-                         \cline{1-4}
-                         \cline{1-4}
-                         AProVE07-27                     & \numprint{29194}                   & \numprint{7729}   & \numprint{77124}   & ACG-20-5p1                & \numprint{331196} & \numprint{1416850} & \numprint{3333531}\\
-                         \cline{5-8}
-                         \cline{5-8}
-                         countbitssrl032                 & \numprint{55724}                   & \numprint{18607}  & \numprint{130020}  & \multicolumn{4}{c}{SPM}\\
-                         \cline{5-8}
-                         \cline{5-8}
-                         6s184                           & \numprint{97516}                   & \numprint{33365}  & \numprint{227536}  & powersim                  & \numprint{15838}  & \numprint{15838}   & \numprint{67562}\\
-                         6s9                             & \numprint{100384}                  & \numprint{34317}  & \numprint{234228}  & as-caida                  & \numprint{31379}  & \numprint{26475}   & \numprint{106762}\\
-                         6s133                           & \numprint{140968}                  & \numprint{48215}  & \numprint{328924}  & hvdc1                     & \numprint{24842}  & \numprint{24842}   & \numprint{159981}\\
-                         6s153                           & \numprint{245440}                  & \numprint{85646}  & \numprint{572692}  & Ill\_Stokes               & \numprint{20896}  & \numprint{20896}   & \numprint{191368}\\
-                         atco\_enc1\_opt2\_10\_16        & \numprint{152744}                  & \numprint{9643}   & \numprint{641139}  & mult\_dcop\_01            & \numprint{25187}  & \numprint{25187}   & \numprint{193276}\\
-                         aaai10-planning-ipc5            & \numprint{308235}                  & \numprint{53919}  & \numprint{690466}  & lp\_pds\_20               & \numprint{108175} & \numprint{33798}   & \numprint{232647}\\
-                         hwmcc10-timeframe               & \numprint{488120}                  & \numprint{163622} & \numprint{1138944} & lhr14                     & \numprint{14270}  & \numprint{14270}   & \numprint{307858}\\
-                         itox\_vc1130                    & \numprint{441729}                  & \numprint{152256} & \numprint{1143974} & c-61                      & \numprint{43618}  & \numprint{43618}   & \numprint{310016}\\
-                         dated-10-11-u                   & \numprint{629461}                  & \numprint{141860} & \numprint{1429872} & ckt11752\_dc\_1           & \numprint{49702}  & \numprint{49702}   & \numprint{333029}\\
-                         manol-pipe-g10bid\_i            & \numprint{792175}                  & \numprint{266405} & \numprint{1848407} & RFdevice                  & \numprint{74104}  & \numprint{74104}   & \numprint{365580}\\
-                         manol-pipe-c8nidw               & \numprint{799867}                  & \numprint{269048} & \numprint{1866355} & light\_in\_tissue         & \numprint{29282}  & \numprint{29282}   & \numprint{406084}\\
-                         atco\_enc2\_opt1\_05\_21        & \numprint{526872}                  & \numprint{56533}  & \numprint{2097393} & Andrews                   & \numprint{60000}  & \numprint{60000}   & \numprint{760154}\\
-                         dated-10-17-u                   & \numprint{1070757}                 & \numprint{229544} & \numprint{2471122} & 2D\_54019\_highK          & \numprint{54019}  & \numprint{54019}   & \numprint{996414}\\
-                         ACG-20-5p0                      & \numprint{1390931}                 & \numprint{324716} & \numprint{3269132} & case39                    & \numprint{40216}  & \numprint{40216}   & \numprint{1042160}\\
-                         ACG-20-5p1                      & \numprint{1416850}                 & \numprint{331196} & \numprint{3333531} & denormal                  & \numprint{89400}  & \numprint{89400}   & \numprint{1156224}\\
-                         \cline{1-4}
-                         \cline{1-4}
-                         \multicolumn{4}{c||}{SAT14Literal} &                          2cubes\_sphere           & 101492                    & 101492  & 1647264\\
-                         \cline{1-4}
-                         \cline{1-4}
-AProVE07-27              & \numprint{15458}  & \numprint{29194}   & \numprint{77124}    & av41092           & \numprint{41092}  & \numprint{41092}  & \numprint{1683902}\\
-countbitssrl032          & \numprint{37213}  & \numprint{55724}   & \numprint{130020}   & Lin               & \numprint{256000} & \numprint{256000} & \numprint{1766400}\\
-6s184                    & \numprint{66730}  & \numprint{97516}   & \numprint{227536}   & cfd1              & \numprint{70656}  & \numprint{70656}  & \numprint{1828364}\\
-6s9                      & \numprint{68634}  & \numprint{100384}  & \numprint{234228}   & mc2depi           & \numprint{525825} & \numprint{525825} & \numprint{2100225}\\
-6s133                    & \numprint{96430}  & \numprint{140968}  & \numprint{328924}   & poisson3Db        & \numprint{85623}  & \numprint{85623}  & \numprint{2374949}\\
-6s153                    & \numprint{171292} & \numprint{245440}  & \numprint{572692}   & rgg\_n\_2\_18\_s0 & \numprint{262144} & \numprint{262141} & \numprint{3094566}\\
-atco\_enc1\_opt2\_10\_16 & \numprint{18930}  & \numprint{152744}  & \numprint{641139}   & cnr-2000          & \numprint{325557} & \numprint{247501} & \numprint{3216152}\\
-        \cline{5-8}
-        \cline{5-8}
-aaai10-planning-ipc5     & \numprint{107838} & \numprint{308235}  & \numprint{690466} \\
-hwmcc10-timeframe        & \numprint{327243} & \numprint{488120}  & \numprint{1138944} \\
-itox\_vc1130             & \numprint{294326} & \numprint{441729}  & \numprint{1143974} \\
-dated-10-11-u            & \numprint{283720} & \numprint{629461}  & \numprint{1429872} \\
-atco\_enc1\_opt2\_05\_4  & \numprint{28738}  & \numprint{386163}  & \numprint{1652800} \\
-manol-pipe-g10bid\_i     & \numprint{532810} & \numprint{792175}  & \numprint{1848407} \\
-manol-pipe-c8nidw        & \numprint{538096} & \numprint{799867}  & \numprint{1866355} \\
-atco\_enc2\_opt1\_05\_21 & \numprint{112732} & \numprint{526872}  & \numprint{2097393} \\
-dated-10-17-u            & \numprint{459088} & \numprint{1070757} & \numprint{2471122} \\
-ACG-20-5p0               & \numprint{649432} & \numprint{1390931} & \numprint{3269132} \\
-ACG-20-5p1               & \numprint{662392} & \numprint{1416850} & \numprint{3333531} \\
-\hline
-\hline
-\end{tabular}
-\end{adjustbox}
-\end{table}
 %Description how the plots are generated
-The main interest is to show how the best solution of the population is increasing compared to the time used by the evolutionary algorithm. There are three inherent issues that need to be dealt with. 
-\begin{enumerate}
-\item The iteration times vary greatly between hypergraphs. 
-\item The different seeds need to be normalized.
-\item The connectivity also varies greatly between hypergraphs.
-
-\end{enumerate}
-To emphasize the first issue, lets assume two hypergraph instances $s$ and $l$. For the small hypergraph $s$ the evolutionary algorithm may perform thousands of iterations, and for the large hypergraph $l$ only 10. When using the absolute time as comparison we have no guarantee how many iterations the evolutionary algorithm has performed in average at a given time point. Similarly when using the iterations of the evolutionary algorithm as comparsion we cannot display the time required by the iterations. The Operator C$_x$ may produce slightly better results than operator C$_y$ per iteration, but also require 1000 times the time per iteration. Sanders and Schulz \cite{sanders2012distributed} present an approach using normalized time as a comparison tool. We choose one of the partitioning algorithms as baseline and determine the average duration $t_I$ to partition a given instance $I$ one time. We then can calculate for each absolute timestamp $t$ of an instance $I$ the normalized time by $t_n = \frac{t}{t_I}$. By doing so we can adjust the variation of iteration times, without dropping the duration information. 
-
-To address the second issue, we used multiple seeds to balance out outlier performance due to randomization. We determine the average best solution for an instance $I$ at the time point $t_n$ as follows. For each seed we create a variable $a_s$ storing the best solution so far. These variables $a_s$ are filled with the first solution created by the corresponding seed. Then the average over all $a_s$ is calculated, determining the first average best solution. Each time a seed $s$ is improving its best solution at a timepoint $t_n$ the corresponding value $a_s$ is updated, and a new average is calculated with the time point $t_n$. This process is illustrated in figure \ref{fig:averagingseeds}. The improvements are processed by ascending order of $t_n$. The result is a list of averaged improvements for Instance $I$, containing elements of the following structure $(avg(a_s), t_n)$. By ordering the list of averaged improvements by $t_n$ we can calculate the average best solution at a timepoint $t_n$.
-
-\begin{figure}[H] 
-    
-  \begin{center}
-   \includegraphics[width=.9\textwidth]{Ipe/seed_averaging_example.pdf}
-  \caption{An example for averaging the seeds of an Instance $I$}\label{fig:averagingseeds} %TODO u nicht gestrichelt; pünktchen
-  \end{center}
-    The solution improvements of the different seeds are run through by ascending normalized time $t_n$ (a)-(f). Then a pair of solution quality and current time is appended to the result every time an improvement is found (b)-(f). The only exception is (a) since there are no existing values to replace. In this case the first values of all seeds are used and the maximum normalized time is used for the first pair.
-\end{figure}
-
-Next we need to average the different instances. Because different instances have higly varying connectivity, we cannot use the arithmetic mean as averaging tool. Instead we use the geometric Mean, to counteract a priorization of instances because of their size. Other than that the process is similar to averaging the seeds. For each instance $I$ we create a variable $a_I$ containing the best solution so far. We use the previously generated lists of averaged improvement $l_I$ as input data. Following the same procedure, each time an improvement is found in one of the $l_I$ the corresponding value $a_I$ is updated and a tuple $(geoMean(a_I), t_n)$ is appended to the final result. An example for this procedure can be found in figure \ref{fig:averaginginstances}
-
-\begin{figure}[H] 
-    
-  \begin{center}
-   \includegraphics[width=.9\textwidth]{Ipe/instanceaveragingexample.pdf}
-  \caption{An example for averaging the seeds of an Instance $I$}\label{fig:averaginginstances} %TODO u nicht gestrichelt; pünktchen
-  \end{center}
-    Similar to seed averaging the lists of averaged improvement are run through by ascending normalized time $t_n$ (a)-(f). Then a pair of solution quality and current time is appended to the result every time an improvement is found (b)-(f). The only exception is (a) since there are no existing values to replace. In this case the first values of all seeds are used and the maximum normalized time is used for the first pair.
-\end{figure}
-
 %Reference to KaffPaE because of normalized time
 %Describe why we normalize the time
 %Graphic explaining the averaging of the seeds
 %Graphic explaining the averaging of the instances
-\newpage
-\section{First Evaluation} 
-All of the data sets presented in this section were created using the tuning subset. These data sets were computed on an Ubuntu 14.04 machine with four Intel Xeon E5-4640 Octa-Core processors @2.4 GHz with 512 GB main memory, 20 MB L3- and 8x256 KB L2-Cache.
-% And some on i130 with worse specs
+
+\section{First Evaluation}
 %Say that this is done on the tuning subset
 %%REPLACEMENT STRATEGIES
 %%vvvvvvvvvvvvvvvvvvvvvv
 %First evaluate the replacement strategies
-\subsection{Replacement strategy evaluation}
-We begin by evaluating the different replacement strategies presented in section \ref{replcaestrategies}. All data sets use KaHyPar-E with the operator C1 as the only evolutionary action. The population size is determined dynamically using $\delta = 15\%$. 
-\begin{figure}[H]
-\caption{Using different replacement strategies}
-
-\begin{center}
-\includegraphics{bachelorarbeit-replacestrategies}\label{fig:replacement}
-\end{center}
-
-\end{figure}
-In figure\ref{fig:replacement} we compare the effectiveness of the three different replacement strategies. As expected in section \ref{Wo auch immer ich gesagt habe dass worst mist ist} replacing the worst element in the population leads to premature convergence and should be avoided. Using the diversity replacement for graph partitioning \cite{sanders2012distributed} from section \ref{sec:diversity} shows that trying to maintain diversity prevents early plateauing and is thus capable of generating better solutions. However the connectivity approach for diversity is able to slightly increment the solution quality. This comfirms the assumption formulated in section \ref{sec:diversity} that connectivity difference is a more appropriate approach in expressing different characteristics of two partitions. Based on these results we will use connectivity difference as default replacement strategy in all upcoming evaluations.
 %Explain why we only use the basic combine operator
 %Say that replacing the worst element leads to premature convergence as in section X
 %Say that using the connectivity difference is a better approach as cut difference, as expected in section X
 %Say that all following plots are using the replacement strategy
 %%^^^^^^^^^^^^^^^^^^^^^^
 %%REPLACEMENT STRATEGIES
-\subsection{Combine operator evaluation}
-Next up we evaluate the different combine operators and compare the solution quality against the solution quality of KaHyPar-CA and KaHyPar-CA+V. We evaluate three configurations of the evolutionary algorithm. The specification KaHyPar-E+C$_x$ means that the configuration used the combine operator C$x$. KaHyPar-E+C1+C2 chooses one of the two combine strategies randomly for each iteration.
+
 %%COMBINE OPERATORS
 %%vvvvvvvvvvvvvvvvv
 %Explain the algorithms used (KaHyPar C1, KaHyPar C1 C2 KaHyPar C2)
-\begin{figure}[H]
-\caption{Comparing KaHyPar-E to KaHyPar}
-\begin{center}
-\includegraphics{bachelorarbeit-basiccomparation}\label{fig:combineop}
-\end{center} 
 
-\end{figure}
-In figure \ref{fig:combineop} we evaluate the results of KaHyPar-E using only basic combines as evolutionary operation against repeated repetitions of KaHyPar-CA and KaHyPar-CA+v which is the strongest configuration for KaHyPar-CA. This evaluation is performed on the tuning subset. The plot lines of KaHyPar-CA, KaHyPar-E + C1 and KaHyPar-E + C1 + C2 are nearly identical up to the time point of 10 $t_n$ normalized time. This is due to the fact that KaHyPar-E is using KaHyPar-CA to generate the initial population. The variations are caused by hardware limitations causing minor fluctuation in the time for performing an iteration and thus slight variations in the normalized time. However the values generated are the same since KaHyPar-CA is configured with the same seed during each of those experiments. KaHyPar-CA+v is not sharing the same starting curve. Since v-cycles are time consuming the algorithm steps of KaHyPar-CA+v are slower than the steps of KaHyPar-CA, resulting in an offset of the starting point for the plot line. As expected KaHyPar-CA+v produces better solutions than KaHyPar-CA, which also extends to repeated repetitions. Both variations of KaHyPar-E gain a significant amount of improvement after generating the initial population. This is due to the combine schemes being able to exploit structural improvements by comparing different partitions as described in \ref{sec:basiccombine} and continually improving the solution quality by the assurance of nondecreasing solution quality \ref{qualityassurance}. However this operation is eventually converging into a local optima since all individuals are going to be replaced with the best solution in relatively close proximity due to the replacement strategy, and neither replacement strategy nor operator are capable to decrease the solution quality of a given individual. the multicombine operation C2 however is not restricted to this assurance. This operator is profiting from a stable population in a sense that the best solutions in the population can most likely be considered good solutions. This is visible in the plot since KaHyPar-E + C1 + C2 is not drastically different from KaHyPar-E + C1 while the basic combine is still effective but allows for an improvement of solution quality whereas KaHyPar-E + C1 is plateauing. Comparing KaHyPar-E + C1 against KaHyPar-CA + v using the Wilcoxon-Pratt Test generates a $Z$-Value of 4.37 indicating that KaHyPar-E + C1 is computing better solutions with a confidence of 99.9998\%.
 %%^^^^^^^^^^^^^^^^^
 %%COMBINE OPERATORS
+
 %%MUTATION OPERATORS
 %%vvvvvvvvvvvvvvvvvv
-\section{Mutation operator evaluation}
-
-\begin{figure}[H]
-\caption{Different Mutation Operations}
-\begin{center}
-\includegraphics{bachelorarbeit-differentoperatos}
-\end{center}
-
-\end{figure}
-In this figure the effectiveness of the different mutation operators are evaluated. Each data set was created using a 50\% chance of C1 and a 50\% chance of the respective mutation operations. In the specific case M1 + M2 the mutation operation performed was selected uniformly at random. This evaluation was performed on the tuning subset. Adding simple v-cycles M1 to the already existing combine operator is in fact performing worse. This is due to the fact that v-cycles share the same quality assurance as C1 and are thus unable to create worse solutions which are necessary to broaden the solution scope of the population. Individuals that have been optimized during the execution of the algorithm also often have been improved by v-cycles or already have a good enough quality so that v-cycles cannot find improvements. In conclusion this means that v-cycles alone are unable to prevent premature convergence. In contrast using v-cycles with new initial partitioning M2 or a combination of both mutation operators will generate better solutions. Since M2 is not limited by the quality assurance of C1 and M1, worse solutions can be created and the solution scope can be explored more effectively. Stable net detection M3 is generating worse solutions or using up more time to generate individuals and therefore dropped from the algorithm. Interestingly when considering how often the different mutation operations have been able to generate a new best solution M3 has only been able to do so for 2 instances out of 25 whereas any combination of M1 and M2 have created a new best solution in all 25 instances. This suggests that M3 is an operation depending on the hypergraph structure and not easily applicable to a generic hypergraph. Due to the replacement strategy newly generated solutions are only considered for insertion if the solution quality is better than the worst individual in the population and will lead to convergence regardless of which mutation operators are applied. 
-
-
-
 %%^^^^^^^^^^^^^^^^^^
 %%MUTATION OPERATORS
 
 %%DIFFERENT REPLACEMENT OPERATORS FOR MUTATIONS
 %%vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-
 %Say that using diverse replacement is good
 %%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 %%DIFFERENT REPLACEMENT OPERATORS FOR MUTATIONS
@@ -714,20 +494,33 @@ In this figure the effectiveness of the different mutation operators are evaluat
 %time
 %chacnes
 %etc etc.
+\section{Final Evaluation}
+%List Configuartions for final evaluation
+%Convergence plot for all k
+%Convergence plot split by k 
+%Improvement Table
+%Performance Plot
+\section{Implementation}
+\section{Experimental Setup}
+\subsection{Environment}
+We evaluate our algorithm on two Hypergraph sets. One time for different $k = \{2,4,8,16,32,64,128\}$ and 174 Hypergraph Instances, repeating
+each run 5 times with different seeds and a algorithm runtime of 8 hours. This is referenced as benchmark subset. The other evaluation is a
+selection of 25 Hypergraphs using only one $k = 32$ and a runtime of 2 hours. This is referenced as tuning subset. 
+As such our datasets contain multiple tuples of $(H, k, s, t, \lambda)$ where $H$ is the instance, $s$ the seed, $t$ the required time and $\lambda$ the solution quality. An Instance $I$ is the subset of $(H, k, s, t, \lambda)$ where $H$ and $k$ are fixed.
+The main interest is the best solution over time compared to other partitioning algorithms. Unfortunately most graphs vary drastically in solution quality and time required to perform one iteration. We solve the time differences by not using the measured time, but rather the normalized time. 
+In order to do so we choose one of the partitioning algorithms $p$ as baseline and determine the average duration $t_I$ of an iteration for each $I$. Afterwards for each $I$ the normalized time $t_n$ is calculated by $t_n = \frac{t}{t_I}$. We then generate a list for each instance containing $(s, t_n, \lambda)$ sorted by $t_n$. Now we generate the averaged improvements for $I$. For each seed $s$ a value $a_s$ is reserved and the list is read in. When $(s, t_n, \lambda)$ is better than the reserved value for $s$ the average over all $a_s$ 
+is the new value appended to the averaged improvements with($(avg(a), t_n)$. Similarly we now reserve a value $a_I$ for each Instance of averaged improvements and calculate a new list of general improvements by calculating the geometric mean over all $a_I$. 
 
-\subsection{Combine chance distribution}
-\begin{figure}[H]
-\caption{Edge frequency chance}
-\begin{center}
-\includegraphics{bachelorarbeit-edgefrequencytuning}
-\end{center}
-In this plot the chances of performing an edge frequency instead of a basic combine are displayed. Clearly recognizable is that a proper application of both operators will lead to improvements. The optimal values are in a range from 20\% to 50\%, however similar to the mutation chance tuning no significant difference can be observed between the tuned values.  
+\begin{figure}[H] 
+    
+  \begin{center}
+   \includegraphics[width=.9\textwidth]{Ipe/seed_averaging_example.pdf}
+  \caption{An example for averaging the seeds of an Instance $I$}\label{fig:averagingseeds} %TODO u nicht gestrichelt; pünktchen
+  \end{center}
+    The solution improvements of the different seeds are run through by ascending normalized time $t_n$ (a)-(f). Then a pair of solution quality and current time is appended to the result every time an improvement is found (b)-(f). The only exception is (a) since there are no existing values to replace. In this case the first values of all seeds are used and the maximum normalized time is used for the first pair.
 \end{figure}
-Additional parameters for that were used as default configuration. The dampening factor for edge frequency (C1) is set to $\gamma = 0.5$ as in \cite{wichlund1998multilevel}. The time allocation for creating the population is set to 15\% of the total time. The time limit was set to 8 hours on the benchmark subset and 2 hours on the tuning subset.
 
-
-
-\subsection{Mutation chance distribution}
+\subsection{Tuning Parameters}
 The parameter spectrum of the evolutionary algorithm is rather voluminous. Beginning with the different chances of the combine and mutation operations to be chosen. As such we first evaluate the operations themselves before tuning the respective chances. The first chance is the amount of mutations performed in contrast to combinations. As such the best value for mutation chance using new initial partitioning, the most powerful mutation operation results in a value of 40\% to 50\% for mutation chance. This is drastically diverging from the chance used in evolutionary graph partitioning which is around 10\% \cite{sanders2012distributed}. 
 \begin{figure}[H]
 \caption{New initial partitioning mutation chance}
@@ -736,12 +529,70 @@ The parameter spectrum of the evolutionary algorithm is rather voluminous. Begin
 \end{center}
 In this plot the different mutation chances are represented. The percentages represent the chance of performing a new initial partitioning vcycle. If not performing a new initial partitioning a basic combine is performed. It is visible that choosing either 0\% mutation chance or 100\% mutation chance are both not viable for generating good solutions. A combination of both operators is increasing solution quality. As seen in this experiment a mutation chance of 40\% for new initial partitioning is generating the best solution. This experiment was performed on the tuning subset to generate values for the run on the benchmark subset.
 \end{figure}
-\section{Final Evaluation}
-%List Configuartions for final evaluation
-%Convergence plot for all k
-%Convergence plot split by k 
-%Improvement Table
-%Performance Plot
+
+Additionally for tuning the chances of selecting a mutation the chance of performing an edge frequency combine can be tuned as well.
+
+\begin{figure}[H]
+\caption{Edge frequency chance}
+\begin{center}
+\includegraphics{bachelorarbeit-edgefrequencytuning}
+\end{center}
+In this plot the chances of performing an edge frequency instead of a basic combine are displayed. Clearly recognizable is that a proper application of both operators will lead to improvements. The optimal values are in a range from 20\% to 50\%, however similar to the mutation chance tuning no significant difference can be observed between the tuned values.  
+\end{figure}
+Additional parameters for that were used as default configuration. The dampening factor for edge frequency (C1) is set to $\gamma = 0.5$ as in \cite{wichlund1998multilevel}. The time allocation for creating the population is set to 15\% of the total time. The time limit was set to 8 hours on the benchmark subset and 2 hours on the tuning subset.
+\subsection{Instances}
+
+\section{Algorithm Evaluation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%  EVALUATION KAHYPARE BEGIN %%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The first evaluation is to compare the simple version of KaHyPar-E against the best configuration KaHyPar-CA + vcycle. To allow this comparison both algorithms have been alloted the same time to create a solution. KaHyPar-CA + vcycle is performing repeated repetitions. All algorithm configurations are run 3 times with different starting seeds. This has been performed on the tuning subset. 
+\begin{figure}[H]
+\caption{Comparing KaHyParE to KaHyPar}
+\begin{center}
+\includegraphics{bachelorarbeit-basiccomparation}
+\end{center}
+
+\end{figure}
+In this plot we evaluate the results of KaHyParE using only basic combines as evolutionary operation against repeated repetitions of KaHyPar-CA and KaHyPar-CA + vcycles which is the strongest configuration for KaHyPar-CA. This evaluation is performed on the tuning subset. The plot lines of KaHyPar-CA, KaHyParE + C1 and KaHyParE + C1 + C2 are nearly identical up to the time point of 10 $t_n$ normalized time. This is due to the fact that KaHyParE is using KaHyPar-CA to generate the initial population. The variations are caused by hardware limitations causing minor fluctuation in the time for performing an iteration and thus slight variations in the normalized time. However the values generated are the same since KaHyPar-CA is configured with the same seed during each of those experiments. KaHyPar-CA + vycles is not sharing the same starting curve. Since v-cycles are time consuming the algorithm steps of KaHyPar-CA + vcycles are slower than the steps of KaHyPar-CA, resulting in an offset of the starting point for the plot line. As expected KaHyPar-CA + vcycles produces better solutions than KaHyPar-CA, which also extends to repeated repetitions. Both variations of KaHyParE gain a significant amount of improvement after generating the initial population. This is due to the combine schemes being able to exploit structural improvements by comparing different partitions as described in \ref{sec:basiccombine} and continually improving the solution quality by the assurance of nondecreasing solution quality \ref{qualityassurance}. However this operation is eventually converging into a local optima since all individuals are going to be replaced with the best solution in relatively close proximity due to the replacement strategy and neither replacement strategy nor operator are capable to decrease the solution quality of a given individual. the multicombine operation C2 however is not restricted to this assurance. This operator is profiting from a stable population in a sense that the best solutions in the population are most likely good solutions. This is visible in the plot since KaHyParE + C1 + C2 is not drastically different from KaHyParE + C1 while the basic combine is still effective but allows for an improvement of solution quality whereas KaHyParE + C1 is plateauing. Comparing KaHyPar-E + C1 against KaHyPar-CA + vcycles using the Wilcoxon-Pratt Test generates a $Z$-Value of 4.37 indicating that KaHyPar-E + C1 is computing better solutions with a confidence of 99.9998\%.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%  EVALUATION KAHYPARE END %%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+After evaluating the combine operators we now consider which mutation operators are improving the solution quality. 
+\begin{figure}[H]
+\caption{Different Mutation Operations}
+\begin{center}
+\includegraphics{bachelorarbeit-differentoperatos}
+\end{center}
+In this figure the effectiveness of the different mutation operators are evaluated. Each data set was created using a 50\% chance of C1 and a 50\% chance of the respective mutation operations. In the specific case M1 + M2 the mutation operation performed was selected uniformly at random. This evaluation was performed on the tuning subset. Adding simple v-cycles M1 to the already existing combine operator is in fact performing worse. This is due to the fact that v-cycles share the same quality assurance as C1 and are thus unable to create worse solutions which are necessary to broaden the solution scope of the population. Individuals that have been optimized during the execution of the algorithm also often have been improved by v-cycles or already have a good enough quality so that v-cycles cannot find improvements. In conclusion this means that v-cycles alone are unable to prevent premature convergence. In contrast using v-cycles with new initial partitioning M2 or a combination of both mutation operators will generate better solutions. Since M2 is not limited by the quality assurance of C1 and M1, worse solutions can be created and the solution scope can be explored more effectively. Stable net detection M3 is generating worse solutions or using up more time to generate individuals and therefore dropped from the algorithm. Interestingly when considering how often the different mutation operations have been able to generate a new best solution M3 has only been able to do so for 2 instances out of 25 whereas any combination of M1 and M2 have created a new best solution in all 25 instances. This suggests that M3 is an operation depending on the hypergraph structure and not easily applicable to a generic hypergraph. Due to the replacement strategy newly generated solutions are only considered for insertion if the solution quality is better than the worst individual in the population and will lead to convergence regardless of which mutation operators are applied. 
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% END EVALUATION OF MUTATIONS 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Mutation operations can be inserted into the population in two different ways. Replacing the element used for the mutation in the classical sense of evolutionary algorithms, or using the diversity replacement approach. We evaluate whether the different replacement strategies are influencing the solution quality.
+\begin{figure}
+\caption{Different replacement strategies for mutations}
+\begin{center}
+\includegraphics{bachelorarbeit-insertrandom}
+\end{center}
+As seen in this plot the different replacement strategies are displayed for M2 and a combination of M1 and M2. While the difference in KaHyPar-E + C1 + M2 and KaHyPar-E + C1 + M2 diverse is only a miniscule improvement in convergence time and solution quality, the difference of KaHyPar-E + C1 + M1 + M2 and KaHyPar-E + C1 + M1 + M2 + diverse is more prominent in terms of solution quality.
+
+\end{figure}
+
+\begin{figure}[H]
+\caption{Using different replacement strategies}
+\label{fig:replacement}
+\begin{center}
+\includegraphics{bachelorarbeit-replacestrategies}
+\end{center}
+
+\end{figure}
+In \ref{fig:replacement} we compare the effectiveness of the three different replacement strategies. Replacing the worst element in the population leads to premature convergence, which is the primary reason for introducing the diverse replacement strategy. However the most natural approach for hypergraphs using the connectivity difference instead of the cut difference results in a slight improvement of the quality. This leads to the conclusion that the connectivity approach is generating  sufficiently different results from the cut approach to influence the replacement target.
+
+Translating the results onto the big data set. 
 % => Convergence all
 \begin{figure}[H]
 \caption{Benchmark subset results}
@@ -789,7 +640,7 @@ The results for the specific k values should be described HERE
 \centering
 \vspace{0pt}
 \captionof{table}{Connectivity improvement of the strongest configurations for KaHyPar-E}~\label{tbl:imp}
-\begin{tabular}{r||r|r||r|r}[H]
+\begin{tabular}{r||r|r||r|r}
 % &  \multicolumn{4}{c}{Algorithms} \\ 
 &\multicolumn{2}{c||}{KaHyPar-E+C1+C2} & \multicolumn{2}{c}{KaHyParE+C1+M1+M2} \\
 $k$                     &                              KaHyPar-CA-V    & KaHyPar-CA &  KaHyPar-CA-V   & KaHyPar-CA  \\ 
