@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.29)  9 NOV 2017 17:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.29)  10 NOV 2017 02:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1473,13 +1473,19 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 151.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <17.28> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 151.
+
+Overfull \hbox (0.8425pt too wide) in paragraph at lines 158--159
+\T1/ptm/m/n/12 Das NP-schwere Hy-per-gra-ph-par-ti-tio-nie-rungs-pro-blem be-si
+tzt vie-le An-wen-dungs-ge-bie-te wie
+ []
+
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 154.
+(babel)             in language  on input line 163.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 154.
+(babel)             in language  on input line 163.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 154.
- [3
+(babel)             in language  on input line 163.
+[3
 
 ] [4
 
@@ -1491,9 +1497,8 @@ Package babel Info: Redefining german shorthand "~
 
 ]
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 180.
-
-(./bachelorarbeit.toc [7])
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 189.
+ (./bachelorarbeit.toc [7])
 \tf@toc=\write5
 \openout5 = `bachelorarbeit.toc'.
 
@@ -1523,16 +1528,16 @@ Class scrbook Warning: \float@addtolists detected!
 
 ] [2]
 chapter 2.
-<Ipe/Coarsening_Example.pdf, id=144, 412.97185pt x 184.87871pt>
+<Ipe/Coarsening_Example.pdf, id=145, 412.97185pt x 184.87871pt>
 File: Ipe/Coarsening_Example.pdf Graphic file (type pdf)
 
 <use Ipe/Coarsening_Example.pdf>
-Package pdftex.def Info: Ipe/Coarsening_Example.pdf used on input line 218.
+Package pdftex.def Info: Ipe/Coarsening_Example.pdf used on input line 227.
 (pdftex.def)             Requested size: 346.55592pt x 155.1447pt.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 219.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 228.
 
-Overfull \hbox (0.66315pt too wide) in paragraph at lines 248--249
+Overfull \hbox (0.66315pt too wide) in paragraph at lines 257--258
 \T1/ptm/m/n/12 There are sev-eral hy-per-graph par-ti-tion-ing al-go-rithms, or
 ig-i-nat-ing from var-i-ous back-grounds
  []
@@ -1541,14 +1546,14 @@ ig-i-nat-ing from var-i-ous back-grounds
 
 
 ] [4 <./Ipe/Coarsening_Example.pdf>]
-<Ipe/Memetic_process.pdf, id=230, 583.54327pt x 401.59033pt>
+<Ipe/Memetic_process.pdf, id=231, 583.54327pt x 401.59033pt>
 File: Ipe/Memetic_process.pdf Graphic file (type pdf)
 
 <use Ipe/Memetic_process.pdf>
-Package pdftex.def Info: Ipe/Memetic_process.pdf used on input line 287.
+Package pdftex.def Info: Ipe/Memetic_process.pdf used on input line 296.
 (pdftex.def)             Requested size: 346.55592pt x 238.49881pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 278--291
+Underfull \hbox (badness 10000) in paragraph at lines 287--300
 
  []
 
@@ -1557,150 +1562,192 @@ chapter 3.
 [7
 
 
-] [8] <Ipe/connexample.pdf, id=280, 285.46649pt x 136.9115pt>
+] [8] <Ipe/connexample.pdf, id=281, 285.46649pt x 136.9115pt>
 File: Ipe/connexample.pdf Graphic file (type pdf)
 
 <use Ipe/connexample.pdf>
-Package pdftex.def Info: Ipe/connexample.pdf used on input line 338.
+Package pdftex.def Info: Ipe/connexample.pdf used on input line 347.
 (pdftex.def)             Requested size: 346.55592pt x 166.22537pt.
  [9 <./Ipe/connexample.pdf>]
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 352.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 361.
  [10] [11] [12]
-<Ipe/diverse_example.pdf, id=314, 385.84149pt x 144.9415pt>
+<Ipe/diverse_example.pdf, id=315, 385.84149pt x 144.9415pt>
 File: Ipe/diverse_example.pdf Graphic file (type pdf)
 
 <use Ipe/diverse_example.pdf>
-Package pdftex.def Info: Ipe/diverse_example.pdf used on input line 415.
+Package pdftex.def Info: Ipe/diverse_example.pdf used on input line 424.
 (pdftex.def)             Requested size: 346.55592pt x 130.19179pt.
  [13 <./Ipe/diverse_example.pdf>] [14
 
 
 ]
 chapter 4.
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.455 \newline
+               ~\newline
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 455--459
+
+ []
+
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 440.
-
-LaTeX Warning: Citation `ISPD98' on page 15 undefined on input line 440.
-
-
-LaTeX Warning: Citation `SPM colection' on page 15 undefined on input line 440.
-
-
-
-LaTeX Warning: Citation `DAC' on page 15 undefined on input line 440.
-
-
-LaTeX Warning: Citation `SAT' on page 15 undefined on input line 440.
-
-
-LaTeX Warning: Citation `row net model' on page 15 undefined on input line 440.
-
-
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 463.
 
 LaTeX Warning: Reference `the section with the graphic' on page 15 undefined on
- input line 446.
+ input line 463.
 
 
 LaTeX Warning: Citation `ein schlag paper' on page 15 undefined on input line 4
-50.
+67.
 
 
-LaTeX Warning: Reference `sec:vcycles' on page 15 undefined on input line 452.
+LaTeX Warning: Reference `sec:vcycles' on page 15 undefined on input line 469.
 
 
 LaTeX Warning: Citation `The work that uses local search unbounded' on page 15 
-undefined on input line 452.
+undefined on input line 469.
 
 ! You can't use `macro parameter character #' in math mode.
 <recently read> ##
                   
-l.452 ...t the stopping criterion is always met $#
+l.469 ...t the stopping criterion is always met $#
                                                   v-cycles = 100$. This algo...
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
 If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 460--474
+
+ []
+
 [15] [16] [17]
-<Ipe/seed_averaging_example.pdf, id=406, 397.63556pt x 276.44179pt>
+<Ipe/seed_averaging_example.pdf, id=416, 397.63556pt x 276.44179pt>
 File: Ipe/seed_averaging_example.pdf Graphic file (type pdf)
 
 <use Ipe/seed_averaging_example.pdf>
-Package pdftex.def Info: Ipe/seed_averaging_example.pdf used on input line 624.
+Package pdftex.def Info: Ipe/seed_averaging_example.pdf used on input line 642.
 
 (pdftex.def)             Requested size: 389.87129pt x 271.0503pt.
  [18]
-<Ipe/instanceaveragingexample.pdf, id=416, 446.8695pt x 290.47171pt>
+<Ipe/instanceaveragingexample.pdf, id=426, 446.8695pt x 290.47171pt>
 File: Ipe/instanceaveragingexample.pdf Graphic file (type pdf)
 
 <use Ipe/instanceaveragingexample.pdf>
-Package pdftex.def Info: Ipe/instanceaveragingexample.pdf used on input line 63
-5.
+Package pdftex.def Info: Ipe/instanceaveragingexample.pdf used on input line 65
+3.
 (pdftex.def)             Requested size: 389.87129pt x 253.43523pt.
  [19 <./Ipe/seed_averaging_example.pdf>]
 [20 <./Ipe/instanceaveragingexample.pdf>]
 
 LaTeX Warning: Reference `replcaestrategies' on page 21 undefined on input line
- 654.
+ 672.
 
-<bachelorarbeit-replacestrategies.pdf, id=644, 433.62pt x 289.08pt>
+<bachelorarbeit-replacestrategies.pdf, id=655, 433.62pt x 289.08pt>
 File: bachelorarbeit-replacestrategies.pdf Graphic file (type pdf)
 
 <use bachelorarbeit-replacestrategies.pdf>
 Package pdftex.def Info: bachelorarbeit-replacestrategies.pdf used on input lin
-e 659.
+e 677.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
-
+ [21]
 
 LaTeX Warning: Reference `Wo auch immer ich gesagt habe dass worst mist ist' on
- page 21 undefined on input line 663.
+ page 22 undefined on input line 681.
 
-[21 <./bachelorarbeit-replacestrategies.pdf>]
-<bachelorarbeit-basiccomparation.pdf, id=659, 433.62pt x 289.08pt>
+<bachelorarbeit-basiccomparation.pdf, id=665, 433.62pt x 289.08pt>
 File: bachelorarbeit-basiccomparation.pdf Graphic file (type pdf)
 
 <use bachelorarbeit-basiccomparation.pdf>
 Package pdftex.def Info: bachelorarbeit-basiccomparation.pdf used on input line
- 678.
+ 697.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
- [22 <./bachelorarbeit-basiccomparation.pdf>] <bachelorarbeit-differentoperatos
-.pdf, id=673, 433.62pt x 289.08pt>
+ [22 <./bachelorarbeit-replacestrategies.pdf>] [23 <./bachelorarbeit-basiccompa
+ration.pdf>]
+<bachelorarbeit-differentoperatos.pdf, id=690, 433.62pt x 289.08pt>
 File: bachelorarbeit-differentoperatos.pdf Graphic file (type pdf)
 
 <use bachelorarbeit-differentoperatos.pdf>
 Package pdftex.def Info: bachelorarbeit-differentoperatos.pdf used on input lin
-e 692.
+e 711.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
- [23] [24 <./bachelorarbeit-differentoperatos.pdf>]
-<bachelorarbeit-edgefrequencytuning.pdf, id=689, 433.62pt x 289.08pt>
+ [24] [25 <./bachelorarbeit-differentoperatos.pdf>]
+File: bachelorarbeit-differentoperatos.pdf Graphic file (type pdf)
+ <use bachelorarbeit-differentoperatos.pdf>
+Package pdftex.def Info: bachelorarbeit-differentoperatos.pdf used on input lin
+e 732.
+(pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
+ [26]
+<bachelorarbeit-edgefrequencytuning.pdf, id=711, 433.62pt x 289.08pt>
 File: bachelorarbeit-edgefrequencytuning.pdf Graphic file (type pdf)
 
 <use bachelorarbeit-edgefrequencytuning.pdf>
 Package pdftex.def Info: bachelorarbeit-edgefrequencytuning.pdf used on input l
-ine 722.
+ine 748.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
- [25]
-<bachelorarbeit-newipmutationchance.pdf, id=696, 433.62pt x 289.08pt>
+ [27]
+<bachelorarbeit-newipmutationchance.pdf, id=720, 433.62pt x 289.08pt>
 File: bachelorarbeit-newipmutationchance.pdf Graphic file (type pdf)
 
 <use bachelorarbeit-newipmutationchance.pdf>
 Package pdftex.def Info: bachelorarbeit-newipmutationchance.pdf used on input l
-ine 735.
+ine 761.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
- [26 <./bachelorarbeit-edgefrequencytuning.pdf>] [27 <./bachelorarbeit-newipmut
-ationchance.pdf>] [28]
+ [28 <./bachelorarbeit-edgefrequencytuning.pdf>]
+
+LaTeX Warning: Command \k invalid in math mode on input line 766.
+
+<../Heatmap/RplotAll.pdf, id=731, 397.485pt x 281.05pt>
+File: ../Heatmap/RplotAll.pdf Graphic file (type pdf)
+
+<use ../Heatmap/RplotAll.pdf>
+Package pdftex.def Info: ../Heatmap/RplotAll.pdf used on input line 776.
+(pdftex.def)             Requested size: 433.19327pt x 306.3084pt.
+ [29 <./bachelorarbeit-newipmutationchance.pdf>]
+<rnw/appendix_convergence-1.pdf, id=743, 867.24pt x 578.16pt>
+File: rnw/appendix_convergence-1.pdf Graphic file (type pdf)
+
+<use rnw/appendix_convergence-1.pdf>
+Package pdftex.def Info: rnw/appendix_convergence-1.pdf used on input line 797.
+
+(pdftex.def)             Requested size: 433.19327pt x 288.79698pt.
+
+<rnw/appendix_convergence-2.pdf, id=744, 867.24pt x 578.16pt>
+File: rnw/appendix_convergence-2.pdf Graphic file (type pdf)
+
+<use rnw/appendix_convergence-2.pdf>
+Package pdftex.def Info: rnw/appendix_convergence-2.pdf used on input line 798.
+
+(pdftex.def)             Requested size: 433.19327pt x 288.79698pt.
+ [30 <../Heatmap/RplotAll.pdf>]
+Overfull \vbox (39.79185pt too high) has occurred while \output is active []
+
+
+[31 <./rnw/appendix_convergence-1.pdf> <./rnw/appendix_convergence-2.pdf>]
+[32]
 chapter 5.
-[29
+[33
 
 
-] [30
+] [34
 
 
 
 ]
 chapter A.
-(./bachelorarbeit.bbl [31] [32
+(./bachelorarbeit.bbl [35] [36
 
 
 ]
@@ -1807,6 +1854,24 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
 (scrbook)              by `\normalfont \scshape ' on input line 12.
 
+! Undefined control sequence.
+l.13 \newblock \Btxinlong
+                         {}\ {\em Proceedings of the 1998 international symp...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.14   Physical design}, \btxpageslong
+                                      {}\ 80--85. ACM, 1998.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -1819,10 +1884,24 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 12.
+(scrbook)              by `\normalfont \scshape ' on input line 17.
+
+
+Class scrbook Warning: Usage of deprecated font command `\sc'!
+(scrbook)              You should note, that in 1994 font command `\sc' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\sc' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
+(scrbook)              by `\normalfont \scshape ' on input line 17.
 
 ! Undefined control sequence.
-l.12 ...arles~J}, {\sc Jen-Hsin Huang} \btxandlong
+l.17 ...arles~J}, {\sc Jen-Hsin Huang} \btxandlong
                                                   {}\ {\sc Andrew~B
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1842,7 +1921,7 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 12.
+(scrbook)              by `\normalfont \scshape ' on input line 17.
 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
@@ -1856,10 +1935,10 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 18.
+(scrbook)              by `\normalfont \scshape ' on input line 23.
 
 ! Undefined control sequence.
-l.18 {\sc Alpert, Charles~J} \btxandlong
+l.23 {\sc Alpert, Charles~J} \btxandlong
                                         {}\ {\sc Andrew~B Kahng}: {\em Recent
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1879,7 +1958,7 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 18.
+(scrbook)              by `\normalfont \scshape ' on input line 23.
 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
@@ -1893,10 +1972,10 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 23.
+(scrbook)              by `\normalfont \scshape ' on input line 28.
 
 ! Undefined control sequence.
-l.25 \newblock \Btxinlong
+l.30 \newblock \Btxinlong
                          {}\ {\em GECCO 2000}, \btxpageslong{}\ 97--102, 2000.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1905,7 +1984,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.25 ...xinlong{}\ {\em GECCO 2000}, \btxpageslong
+l.30 ...xinlong{}\ {\em GECCO 2000}, \btxpageslong
                                                   {}\ 97--102, 2000.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1925,7 +2004,7 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 28.
+(scrbook)              by `\normalfont \scshape ' on input line 33.
 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
@@ -1939,7 +2018,7 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 28.
+(scrbook)              by `\normalfont \scshape ' on input line 33.
 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
@@ -1953,10 +2032,10 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 28.
+(scrbook)              by `\normalfont \scshape ' on input line 33.
 
 ! Undefined control sequence.
-l.28 ...G~Grewal}, {\sc Shawki Areibi} \btxandlong
+l.33 ...G~Grewal}, {\sc Shawki Areibi} \btxandlong
                                                   {}\ {\sc
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1976,10 +2055,10 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 28.
+(scrbook)              by `\normalfont \scshape ' on input line 33.
 
 ! Undefined control sequence.
-l.31 \newblock \Btxinlong
+l.36 \newblock \Btxinlong
                          {}\ {\em Electrical and Computer Engineering (CCECE...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1988,7 +2067,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.32   23rd Canadian Conference on}, \btxpageslong
+l.37   23rd Canadian Conference on}, \btxpageslong
                                                   {}\ 1--6. IEEE, 2010.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2008,7 +2087,7 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 35.
+(scrbook)              by `\normalfont \scshape ' on input line 40.
 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
@@ -2022,10 +2101,10 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 35.
+(scrbook)              by `\normalfont \scshape ' on input line 40.
 
 ! Undefined control sequence.
-l.35 ...det}, {\sc B~Barla Cambazoglu} \btxandlong
+l.40 ...det}, {\sc B~Barla Cambazoglu} \btxandlong
                                                   {}\ {\sc Bora
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2045,21 +2124,7 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 35.
-
-
-Class scrbook Warning: Usage of deprecated font command `\sc'!
-(scrbook)              You should note, that in 1994 font command `\sc' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\sc' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 41.
+(scrbook)              by `\normalfont \scshape ' on input line 40.
 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
@@ -2087,7 +2152,7 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 46.
+(scrbook)              by `\normalfont \scshape ' on input line 51.
 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
@@ -2101,10 +2166,24 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 46.
+(scrbook)              by `\normalfont \scshape ' on input line 51.
+
+
+Class scrbook Warning: Usage of deprecated font command `\sc'!
+(scrbook)              You should note, that in 1994 font command `\sc' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\sc' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
+(scrbook)              by `\normalfont \scshape ' on input line 51.
 
 ! Undefined control sequence.
-l.47   \btxandlong
+l.52   \btxandlong
                   {}\ {\sc Dorothea Wagner}: {\em Graph partitioning and graph
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2124,10 +2203,10 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 47.
+(scrbook)              by `\normalfont \scshape ' on input line 52.
 
 ! Undefined control sequence.
-l.48   clustering}, \btxvolumelong
+l.53   clustering}, \btxvolumelong
                                   {}\ 588.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2147,57 +2226,6 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 52.
-
-! Undefined control sequence.
-l.52 {\sc Blickle, Tobias} \btxandlong
-                                      {}\ {\sc Lothar Thiele}: {\em A compar...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Class scrbook Warning: Usage of deprecated font command `\sc'!
-(scrbook)              You should note, that in 1994 font command `\sc' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\sc' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 52.
-
-
-Class scrbook Warning: Usage of deprecated font command `\sc'!
-(scrbook)              You should note, that in 1994 font command `\sc' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\sc' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 57.
-
-
-Class scrbook Warning: Usage of deprecated font command `\sc'!
-(scrbook)              You should note, that in 1994 font command `\sc' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\sc' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
 (scrbook)              by `\normalfont \scshape ' on input line 57.
 
 
@@ -2229,8 +2257,8 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              by `\normalfont \scshape ' on input line 57.
 
 ! Undefined control sequence.
-l.58   Leung} \btxandlong
-                         {}\ {\sc Dian Zhou}: {\em On high-speed VLSI interc...
+l.57 ...iepold}, {\sc Marijn~JH Heule} \btxandlong
+                                                  {}\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -2251,8 +2279,124 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
 (scrbook)              by `\normalfont \scshape ' on input line 58.
 
+
+Class scrbook Warning: Usage of deprecated font command `\sc'!
+(scrbook)              You should note, that in 1994 font command `\sc' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\sc' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
+(scrbook)              by `\normalfont \scshape ' on input line 62.
+
 ! Undefined control sequence.
-l.60 \newblock \Btxinlong
+l.62 {\sc Blickle, Tobias} \btxandlong
+                                      {}\ {\sc Lothar Thiele}: {\em A compar...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Class scrbook Warning: Usage of deprecated font command `\sc'!
+(scrbook)              You should note, that in 1994 font command `\sc' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\sc' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
+(scrbook)              by `\normalfont \scshape ' on input line 62.
+
+
+Class scrbook Warning: Usage of deprecated font command `\sc'!
+(scrbook)              You should note, that in 1994 font command `\sc' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\sc' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
+(scrbook)              by `\normalfont \scshape ' on input line 67.
+
+
+Class scrbook Warning: Usage of deprecated font command `\sc'!
+(scrbook)              You should note, that in 1994 font command `\sc' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\sc' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
+(scrbook)              by `\normalfont \scshape ' on input line 67.
+
+
+Class scrbook Warning: Usage of deprecated font command `\sc'!
+(scrbook)              You should note, that in 1994 font command `\sc' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\sc' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
+(scrbook)              by `\normalfont \scshape ' on input line 67.
+
+
+Class scrbook Warning: Usage of deprecated font command `\sc'!
+(scrbook)              You should note, that in 1994 font command `\sc' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\sc' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
+(scrbook)              by `\normalfont \scshape ' on input line 67.
+
+! Undefined control sequence.
+l.68   Leung} \btxandlong
+                         {}\ {\sc Dian Zhou}: {\em On high-speed VLSI interc...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Class scrbook Warning: Usage of deprecated font command `\sc'!
+(scrbook)              You should note, that in 1994 font command `\sc' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\sc' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
+(scrbook)              by `\normalfont \scshape ' on input line 68.
+
+! Undefined control sequence.
+l.70 \newblock \Btxinlong
                          {}\ {\em Proc. Asia-Pacific Conf. on Circuits and S...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2261,7 +2405,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.61   \btxpageslong
+l.71   \btxpageslong
                     {}\ 35--40, 1992.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2281,10 +2425,10 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 64.
+(scrbook)              by `\normalfont \scshape ' on input line 74.
 
 ! Undefined control sequence.
-l.64 {\sc Bui, Thang~Nguyen} \btxandlong
+l.74 {\sc Bui, Thang~Nguyen} \btxandlong
                                         {}\ {\sc Byung~Ro Moon}: {\em A fast...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2304,10 +2448,10 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 64.
+(scrbook)              by `\normalfont \scshape ' on input line 74.
 
 ! Undefined control sequence.
-l.67 \newblock \Btxinlong
+l.77 \newblock \Btxinlong
                          {}\ {\em Proceedings of the 31st annual Design Auto...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2316,7 +2460,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.68   Conference}, \btxpageslong
+l.78   Conference}, \btxpageslong
                                  {}\ 664--669. ACM, 1994.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2324,6 +2468,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+[37]
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -2336,21 +2481,7 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 71.
-
-
-Class scrbook Warning: Usage of deprecated font command `\sc'!
-(scrbook)              You should note, that in 1994 font command `\sc' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\sc' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 71.
+(scrbook)              by `\normalfont \scshape ' on input line 81.
 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
@@ -2364,7 +2495,7 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 71.
+(scrbook)              by `\normalfont \scshape ' on input line 81.
 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
@@ -2378,10 +2509,24 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 71.
+(scrbook)              by `\normalfont \scshape ' on input line 81.
+
+
+Class scrbook Warning: Usage of deprecated font command `\sc'!
+(scrbook)              You should note, that in 1994 font command `\sc' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\sc' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
+(scrbook)              by `\normalfont \scshape ' on input line 81.
 
 ! Undefined control sequence.
-l.72   Peter Sanders} \btxandlong
+l.82   Peter Sanders} \btxandlong
                                  {}\ {\sc Christian Schulz}: {\em Recent adv...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2401,10 +2546,10 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 72.
+(scrbook)              by `\normalfont \scshape ' on input line 82.
 
 ! Undefined control sequence.
-l.74 \newblock \Btxinlong
+l.84 \newblock \Btxinlong
                          {}\ {\em Algorithm Engineering}, \btxpageslong{}\ 1...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2413,7 +2558,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.74 ...{\em Algorithm Engineering}, \btxpageslong
+l.84 ...{\em Algorithm Engineering}, \btxpageslong
                                                   {}\ 117--158.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2422,13 +2567,12 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 1661) in paragraph at lines 71--76
+Underfull \hbox (badness 1661) in paragraph at lines 81--86
 []\T1/ptm/m/sc/12 Buluç, Ay-d^^Yn\T1/ptm/m/n/12 , \T1/ptm/m/sc/12 Hen-ning Mey-
 er-henke\T1/ptm/m/n/12 , \T1/ptm/m/sc/12 Ilya Safro\T1/ptm/m/n/12 , \T1/ptm/m/s
 c/12 Pe-ter Sanders
  []
 
-[33]
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -2441,10 +2585,10 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 78.
+(scrbook)              by `\normalfont \scshape ' on input line 88.
 
 ! Undefined control sequence.
-l.78 {\sc Catalyurek, Umit~V} \btxandlong
+l.88 {\sc Catalyurek, Umit~V} \btxandlong
                                          {}\ {\sc Cevdet Aykanat}: {\em
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2464,7 +2608,7 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 78.
+(scrbook)              by `\normalfont \scshape ' on input line 88.
 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
@@ -2478,10 +2622,10 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 85.
+(scrbook)              by `\normalfont \scshape ' on input line 95.
 
 ! Undefined control sequence.
-l.85 {\sc Chan, Heming} \btxandlong
+l.95 {\sc Chan, Heming} \btxandlong
                                    {}\ {\sc Pinaki Mazumder}: {\em A systolic
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2501,10 +2645,10 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 85.
+(scrbook)              by `\normalfont \scshape ' on input line 95.
 
 ! Undefined control sequence.
-l.88 ...in evolutionary computation, \btxpageslong
+l.98 ...in evolutionary computation, \btxpageslong
                                                   {}\ 109--126,
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2524,7 +2668,7 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 92.
+(scrbook)              by `\normalfont \scshape ' on input line 102.
 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
@@ -2538,7 +2682,7 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 92.
+(scrbook)              by `\normalfont \scshape ' on input line 102.
 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
@@ -2552,10 +2696,10 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 92.
+(scrbook)              by `\normalfont \scshape ' on input line 102.
 
 ! Undefined control sequence.
-l.92 ... Ke~Tang}, {\sc Guoliang Chen} \btxandlong
+l.102 ...Ke~Tang}, {\sc Guoliang Chen} \btxandlong
                                                   {}\ {\sc Xin
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2575,7 +2719,7 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 92.
+(scrbook)              by `\normalfont \scshape ' on input line 102.
 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
@@ -2589,39 +2733,11 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 98.
-
-
-Class scrbook Warning: Usage of deprecated font command `\sc'!
-(scrbook)              You should note, that in 1994 font command `\sc' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\sc' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 98.
-
-
-Class scrbook Warning: Usage of deprecated font command `\sc'!
-(scrbook)              You should note, that in 1994 font command `\sc' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\sc' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 98.
+(scrbook)              by `\normalfont \scshape ' on input line 108.
 
 ! Undefined control sequence.
-l.99   \btxandlong
-                  {}\ {\sc Renato~F Werneck}: {\em Graph partitioning with n...
+l.108 {\sc Davis, Timothy~A} \btxandlong
+                                        {}\ {\sc Yifan Hu}: {\em The Univers...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -2640,10 +2756,75 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 99.
+(scrbook)              by `\normalfont \scshape ' on input line 108.
+
+
+Class scrbook Warning: Usage of deprecated font command `\sc'!
+(scrbook)              You should note, that in 1994 font command `\sc' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\sc' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
+(scrbook)              by `\normalfont \scshape ' on input line 113.
+
+
+Class scrbook Warning: Usage of deprecated font command `\sc'!
+(scrbook)              You should note, that in 1994 font command `\sc' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\sc' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
+(scrbook)              by `\normalfont \scshape ' on input line 113.
+
+
+Class scrbook Warning: Usage of deprecated font command `\sc'!
+(scrbook)              You should note, that in 1994 font command `\sc' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\sc' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
+(scrbook)              by `\normalfont \scshape ' on input line 113.
 
 ! Undefined control sequence.
-l.101 \newblock \Btxinlong
+l.114   \btxandlong
+                   {}\ {\sc Renato~F Werneck}: {\em Graph partitioning with ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Class scrbook Warning: Usage of deprecated font command `\sc'!
+(scrbook)              You should note, that in 1994 font command `\sc' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\sc' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
+(scrbook)              by `\normalfont \scshape ' on input line 114.
+
+! Undefined control sequence.
+l.116 \newblock \Btxinlong
                           {}\ {\em Parallel \& Distributed Processing Symposium
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2652,7 +2833,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.102 ..., 2011 IEEE International}, \btxpageslong
+l.117 ..., 2011 IEEE International}, \btxpageslong
                                                   {}\ 1135--1146. IEEE, 2011.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2672,7 +2853,7 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 105.
+(scrbook)              by `\normalfont \scshape ' on input line 120.
 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
@@ -2686,7 +2867,7 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 105.
+(scrbook)              by `\normalfont \scshape ' on input line 120.
 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
@@ -2700,7 +2881,7 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 105.
+(scrbook)              by `\normalfont \scshape ' on input line 120.
 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
@@ -2714,10 +2895,10 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 105.
+(scrbook)              by `\normalfont \scshape ' on input line 120.
 
 ! Undefined control sequence.
-l.106   Bisseling} \btxandlong
+l.121   Bisseling} \btxandlong
                               {}\ {\sc Umit~V Catalyurek}: {\em Parallel hyp...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2737,10 +2918,10 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 106.
+(scrbook)              by `\normalfont \scshape ' on input line 121.
 
 ! Undefined control sequence.
-l.108 \newblock \Btxinlong
+l.123 \newblock \Btxinlong
                           {}\ {\em Parallel and Distributed Processing Sympo...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2749,7 +2930,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.109 ... 2006. 20th International}, \btxpageslong
+l.124 ... 2006. 20th International}, \btxpageslong
                                                   {}\ 10--pp. IEEE, 2006.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2769,10 +2950,10 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 112.
+(scrbook)              by `\normalfont \scshape ' on input line 127.
 
 ! Undefined control sequence.
-l.112 {\sc Fiduccia, Charles~M} \btxandlong
+l.127 {\sc Fiduccia, Charles~M} \btxandlong
                                            {}\ {\sc Robert~M Mattheyses}: {\...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2792,10 +2973,10 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 112.
+(scrbook)              by `\normalfont \scshape ' on input line 127.
 
 ! Undefined control sequence.
-l.114 \newblock \Btxinlong
+l.129 \newblock \Btxinlong
                           {}\ {\em Papers on Twenty-five years of electronic...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2804,7 +2985,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.115   automation}, \btxpageslong
+l.130   automation}, \btxpageslong
                                   {}\ 241--247. ACM, 1988.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2824,10 +3005,10 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 118.
+(scrbook)              by `\normalfont \scshape ' on input line 133.
 
 ! Undefined control sequence.
-l.118 {\sc Garey, Michael~R} \btxandlong
+l.133 {\sc Garey, Michael~R} \btxandlong
                                         {}\ {\sc David~S Johnson}: {\em Comp...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2847,10 +3028,10 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 118.
+(scrbook)              by `\normalfont \scshape ' on input line 133.
 
 ! Undefined control sequence.
-l.119   intractability}, \btxvolumelong
+l.134   intractability}, \btxvolumelong
                                        {}~29.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2870,10 +3051,10 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 123.
+(scrbook)              by `\normalfont \scshape ' on input line 138.
 
 ! Undefined control sequence.
-l.123 {\sc Heuer, Tobias} \btxandlong
+l.138 {\sc Heuer, Tobias} \btxandlong
                                      {}\ {\sc Sebastian Schlag}: {\em Improving
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2893,10 +3074,10 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 123.
+(scrbook)              by `\normalfont \scshape ' on input line 138.
 
 ! Undefined control sequence.
-l.126 \newblock \Btxinlong
+l.141 \newblock \Btxinlong
                           {}\ {\em LIPIcs-Leibniz International Proceedings in
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2905,7 +3086,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.127   Informatics}, \btxvolumelong
+l.142   Informatics}, \btxvolumelong
                                     {}~75. Schloss Dagstuhl-Leibniz-Zentrum ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2925,7 +3106,7 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 131.
+(scrbook)              by `\normalfont \scshape ' on input line 146.
 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
@@ -2939,10 +3120,10 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 131.
+(scrbook)              by `\normalfont \scshape ' on input line 146.
 
 ! Undefined control sequence.
-l.131 ... Manuel}, {\sc Peter Sanders} \btxandlong
+l.146 ... Manuel}, {\sc Peter Sanders} \btxandlong
                                                   {}\ {\sc Christian
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2962,10 +3143,10 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 131.
+(scrbook)              by `\normalfont \scshape ' on input line 146.
 
 ! Undefined control sequence.
-l.133 \newblock \Btxinlong
+l.148 \newblock \Btxinlong
                           {}\ {\em Parallel \& Distributed Processing (IPDPS...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2974,7 +3155,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.134 ...nternational Symposium on}, \btxpageslong
+l.149 ...nternational Symposium on}, \btxpageslong
                                                   {}\ 1--12. IEEE, 2010.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2994,10 +3175,10 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 137.
+(scrbook)              by `\normalfont \scshape ' on input line 152.
 
 ! Undefined control sequence.
-l.139 \newblock \Btxinlong
+l.154 \newblock \Btxinlong
                           {}\ {\em International Conference on Parallel Problem
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3006,7 +3187,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.140   Solving from Nature}, \btxpageslong
+l.155   Solving from Nature}, \btxpageslong
                                            {}\ 75--79. Springer, 1990.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3026,7 +3207,7 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 143.
+(scrbook)              by `\normalfont \scshape ' on input line 158.
 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
@@ -3040,7 +3221,7 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 143.
+(scrbook)              by `\normalfont \scshape ' on input line 158.
 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
@@ -3054,7 +3235,7 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 143.
+(scrbook)              by `\normalfont \scshape ' on input line 158.
 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
@@ -3068,10 +3249,10 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 143.
+(scrbook)              by `\normalfont \scshape ' on input line 158.
 
 ! Undefined control sequence.
-l.144   Pupyrev} \btxandlong
+l.159   Pupyrev} \btxandlong
                             {}\ {\sc Alon Shalita}: {\em Social hash partiti...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3091,7 +3272,22 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 144.
+(scrbook)              by `\normalfont \scshape ' on input line 159.
+
+[38]
+
+Class scrbook Warning: Usage of deprecated font command `\sc'!
+(scrbook)              You should note, that in 1994 font command `\sc' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\sc' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
+(scrbook)              by `\normalfont \scshape ' on input line 164.
 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
@@ -3105,7 +3301,7 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 149.
+(scrbook)              by `\normalfont \scshape ' on input line 164.
 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
@@ -3119,24 +3315,10 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 149.
-
-
-Class scrbook Warning: Usage of deprecated font command `\sc'!
-(scrbook)              You should note, that in 1994 font command `\sc' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\sc' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 149.
+(scrbook)              by `\normalfont \scshape ' on input line 164.
 
 ! Undefined control sequence.
-l.149 ... Aggarwal}, {\sc Vipin Kumar} \btxandlong
+l.164 ... Aggarwal}, {\sc Vipin Kumar} \btxandlong
                                                   {}\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3156,7 +3338,7 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 150.
+(scrbook)              by `\normalfont \scshape ' on input line 165.
 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
@@ -3170,10 +3352,10 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 156.
+(scrbook)              by `\normalfont \scshape ' on input line 171.
 
 ! Undefined control sequence.
-l.156 {\sc Karypis, George} \btxandlong
+l.171 {\sc Karypis, George} \btxandlong
                                        {}\ {\sc Vipin Kumar}: {\em Multileve...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3193,22 +3375,7 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 156.
-
-[34]
-
-Class scrbook Warning: Usage of deprecated font command `\sc'!
-(scrbook)              You should note, that in 1994 font command `\sc' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\sc' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 161.
+(scrbook)              by `\normalfont \scshape ' on input line 171.
 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
@@ -3222,10 +3389,24 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 161.
+(scrbook)              by `\normalfont \scshape ' on input line 176.
+
+
+Class scrbook Warning: Usage of deprecated font command `\sc'!
+(scrbook)              You should note, that in 1994 font command `\sc' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\sc' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
+(scrbook)              by `\normalfont \scshape ' on input line 176.
 
 ! Undefined control sequence.
-l.161 ...ong-Pil}, {\sc Yong-Hyuk Kim} \btxandlong
+l.176 ...ong-Pil}, {\sc Yong-Hyuk Kim} \btxandlong
                                                   {}\ {\sc Byung-Ro Moon}:
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3245,10 +3426,10 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 161.
+(scrbook)              by `\normalfont \scshape ' on input line 176.
 
 ! Undefined control sequence.
-l.163 \newblock \Btxinlong
+l.178 \newblock \Btxinlong
                           {}\ {\em Genetic and Evolutionary Computation--GEC...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3257,7 +3438,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.164   \btxpageslong
+l.179   \btxpageslong
                      {}\ 1054--1064. Springer, 2004.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3277,10 +3458,10 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 167.
+(scrbook)              by `\normalfont \scshape ' on input line 182.
 
 ! Undefined control sequence.
-l.167 {\sc Kim, Yong-Hyuk} \btxandlong
+l.182 {\sc Kim, Yong-Hyuk} \btxandlong
                                       {}\ {\sc Byung-Ro Moon}: {\em Lock-gai...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3300,7 +3481,7 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 167.
+(scrbook)              by `\normalfont \scshape ' on input line 182.
 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
@@ -3314,7 +3495,7 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 172.
+(scrbook)              by `\normalfont \scshape ' on input line 187.
 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
@@ -3328,10 +3509,10 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 172.
+(scrbook)              by `\normalfont \scshape ' on input line 187.
 
 ! Undefined control sequence.
-l.172 ...Sung~Kyu}, {\sc Dongmin Xu} \btxetalshort
+l.187 ...Sung~Kyu}, {\sc Dongmin Xu} \btxetalshort
                                                   {.}: {\em Large scale
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3340,7 +3521,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.175 \newblock \Btxinlong
+l.190 \newblock \Btxinlong
                           {}\ {\em Computer-Aided Design, 1997. Digest of Te...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3349,7 +3530,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.176 ...ternational Conference on}, \btxpageslong
+l.191 ...ternational Conference on}, \btxpageslong
                                                   {}\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3369,10 +3550,10 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 180.
+(scrbook)              by `\normalfont \scshape ' on input line 195.
 
 ! Undefined control sequence.
-l.180 {\sc Papa, David~A} \btxandlong
+l.195 {\sc Papa, David~A} \btxandlong
                                      {}\ {\sc Igor~L Markov}: {\em Hypergraph
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3392,7 +3573,7 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 180.
+(scrbook)              by `\normalfont \scshape ' on input line 195.
 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
@@ -3406,10 +3587,10 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 184.
+(scrbook)              by `\normalfont \scshape ' on input line 199.
 
 ! Undefined control sequence.
-l.184 {\sc Saab, Youssef} \btxandlong
+l.199 {\sc Saab, Youssef} \btxandlong
                                      {}\ {\sc Vasant Rao}: {\em An evolution...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3429,10 +3610,10 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 184.
+(scrbook)              by `\normalfont \scshape ' on input line 199.
 
 ! Undefined control sequence.
-l.186 \newblock \Btxinlong
+l.201 \newblock \Btxinlong
                           {}\ {\em Proceedings of the 26th ACM/IEEE design a...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3441,7 +3622,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.187   conference}, \btxpageslong
+l.202   conference}, \btxpageslong
                                   {}\ 767--770. ACM, 1989.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3461,7 +3642,7 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 190.
+(scrbook)              by `\normalfont \scshape ' on input line 205.
 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
@@ -3475,10 +3656,10 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 190.
+(scrbook)              by `\normalfont \scshape ' on input line 205.
 
 ! Undefined control sequence.
-l.190 ...iq~M}, {\sc Aiman~H El-Maleh} \btxandlong
+l.205 ...iq~M}, {\sc Aiman~H El-Maleh} \btxandlong
                                                   {}\ {\sc Raslan~H
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3498,7 +3679,7 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 190.
+(scrbook)              by `\normalfont \scshape ' on input line 205.
 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
@@ -3512,7 +3693,7 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 197.
+(scrbook)              by `\normalfont \scshape ' on input line 212.
 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
@@ -3526,154 +3707,11 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 201.
+(scrbook)              by `\normalfont \scshape ' on input line 216.
 
 ! Undefined control sequence.
-l.201 {\sc Sanders, Peter} \btxandlong
+l.216 {\sc Sanders, Peter} \btxandlong
                                       {}\ {\sc Christian Schulz}: {\em Distr...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Class scrbook Warning: Usage of deprecated font command `\sc'!
-(scrbook)              You should note, that in 1994 font command `\sc' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\sc' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 201.
-
-! Undefined control sequence.
-l.203 \newblock \Btxinlong
-                          {}\ {\em 2012 Proceedings of the Fourteenth Worksh...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.204 ... and Experiments (ALENEX)}, \btxpageslong
-                                                  {}\ 16--29.
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Class scrbook Warning: Usage of deprecated font command `\sc'!
-(scrbook)              You should note, that in 1994 font command `\sc' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\sc' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 208.
-
-
-Class scrbook Warning: Usage of deprecated font command `\sc'!
-(scrbook)              You should note, that in 1994 font command `\sc' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\sc' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 208.
-
-
-Class scrbook Warning: Usage of deprecated font command `\sc'!
-(scrbook)              You should note, that in 1994 font command `\sc' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\sc' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 208.
-
-
-Class scrbook Warning: Usage of deprecated font command `\sc'!
-(scrbook)              You should note, that in 1994 font command `\sc' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\sc' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 208.
-
-
-Class scrbook Warning: Usage of deprecated font command `\sc'!
-(scrbook)              You should note, that in 1994 font command `\sc' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\sc' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 209.
-
-! Undefined control sequence.
-l.209 ...erhenke}, {\sc Peter Sanders} \btxandlong
-                                                  {}\ {\sc Christian Schulz}...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Class scrbook Warning: Usage of deprecated font command `\sc'!
-(scrbook)              You should note, that in 1994 font command `\sc' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\sc' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 209.
-
-! Undefined control sequence.
-l.211 \newblock \Btxinlong
-                          {}\ {\em 2016 Proceedings of the Eighteenth Worksh...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.212 ... and Experiments (ALENEX)}, \btxpageslong
-                                                  {}\ 53--67.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -3695,7 +3733,150 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              by `\normalfont \scshape ' on input line 216.
 
 ! Undefined control sequence.
-l.218 \newblock \btxphdthesis
+l.218 \newblock \Btxinlong
+                          {}\ {\em 2012 Proceedings of the Fourteenth Worksh...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.219 ... and Experiments (ALENEX)}, \btxpageslong
+                                                  {}\ 16--29.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Class scrbook Warning: Usage of deprecated font command `\sc'!
+(scrbook)              You should note, that in 1994 font command `\sc' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\sc' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
+(scrbook)              by `\normalfont \scshape ' on input line 223.
+
+
+Class scrbook Warning: Usage of deprecated font command `\sc'!
+(scrbook)              You should note, that in 1994 font command `\sc' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\sc' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
+(scrbook)              by `\normalfont \scshape ' on input line 223.
+
+
+Class scrbook Warning: Usage of deprecated font command `\sc'!
+(scrbook)              You should note, that in 1994 font command `\sc' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\sc' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
+(scrbook)              by `\normalfont \scshape ' on input line 223.
+
+
+Class scrbook Warning: Usage of deprecated font command `\sc'!
+(scrbook)              You should note, that in 1994 font command `\sc' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\sc' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
+(scrbook)              by `\normalfont \scshape ' on input line 223.
+
+
+Class scrbook Warning: Usage of deprecated font command `\sc'!
+(scrbook)              You should note, that in 1994 font command `\sc' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\sc' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
+(scrbook)              by `\normalfont \scshape ' on input line 224.
+
+! Undefined control sequence.
+l.224 ...erhenke}, {\sc Peter Sanders} \btxandlong
+                                                  {}\ {\sc Christian Schulz}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Class scrbook Warning: Usage of deprecated font command `\sc'!
+(scrbook)              You should note, that in 1994 font command `\sc' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\sc' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
+(scrbook)              by `\normalfont \scshape ' on input line 224.
+
+! Undefined control sequence.
+l.226 \newblock \Btxinlong
+                          {}\ {\em 2016 Proceedings of the Eighteenth Worksh...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.227 ... and Experiments (ALENEX)}, \btxpageslong
+                                                  {}\ 53--67.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Class scrbook Warning: Usage of deprecated font command `\sc'!
+(scrbook)              You should note, that in 1994 font command `\sc' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\sc' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
+(scrbook)              by `\normalfont \scshape ' on input line 231.
+
+! Undefined control sequence.
+l.233 \newblock \btxphdthesis
                              {}, University of London, 2006.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3715,10 +3896,10 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 221.
+(scrbook)              by `\normalfont \scshape ' on input line 236.
 
 ! Undefined control sequence.
-l.221 {\sc Vastenhouw, Brendan} \btxandlong
+l.236 {\sc Vastenhouw, Brendan} \btxandlong
                                            {}\ {\sc Rob~H Bisseling}: {\em A
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3738,7 +3919,7 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 221.
+(scrbook)              by `\normalfont \scshape ' on input line 236.
 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
@@ -3752,10 +3933,115 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\sc' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
-(scrbook)              by `\normalfont \scshape ' on input line 227.
+(scrbook)              by `\normalfont \scshape ' on input line 242.
+
+
+Class scrbook Warning: Usage of deprecated font command `\sc'!
+(scrbook)              You should note, that in 1994 font command `\sc' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\sc' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
+(scrbook)              by `\normalfont \scshape ' on input line 242.
+
+
+Class scrbook Warning: Usage of deprecated font command `\sc'!
+(scrbook)              You should note, that in 1994 font command `\sc' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\sc' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
+(scrbook)              by `\normalfont \scshape ' on input line 242.
+
+
+Class scrbook Warning: Usage of deprecated font command `\sc'!
+(scrbook)              You should note, that in 1994 font command `\sc' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\sc' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
+(scrbook)              by `\normalfont \scshape ' on input line 242.
 
 ! Undefined control sequence.
-l.228 \newblock \Btxinlong
+l.243   Li} \btxandlong
+                       {}\ {\sc Yaoguang Wei}: {\em The DAC 2012 routability...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Class scrbook Warning: Usage of deprecated font command `\sc'!
+(scrbook)              You should note, that in 1994 font command `\sc' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\sc' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
+(scrbook)              by `\normalfont \scshape ' on input line 243.
+
+! Undefined control sequence.
+l.245 \newblock \Btxinlong
+                          {}\ {\em Proceedings of the 49th Annual Design Aut...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.246   Conference}, \btxpageslong
+                                  {}\ 774--782. ACM, 2012.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 4505) in paragraph at lines 242--247
+[]\T1/ptm/m/sc/12 Viswanathan, Natara-jan\T1/ptm/m/n/12 , \T1/ptm/m/sc/12 Charl
+es Alpert\T1/ptm/m/n/12 , \T1/ptm/m/sc/12 Cliff Sze\T1/ptm/m/n/12 , \T1/ptm/m/s
+c/12 Zhuo Li
+ []
+
+[39]
+
+Class scrbook Warning: Usage of deprecated font command `\sc'!
+(scrbook)              You should note, that in 1994 font command `\sc' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\sc' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
+(scrbook)              by `\normalfont \scshape ' on input line 249.
+
+! Undefined control sequence.
+l.250 \newblock \Btxinlong
                           {}\ {\em Proceedings of the 1998 IEEE/ACM internat...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3764,7 +4050,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.229 ... on Computer-aided design}, \btxpageslong
+l.251 ... on Computer-aided design}, \btxpageslong
                                                   {}\ 505--511. ACM, 1998.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3772,12 +4058,12 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-) [35]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 842.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 842.
+) [40]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 873.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 873.
  (./bachelorarbeit.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 842.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 842.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 873.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 873.
 
 
 Package rerunfilecheck Warning: File `bachelorarbeit.out' has changed.
@@ -3786,17 +4072,17 @@ Package rerunfilecheck Warning: File `bachelorarbeit.out' has changed.
 
 Package rerunfilecheck Info: Checksums for `bachelorarbeit.out':
 (rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  B8997793B9A0833218C532DFD3ED3ED3;2494.
+(rerunfilecheck)             After:  50C50B08FB5474C9322DC2664F052B7B;2530.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 842.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 873.
  ) 
 Here is how much of TeX's memory you used:
- 22741 strings out of 493033
- 403991 string characters out of 6136455
- 640617 words of memory out of 5000000
- 25675 multiletter control sequences out of 15000+600000
+ 22773 strings out of 493033
+ 404728 string characters out of 6136455
+ 640940 words of memory out of 5000000
+ 25689 multiletter control sequences out of 15000+600000
  66296 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,10n,66p,2553b,518s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3816,9 +4102,9 @@ live/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr
 8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bachelorarbeit.pdf (43 pages, 1053830 bytes).
+Output written on bachelorarbeit.pdf (48 pages, 2019995 bytes).
 PDF statistics:
- 842 PDF objects out of 1000 (max. 8388607)
- 143 named destinations out of 1000 (max. 500000)
- 73 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 935 PDF objects out of 1000 (max. 8388607)
+ 156 named destinations out of 1000 (max. 500000)
+ 88 words of extra memory for PDF output out of 10000 (max. 10000000)
 

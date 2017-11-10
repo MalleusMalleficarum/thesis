@@ -8,6 +8,11 @@
   Algorithm Engineering and Experiments (ALENEX)}, \btxpageslong{}\ 28--42.
   SIAM, 2017.
 
+\bibitem{alpert1998ispd98}
+{\sc Alpert, Charles~J}: {\em The ISPD98 circuit benchmark suite}.
+\newblock \Btxinlong{}\ {\em Proceedings of the 1998 international symposium on
+  Physical design}, \btxpageslong{}\ 80--85. ACM, 1998.
+
 \bibitem{alpert1998multilevel}
 {\sc Alpert, Charles~J}, {\sc Jen-Hsin Huang} \btxandlong{}\ {\sc Andrew~B
   Kahng}: {\em Multilevel circuit partitioning}.
@@ -47,6 +52,11 @@
   \btxandlong{}\ {\sc Dorothea Wagner}: {\em Graph partitioning and graph
   clustering}, \btxvolumelong{}\ 588.
 \newblock American Mathematical Soc., 2013.
+
+\bibitem{belov2014proceedings}
+{\sc Belov, Anton}, {\sc Daniel Diepold}, {\sc Marijn~JH Heule} \btxandlong{}\
+  {\sc Matti J{\"a}rvisalo}: {\em Proceedings of SAT Competition 2014}.
+\newblock 2014.
 
 \bibitem{blickle1996comparison}
 {\sc Blickle, Tobias} \btxandlong{}\ {\sc Lothar Thiele}: {\em A comparison of
@@ -93,6 +103,11 @@
   Yao}: {\em A large population size can be unhelpful in evolutionary
   algorithms}.
 \newblock Theoretical Computer Science, 436:54--70, 2012.
+
+\bibitem{davis2011university}
+{\sc Davis, Timothy~A} \btxandlong{}\ {\sc Yifan Hu}: {\em The University of
+  Florida sparse matrix collection}.
+\newblock ACM Transactions on Mathematical Software (TOMS), 38(1):1, 2011.
 
 \bibitem{delling2011graph}
 {\sc Delling, Daniel}, {\sc Andrew~V Goldberg}, {\sc Ilya Razenshteyn}
@@ -222,6 +237,13 @@
   two-dimensional data distribution method for parallel sparse matrix-vector
   multiplication}.
 \newblock SIAM review, 47(1):67--95, 2005.
+
+\bibitem{viswanathan2012dac}
+{\sc Viswanathan, Natarajan}, {\sc Charles Alpert}, {\sc Cliff Sze}, {\sc Zhuo
+  Li} \btxandlong{}\ {\sc Yaoguang Wei}: {\em The DAC 2012 routability-driven
+  placement contest and benchmark suite}.
+\newblock \Btxinlong{}\ {\em Proceedings of the 49th Annual Design Automation
+  Conference}, \btxpageslong{}\ 774--782. ACM, 2012.
 
 \bibitem{wichlund1998multilevel}
 {\sc Wichlund, Sverre}: {\em On multilevel circuit partitioning}.

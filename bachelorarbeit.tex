@@ -149,8 +149,17 @@
 \clearpage
 
 \section*{Abstract}
-In this thesis we augment the existing Hypergraph Partitioner KaHyPar with an evolutionary framework with the goal to improve the 
-solution quality.
+The NP-hard hypergraph partitioning problem has many real life applications like processor load balance or VLSI design. As such meta heuristics are the design philosophy to increase solution quality. In this thesis we create an effective evolutionary algorithm 
+improving the existing multilevel hypergraph partitioner KaHyPar. We introduce operations heavily integrated in both the evolutionary and multilevel aspect. We evaluate the benefits of the algorithm on 90 instances, showing that the evolutionary component increases solution quality by 2.2\%.
+
+
+
+\section*{Abstrakt}
+Das NP-schwere Hypergraphpartitionierungsproblem besitzt viele Anwendungsgebiete wie Prozessorlastverteilung oder Schaltkreisdesign. Die gängige Strategie ist es Metaheuristiken einzusetzen, um eine Verbessung der Lösungsqualität zu erreichen. In dieser Thesis entwickeln wir einen effektiven evolutionären Algorithmus, der den bestehenden Multilevelpartitionierer KaHyPar verbessert. Wir führen Operationen ein, die sowohl den evolutionären Aspekt als auch den Multilevelaspekt benutzen. Wir evaluieren die Vorteile des evolutionären Algorithmus auf 90 Hypergraphinstanzen, wobei gezeigt werden kann dass eine durchschnittliche Verbesserung von 2.2\% erzielt werden kann.
+
+
+
+
 \addcontentsline{toc}{chapter}{Abstract}
 \selectlanguage{english}
 % German and English Abstract
@@ -165,7 +174,7 @@ solution quality.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Acknowledgments}
 
-I'd like to thank Timo for the supply of Club-Mate
+I'd like to thank Timo Bingmann for the supply of Club-Mate.
 \vfill\vfill\vfill
 Hiermit versichere ich, dass ich diese Arbeit selbständig verfasst und keine anderen, als die angegebenen Quellen und Hilfsmittel benutzt, die wörtlich oder inhaltlich übernommenen Stellen als solche kenntlich gemacht und die Satzung des Karlsruher Instituts für Technologie zur Sicherung guter wissenschaftlicher Praxis in der jeweils gültigen Fassung beachtet habe.
 
@@ -247,7 +256,7 @@ Both metrics can be used to measure the quality of a solution. We use the connec
 
 There are several hypergraph partitioning algorithms, originating from various backgrounds such as processor communication balancing \cite{catalyurek1999hypergraph}, circuit partitioning \cite{alpert1998multilevel} or database storage sharding \cite{kabiljo2017social}.
 
-Two approaches are used for hypergraph partitioning. The first approach is the bisectioning of the hypergraph, where the number of blocks is fixed to $k=2$ as in hMetis\cite{karypis1999multilevel} and MLPart\cite{alpert1998multilevel}. By recursively bisectioning the resulting partitions, $k$ can assume values of the powers of 2. This is implemented in tools like PatoH \cite{catalyurek1999hypergraph}, Mondrian\cite{vastenhouw2005two} and Zoltan\cite{devine2006parallel}(allowing imbalanced bipartitions to create partitions of arbitrary k). The other approach is to skip the recursion and directly partition the hypergraph into $k$ blocks. This is called a direct k-way partition and is used in kMetis\cite{karypis2000multilevel}, kPatoH \cite{aykanat2008multi} and SHP\cite{kabiljo2017social}(also implementing a recursive bisection). Note that except SHP \cite{kabiljo2017social} all tools are utilizing the multilevel paradigm. 
+Two approaches are used for hypergraph partitioning. The first approach is the bisectioning of the hypergraph, where the number of blocks is fixed to $k=2$ as in hMetis\cite{karypis1999multilevel} and MLPart\cite{alpert1998multilevel}. By recursively bisectioning the resulting partitions, $k$ can assume values of the powers of 2. This is implemented in tools like PatoH \cite{catalyurek1999hypergraph}, Mondrian\cite{vastenhouw2005two} and Zoltan\cite{devine2006parallel}(allowing imbalanced bipartitions to create partitions of arbitrary k). The other approach is to skip the recursion and directly partition the hypergraph into $k$ blocks. This is called a direct k-way partition and is used in hMetis-Kway\cite{karypis2000multilevel}, kPatoH \cite{aykanat2008multi} and SHP\cite{kabiljo2017social}(also implementing a recursive bisection). Note that except SHP \cite{kabiljo2017social} all tools are utilizing the multilevel paradigm. 
 
 Of course this is only a collection of the most common hypergraph partitioners, which is why we would like to refer to the survey works\cite{alpert1995recent}\cite{bader2013graph}\cite{papa2007hypergraph}\cite{trifunovic2006parallel}.
 
@@ -437,11 +446,19 @@ All following plots are using KaHyPar for generating an initial population and p
 
 
 \section{Experimental Setup}
-We use two benchmark sets for evaluation. Both sets are using instances from the benchmark set of Heuer and Schlag \cite{heuer2017improving}, which consists of various hypergraphs from the ISPD98 benchmark \cite{ISPD98}, Sparse Matrices \cite{SPM colection}, the DAC benchmark \cite{DAC} and Sat instances \cite{SAT}. The sparse matrices are converted by row-net model \cite{row net model}, whereas the SAT instances are converted to hypergraphs using three approaches \cite{}
+We use two benchmark sets for evaluation. Both sets are using instances from the benchmark set of Heuer and Schlag \cite{heuer2017improving}, which consists of various hypergraphs from the ISPD98 benchmark \cite{alpert1998ispd98}, Sparse Matrices \cite{davis2011university}, the DAC benchmark \cite{viswanathan2012dac} and SAT instances \cite{belov2014proceedings}. 
+
+%The sparse matrices are converted by row-net model \cite{row net model}, whereas the SAT instances are converted to hypergraphs using three approaches \cite{}
+
+
 %Describe the tuning benchmark set
+\newline ~\newline
 The first set is called the tuning subset. It consists of 25 Hypergraph instances. The instances were chosen to accurately represent the complete benchmark set. However no instance requiring a high partition time was chosen. This was done to ensure that the instances of the tuning subset can display the effects of the evolutionary algorithm within a smaller time window. The running time for partitions on the tuning subset is 2 hours. The instances were partitioned for $k = 32$ and $\epsilon = 0.03$. Each partitioning run of the tuning subset is repeated 3 times with a different seed for the randomization. This results in 150 CPU-hours required for each data set produced on the tuning subset.
 %Describe the benchmark set
+\newline
+
 The second set is called the benchmark subset. It consists of 90 Hypergraph instances from the benchmark set. All instances in the benchmark subset were partitioned for $\epsilon = 0.03$ and 7 different values for $k = \{2,4,8,16,32,64,128\}$. The running time for each partitioning on the benchmark subset is 8 hours, and each run is repeated 5 times. This results in 25200 CPU-hours necessary per data set produced on the benchmark subset.
+\newline ~ \newline
 %Describe why repetitions are performed
 The reason for repeating the partitions with different starting seeds is to balance out possible outliers of the randomization. This process is described more detailed in section\ref{the section with the graphic}.
 %Describe the reason for using two different sets
@@ -512,7 +529,8 @@ hypergraph & $n$& $m$ & $p$ & hypergraph & $n$ & $m$ & $p$\\
         \end{adjustbox}
         \end{table}
         
-Table \ref{tbl:instancessmall} displays the instances in the tuning subset, as well as their basic properties. $n$ is the number of vertices, $m$ ist the number of hyperedges and $p$ is the number of pins. The instances are sorted by their respective classes.
+Table \ref{tbl:instancessmall} displays the instances in the tuning subset, as well as their basic properties. $n$ is the number of vertices, $m$ ist the number of hyperedges and $p$ is the number of pins. The instances are sorted by their respective classes. 
+Similarly table \ref{tbl:instanceslarge} displays the instances of the benchmark subset.
 %Table of instances of the benchmark subset
 \begin{table}[H]\caption{Hypergraph properties of the benchmark subset.}
 \label{tbl:instanceslarge}
@@ -644,7 +662,7 @@ Next we need to average the different instances. Because different instances hav
 %Graphic explaining the averaging of the instances
 \newpage
 \section{First Evaluation} 
-All of the data sets presented in this section were created using the tuning subset. These data sets were computed on an Ubuntu 14.04 machine with four Intel Xeon E5-4640 Octa-Core processors @2.4 GHz with 512 GB main memory, 20 MB L3- and 8x256 KB L2-Cache.
+All of the data sets presented in this section were created using the tuning subset. These data sets were computed on an Ubuntu 14.04 machine with four Intel Xeon E5-4640 Octa-Core processors @2.4 GHz with 512 GB main memory, 20 MB L3- and 8x256 KB L2-Cache. The following parameters are used as default: Dynamic Population size using $\delta = 0.15$ and $[3,50]$ as lower/upper bound for the population size, $\gamma = 0.5$ as dampening factor for C2, C2 and M3 are using $\sqrt{|P|}$ as default amount of individuals. The threshold of M3 is $0.75$. As preluded the time limit $t$ is set to 2 hours, $\epsilon = 0.03$ and $k=32$. The used seeds are $1,2$ and $3$. The parameters of KaHyPar are set using the default configuration for direct k-way partitioning. \footnote{https://github.com/SebastianSchlag/kahypar/blob/master/config/km1\_direct\_kway\_sea17.ini}
 % And some on i130 with worse specs
 %Say that this is done on the tuning subset
 %%REPLACEMENT STRATEGIES
@@ -668,7 +686,8 @@ In figure\ref{fig:replacement} we compare the effectiveness of the three differe
 %%^^^^^^^^^^^^^^^^^^^^^^
 %%REPLACEMENT STRATEGIES
 \subsection{Combine operator evaluation}
-Next up we evaluate the different combine operators and compare the solution quality against the solution quality of KaHyPar-CA and KaHyPar-CA+V. We evaluate three configurations of the evolutionary algorithm. The specification KaHyPar-E+C$_x$ means that the configuration used the combine operator C$x$. KaHyPar-E+C1+C2 chooses one of the two combine strategies randomly for each iteration.
+\label{sec:combineoperatorevaluation}
+Next up we evaluate the different combine operators and compare the solution quality against the solution quality of KaHyPar-CA and KaHyPar-CA+V. We evaluate three configurations of the evolutionary algorithm. The specification KaHyPar-E+C$_x$ means that the configuration used the combine operator C$_x$. KaHyPar-E+C1+C2 chooses one of the two combine strategies randomly for each iteration.
 %%COMBINE OPERATORS
 %%vvvvvvvvvvvvvvvvv
 %Explain the algorithms used (KaHyPar C1, KaHyPar C1 C2 KaHyPar C2)
@@ -684,7 +703,7 @@ In figure \ref{fig:combineop} we evaluate the results of KaHyPar-E using only ba
 %%COMBINE OPERATORS
 %%MUTATION OPERATORS
 %%vvvvvvvvvvvvvvvvvv
-\section{Mutation operator evaluation}
+\subsection{Mutation operator evaluation}
 
 \begin{figure}[H]
 \caption{Different Mutation Operations}
@@ -702,20 +721,27 @@ In this figure the effectiveness of the different mutation operators are evaluat
 
 %%DIFFERENT REPLACEMENT OPERATORS FOR MUTATIONS
 %%vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+\subsection{Mutation replacement strategies}
 
+
+Mutation operations can be inserted into the population in two different ways. Replacing the element used for the mutation in the classical sense of evolutionary algorithms, or using the diversity replacement approach. We evaluate whether the different replacement strategies are influencing the solution quality.
+\begin{figure}[H]
+\caption{Different replacement strategies for mutations}
+\begin{center}
+%\includegraphics{bachelorarbeit-insertrandom}
+\includegraphics{bachelorarbeit-differentoperatos}
+
+\end{center}
+As seen in this plot the different replacement strategies are displayed for M2 and a combination of M1 and M2. While the difference in KaHyPar-E + C1 + M2 and KaHyPar-E + C1 + M2 diverse is only a miniscule improvement in convergence time and solution quality, the difference of KaHyPar-E + C1 + M1 + M2 and KaHyPar-E + C1 + M1 + M2 + diverse is more prominent in terms of solution quality.
+
+\end{figure}
 %Say that using diverse replacement is good
 %%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 %%DIFFERENT REPLACEMENT OPERATORS FOR MUTATIONS
 \section{Tuning Parameters}
-%epsilon
-%gamma
-%popsize
-%dyn allocation
-%time
-%chacnes
-%etc etc.
-
+KaHyPar-E is adding the following parameters to KaHyPar: dynamic population size $\delta = 0.15$, upper and lower bound limits for the population size $[3,50]$, the edge frequency dampening parameter $\gamma = 0.5$ as well as the amount of individuals used by C2 \& M3 $n = \sqrt{|P|}$. Additional parameters are the replacement strategy, as well as the distribution of combine operators and mutation operators. Most importantly, KaHyPar-E adds the time limit $t$. Noteworthy parameters of KaHyPar include $\epsilon = 0.03$, $k$ and the seed $s$. For other parameters of KaHyPar we refer to the default configurations \footnote{https://github.com/SebastianSchlag/kahypar/blob/master/config}. 
 \subsection{Combine chance distribution}
+As seen in section \ref{sec:combineoperatorevaluation} a combination of both C1 + C2 is generating better results when being used together. We want to analze different percentages regarding the distribution of the two operatos
 \begin{figure}[H]
 \caption{Edge frequency chance}
 \begin{center}
@@ -734,9 +760,10 @@ The parameter spectrum of the evolutionary algorithm is rather voluminous. Begin
 \begin{center}
 \includegraphics{bachelorarbeit-newipmutationchance}
 \end{center}
-In this plot the different mutation chances are represented. The percentages represent the chance of performing a new initial partitioning vcycle. If not performing a new initial partitioning a basic combine is performed. It is visible that choosing either 0\% mutation chance or 100\% mutation chance are both not viable for generating good solutions. A combination of both operators is increasing solution quality. As seen in this experiment a mutation chance of 40\% for new initial partitioning is generating the best solution. This experiment was performed on the tuning subset to generate values for the run on the benchmark subset.
+In this plot the different mutation chances are represented. The percentages represent the chance of performing a new initial partitioning vcycle. If not performing a new initial partitioning a basic combine is performed. It is visible that choosing either 0\% mutation chance or 100\% mutation chance are both not viable for generating good solutions. A combination of both operators is increasing solution quality. As seen in this experiment a mutation chance of 30\% -50\% for new initial partitioning is generating the best solutions. This experiment was performed on the tuning subset to generate values for the run on the benchmark subset.
 \end{figure}
 \section{Final Evaluation}
+Now we use the results form the tuning subset and translate them onto the benchmark subset. As already mentioned the data sets are generated over more hypergraph instances, using $t$ 8 hours for partitioning, $\epsilon = 0.03$, and $\k = \{2,4,8,16,32,64,128\}$. The following data sets are evaluated on the benchmark subset: KaHyPar-CA, KaHyPar-CA-V, KaHyPar-E+C1, KaHyPar-E+C1+C2 and KaHyPar-E+M1+M2. The data sets were created on a cluster consisting of 512 16-way Intel Xeon compute nodes. All nodes contain two Octa-core Intel Xeon processors E5-2670 (Sandy Bridge) @ 2.6 GHz and have 8x256 KB of level 2 cache and 20 MB level 3 cache. Each node has 64 GB of main memory and local disks with 2 TB capacity. The nodes were allocated exclusively to avoid cpu time interference.
 %List Configuartions for final evaluation
 %Convergence plot for all k
 %Convergence plot split by k 
@@ -746,6 +773,7 @@ In this plot the different mutation chances are represented. The percentages rep
 \begin{figure}[H]
 \caption{Benchmark subset results}
 \begin{center}
+\includegraphics[width=\textwidth]{../Heatmap/RplotAll}
 %<<full evaluation, fig=TRUE, echo=FALSE, height=4, width=6>>=
 %source("/home/andre/server-home/temppap/R/plot_functions.R")
 %source("/home/andre/server-home/temppap/R/final_preprocessing.R")
@@ -759,12 +787,15 @@ In this plot the different mutation chances are represented. The percentages rep
 %                              baselineTime(traditional_combine)))
 %@
 \end{center}
-The results for the big dataset should be described HERE
+In average all evolutionary operators are performing better. TODO TEXT
 \end{figure}
 % => Convergence split by k
+
 \begin{figure}[H]
 \caption{Benchmark subset split by k}
 \begin{center}
+\includegraphics[width=\textwidth]{rnw/appendix_convergence-1}
+\includegraphics[width=\textwidth]{rnw/appendix_convergence-2}
 %<<full evaluation, fig=TRUE, echo=FALSE, height=4, width=6>>=
 %ks = c(2,4,8,16,32,64,128)
 %for (k in ks) {
@@ -789,7 +820,7 @@ The results for the specific k values should be described HERE
 \centering
 \vspace{0pt}
 \captionof{table}{Connectivity improvement of the strongest configurations for KaHyPar-E}~\label{tbl:imp}
-\begin{tabular}{r||r|r||r|r}[H]
+\begin{tabular}[H]{r||r|r||r|r}\label{tab:improvement}
 % &  \multicolumn{4}{c}{Algorithms} \\ 
 &\multicolumn{2}{c||}{KaHyPar-E+C1+C2} & \multicolumn{2}{c}{KaHyParE+C1+M1+M2} \\
 $k$                     &                              KaHyPar-CA-V    & KaHyPar-CA &  KaHyPar-CA-V   & KaHyPar-CA  \\ 
@@ -804,13 +835,15 @@ all k &  1.7\% & 2.7\% & 2.2\% & 3.2\% \\
 16& 1.9\% &2.8\%& 2.6\%& 3.5\%\\
 32& 2.9\% &3.9\%& 3.2\%& 4.2\%\\
 64&  3.2\% &4.7\%& 3.4\% &4.8\%\\
-128& 3.4\% &5.1\%& 3.3\% &5.0\%  
+128& 3.4\% &5.1\%& 3.3\% &5.0\% \\ 
 \end{tabular}
 
 %\vspace*{-.75cm}
 \end{figure}
+In table  \ref{tab:improvement} the average improvements of the two strongest configurations of KaHyPar-E are compared to KaHyPar-CA-V and KaHyPar-CA. 
+The average improvements are then split by k. 
 
-
+%ADD PERFORMANCE PLOT
 
 
 
@@ -820,10 +853,10 @@ all k &  1.7\% & 2.7\% & 2.2\% & 3.2\% \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Discussion}
 \section{Conclusion}
-Creating an evolutionary framework for KaHyPar resulted in a quality improvement for hypergraph partitions of 3.2\%. We used combine operators different from usual crossover approaches to detect and exploit good solution qualities in partitions, as well as mutation operations to increase the solution scope compared to KaHyPar. Additionally we created a diversity strategy applicable to hypergraphs for replacement. Our operators are heavily integrated into the standard procedure of KaHyPar, to the point where all operators make use of the multilevel partition steps provided by KaHyPar. To the authors best knowledge, this work is the first combination of multilevel and memetic algorithms in the field of hypergraph partitioning.
+This thesis presents an evolutionary framework for KaHyPar resulting in a quality improvement for hypergraph partitions of up to 5\%. We used combine operators different from usual crossover approaches to detect and exploit good solution qualities in partitions, as well as mutation operations to increase the solution scope compared to KaHyPar. Additionally we created a diversity strategy applicable to hypergraphs for replacement. Our operators are heavily integrated into the standard procedure of KaHyPar, to the point where all operators make use of the multilevel partition steps provided by KaHyPar. This work is the first combination of multilevel and memetic algorithms in the field of hypergraph partitioning.
 As expected of an evolutionary algorithm, the quality improvement needs multiple iterations to show significance. KaHyPar-E was designed with that mentality to improve the best possible solution for the partition of a hypergraph where the time constraint is of secondary relevance. 
 \section{Future Work}
-Currently KaHyPar-E is providing solution quality but lacks performance. Adding a layer of parallelization would allow a significant speedup by creating multiple individuals during an iteration. This should be realizable without greater effort due to the independence of the child and parent partitions. Another interesting approach is a time cost analysis for the different operators. There is a strong suggestion that the basic combine operator is significantly faster than a regular iteration in KaHyPar. If this suggestion is true, a faster population generation would be a valid approach to increase performance. Also the v-cycle mutation operator might turn out to be more beneficial if the number of cycles is increased. Other than that more sophistiacted selection strategies for parent selection as well as edge frequency might also be helpful. A more detailed analysis and exploitation of hypergraph structures may enhance the performance of the current evolutionary operators, or perhaps even inspire the addition of new operators.
+Currently KaHyPar-E is providing solution quality but no speedup for a single partition. Adding a layer of parallelization would allow a significant speedup by creating multiple individuals during an iteration. This should be realizable without greater effort due to the independence of the child and parent partitions. Another interesting approach is a time cost analysis for the different operators. There is a strong suggestion that the basic combine operator is significantly faster than a regular iteration in KaHyPar. If this suggestion is true, a faster population generation would be a valid approach to increase performance. Also the v-cycle mutation operator might turn out to be more beneficial if the number of cycles is increased. Other than that more sophistiacted selection strategies for parent selection as well as edge frequency might also be helpful. A more detailed analysis and exploitation of hypergraph structures may enhance the performance of the current evolutionary operators, or perhaps even inspire the addition of new operators.
 
 \clearpage
 \begin{appendix}
@@ -832,9 +865,7 @@ Currently KaHyPar-E is providing solution quality but lacks performance. Adding 
 The source code was written in C++, using the C++11 version. The software was compiled by gcc-5.2+. The combine operators are implemented as a policy in the rater. These policies are meant to avoid overhead and control flow complexity during the coarsening, which is the most time consuming part of an iteration in KaHyPar. An action element is attached to each iteration, containing the necessary requirements for each of the different operation. These requirements activate or deactivate 
 initial partitioning or the use of parent information during the coarsening, depending on the action performed. Edge frequency and stable net removal use the same baseline vector containing the amount of cut edges from X partitions. 
 % Data Structures etc..
-\section{Hardware}
-The experiments on the tuning subset were performed on i128.
-The experiments on the benchmark subset were performed on bwUnicluster.
+
 \end{appendix}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \bibliographystyle{gerplain}

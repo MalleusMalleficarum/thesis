@@ -1,66 +1,56 @@
 This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: bachelorarbeit.aux
-White space in argument---line 122 of file bachelorarbeit.aux
- : \citation{SPM
- :               colection}
-I'm skipping whatever remains of this command
 White space in argument---line 125 of file bachelorarbeit.aux
- : \citation{row
- :               net model}
-I'm skipping whatever remains of this command
-White space in argument---line 126 of file bachelorarbeit.aux
  : \citation{ein
  :               schlag paper}
 I'm skipping whatever remains of this command
-White space in argument---line 128 of file bachelorarbeit.aux
+White space in argument---line 127 of file bachelorarbeit.aux
  : \citation{The
  :               work that uses local search unbounded}
 I'm skipping whatever remains of this command
 The style file: gerplain.bst
 Database file #1: literatur.bib
-Warning--I didn't find a database entry for "ISPD98"
-Warning--I didn't find a database entry for "DAC"
-Warning--I didn't find a database entry for "SAT"
-You've used 37 entries,
+Warning--empty journal in belov2014proceedings
+You've used 41 entries,
             2343 wiz_defined-function locations,
-            771 strings with 11702 characters,
-and the built_in function-call counts, 15985 in all, are:
-= -- 1706
-> -- 615
-< -- 21
-+ -- 251
-- -- 204
-* -- 1226
-:= -- 2334
-add.period$ -- 89
-call.type$ -- 37
-change.case$ -- 175
+            784 strings with 12365 characters,
+and the built_in function-call counts, 17669 in all, are:
+= -- 1881
+> -- 686
+< -- 23
++ -- 282
+- -- 228
+* -- 1355
+:= -- 2583
+add.period$ -- 99
+call.type$ -- 41
+change.case$ -- 195
 chr.to.int$ -- 0
-cite$ -- 37
-duplicate$ -- 723
-empty$ -- 1331
-format.name$ -- 204
-if$ -- 3666
+cite$ -- 42
+duplicate$ -- 802
+empty$ -- 1466
+format.name$ -- 228
+if$ -- 4051
 int.to.chr$ -- 0
-int.to.str$ -- 37
-missing$ -- 52
-newline$ -- 150
-num.names$ -- 74
-pop$ -- 254
+int.to.str$ -- 41
+missing$ -- 58
+newline$ -- 166
+num.names$ -- 82
+pop$ -- 283
 preamble$ -- 1
-purify$ -- 175
+purify$ -- 195
 quote$ -- 0
-skip$ -- 565
+skip$ -- 627
 stack$ -- 0
-substring$ -- 997
-swap$ -- 321
-text.length$ -- 21
+substring$ -- 1079
+swap$ -- 357
+text.length$ -- 23
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 142
-warning$ -- 0
-while$ -- 154
-width$ -- 39
-write$ -- 384
-(There were 4 error messages)
+type$ -- 158
+warning$ -- 1
+while$ -- 169
+width$ -- 43
+write$ -- 424
+(There were 2 error messages)

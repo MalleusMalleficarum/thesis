@@ -1,0 +1,39 @@
+<<set-parent, echo=FALSE, cache=FALSE>>=
+set_parent('../bachelorarbeit.tex')
+@
+
+<<configure, echo=F,cache=FALSE>>=
+library(knitr)
+library(tikzDevice)
+library(highlight)
+knitr::opts_chunk$set(echo=F, eval=T, message = F, warning=F, cache = F, sanitize=T, fig=TRUE)
+knit_hooks$set(crop=hook_pdfcrop)
+## set global chunk options
+opts_chunk$set(fig.path='./', cache.path='./cache/-', fig.align='center', fig.show='hold', par=TRUE)
+## I use = but I can replace it with <-; set code/output width to be 68
+options(formatR.arrow=TRUE, width=68, digits=4)
+## tune details of base graphics (http://yihui.name/knitr/hooks)
+knit_hooks$set(par=function(before, options, envir){
+if (before && options$fig.show!='none') par(mar=c(4,4,.1,.1),cex.lab=.95,cex.axis=.9,mgp=c(2,.7,0),tcl=-.3) })
+@
+
+<<setup, echo=F,sanitize=T>>=
+source("/home/andre/server-home/temppap/R/plot_functions.R")
+source("/home/andre/server-home/temppap/R/final_preprocessing.R")
+@
+
+\begin{figure}[t!]
+\centering
+ <<replace_plot,dev='pictex',fig.width=6,fig.height=4,out.width='\\textwidth',fig.show='hold', crop=TRUE,sanitize=F>>=
+#par(mar=c(4, 4, 1, .1), mgp=c(2,1,0))
+convergencePlot(automaticPlot(list("KaHyPar-E+C1" = traditional_combine),
+                              #    "KaHyPar-E+C1+C2" = random_combine,
+                              #    "KaHyPar-CA" = kahypar_ca,
+                              #    "KaHyPar-CA-V" = kahypar_ca_vcycle,
+                              #    "KaHyPar-E+C1+M1+M2" = trad_vcycle_mutate),
+                              baselineTime(traditional_combine)))
+@
+\caption{Convergence plots for all instances and for different values of $k$.}\label{fig:convergence}
+\vspace*{-.5cm}
+\end{figure}
+

@@ -1,0 +1,77 @@
+<<set-parent, echo=FALSE, cache=FALSE>>=
+set_parent('../paper.tex')
+@
+
+<<configure, echo=F,cache=FALSE>>=
+library(knitr)
+library(tikzDevice)
+library(highlight)
+knitr::opts_chunk$set(echo=F, eval=T, message = F, warning=F, cache = F, sanitize=T, fig=TRUE)
+knit_hooks$set(crop=hook_pdfcrop)
+## set global chunk options
+opts_chunk$set(fig.path='./', cache.path='./cache/-', fig.align='center', fig.show='hold', par=TRUE)
+## I use = but I can replace it with <-; set code/output width to be 68
+options(formatR.arrow=TRUE, width=68, digits=4)
+## tune details of base graphics (http://yihui.name/knitr/hooks)
+knit_hooks$set(par=function(before, options, envir){
+if (before && options$fig.show!='none') par(mar=c(4,4,.1,.1),cex.lab=.95,cex.axis=.9,mgp=c(2,.7,0),tcl=-.3) })
+@
+
+<<setup, echo=F,sanitize=T>>=
+source("/home/schlag/repo/publication/evolutionary_hypergraphpartitioning/R/plot_functions.R")
+source("/home/schlag/repo/publication/evolutionary_hypergraphpartitioning/R/final_preprocessing.R")
+@
+
+\begin{figure}[t!]
+\centering
+ <<convergence,dev='tikz',dev.args=list(pointsize=10),,fig.width=6,fig.height=4,out.width='\\textwidth',fig.show='hold', crop=TRUE,sanitize=F>>=
+#par(mar=c(4, 4, 1, .1), mgp=c(2,1,0))
+cols=c("KaHyPar-CA" = "#4daf4a", "KaHyPar-CA-V" = "#377eb8", "EvoHGP$+C+M_{0.5}$" = "#e41a1c", "EvoHGP$+C+ER$" = "#ff7f00")
+
+
+data = automaticPlot(list("KaHyPar-CA" = kahypar_ca,
+                          "KaHyPar-CA-V" = kahypar_ca_vcycle,
+                          "EvoHGP$+C+M_{0.5}$" = trad_vcycle_mutate,
+                          "EvoHGP$+C+ER$" = random_combine),
+                              baselineTime(traditional_combine))
+data$algorithm <- factor(data$algorithm, levels = c("KaHyPar-CA", "KaHyPar-CA-V", "EvoHGP$+C+ER$", "EvoHGP$+C+M_{0.5}$"))
+a =  convergencePlot(data, legendPos = c(0.75,0.75), title="All Instances", colors = cols, legendcol=1)
+
+
+k=2
+data2 = automaticPlot(list("EvoHGP$+C+ER$" = random_combine[random_combine$k == k,],
+                                   "KaHyPar-CA" = kahypar_ca[kahypar_ca$k == k,],
+                                   "KaHyPar-CA-V" = kahypar_ca_vcycle[kahypar_ca_vcycle$k == k,],
+                                   "EvoHGP$+C+M_{0.5}$" = trad_vcycle_mutate[trad_vcycle_mutate$k == k,]),
+                              baselineTime(traditional_combine[traditional_combine$k == k,]))
+data2$algorithm <- factor(data2$algorithm, levels = c("EvoHGP$+C+ER$", "KaHyPar-CA", "KaHyPar-CA-V", "EvoHGP$+C+M_{0.5}$"))
+b = convergencePlot(data2, legendPos = c(0.75,0.75), title="$k=2$",colors = cols, legendcol=1)
+
+k=32
+data32 = automaticPlot(list("EvoHGP$+C+ER$" = random_combine[random_combine$k == k,],
+                                   "KaHyPar-CA" = kahypar_ca[kahypar_ca$k == k,],
+                                   "KaHyPar-CA-V" = kahypar_ca_vcycle[kahypar_ca_vcycle$k == k,],
+                                   "EvoHGP$+C+M_{0.5}$" = trad_vcycle_mutate[trad_vcycle_mutate$k == k,]),
+                              baselineTime(traditional_combine[traditional_combine$k == k,]))
+data32$algorithm <- factor(data32$algorithm, levels = c("KaHyPar-CA", "KaHyPar-CA-V", "EvoHGP$+C+ER$",  "EvoHGP$+C+M_{0.5}$"))
+c = convergencePlot(data32, legendPos = c(0.25,0.25), title="$k=32$", legendcol=1)
+
+k=128
+data128 = automaticPlot(list("EvoHGP$+C+ER$" = random_combine[random_combine$k == k,],
+                                   "KaHyPar-CA" = kahypar_ca[kahypar_ca$k == k,],
+                                   "KaHyPar-CA-V" = kahypar_ca_vcycle[kahypar_ca_vcycle$k == k,],
+                                   "EvoHGP$+C+M_{0.5}$" = trad_vcycle_mutate[trad_vcycle_mutate$k == k,]),
+                              baselineTime(traditional_combine[traditional_combine$k == k,]))
+data128$algorithm <- factor(data128$algorithm, levels = c("KaHyPar-CA", "KaHyPar-CA-V", "EvoHGP$+C+ER$", "EvoHGP$+C+M_{0.5}$"))
+d = convergencePlot(data128, legendPos = c(0.25,0.25), title="$k=128$", legendcol=1)
+
+library(gridExtra)
+library(grid)
+library(ggplot2)
+library(lattice)
+
+grid.arrange(a,b,c,d, ncol=2)
+@
+\caption{Convergence plots for all instances and for different values of $k$.}\label{fig:convergence}
+\vspace*{-.5cm}
+\end{figure}

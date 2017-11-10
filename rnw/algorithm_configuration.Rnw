@@ -1,0 +1,188 @@
+<<set-parent, echo=FALSE, cache=FALSE>>=
+set_parent('../paper.tex')
+@
+
+<<configure, echo=F,cache=FALSE>>=
+library(knitr)
+library(tikzDevice)
+library(highlight)
+knitr::opts_chunk$set(echo=F, eval=T, message = F, warning=F, cache = F, sanitize=T, fig=TRUE)
+knit_hooks$set(crop=hook_pdfcrop)
+## set global chunk options
+opts_chunk$set(fig.path='./', cache.path='./cache/-', fig.align='center', fig.show='hold', par=TRUE)
+## I use = but I can replace it with <-; set code/output width to be 68
+options(formatR.arrow=TRUE, width=68, digits=4)
+## tune details of base graphics (http://yihui.name/knitr/hooks)
+knit_hooks$set(par=function(before, options, envir){
+if (before && options$fig.show!='none') par(mar=c(4,4,.1,.1),cex.lab=.95,cex.axis=.9,mgp=c(2,.7,0),tcl=-.3) })
+@
+
+<<setup, echo=F,sanitize=T>>=
+source("/home/schlag/repo/publication/evolutionary_hypergraphpartitioning/R/plot_functions.R")
+
+#read in data
+traditional_combine <- read.csv("/home/schlag/repo/publication/evolutionary_hypergraphpartitioning/R/i10pc128/traditional_combine_clean.txt",
+                                header=TRUE, sep=" ")
+random_combine <- read.csv("/home/schlag/repo/publication/evolutionary_hypergraphpartitioning/R/i10pc128/random_combine_clean.txt",
+                           header=TRUE, sep=" ")
+ef_combine <- read.csv("/home/schlag/repo/publication/evolutionary_hypergraphpartitioning/R/i10pc128/100_percent_edge_frequency_clean.txt",
+                       header=TRUE, sep=" ")
+
+random_combine_mutation <- read.csv("/home/schlag/repo/publication/evolutionary_hypergraphpartitioning/R/i10pc128/temporary_50_50_with_mutation_clean.txt",
+                                    header=TRUE, sep=" ")
+traditional_combine_mutation  <- read.csv("/home/schlag/repo/publication/evolutionary_hypergraphpartitioning/R/i10pc128/temporary_traditional_mutation_clean.txt",
+                                          header=TRUE, sep=" ")
+traditional_combine_mutation_50 <- read.csv("/home/schlag/repo/publication/evolutionary_hypergraphpartitioning/R/i10pc128/random_combine_vcycles.txt",
+                                    header=TRUE, sep=" ")
+
+kahypar_ca_vcycle <- read.csv("/home/schlag/repo/publication/evolutionary_hypergraphpartitioning/R/i10pc128/nonevolutionary_vcycles_clean.txt",
+                              header=TRUE, sep=" ")
+kahypar_ca <- read.csv("/home/schlag/repo/publication/evolutionary_hypergraphpartitioning/R/i10pc128/nonevolutionary_clean.txt",
+                       header=TRUE, sep=" ")
+
+
+################################
+# undo factors
+################################
+traditional_combine$name <- as.character(traditional_combine$name)
+random_combine$name <- as.character(random_combine$name)
+ef_combine$name <- as.character(ef_combine$name)
+
+random_combine_mutation$name <- as.character(random_combine_mutation$name)
+traditional_combine_mutation$name <- as.character(traditional_combine_mutation$name)
+traditional_combine_mutation_50$name <- as.character(traditional_combine_mutation_50$name)
+
+kahypar_ca_vcycle$name <- as.character(kahypar_ca_vcycle$name)
+kahypar_ca$name <- as.character(kahypar_ca$name)
+
+################################
+# add graph classes
+################################
+traditional_combine$class <- as.factor(apply(traditional_combine, 1, function(x) graphclass(x)))
+random_combine$class <- as.factor(apply(random_combine, 1, function(x) graphclass(x)))
+ef_combine$class <- as.factor(apply(ef_combine, 1, function(x) graphclass(x)))
+
+traditional_combine_mutation$class <- as.factor(apply(traditional_combine_mutation, 1, function(x) graphclass(x)))
+random_combine_mutation$class <- as.factor(apply(random_combine_mutation, 1, function(x) graphclass(x)))
+traditional_combine_mutation_50$class <- as.factor(apply(traditional_combine_mutation_50, 1, function(x) graphclass(x)))
+
+kahypar_ca_vcycle$class <- as.factor(apply(kahypar_ca_vcycle, 1, function(x) graphclass(x)))
+kahypar_ca$class <- as.factor(apply(kahypar_ca, 1, function(x) graphclass(x)))
+
+################################
+# find unique instances
+################################
+instances_traditional_combine = traditional_combine[!duplicated(traditional_combine[,c("name","k")]),]
+instances_random_combine = random_combine[!duplicated(random_combine[,c("name","k")]),]
+instances_ef_combine= ef_combine[!duplicated(ef_combine[,c("name","k")]),]
+
+instances_traditional_combine_mutation= traditional_combine_mutation[!duplicated(traditional_combine_mutation[,c("name","k")]),]
+instances_random_combine_mutation= random_combine_mutation[!duplicated(random_combine_mutation[,c("name","k")]),]
+instances_traditional_combine_mutation_50= traditional_combine_mutation_50[!duplicated(traditional_combine_mutation_50[,c("name","k")]),]
+
+instances_kahypar_ca_vcycle = kahypar_ca_vcycle[!duplicated(kahypar_ca_vcycle[,c("name","k")]),]
+instances_kahypar_ca = kahypar_ca[!duplicated(kahypar_ca[,c("name","k")]),]
+
+################################
+# build a filter
+################################
+semi_join_filter = semi_join(instances_random_combine, instances_traditional_combine, by=c('name','k'))
+semi_join_filter = semi_join(semi_join_filter, instances_ef_combine, by=c('name','k'))
+
+semi_join_filter = semi_join(semi_join_filter, instances_traditional_combine_mutation, by=c('name','k'))
+semi_join_filter = semi_join(semi_join_filter, instances_random_combine_mutation, by=c('name','k'))
+semi_join_filter = semi_join(semi_join_filter, instances_traditional_combine_mutation_50, by=c('name','k'))
+
+semi_join_filter = semi_join(semi_join_filter, instances_kahypar_ca_vcycle, by=c('name','k'))
+semi_join_filter = semi_join(semi_join_filter, instances_kahypar_ca, by=c('name','k'))
+
+################################
+# apply the semi_join_filter to all data frames
+################################
+traditional_combine = semi_join(traditional_combine, semi_join_filter, by=c('name','k'))
+random_combine = semi_join(random_combine, semi_join_filter, by=c('name','k'))
+ef_combine = semi_join(ef_combine, semi_join_filter, by=c('name','k'))
+
+traditional_combine_mutation = semi_join(traditional_combine_mutation, semi_join_filter, by=c('name','k'))
+random_combine_mutation = semi_join(random_combine_mutation, semi_join_filter, by=c('name','k'))
+traditional_combine_mutation_50 = semi_join(traditional_combine_mutation_50, semi_join_filter, by=c('name','k'))
+
+kahypar_ca_vcycle = semi_join(kahypar_ca_vcycle, semi_join_filter, by=c('name','k'))
+kahypar_ca = semi_join(kahypar_ca, semi_join_filter, by=c('name','k'))
+
+################################
+# maintain sort order
+################################
+traditional_combine = traditional_combine[with(traditional_combine, order(name,k,seed,iteration,time)), ]
+random_combine = random_combine[with(random_combine, order(name,k,seed,iteration,time)), ]
+ef_combine = ef_combine[with(ef_combine, order(name,k,seed,iteration,time)), ]
+
+traditional_combine_mutation = traditional_combine_mutation[with(traditional_combine_mutation, order(name,k,seed,iteration,time)), ]
+random_combine_mutation = random_combine_mutation[with(random_combine_mutation, order(name,k,seed,iteration,time)), ]
+traditional_combine_mutation_50 = traditional_combine_mutation_50[with(traditional_combine_mutation_50, order(name,k,seed,iteration,time)), ]
+
+kahypar_ca_vcycle = kahypar_ca_vcycle[with(kahypar_ca_vcycle, order(name,k,seed,iteration,time)), ]
+kahypar_ca = kahypar_ca[with(kahypar_ca, order(name,k,seed,iteration,time)), ]
+
+################################
+#sanity checks
+################################
+stopifnot(count(traditional_combine[!duplicated(traditional_combine[,c("name","k")]),]) ==
+            count(random_combine[!duplicated(random_combine[,c("name","k")]),]))
+stopifnot(count(traditional_combine[!duplicated(traditional_combine[,c("name","k")]),]) ==
+            count(ef_combine[!duplicated(ef_combine[,c("name","k")]),]))
+
+stopifnot(count(traditional_combine[!duplicated(traditional_combine[,c("name","k")]),]) ==
+            count(traditional_combine_mutation[!duplicated(traditional_combine_mutation[,c("name","k")]),]))
+stopifnot(count(traditional_combine[!duplicated(traditional_combine[,c("name","k")]),]) ==
+            count(random_combine_mutation[!duplicated(random_combine_mutation[,c("name","k")]),]))
+stopifnot(count(traditional_combine_mutation_50[!duplicated(traditional_combine_mutation_50[,c("name","k")]),]) ==
+            count(traditional_combine_mutation_50[!duplicated(traditional_combine_mutation_50[,c("name","k")]),]))
+
+stopifnot(count(traditional_combine[!duplicated(traditional_combine[,c("name","k")]),]) ==
+            count(kahypar_ca_vcycle[!duplicated(kahypar_ca_vcycle[,c("name","k")]),]))
+stopifnot(count(traditional_combine[!duplicated(traditional_combine[,c("name","k")]),]) ==
+            count(kahypar_ca[!duplicated(kahypar_ca[,c("name","k")]),]))
+
+# warning(paste("imalance > 0.03:", count(traditional_combine[traditional_combine$imbalance > 0.03,])))
+# warning(paste("imalance > 0.03:", count(random_combine[random_combine$imbalance > 0.03,])))
+# warning(paste("imalance > 0.03:", count(kahypar_ca[kahypar_ca$imbalance > 0.03,])))
+# warning(paste("imalance > 0.03:", count(kahypar_ca_vcycle[kahypar_ca_vcycle$imbalance > 0.03,])))
+# warning(paste("imalance > 0.03:", count(ef_combine[ef_combine$imbalance > 0.03,])))
+# warning(paste("imalance > 0.03:", count(traditional_combine_mutation[traditional_combine_mutation$imbalance > 0.03,])))
+# warning(paste("imalance > 0.03:", count(random_combine_mutation[random_combine_mutation$imbalance > 0.03,])))
+# warning(paste("imalance > 0.03:", count(traditional_combine_mutation_50[traditional_combine_mutation_50$imbalance > 0.03,])))
+@
+
+\begin{figure}
+\centering
+ <<algo_conf,dev='tikz',dev.args=list(pointsize=10),,fig.width=4,fig.height=3,out.width='.5\\textwidth',fig.show='hold', crop=TRUE,sanitize=F>>=
+#par(mar=c(4, 4, 1, .1), mgp=c(2,1,0))
+
+# colors
+# CA = #ff7f00
+# CA-V = #e41a1c
+# EF = #a65628
+# C1 = #999999
+# C1lame = #00fe33
+# C1M1M2 = #377eb8
+# C1C2 = #4daf4a
+
+data = automaticPlot(list("KaHyPar-CA" = kahypar_ca,
+                          "KaHyPar-CA-V" = kahypar_ca_vcycle,
+                          "EvoHGP$+ER$" = ef_combine,
+                          "EvoHGP$+C$" = traditional_combine,
+                          "EvoHGP$+C+M_{0.1}$" = traditional_combine_mutation,
+                          "EvoHGP$+C+M_{0.5}$" = traditional_combine_mutation_50,
+                          "EvoHGP$+C+ER$" = random_combine),
+                          baselineTime(traditional_combine))
+data$algorithm <- factor(data$algorithm, levels = c("KaHyPar-CA", "KaHyPar-CA-V", "EvoHGP$+ER$",
+                                                    "EvoHGP$+C$", "EvoHGP$+C+M_{0.1}$", "EvoHGP$+C+M_{0.5}$", "EvoHGP$+C+ER$"))
+
+convergencePlot(data,
+                legendPos = c(0.2,0.3),
+                title="",
+                legendcol = 1, fntsize_axis=10, fntsize_leg=9, keysize=.75)
+@
+\caption{Configuration}\label{fig:config}
+\end{figure}
