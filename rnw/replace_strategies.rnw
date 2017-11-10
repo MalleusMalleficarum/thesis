@@ -1,0 +1,58 @@
+<<set-parent, echo=FALSE, cache=FALSE>>=
+set_parent('../bachelorarbeit.tex')
+@
+
+<<configure, echo=F,cache=FALSE>>=
+library(knitr)
+library(tikzDevice)
+library(highlight)
+knitr::opts_chunk$set(echo=F, eval=T, message = F, warning=F, cache = F, sanitize=T, fig=TRUE)
+knit_hooks$set(crop=hook_pdfcrop)
+## set global chunk options
+opts_chunk$set(fig.path='./', cache.path='./cache/-', fig.align='center', fig.show='hold', par=TRUE)
+## I use = but I can replace it with <-; set code/output width to be 68
+options(formatR.arrow=TRUE, width=68, digits=4)
+## tune details of base graphics (http://yihui.name/knitr/hooks)
+knit_hooks$set(par=function(before, options, envir){
+if (before && options$fig.show!='none') par(mar=c(4,4,.1,.1),cex.lab=.95,cex.axis=.9,mgp=c(2,.7,0),tcl=-.3) })
+@
+
+<<setup, echo=F,sanitize=T>>=
+source("/home/andre/server-home/temppap/R/plot_functions.R")
+source("/home/andre/server-home/temppap/R/final_preprocessing.R")
+@
+
+\begin{figure}
+\centering
+ <<replace_plot,dev='tikz',dev.args=list(pointsize=10),,fig.width=6,fig.height=4,out.width='\\textwidth',fig.show='hold', crop=TRUE,sanitize=F>>=
+#par(mar=c(4, 4, 1, .1), mgp=c(2,1,0))
+trad_worst = read.csv(file="/home/andre/server-global_data/schlag/in_out/robin_local_results/replace-strategies/traditional_worst_clean.txt", header=TRUE, sep=" ")
+trad_worst <- trad_worst[trad_worst$seed <= 3,]
+trad_cut_div = read.csv(file="/home/andre/server-global_data/schlag/in_out/robin_local_results/replace-strategies/traditional_cut_diverse_clean.txt", header=TRUE, sep=" ") 
+trad_cut_div <- trad_cut_div[trad_cut_div$seed <= 3,]
+traditional_combine_small = read.csv(file="/home/andre/server-home/Hypergraphs/tuning/results/2hour_restart_dynamic_population/clean/traditional_combine_clean.txt", header=TRUE, sep=" ")
+trad_conn_div =  read.csv(file="/home/andre/server-global_data/schlag/in_out/robin_local_results/replace-strategies/traditional_connectivity_diverse_clean.txt", header=TRUE, sep=" ") 
+trad_conn_div <- trad_conn_div[trad_conn_div$seed <= 3,]
+data = automaticPlot(list("CA" = trad_worst,
+                         "CA-V" = trad_cut_div,
+                         "E+C1" = trad_conn_div),
+                    computeSequentialBaselineTime(trad_conn_div))
+colors=c("CA" = "#000000", "CA-V" = "#888888", "E+C1" = "#ff0000")
+convergencePlot(data, legendPos = c(0.1,0.1), title="",legendcol = 2,colors)
+#ggplot(data, aes(x=t, y=best, color=algorithm)) +
+  #geom_line() +
+ # scale_x_continuous(trans = "log", breaks = c(1,2,5,10,20,50,100,200,500,1000,2000,5000)) +
+  #scale_y_continuous(breaks = pretty_breaks(n=5))
+library(gridExtra)
+library(grid)
+library(ggplot2)
+library(lattice)
+
+#devtools::install_github("baptiste/egg") 
+#grid.draw(egg::ggarrange(plots=plots, ncol=2, nrow=4))
+
+
+
+@
+\caption{Convergence plots for different values of $k$.}
+\end{figure}

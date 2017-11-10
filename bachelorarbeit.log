@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.29)  10 NOV 2017 02:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.11.10)  10 NOV 2017 21:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1519,6 +1519,11 @@ Class scrbook Warning: \float@addtolists detected!
 (scrbook)              a package that still implements the
 (scrbook)              deprecated \float@addtolist interface .
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 199--202
+
+ []
+
 [1
 
 
@@ -1528,6 +1533,40 @@ Class scrbook Warning: \float@addtolists detected!
 
 ] [2]
 chapter 2.
+! Missing $ inserted.
+<inserted text> 
+                $
+l.211 ...is a subset of the vertices \ e \subseteq
+                                                   V$.
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! LaTeX Error: \mathcal allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.220 ...set of cut edges from a partition\mathcal
+                                                  {P} The cut metric of\math...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \mathcal allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.220 ...tion\mathcal{P} The cut metric of\mathcal
+                                                  {P}is defined as $cut(\mat...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 <Ipe/Coarsening_Example.pdf, id=145, 412.97185pt x 184.87871pt>
 File: Ipe/Coarsening_Example.pdf Graphic file (type pdf)
 
@@ -1550,10 +1589,10 @@ ig-i-nat-ing from var-i-ous back-grounds
 File: Ipe/Memetic_process.pdf Graphic file (type pdf)
 
 <use Ipe/Memetic_process.pdf>
-Package pdftex.def Info: Ipe/Memetic_process.pdf used on input line 296.
+Package pdftex.def Info: Ipe/Memetic_process.pdf used on input line 297.
 (pdftex.def)             Requested size: 346.55592pt x 238.49881pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--300
+Underfull \hbox (badness 10000) in paragraph at lines 288--301
 
  []
 
@@ -1566,17 +1605,17 @@ chapter 3.
 File: Ipe/connexample.pdf Graphic file (type pdf)
 
 <use Ipe/connexample.pdf>
-Package pdftex.def Info: Ipe/connexample.pdf used on input line 347.
+Package pdftex.def Info: Ipe/connexample.pdf used on input line 348.
 (pdftex.def)             Requested size: 346.55592pt x 166.22537pt.
  [9 <./Ipe/connexample.pdf>]
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 361.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 362.
  [10] [11] [12]
 <Ipe/diverse_example.pdf, id=315, 385.84149pt x 144.9415pt>
 File: Ipe/diverse_example.pdf Graphic file (type pdf)
 
 <use Ipe/diverse_example.pdf>
-Package pdftex.def Info: Ipe/diverse_example.pdf used on input line 424.
+Package pdftex.def Info: Ipe/diverse_example.pdf used on input line 425.
 (pdftex.def)             Requested size: 346.55592pt x 130.19179pt.
  [13 <./Ipe/diverse_example.pdf>] [14
 
@@ -1590,38 +1629,38 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.455 \newline
+l.456 \newline
                ~\newline
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 455--459
+Underfull \hbox (badness 10000) in paragraph at lines 456--460
 
  []
 
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 463.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 464.
 
 LaTeX Warning: Reference `the section with the graphic' on page 15 undefined on
- input line 463.
+ input line 464.
 
 
 LaTeX Warning: Citation `ein schlag paper' on page 15 undefined on input line 4
-67.
+68.
 
 
-LaTeX Warning: Reference `sec:vcycles' on page 15 undefined on input line 469.
+LaTeX Warning: Reference `sec:vcycles' on page 15 undefined on input line 470.
 
 
 LaTeX Warning: Citation `The work that uses local search unbounded' on page 15 
-undefined on input line 469.
+undefined on input line 470.
 
 ! You can't use `macro parameter character #' in math mode.
 <recently read> ##
                   
-l.469 ...t the stopping criterion is always met $#
+l.470 ...t the stopping criterion is always met $#
                                                   v-cycles = 100$. This algo...
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -1629,7 +1668,7 @@ If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 460--474
+Underfull \hbox (badness 10000) in paragraph at lines 461--475
 
  []
 
@@ -1638,7 +1677,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 460--474
 File: Ipe/seed_averaging_example.pdf Graphic file (type pdf)
 
 <use Ipe/seed_averaging_example.pdf>
-Package pdftex.def Info: Ipe/seed_averaging_example.pdf used on input line 642.
+Package pdftex.def Info: Ipe/seed_averaging_example.pdf used on input line 643.
 
 (pdftex.def)             Requested size: 389.87129pt x 271.0503pt.
  [18]
@@ -1647,101 +1686,113 @@ File: Ipe/instanceaveragingexample.pdf Graphic file (type pdf)
 
 <use Ipe/instanceaveragingexample.pdf>
 Package pdftex.def Info: Ipe/instanceaveragingexample.pdf used on input line 65
-3.
+4.
 (pdftex.def)             Requested size: 389.87129pt x 253.43523pt.
  [19 <./Ipe/seed_averaging_example.pdf>]
 [20 <./Ipe/instanceaveragingexample.pdf>]
 
 LaTeX Warning: Reference `replcaestrategies' on page 21 undefined on input line
- 672.
+ 673.
 
-<bachelorarbeit-replacestrategies.pdf, id=655, 433.62pt x 289.08pt>
-File: bachelorarbeit-replacestrategies.pdf Graphic file (type pdf)
 
-<use bachelorarbeit-replacestrategies.pdf>
-Package pdftex.def Info: bachelorarbeit-replacestrategies.pdf used on input lin
-e 677.
-(pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
- [21]
+<rnw/tuning_subset_plots/replace_plot-1.pdf, id=655, 408.52625pt x 258.9675pt>
+File: rnw/tuning_subset_plots/replace_plot-1.pdf Graphic file (type pdf)
+
+<use rnw/tuning_subset_plots/replace_plot-1.pdf>
+Package pdftex.def Info: rnw/tuning_subset_plots/replace_plot-1.pdf used on inp
+ut line 678.
+(pdftex.def)             Requested size: 408.52525pt x 258.96684pt.
+
 
 LaTeX Warning: Reference `Wo auch immer ich gesagt habe dass worst mist ist' on
- page 22 undefined on input line 681.
+ page 21 undefined on input line 682.
 
-<bachelorarbeit-basiccomparation.pdf, id=665, 433.62pt x 289.08pt>
-File: bachelorarbeit-basiccomparation.pdf Graphic file (type pdf)
+[21 <./rnw/tuning_subset_plots/replace_plot-1.pdf>]
+<rnw/tuning_subset_plots/combine_plot-1.pdf, id=690, 408.52625pt x 258.9675pt>
+File: rnw/tuning_subset_plots/combine_plot-1.pdf Graphic file (type pdf)
 
-<use bachelorarbeit-basiccomparation.pdf>
-Package pdftex.def Info: bachelorarbeit-basiccomparation.pdf used on input line
- 697.
-(pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
- [22 <./bachelorarbeit-replacestrategies.pdf>] [23 <./bachelorarbeit-basiccompa
-ration.pdf>]
-<bachelorarbeit-differentoperatos.pdf, id=690, 433.62pt x 289.08pt>
-File: bachelorarbeit-differentoperatos.pdf Graphic file (type pdf)
+<use rnw/tuning_subset_plots/combine_plot-1.pdf>
+Package pdftex.def Info: rnw/tuning_subset_plots/combine_plot-1.pdf used on inp
+ut line 698.
+(pdftex.def)             Requested size: 408.52525pt x 258.96684pt.
+ [22 <./rnw/tuning_subset_plots/combine_plot-1.pdf>]
+<rnw/tuning_subset_plots/mutation_plot-1.pdf, id=727, 408.52625pt x 258.9675pt>
+File: rnw/tuning_subset_plots/mutation_plot-1.pdf Graphic file (type pdf)
+<use rnw/tuning_subset_plots/mutation_plot-1.pdf>
+Package pdftex.def Info: rnw/tuning_subset_plots/mutation_plot-1.pdf used on in
+put line 712.
+(pdftex.def)             Requested size: 408.52525pt x 258.96684pt.
+ [23] [24 <./rnw/tuning_subset_plots/mutation_plot-1.pdf>]
+<rnw/tuning_subset_plots/diverse_plot-1.pdf, id=766, 408.52625pt x 258.9675pt>
+File: rnw/tuning_subset_plots/diverse_plot-1.pdf Graphic file (type pdf)
 
-<use bachelorarbeit-differentoperatos.pdf>
-Package pdftex.def Info: bachelorarbeit-differentoperatos.pdf used on input lin
-e 711.
-(pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
- [24] [25 <./bachelorarbeit-differentoperatos.pdf>]
-File: bachelorarbeit-differentoperatos.pdf Graphic file (type pdf)
- <use bachelorarbeit-differentoperatos.pdf>
-Package pdftex.def Info: bachelorarbeit-differentoperatos.pdf used on input lin
-e 732.
-(pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
+<use rnw/tuning_subset_plots/diverse_plot-1.pdf>
+Package pdftex.def Info: rnw/tuning_subset_plots/diverse_plot-1.pdf used on inp
+ut line 733.
+(pdftex.def)             Requested size: 408.52525pt x 258.96684pt.
+ [25 <./rnw/tuning_subset_plots/diverse_plot-1.pdf>]
+<rnw/tuning_subset_plots/edge_tuning_plot-1.pdf, id=802, 408.52625pt x 258.9675
+pt>
+File: rnw/tuning_subset_plots/edge_tuning_plot-1.pdf Graphic file (type pdf)
+ <use rnw/tuning_subset_plots/edge_tuning_plot-1.pdf>
+Package pdftex.def Info: rnw/tuning_subset_plots/edge_tuning_plot-1.pdf used on
+ input line 749.
+(pdftex.def)             Requested size: 408.52525pt x 258.96684pt.
  [26]
-<bachelorarbeit-edgefrequencytuning.pdf, id=711, 433.62pt x 289.08pt>
-File: bachelorarbeit-edgefrequencytuning.pdf Graphic file (type pdf)
+<rnw/tuning_subset_plots/mutation_tuning_plot-1.pdf, id=810, 408.52625pt x 258.
+9675pt>
+File: rnw/tuning_subset_plots/mutation_tuning_plot-1.pdf Graphic file (type pdf
+)
+ <use rnw/tuning_subset_plots/mutation_tuning_plot-1.pdf>
+Package pdftex.def Info: rnw/tuning_subset_plots/mutation_tuning_plot-1.pdf use
+d on input line 762.
+(pdftex.def)             Requested size: 408.52525pt x 258.96684pt.
+ [27 <./rnw/tuning_subset_plots/edge_tuning_plot-1.pdf>]
 
-<use bachelorarbeit-edgefrequencytuning.pdf>
-Package pdftex.def Info: bachelorarbeit-edgefrequencytuning.pdf used on input l
-ine 748.
-(pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
- [27]
-<bachelorarbeit-newipmutationchance.pdf, id=720, 433.62pt x 289.08pt>
-File: bachelorarbeit-newipmutationchance.pdf Graphic file (type pdf)
+LaTeX Warning: Command \k invalid in math mode on input line 767.
 
-<use bachelorarbeit-newipmutationchance.pdf>
-Package pdftex.def Info: bachelorarbeit-newipmutationchance.pdf used on input l
-ine 761.
-(pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
- [28 <./bachelorarbeit-edgefrequencytuning.pdf>]
+<rnw/tuning_subset_plots/full_plot-1.pdf, id=840, 398.48875pt x 260.975pt>
+File: rnw/tuning_subset_plots/full_plot-1.pdf Graphic file (type pdf)
 
-LaTeX Warning: Command \k invalid in math mode on input line 766.
-
-<../Heatmap/RplotAll.pdf, id=731, 397.485pt x 281.05pt>
-File: ../Heatmap/RplotAll.pdf Graphic file (type pdf)
-
-<use ../Heatmap/RplotAll.pdf>
-Package pdftex.def Info: ../Heatmap/RplotAll.pdf used on input line 776.
-(pdftex.def)             Requested size: 433.19327pt x 306.3084pt.
- [29 <./bachelorarbeit-newipmutationchance.pdf>]
-<rnw/appendix_convergence-1.pdf, id=743, 867.24pt x 578.16pt>
+<use rnw/tuning_subset_plots/full_plot-1.pdf>
+Package pdftex.def Info: rnw/tuning_subset_plots/full_plot-1.pdf used on input 
+line 777.
+(pdftex.def)             Requested size: 433.19327pt x 283.71643pt.
+ [28 <./rnw/tuning_subset_plots/mutation_tuning_plot-1.pdf>]
+<rnw/appendix_convergence-1.pdf, id=870, 433.62pt x 289.08pt>
 File: rnw/appendix_convergence-1.pdf Graphic file (type pdf)
 
 <use rnw/appendix_convergence-1.pdf>
-Package pdftex.def Info: rnw/appendix_convergence-1.pdf used on input line 797.
+Package pdftex.def Info: rnw/appendix_convergence-1.pdf used on input line 798.
 
-(pdftex.def)             Requested size: 433.19327pt x 288.79698pt.
+(pdftex.def)             Requested size: 433.19327pt x 288.81021pt.
 
-<rnw/appendix_convergence-2.pdf, id=744, 867.24pt x 578.16pt>
+<rnw/appendix_convergence-2.pdf, id=871, 433.62pt x 289.08pt>
 File: rnw/appendix_convergence-2.pdf Graphic file (type pdf)
 
 <use rnw/appendix_convergence-2.pdf>
-Package pdftex.def Info: rnw/appendix_convergence-2.pdf used on input line 798.
+Package pdftex.def Info: rnw/appendix_convergence-2.pdf used on input line 799.
 
-(pdftex.def)             Requested size: 433.19327pt x 288.79698pt.
- [30 <../Heatmap/RplotAll.pdf>]
-Overfull \vbox (39.79185pt too high) has occurred while \output is active []
+(pdftex.def)             Requested size: 433.19327pt x 288.81021pt.
+ [29 <./rnw/tuning_subset_plots/full_plot-1.pdf>]
+Overfull \vbox (39.81831pt too high) has occurred while \output is active []
 
 
-[31 <./rnw/appendix_convergence-1.pdf> <./rnw/appendix_convergence-2.pdf>]
-[32]
+[30 <./rnw/appendix_convergence-1.pdf> <./rnw/appendix_convergence-2.pdf>]
+<rnw/tuning_subset_plots/performance_plot_main-1.pdf, id=962, 281.05pt x 177.66
+376pt>
+File: rnw/tuning_subset_plots/performance_plot_main-1.pdf Graphic file (type pd
+f)
+ <use rnw/tuning_subset_plots/performance_plot_main-1.pdf>
+Package pdftex.def Info: rnw/tuning_subset_plots/performance_plot_main-1.pdf us
+ed on input line 850.
+(pdftex.def)             Requested size: 433.19327pt x 273.85513pt.
+ [31 <./rnw/tuning_subset_plots/performance_plot_main-1.pdf>] [32
+
+
+]
 chapter 5.
-[33
-
-
-] [34
+[33] [34
 
 
 
@@ -4059,11 +4110,11 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ) [40]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 873.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 873.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 878.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 878.
  (./bachelorarbeit.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 873.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 873.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 878.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 878.
 
 
 Package rerunfilecheck Warning: File `bachelorarbeit.out' has changed.
@@ -4076,13 +4127,13 @@ Package rerunfilecheck Info: Checksums for `bachelorarbeit.out':
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 873.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 878.
  ) 
 Here is how much of TeX's memory you used:
- 22773 strings out of 493033
- 404728 string characters out of 6136455
- 640940 words of memory out of 5000000
- 25689 multiletter control sequences out of 15000+600000
+ 22783 strings out of 493033
+ 405343 string characters out of 6136454
+ 10553941 words of memory out of 20500867
+ 25697 multiletter control sequences out of 15000+600000
  66296 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,10n,66p,2553b,518s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -4102,9 +4153,9 @@ live/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr
 8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bachelorarbeit.pdf (48 pages, 2019995 bytes).
+Output written on bachelorarbeit.pdf (48 pages, 2980476 bytes).
 PDF statistics:
- 935 PDF objects out of 1000 (max. 8388607)
+ 1110 PDF objects out of 1200 (max. 8388607)
  156 named destinations out of 1000 (max. 500000)
- 88 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 98 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -30,7 +30,7 @@ data_all_tikz = automaticPlot(list("E+C1" = traditional_combine,
 
 \begin{figure}[H]
 \centering
- <<replace_plot,fig.width=6,fig.height=4,out.width='\\textwidth',fig.show='hold', crop=TRUE,sanitize=F>>=
+ <<replace_plot,dev='tikz',dev.args=list(pointsize=10),,fig.width=6,fig.height=4,out.width='\\textwidth',fig.show='hold', crop=TRUE,sanitize=F>>=
 #par(mar=c(4, 4, 1, .1), mgp=c(2,1,0))
 convergencePlot(data_all_tikz, c(0.2,0.2), "all k")
 @

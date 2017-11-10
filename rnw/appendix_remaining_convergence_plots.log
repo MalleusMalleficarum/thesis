@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.29)  10 NOV 2017 02:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.11.10)  10 NOV 2017 21:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1442,19 +1442,19 @@ LaTeX Info: Redefining \nameref on input line 132.
 
 Package xcolor Warning: Incompatible color definition on input line 142.
 
-<./appendix_convergence-1.pdf, id=6, 867.24pt x 578.16pt>
+<./appendix_convergence-1.pdf, id=6, 433.62pt x 289.08pt>
 File: ./appendix_convergence-1.pdf Graphic file (type pdf)
 
 <use ./appendix_convergence-1.pdf>
 Package pdftex.def Info: ./appendix_convergence-1.pdf used on input line 144.
-(pdftex.def)             Requested size: 433.19327pt x 288.79698pt.
+(pdftex.def)             Requested size: 433.19327pt x 288.81021pt.
 
-<./appendix_convergence-2.pdf, id=7, 867.24pt x 578.16pt>
+<./appendix_convergence-2.pdf, id=7, 433.62pt x 289.08pt>
 File: ./appendix_convergence-2.pdf Graphic file (type pdf)
 
 <use ./appendix_convergence-2.pdf>
 Package pdftex.def Info: ./appendix_convergence-2.pdf used on input line 145.
-(pdftex.def)             Requested size: 433.19327pt x 288.79698pt.
+(pdftex.def)             Requested size: 433.19327pt x 288.81021pt.
 LaTeX Font Info:    Try loading font information for T1+phv on input line 152.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
@@ -1499,8 +1499,8 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 156.
  ) 
 Here is how much of TeX's memory you used:
  22305 strings out of 493033
- 400202 string characters out of 6136455
- 544675 words of memory out of 5000000
+ 400202 string characters out of 6136454
+ 10543676 words of memory out of 20490602
  25401 multiletter control sequences out of 15000+600000
  21252 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1513,7 +1513,7 @@ type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uh
 vb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on appendix_remaining_convergence_plots.pdf (1 page, 778985 byte
+Output written on appendix_remaining_convergence_plots.pdf (1 page, 661976 byte
 s).
 PDF statistics:
  83 PDF objects out of 1000 (max. 8388607)

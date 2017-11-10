@@ -1,0 +1,42 @@
+<<set-parent, echo=FALSE, cache=FALSE>>=
+set_parent('../../bachelorarbeit.tex')
+@
+
+<<configure, echo=F,cache=FALSE>>=
+library(knitr)
+library(tikzDevice)
+library(highlight)
+knitr::opts_chunk$set(echo=F, eval=T, message = F, warning=F, cache = F, sanitize=T, fig=TRUE)
+knit_hooks$set(crop=hook_pdfcrop)
+## set global chunk options
+opts_chunk$set(fig.path='./', cache.path='./cache/-', fig.align='center', fig.show='hold', par=TRUE)
+## I use = but I can replace it with <-; set code/output width to be 68
+options(formatR.arrow=TRUE, width=68, digits=4)
+## tune details of base graphics (http://yihui.name/knitr/hooks)
+knit_hooks$set(par=function(before, options, envir){
+if (before && options$fig.show!='none') par(mar=c(4,4,.1,.1),cex.lab=.95,cex.axis=.9,mgp=c(2,.7,0),tcl=-.3) })
+@
+
+<<setup, echo=F,sanitize=T>>=
+source("/home/andre/server-home/temppap/R/plot_functions.R")
+source("/home/andre/server-home/temppap/R/final_preprocessing.R")
+
+@
+
+\begin{figure}[H]
+\centering
+ <<full_plot,dev='tikz',dev.args=list(pointsize=10),,fig.width=6,fig.height=4,out.width='\\textwidth',fig.show='hold', crop=TRUE,sanitize=F>>=
+#par(mar=c(4, 4, 1, .1), mgp=c(2,1,0))
+data_all_tikz = automaticPlot(list("$K_E$+C$_1$" = traditional_combine,
+                              "$K_E$+C$_1$+C$_2$" = random_combine,
+                              "$K_N$-CA" = kahypar_ca,
+                              "$K_N$-CA-V" = kahypar_ca_vcycle,
+                              "$K_E$ + C$_1$ +M$_1$ +M$_2$" = trad_vcycle_mutate),
+                         baselineTime(traditional_combine))
+colors = c("$K_E$+C$_1$" = "#a50026","$K_E$+C$_1$+C$_2$" = "#f2a518","$K_N$-CA" = "#21bc21","$K_N$-CA-V" = "#000000","$K_E$ + C$_1$ +M$_1$ +M$_2$" = "#041fed")
+convergencePlot(data_all_tikz, c(0.2,0.2), "all k",legendcol = 2, colors)
+@
+\caption{Convergence plots for all instances and for different values of $k$.}\label{fig:convergence}
+\vspace*{-.5cm}
+\end{figure}
+

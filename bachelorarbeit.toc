@@ -28,12 +28,12 @@
 \contentsline {section}{\numberline {4.3}First Evaluation}{21}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}Replacement strategy evaluation}{21}{subsection.4.3.1}
 \contentsline {subsection}{\numberline {4.3.2}Combine operator evaluation}{22}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Mutation operator evaluation}{25}{subsection.4.3.3}
-\contentsline {subsection}{\numberline {4.3.4}Mutation replacement strategies}{26}{subsection.4.3.4}
-\contentsline {section}{\numberline {4.4}Tuning Parameters}{27}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Combine chance distribution}{28}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Mutation chance distribution}{29}{subsection.4.4.2}
-\contentsline {section}{\numberline {4.5}Final Evaluation}{30}{section.4.5}
+\contentsline {subsection}{\numberline {4.3.3}Mutation operator evaluation}{24}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}Mutation replacement strategies}{25}{subsection.4.3.4}
+\contentsline {section}{\numberline {4.4}Tuning Parameters}{26}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Combine chance distribution}{26}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Mutation chance distribution}{27}{subsection.4.4.2}
+\contentsline {section}{\numberline {4.5}Final Evaluation}{28}{section.4.5}
 \contentsline {chapter}{\numberline {5}Discussion}{33}{chapter.5}
 \contentsline {section}{\numberline {5.1}Conclusion}{33}{section.5.1}
 \contentsline {section}{\numberline {5.2}Future Work}{33}{section.5.2}

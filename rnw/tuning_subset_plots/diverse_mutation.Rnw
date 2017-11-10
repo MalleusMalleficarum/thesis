@@ -1,0 +1,60 @@
+<<set-parent, echo=FALSE, cache=FALSE>>=
+set_parent('../../bachelorarbeit.tex')
+@
+
+<<configure, echo=F,cache=FALSE>>=
+library(knitr)
+library(tikzDevice)
+library(highlight)
+knitr::opts_chunk$set(echo=F, eval=T, message = F, warning=F, cache = F, sanitize=T, fig=TRUE)
+knit_hooks$set(crop=hook_pdfcrop)
+## set global chunk options
+opts_chunk$set(fig.path='./', cache.path='./cache/-', fig.align='center', fig.show='hold', par=TRUE)
+## I use = but I can replace it with <-; set code/output width to be 68
+options(formatR.arrow=TRUE, width=68, digits=4)
+## tune details of base graphics (http://yihui.name/knitr/hooks)
+knit_hooks$set(par=function(before, options, envir){
+if (before && options$fig.show!='none') par(mar=c(4,4,.1,.1),cex.lab=.95,cex.axis=.9,mgp=c(2,.7,0),tcl=-.3) })
+@
+
+<<setup, echo=F,sanitize=T>>=
+source("/home/andre/server-home/temppap/R/plot_functions.R")
+source("/home/andre/server-home/temppap/R/final_preprocessing.R")
+@
+
+\begin{figure}
+\centering
+ <<diverse_plot,dev='tikz',dev.args=list(pointsize=10),,fig.width=6,fig.height=4,out.width='\\textwidth',fig.show='hold', crop=TRUE,sanitize=F>>=
+#par(mar=c(4, 4, 1, .1), mgp=c(2,1,0))
+mutation_nonforced_insertion_random_vcycles = read.csv(file="/home/andre/server-global_data/schlag/in_out/robin_local_results/mutation-uses-insertion-strategy/clean/mutation_uses_insertion_strategy_clean.txt", header=TRUE, sep=" ")
+mutation_forced_insertion_random_vcycles = read.csv(file="/home/andre/server-global_data/schlag/in_out/robin_local_results/traditional_combine_and_vcycles/clean/random_vcycles_clean.txt", header=TRUE, sep=" ")
+mutation_forced_insertion_newip = read.csv(file="/home/andre/server-global_data/schlag/in_out/robin_local_results/traditional_combine_and_vcycles/clean/new_initial_partition_vcycle_clean.txt", header=TRUE, sep=" ")
+newip_50percent = read.csv(file="/home/andre/server-home/Hypergraphs/unicluster_results_after_paper/newip_tuning/50_clean.txt", header=TRUE, sep=" ")
+basline_dt = computeSequentialBaselineTime(mutation_nonforced_insertion_random_vcycles)
+data = automaticPlot(list(   "$K_E$ + C$_1$ + M$_1$ + M$_2$ " = mutation_forced_insertion_random_vcycles,
+                             "$K_E$ + C$_1$ + M$_1$ + M$_2$ diverse"= mutation_nonforced_insertion_random_vcycles,
+                             "$K_E$ + C$_1$ + M$_2$ " = mutation_forced_insertion_newip,
+                             "$K_E$ + C$_1$ + M$_2$ diverse" = newip_50percent),
+                              computeSequentialBaselineTime(mutation_nonforced_insertion_random_vcycles))
+colors=c("$K_E$ + C$_1$ + M$_2$ " = "#984ea3","$K_E$ + C$_1$ + M$_2$ diverse" = "#008800", "$K_E$ + C$_1$ + M$_1$ + M$_2$ " = "#ff7f00", "$K_E$ + C$_1$ + M$_1$ + M$_2$ diverse" = "#041fed")
+convergencePlot(data, legendPos = c(0.3,0.2), title="",legendcol = 2,colors)
+#ggplot(data, aes(x=t, y=best, color=algorithm)) +
+  #geom_line() +
+ # scale_x_continuous(trans = "log", breaks = c(1,2,5,10,20,50,100,200,500,1000,2000,5000)) +
+  #scale_y_continuous(breaks = pretty_breaks(n=5))
+library(gridExtra)
+library(grid)
+library(ggplot2)
+library(lattice)
+
+#devtools::install_github("baptiste/egg") 
+#grid.draw(egg::ggarrange(plots=plots, ncol=2, nrow=4))
+
+
+
+@
+\caption{Convergence plots for different values of $k$.}
+\end{figure}
+
+
+
