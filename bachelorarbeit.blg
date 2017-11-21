@@ -1,56 +1,53 @@
 This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: bachelorarbeit.aux
-White space in argument---line 125 of file bachelorarbeit.aux
- : \citation{ein
- :               schlag paper}
-I'm skipping whatever remains of this command
-White space in argument---line 127 of file bachelorarbeit.aux
- : \citation{The
- :               work that uses local search unbounded}
+White space in argument---line 33 of file bachelorarbeit.aux
+ : \citation{Multilevel
+ :                      paradigm}
 I'm skipping whatever remains of this command
 The style file: gerplain.bst
 Database file #1: literatur.bib
+Warning--I didn't find a database entry for "moscato1989evolution"
 Warning--empty journal in belov2014proceedings
-You've used 41 entries,
+You've used 39 entries,
             2343 wiz_defined-function locations,
-            784 strings with 12365 characters,
-and the built_in function-call counts, 17669 in all, are:
-= -- 1881
-> -- 686
-< -- 23
-+ -- 282
-- -- 228
-* -- 1355
-:= -- 2583
-add.period$ -- 99
-call.type$ -- 41
-change.case$ -- 195
+            774 strings with 11988 characters,
+and the built_in function-call counts, 16488 in all, are:
+= -- 1762
+> -- 630
+< -- 21
++ -- 260
+- -- 208
+* -- 1258
+:= -- 2418
+add.period$ -- 94
+call.type$ -- 39
+change.case$ -- 181
 chr.to.int$ -- 0
-cite$ -- 42
-duplicate$ -- 802
-empty$ -- 1466
-format.name$ -- 228
-if$ -- 4051
+cite$ -- 40
+duplicate$ -- 745
+empty$ -- 1373
+format.name$ -- 208
+if$ -- 3779
 int.to.chr$ -- 0
-int.to.str$ -- 41
-missing$ -- 58
-newline$ -- 166
-num.names$ -- 82
-pop$ -- 283
+int.to.str$ -- 39
+missing$ -- 56
+newline$ -- 158
+num.names$ -- 78
+pop$ -- 261
 preamble$ -- 1
-purify$ -- 195
+purify$ -- 181
 quote$ -- 0
-skip$ -- 627
+skip$ -- 584
 stack$ -- 0
-substring$ -- 1079
-swap$ -- 357
-text.length$ -- 23
+substring$ -- 1013
+swap$ -- 326
+text.length$ -- 21
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 158
+type$ -- 150
 warning$ -- 1
-while$ -- 169
-width$ -- 43
-write$ -- 424
-(There were 2 error messages)
+while$ -- 159
+width$ -- 41
+write$ -- 403
+(There was 1 error message)

@@ -31,13 +31,14 @@ nonevolutionary = read.csv(file="/home/andre/server-home/Hypergraphs/tuning/resu
 nonevolutionary_vcycles = read.csv(file="/home/andre/server-home/Hypergraphs/tuning/results/2hour_restart_dynamic_population/clean/nonevolutionary_vcycles_clean.txt", header=TRUE, sep=" ")
 random_combine = read.csv(file="/home/andre/server-home/Hypergraphs/tuning/results/2hour_restart_dynamic_population/clean/random_combine_clean.txt", header=TRUE, sep=" ")
 traditional_combine = read.csv(file="/home/andre/server-home/Hypergraphs/tuning/results/2hour_restart_dynamic_population/clean/traditional_combine_clean.txt", header=TRUE, sep=" ")
+edge_100percent =  read.csv(file="/home/andre/server-home/Hypergraphs/unicluster_results_after_paper/edge-chance-tuning/100percent_clean.txt", header=TRUE, sep=" ")
 basline_dt = computeSequentialBaselineTime(traditional_combine)
 data = automaticPlot(list("$K_E$ + C$_1$" = traditional_combine,
                                           "$K_N$-CA" = nonevolutionary,
                                           "$K_N$-CA-V" = nonevolutionary_vcycles,
                                           "$K_E$ + C$_1$ + C$_2$" = random_combine),
                               computeSequentialBaselineTime(traditional_combine))
-colors=c("CA" = "#21bc21", "CA-V" = "#000000", "E+C1" = "#a50026", "$K_E$ + C$_1$" = "#a50026", "$K_N$-CA" = "#21bc21", "$K_N$-CA-V" = "#000000", "$K_E$ + C$_1$ + C$_2$" = "#f2a518")
+colors=c("CA" = "#21bc21", "CA-V" = "#000000", "E+C1" = "#a50026", "$K_E$ + C$_1$" = "#a50026", "$K_N$-CA" = "#21bc21", "$K_N$-CA-V" = "#000000", "$K_E$ + C$_1$ + C$_2$" = "#f2a518", "$K_E +C$_2$" = "#888888")
 convergencePlot(data, legendPos = c(0.2,0.2), title="",legendcol = 2,colors)
 #ggplot(data, aes(x=t, y=best, color=algorithm)) +
   #geom_line() +

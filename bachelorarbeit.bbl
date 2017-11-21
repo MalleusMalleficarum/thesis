@@ -63,26 +63,12 @@
   selection schemes used in evolutionary algorithms}.
 \newblock Evolutionary Computation, 4(4):361--394, 1996.
 
-\bibitem{boese1992high}
-{\sc Boese, Kenneth~D}, {\sc Jason Cong}, {\sc Andrew~B Kahng}, {\sc Kwok-Shing
-  Leung} \btxandlong{}\ {\sc Dian Zhou}: {\em On high-speed VLSI interconnects:
-  Analysis and design}.
-\newblock \Btxinlong{}\ {\em Proc. Asia-Pacific Conf. on Circuits and Systems},
-  \btxpageslong{}\ 35--40, 1992.
-
 \bibitem{bui1994fast}
 {\sc Bui, Thang~Nguyen} \btxandlong{}\ {\sc Byung~Ro Moon}: {\em A fast and
   stable hybrid genetic algorithm for the ratio-cut partitioning problem on
   hypergraphs}.
 \newblock \Btxinlong{}\ {\em Proceedings of the 31st annual Design Automation
   Conference}, \btxpageslong{}\ 664--669. ACM, 1994.
-
-\bibitem{bulucc2016recent}
-{\sc Bulu{\c{c}}, Ayd{\i}n}, {\sc Henning Meyerhenke}, {\sc Ilya Safro}, {\sc
-  Peter Sanders} \btxandlong{}\ {\sc Christian Schulz}: {\em Recent advances in
-  graph partitioning}.
-\newblock \Btxinlong{}\ {\em Algorithm Engineering}, \btxpageslong{}\ 117--158.
-  Springer, 2016.
 
 \bibitem{catalyurek1999hypergraph}
 {\sc Catalyurek, Umit~V} \btxandlong{}\ {\sc Cevdet Aykanat}: {\em

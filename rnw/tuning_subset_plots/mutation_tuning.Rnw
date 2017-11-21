@@ -38,7 +38,7 @@ newip_90percent = read.csv(file="/home/andre/server-home/Hypergraphs/unicluster_
 newip_100percent = read.csv(file="/home/andre/server-home/Hypergraphs/unicluster_results_after_paper/newip_tuning/100_clean.txt", header=TRUE, sep=" ")
 traditional_combine = read.csv(file="/home/andre/server-home/Hypergraphs/tuning/results/2hour_restart_dynamic_population/clean/traditional_combine_clean.txt", header=TRUE, sep=" ")
 basline_dt = computeSequentialBaselineTime(traditional_combine)
-data = automaticPlot(list("KaHyParE + C1" = traditional_combine,
+data = automaticPlot(list("$K_E$+C$_1$" = traditional_combine,
                           "0.1" = newip_10percent,
                           "0.2" = newip_20percent,
                           "0.3" = newip_30percent,
@@ -48,10 +48,10 @@ data = automaticPlot(list("KaHyParE + C1" = traditional_combine,
                           "0.7" = newip_70percent,
                           "0.8" = newip_80percent,
                           "0.9" = newip_90percent,
-                          "KaHyParE + M2" = newip_100percent),
+                          "$K_E$+M$_2$" = newip_100percent),
                      computeSequentialBaselineTime(traditional_combine))
 colors=c("CA" = "#000000", "CA-V" = "#888888", "E+C1" = "#ff0000", "KaHyPar-E + C1" = "#0000ff", "KaHyPar-CA" = "#000000", "KaHyPar-CA+vcycle" = "#aaaa00", "KaHyPar-E + C1 + C2" = "#00ff00", "KaHyPar-E + C1 + M1" = "#ff0000", "KaHyPar-E + C1 + M2 " = "#00ff00","KaHyPar-E + C1 + M2 diverse" = "#008800", "KaHyPar-E + C1 + M3" = "#0000ff", "KaHyPar-E + C1 + M1 + M2 " = "#ffff00", "KaHyPar-E + C1 + M1 + M2 diverse" = "#888800")
-colors = c("KaHyParE + C1" = "#a50026",
+colors = c("$K_E$+C$_1$" = "#a50026",
                           "0.1" = "#081d58",
                           "0.2" = "#253494",
                           "0.3" = "#225ea8",
@@ -61,7 +61,7 @@ colors = c("KaHyParE + C1" = "#a50026",
                           "0.7" = "#c7e9b4",
                           "0.8" = "#edf8b1",
                           "0.9" = "#ffffd9",
-                          "KaHyParE + M2" = "#006837")
+                          "$K_E$+M$_2$" = "#006837")
 #ffffd9
 #edf8b1
 #c7e9b4
