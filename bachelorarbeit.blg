@@ -1,53 +1,48 @@
 This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: bachelorarbeit.aux
-White space in argument---line 33 of file bachelorarbeit.aux
- : \citation{Multilevel
- :                      paradigm}
-I'm skipping whatever remains of this command
 The style file: gerplain.bst
 Database file #1: literatur.bib
-Warning--I didn't find a database entry for "moscato1989evolution"
 Warning--empty journal in belov2014proceedings
-You've used 39 entries,
+You've used 41 entries,
             2343 wiz_defined-function locations,
-            774 strings with 11988 characters,
-and the built_in function-call counts, 16488 in all, are:
-= -- 1762
-> -- 630
-< -- 21
-+ -- 260
-- -- 208
-* -- 1258
-:= -- 2418
-add.period$ -- 94
-call.type$ -- 39
-change.case$ -- 181
+            783 strings with 12349 characters,
+and the built_in function-call counts, 17412 in all, are:
+= -- 1859
+> -- 671
+< -- 22
++ -- 276
+- -- 222
+* -- 1329
+:= -- 2556
+add.period$ -- 99
+call.type$ -- 41
+change.case$ -- 191
 chr.to.int$ -- 0
-cite$ -- 40
-duplicate$ -- 745
-empty$ -- 1373
-format.name$ -- 208
-if$ -- 3779
+cite$ -- 42
+duplicate$ -- 787
+empty$ -- 1446
+format.name$ -- 222
+if$ -- 3991
 int.to.chr$ -- 0
-int.to.str$ -- 39
-missing$ -- 56
-newline$ -- 158
-num.names$ -- 78
-pop$ -- 261
+int.to.str$ -- 41
+missing$ -- 59
+newline$ -- 166
+num.names$ -- 82
+pop$ -- 274
 preamble$ -- 1
-purify$ -- 181
+purify$ -- 191
 quote$ -- 0
-skip$ -- 584
+skip$ -- 618
 stack$ -- 0
-substring$ -- 1013
-swap$ -- 326
-text.length$ -- 21
+substring$ -- 1067
+swap$ -- 344
+text.length$ -- 22
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 150
+type$ -- 158
 warning$ -- 1
-while$ -- 159
-width$ -- 41
-write$ -- 403
-(There was 1 error message)
+while$ -- 167
+width$ -- 43
+write$ -- 424
+(There was 1 warning)

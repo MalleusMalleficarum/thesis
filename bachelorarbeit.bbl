@@ -70,6 +70,13 @@
 \newblock \Btxinlong{}\ {\em Proceedings of the 31st annual Design Automation
   Conference}, \btxpageslong{}\ 664--669. ACM, 1994.
 
+\bibitem{bulucc2016recent}
+{\sc Bulu{\c{c}}, Ayd{\i}n}, {\sc Henning Meyerhenke}, {\sc Ilya Safro}, {\sc
+  Peter Sanders} \btxandlong{}\ {\sc Christian Schulz}: {\em Recent advances in
+  graph partitioning}.
+\newblock \Btxinlong{}\ {\em Algorithm Engineering}, \btxpageslong{}\ 117--158.
+  Springer, 2016.
+
 \bibitem{catalyurek1999hypergraph}
 {\sc Catalyurek, Umit~V} \btxandlong{}\ {\sc Cevdet Aykanat}: {\em
   Hypergraph-partitioning-based decomposition for parallel sparse-matrix vector
@@ -176,6 +183,11 @@
 \newblock \Btxinlong{}\ {\em Computer-Aided Design, 1997. Digest of Technical
   Papers., 1997 IEEE/ACM International Conference on}, \btxpageslong{}\
   441--446. IEEE, 1997.
+
+\bibitem{moscato1989evolution}
+{\sc Moscato, Pablo} \btxetalshort{.}: {\em On evolution, search, optimization,
+  genetic algorithms and martial arts: Towards memetic algorithms}.
+\newblock Caltech concurrent computation program, C3P Report, 826:1989, 1989.
 
 \bibitem{papa2007hypergraph}
 {\sc Papa, David~A} \btxandlong{}\ {\sc Igor~L Markov}: {\em Hypergraph
