@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.11.10)  22 NOV 2017 00:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.11.10)  22 NOV 2017 00:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1519,30 +1519,6 @@ Class scrbook Warning: \float@addtolists detected!
 (scrbook)              a package that still implements the
 (scrbook)              deprecated \float@addtolist interface .
 
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 210.
-
-LaTeX Warning: Citation `moscato1989evolution' on page 1 undefined on input lin
-e 210.
-
-
-LaTeX Warning: Citation `garey2002computers' on page 1 undefined on input line 
-212.
-
-
-LaTeX Warning: Citation `bulucc2016recent' on page 1 undefined on input line 21
-4.
-
-
-LaTeX Warning: Citation `schlag2016k' on page 1 undefined on input line 214.
-
-
-LaTeX Warning: Citation `schlag2016k' on page 1 undefined on input line 251.
-
-
-LaTeX Warning: Citation `sanders2012distributed' on page 1 undefined on input l
-ine 251.
-
 [1
 
 
@@ -1574,7 +1550,7 @@ l.271 ...tion\mathcal{P} The cut metric of\mathcal
                                                   {P}is defined as $cut(\mat...
 
 ? 
-<Ipe/Coarsening_Example.pdf, id=242, 412.97185pt x 184.87871pt>
+<Ipe/Coarsening_Example.pdf, id=253, 412.97185pt x 184.87871pt>
 File: Ipe/Coarsening_Example.pdf Graphic file (type pdf)
 
 <use Ipe/Coarsening_Example.pdf>
@@ -1583,146 +1559,16 @@ Package pdftex.def Info: Ipe/Coarsening_Example.pdf used on input line 278.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 279.
 
-
-LaTeX Warning: Citation `catalyurek1999hypergraph' on page 3 undefined on input
- line 308.
-
-
-LaTeX Warning: Citation `alpert1998multilevel' on page 3 undefined on input lin
-e 308.
-
-
-LaTeX Warning: Citation `kabiljo2017social' on page 3 undefined on input line 3
-08.
-
-
 Overfull \hbox (0.66315pt too wide) in paragraph at lines 308--309
 \T1/ptm/m/n/12 There are sev-eral hy-per-graph par-ti-tion-ing al-go-rithms, or
 ig-i-nat-ing from var-i-ous back-grounds
  []
 
-
-LaTeX Warning: Citation `karypis1999multilevel' on page 3 undefined on input li
-ne 310.
-
-
-LaTeX Warning: Citation `alpert1998multilevel' on page 3 undefined on input lin
-e 310.
-
-
-LaTeX Warning: Citation `catalyurek1999hypergraph' on page 3 undefined on input
- line 310.
-
-
-LaTeX Warning: Citation `vastenhouw2005two' on page 3 undefined on input line 3
-10.
-
-
-LaTeX Warning: Citation `devine2006parallel' on page 3 undefined on input line 
-310.
-
-
-LaTeX Warning: Citation `karypis2000multilevel' on page 3 undefined on input li
-ne 311.
-
-
-LaTeX Warning: Citation `aykanat2008multi' on page 3 undefined on input line 31
-1.
-
-
-LaTeX Warning: Citation `kabiljo2017social' on page 3 undefined on input line 3
-11.
-
-
-LaTeX Warning: Citation `kabiljo2017social' on page 3 undefined on input line 3
-11.
-
 [3
 
 
-]
-
-LaTeX Warning: Citation `alpert1995recent' on page 4 undefined on input line 31
-3.
-
-
-LaTeX Warning: Citation `bader2013graph' on page 4 undefined on input line 313.
-
-
-
-LaTeX Warning: Citation `papa2007hypergraph' on page 4 undefined on input line 
-313.
-
-
-LaTeX Warning: Citation `trifunovic2006parallel' on page 4 undefined on input l
-ine 313.
-
-
-LaTeX Warning: Citation `saab1989evolution' on page 4 undefined on input line 3
-23.
-
-
-LaTeX Warning: Citation `hulin1990circuit' on page 4 undefined on input line 32
-3.
-
-
-LaTeX Warning: Citation `bui1994fast' on page 4 undefined on input line 323.
-
-
-LaTeX Warning: Citation `fiduccia1988linear' on page 4 undefined on input line 
-323.
-
-
-LaTeX Warning: Citation `chan1995systolic' on page 4 undefined on input line 32
-5.
-
-
-LaTeX Warning: Citation `areibi2000integrated' on page 4 undefined on input lin
-e 326.
-
-
-LaTeX Warning: Citation `sanchis1989multiple' on page 4 undefined on input line
- 326.
-
-
-LaTeX Warning: Citation `kim2004hybrid' on page 4 undefined on input line 327.
-
-
-LaTeX Warning: Citation `kim2004lock' on page 4 undefined on input line 327.
-
-
-LaTeX Warning: Citation `sait2006evolutionary' on page 4 undefined on input lin
-e 328.
-
-
-LaTeX Warning: Citation `armstrong2010investigation' on page 4 undefined on inp
-ut line 329.
-
-[4 <./Ipe/Coarsening_Example.pdf>]
-
-LaTeX Warning: Citation `sanders2012distributed' on page 5 undefined on input l
-ine 334.
-
-
-LaTeX Warning: Citation `holtgrewe2010engineering' on page 5 undefined on input
- line 334.
-
-
-LaTeX Warning: Citation `akhremtsev2017engineering' on page 5 undefined on inpu
-t line 340.
-
-
-LaTeX Warning: Citation `schlag2016k' on page 5 undefined on input line 340.
-
-
-LaTeX Warning: Citation `fiduccia1988linear' on page 5 undefined on input line 
-344.
-
-
-LaTeX Warning: Citation `heuer2017improving' on page 5 undefined on input line 
-345.
-
-<Ipe/Memetic_process.pdf, id=274, 583.54327pt x 401.59033pt>
+] [4 <./Ipe/Coarsening_Example.pdf>]
+<Ipe/Memetic_process.pdf, id=341, 583.54327pt x 401.59033pt>
 File: Ipe/Memetic_process.pdf Graphic file (type pdf)
 
 <use Ipe/Memetic_process.pdf>
@@ -1735,77 +1581,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 340--354
 
 [5] [6 <./Ipe/Memetic_process.pdf>]
 chapter 3.
-
-LaTeX Warning: Citation `chen2012large' on page 7 undefined on input line 385.
-
 [7
 
 
-]
-
-LaTeX Warning: Citation `back1996evolutionary' on page 8 undefined on input lin
-e 399.
-
-
-LaTeX Warning: Citation `sanders2012distributed' on page 8 undefined on input l
-ine 402.
-
-<Ipe/connexample.pdf, id=312, 285.46649pt x 136.9115pt>
+] <Ipe/connexample.pdf, id=386, 285.46649pt x 136.9115pt>
 File: Ipe/connexample.pdf Graphic file (type pdf)
 
 <use Ipe/connexample.pdf>
 Package pdftex.def Info: Ipe/connexample.pdf used on input line 408.
 (pdftex.def)             Requested size: 346.55592pt x 166.22537pt.
- [8]
-
-LaTeX Warning: Citation `blickle1996comparison' on page 9 undefined on input li
-ne 420.
-
-[9 <./Ipe/connexample.pdf>]
+ [8] [9 <./Ipe/connexample.pdf>]
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 424.
-
-
-LaTeX Warning: Citation `wichlund1998multilevel' on page 10 undefined on input 
-line 435.
-
-
-LaTeX Warning: Citation `delling2011graph' on page 10 undefined on input line 4
-35.
-
-
-LaTeX Warning: Citation `delling2011graph' on page 10 undefined on input line 4
-47.
-
-[10]
-
-LaTeX Warning: Citation `lim1997large' on page 11 undefined on input line 471.
-
-[11] [12] [13] [14
+ [10] [11] [12]
+[13] [14
 
 
 ]
 chapter 4.
-
-LaTeX Warning: Citation `heuer2017improving' on page 15 undefined on input line
- 520.
-
-
-LaTeX Warning: Citation `alpert1998ispd98' on page 15 undefined on input line 5
-20.
-
-
-LaTeX Warning: Citation `davis2011university' on page 15 undefined on input lin
-e 520.
-
-
-LaTeX Warning: Citation `viswanathan2012dac' on page 15 undefined on input line
- 520.
-
-
-LaTeX Warning: Citation `belov2014proceedings' on page 15 undefined on input li
-ne 520.
-
 
 ! LaTeX Error: There's no line here to end.
 
@@ -1822,28 +1615,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 526--530
  []
 
 
-LaTeX Warning: Citation `akhremtsev2017engineering' on page 15 undefined on inp
-ut line 538.
-
-
-LaTeX Warning: Citation `heuer2017improving' on page 15 undefined on input line
- 540.
-
-
-LaTeX Warning: Citation `armstrong2010investigation' on page 15 undefined on in
-put line 540.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 531--544
 
  []
 
-[15] [16]
-
-LaTeX Warning: Citation `sanders2012distributed' on page 17 undefined on input 
-line 711.
-
-[17] <Ipe/seed_averaging_example.pdf, id=371, 397.63556pt x 276.44179pt>
+[15] [16] [17]
+<Ipe/seed_averaging_example.pdf, id=468, 397.63556pt x 276.44179pt>
 File: Ipe/seed_averaging_example.pdf Graphic file (type pdf)
 
 <use Ipe/seed_averaging_example.pdf>
@@ -1851,7 +1628,7 @@ Package pdftex.def Info: Ipe/seed_averaging_example.pdf used on input line 719.
 
 (pdftex.def)             Requested size: 389.87129pt x 271.0503pt.
  [18]
-<Ipe/instanceaveragingexample.pdf, id=378, 446.8695pt x 290.47171pt>
+<Ipe/instanceaveragingexample.pdf, id=475, 446.8695pt x 290.47171pt>
 File: Ipe/instanceaveragingexample.pdf Graphic file (type pdf)
 
 <use Ipe/instanceaveragingexample.pdf>
@@ -1860,20 +1637,15 @@ Package pdftex.def Info: Ipe/instanceaveragingexample.pdf used on input line 73
 (pdftex.def)             Requested size: 389.87129pt x 253.43523pt.
  [19 <./Ipe/seed_averaging_example.pdf>]
 [20 <./Ipe/instanceaveragingexample.pdf>]
-<rnw/tuning_subset_plots/replace_plot-1.pdf, id=608, 408.52625pt x 258.9675pt>
+<rnw/tuning_subset_plots/replace_plot-1.pdf, id=705, 408.52625pt x 258.9675pt>
 File: rnw/tuning_subset_plots/replace_plot-1.pdf Graphic file (type pdf)
 
 <use rnw/tuning_subset_plots/replace_plot-1.pdf>
 Package pdftex.def Info: rnw/tuning_subset_plots/replace_plot-1.pdf used on inp
 ut line 754.
 (pdftex.def)             Requested size: 408.52525pt x 258.96684pt.
-
-
-LaTeX Warning: Citation `sanders2012distributed' on page 21 undefined on input 
-line 758.
-
-[21 <./rnw/tuning_subset_plots/replace_plot-1.pdf>]
-<rnw/tuning_subset_plots/combine_plot-1.pdf, id=643, 408.52625pt x 258.9675pt>
+ [21 <./rnw/tuning_subset_plots/replace_plot-1.pdf>]
+<rnw/tuning_subset_plots/combine_plot-1.pdf, id=741, 408.52625pt x 258.9675pt>
 File: rnw/tuning_subset_plots/combine_plot-1.pdf Graphic file (type pdf)
 
 <use rnw/tuning_subset_plots/combine_plot-1.pdf>
@@ -1881,14 +1653,14 @@ Package pdftex.def Info: rnw/tuning_subset_plots/combine_plot-1.pdf used on inp
 ut line 774.
 (pdftex.def)             Requested size: 408.52525pt x 258.96684pt.
  [22 <./rnw/tuning_subset_plots/combine_plot-1.pdf>]
-<rnw/tuning_subset_plots/mutation_plot-1.pdf, id=680, 408.52625pt x 258.9675pt>
+<rnw/tuning_subset_plots/mutation_plot-1.pdf, id=778, 408.52625pt x 258.9675pt>
 File: rnw/tuning_subset_plots/mutation_plot-1.pdf Graphic file (type pdf)
 <use rnw/tuning_subset_plots/mutation_plot-1.pdf>
 Package pdftex.def Info: rnw/tuning_subset_plots/mutation_plot-1.pdf used on in
 put line 788.
 (pdftex.def)             Requested size: 408.52525pt x 258.96684pt.
  [23] [24 <./rnw/tuning_subset_plots/mutation_plot-1.pdf>]
-<rnw/tuning_subset_plots/diverse_plot-1.pdf, id=719, 408.52625pt x 258.9675pt>
+<rnw/tuning_subset_plots/diverse_plot-1.pdf, id=817, 408.52625pt x 258.9675pt>
 File: rnw/tuning_subset_plots/diverse_plot-1.pdf Graphic file (type pdf)
 
 <use rnw/tuning_subset_plots/diverse_plot-1.pdf>
@@ -1896,7 +1668,7 @@ Package pdftex.def Info: rnw/tuning_subset_plots/diverse_plot-1.pdf used on inp
 ut line 809.
 (pdftex.def)             Requested size: 408.52525pt x 258.96684pt.
  [25 <./rnw/tuning_subset_plots/diverse_plot-1.pdf>]
-<rnw/tuning_subset_plots/edge_tuning_plot-1.pdf, id=755, 408.52625pt x 258.9675
+<rnw/tuning_subset_plots/edge_tuning_plot-1.pdf, id=853, 408.52625pt x 258.9675
 pt>
 File: rnw/tuning_subset_plots/edge_tuning_plot-1.pdf Graphic file (type pdf)
  <use rnw/tuning_subset_plots/edge_tuning_plot-1.pdf>
@@ -1904,16 +1676,7 @@ Package pdftex.def Info: rnw/tuning_subset_plots/edge_tuning_plot-1.pdf used on
  input line 825.
 (pdftex.def)             Requested size: 408.52525pt x 258.96684pt.
  [26]
-
-LaTeX Warning: Citation `wichlund1998multilevel' on page 27 undefined on input 
-line 829.
-
-
-LaTeX Warning: Citation `sanders2012distributed' on page 27 undefined on input 
-line 834.
-
-
-<rnw/tuning_subset_plots/mutation_tuning_plot-1.pdf, id=762, 408.52625pt x 258.
+<rnw/tuning_subset_plots/mutation_tuning_plot-1.pdf, id=862, 408.52625pt x 258.
 9675pt>
 File: rnw/tuning_subset_plots/mutation_tuning_plot-1.pdf Graphic file (type pdf
 )
@@ -1922,7 +1685,7 @@ Package pdftex.def Info: rnw/tuning_subset_plots/mutation_tuning_plot-1.pdf use
 d on input line 838.
 (pdftex.def)             Requested size: 408.52525pt x 258.96684pt.
  [27 <./rnw/tuning_subset_plots/edge_tuning_plot-1.pdf>]
-<rnw/tuning_subset_plots/full_plot-1.pdf, id=796, 398.48875pt x 260.975pt>
+<rnw/tuning_subset_plots/full_plot-1.pdf, id=896, 398.48875pt x 260.975pt>
 File: rnw/tuning_subset_plots/full_plot-1.pdf Graphic file (type pdf)
 
 <use rnw/tuning_subset_plots/full_plot-1.pdf>
@@ -1930,7 +1693,7 @@ Package pdftex.def Info: rnw/tuning_subset_plots/full_plot-1.pdf used on input
 line 853.
 (pdftex.def)             Requested size: 433.19327pt x 283.71643pt.
  [28 <./rnw/tuning_subset_plots/mutation_tuning_plot-1.pdf>]
-<rnw/appendix_convergence-1.pdf, id=830, 433.62pt x 289.08pt>
+<rnw/appendix_convergence-1.pdf, id=930, 433.62pt x 289.08pt>
 File: rnw/appendix_convergence-1.pdf Graphic file (type pdf)
 
 <use rnw/appendix_convergence-1.pdf>
@@ -1938,7 +1701,7 @@ Package pdftex.def Info: rnw/appendix_convergence-1.pdf used on input line 876.
 
 (pdftex.def)             Requested size: 433.19327pt x 288.81021pt.
 
-<rnw/appendix_convergence-2.pdf, id=831, 433.62pt x 289.08pt>
+<rnw/appendix_convergence-2.pdf, id=931, 433.62pt x 289.08pt>
 File: rnw/appendix_convergence-2.pdf Graphic file (type pdf)
 
 <use rnw/appendix_convergence-2.pdf>
@@ -1950,19 +1713,15 @@ Overfull \vbox (12.80046pt too high) has occurred while \output is active []
 
 
 [30 <./rnw/appendix_convergence-1.pdf> <./rnw/appendix_convergence-2.pdf>]
-<rnw/tuning_subset_plots/performance_plot_main-1.pdf, id=924, 281.05pt x 177.66
-376pt>
+<rnw/tuning_subset_plots/performance_plot_main-1.pdf, id=1024, 281.05pt x 177.6
+6376pt>
 File: rnw/tuning_subset_plots/performance_plot_main-1.pdf Graphic file (type pd
 f)
  <use rnw/tuning_subset_plots/performance_plot_main-1.pdf>
 Package pdftex.def Info: rnw/tuning_subset_plots/performance_plot_main-1.pdf us
 ed on input line 934.
 (pdftex.def)             Requested size: 433.19327pt x 273.85513pt.
- [31]
-
-LaTeX Warning: Citation `schlag2016k' on page 32 undefined on input line 939.
-
-[32 <./rnw/tuning_subset_plots/performance_plot_main-1.pdf>]
+ [31] [32 <./rnw/tuning_subset_plots/performance_plot_main-1.pdf>]
 chapter 5.
 [33
 
@@ -3867,21 +3626,14 @@ Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 967.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 967.
 Package rerunfilecheck Info: File `bachelorarbeit.out' has not changed.
 (rerunfilecheck)             Checksum: 7B6CF5809ED4C753C4FB85D9D7A5FE5C;2358.
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 967.
  ) 
 Here is how much of TeX's memory you used:
- 22813 strings out of 493033
- 405775 string characters out of 6136454
- 10552670 words of memory out of 20499596
- 25733 multiletter control sequences out of 15000+600000
- 66296 words of font info for 96 fonts, out of 8000000 for 9000
+ 22810 strings out of 493033
+ 405742 string characters out of 6136454
+ 10554347 words of memory out of 20501273
+ 25731 multiletter control sequences out of 15000+600000
+ 63493 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,10n,66p,2508b,518s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
@@ -3900,9 +3652,9 @@ live/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr
 8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bachelorarbeit.pdf (46 pages, 2943929 bytes).
+Output written on bachelorarbeit.pdf (46 pages, 2953652 bytes).
 PDF statistics:
- 1107 PDF objects out of 1200 (max. 8388607)
+ 1167 PDF objects out of 1200 (max. 8388607)
  147 named destinations out of 1000 (max. 500000)
  381 words of extra memory for PDF output out of 10000 (max. 10000000)
 
