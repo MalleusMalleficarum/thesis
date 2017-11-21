@@ -103,7 +103,7 @@
     Bachelor thesis
     \vspace*{2cm}
 
-    {\bf\huge Evolutionary Hypergraph Partitioning  \par}
+    {\textbf{\huge Evolutionary Hypergraph Partitioning  \par}}
     % Siehe auch oben die Felder pdftitle={}
     % mit \par am Ende stimmt der Zeilenabstand
 
@@ -259,7 +259,7 @@ Finally we conclude the thesis and give a preview of further improvements to the
 \label{chapter:preliminaries}
 \section{General Definitions}
 
-A hypergraph $H = (V, E, c, w)$ is defined as a set of vertices $V$, a set of hyperedges $E$ where each hyperedge is a subset of the vertices \ e \subseteq V$.
+A hypergraph $H = (V, E, c, w)$ is defined as a set of vertices $V$, a set of hyperedges $E$ where each hyperedge is a subset of the vertices $\ e \subseteq V$.
 
 The weight of a vertex is measured by $c: V \rightarrow  \mathbb R_{\ge 0}$. Similarly the weight of a hyperedge is defined by $w: E \rightarrow  \mathbb R_{\ge 0}$. 
 The set extension of $c$ and $w$ are defined as $c(V') = \sum_{v \in V'} c(v)$ and $w(E') = \sum_{e \in E'} w(e)$. 
@@ -367,17 +367,19 @@ In this chapter we first outline the general procedure of an evolutionary algori
 theoretical foundation. Then we introduce operators for combination and mutation as well as strategies for selection and replacement.
 \section{Overview}
 %Place this section in the introduction
-Evolutionary algorithms are inspired by the theory of evolution. Much like the biological counterpart they attempt to simulate 
-an enclosed space where several actors, or individuals, try to compete for survival and reproduction in an isolated setting over the timespan of multiple generations.
-The evolution theory states that individuals having more helpful traits like special beaks to assist in aquiring food are more likely to survive longer and 
-thus more likely to pass these helpful traits onto the next generation. Addiditionaly some traits occur randomly through changing the genetic information erratically. These are called mutations and are even present in humans, and can be harmful like the sickle-cell desease or beneficial like the ability to consume lactose. In the evolution theory mutations 
-are usually a factor that introduces previously nonexistent traits, which would not be able to be recreated using reproduction alone. Repeating the cycle of survival and reproduction the mutations that are helpful will more likely be passed on and established. Based on this principle evolutionary algorithms are essentially converting the process described above onto a mathematical problem.
+%Evolutionary algorithms are inspired by the theory of evolution. Much like the biological counterpart they attempt to simulate 
+%an enclosed space where several actors, or individuals, try to compete for survival and reproduction in an isolated setting over the %timespan of multiple generations.
+%The evolution theory states that individuals having more helpful traits like special beaks to assist in aquiring food are more likely to %survive longer and 
+%thus more likely to pass these helpful traits onto the next generation. Addiditionaly some traits occur randomly through changing the %genetic information erratically. These are called mutations and are even present in humans, and can be harmful like the sickle-cell %desease or beneficial like the ability to consume lactose. In the evolution theory mutations 
+%are usually a factor that introduces previously nonexistent traits, which would not be able to be recreated using reproduction alone. %Repeating the cycle of survival and reproduction the mutations that are helpful will more likely be passed on and established. Based on %this principle evolutionary algorithms are essentially converting the process described above onto a mathematical problem.
 %HERE I CUT IN; THE ABOVE IS A GOOD INTRODUCTION
-Therefore some initial solutions are generated and then the same steps are repeated until a stopping criterion has been met.
+In order to apply an evolutionary algorithm we first have to generate an initial population. 
+Following the principle of evolutionary algorithms after the initial solutions are generated  the same steps are repeated until a stopping criterion has been met.
 Evolutionary algorithms are usually repeating 4 steps that try to simulate evolution. First some individuals have to be chosen for recombination. Then the chosen individuals have to be combined with each other generating offspring. As third step mutations are performed on some individuals and as fourth step the individuals surviving the iteration(generation) are selected by a corresponding metric, also called fitness. For hypergraph partitioning we consider a partition as an individual and the fitness of said individual is the cut or connectivity metric. We alternate the evolutionary scheme a bit in a sense that we perform combination or mutation exclusively during an iteration and additionally only generate one new solution during said iteration and then replace an existing individual with the new offspring. 
+In the sections \ref{sec:population} - \ref{sec:selectionstrategies} \& \ref{sec:replacement} we explain the tools required for maintaining, selecting and evicting individuals from the population. In section \ref{sec:combines} we introduce the two combine operators used to generate offspring. In section \ref{sec:mutations} we describe the mutation operations implemented in KaHyPar-E to complete the evolutionary framework.
 
 \section{Population}
-
+\label{sec:population}
 The algorithm will produce multiple individuals, which are inserted and removed from the population. Only a fixed number of
 individuals are in the population. This number is the maximum population size. Further individuals have to compete for a place in the population. 
 The population size is an important parameter, as a small value limits the exploration capability and a high value limits convergence \cite{chen2012large}.
@@ -413,9 +415,11 @@ As described above the characteristic influencing the quality of a partition are
 \end{figure}
 
 \section{Selection Strategies}
+\label{sec:selectionstrategies}
 For an evolutionary algorithm we attempt to generate new, improved solutions by using existing solutions. A logical conclusion is that good individuals have good characteristics that may be passed on to child individuals.
 close to the original individual and as result similarly good. We select our individuals using tournament selection \cite{blickle1996comparison}, meaning that the individuals are competing for their chance of recombination by their fitness. In a long term perspective this ensures that good individuals get a more frequent chance of reproduction as stated by the evolutionary theory.  By first selecting two random individuals and using the one with the better solution quality we can extract one individual $I_1$. For operators requiring two seperate Individuals we can simply repeat this step to get a new individual $I_2$. In the unlikely case that the two selected individuals are the same we instead use the worse individual from the second tournament selection.
 \section{Combine Operations}
+\label{sec:combines}
 Combine operations generate a new individual by using two or more individuals as input. We present two different combine operators. The first operator C1 combines two partitions which are determined using tournament selection. While C1 uses two parents, the second operator C2 is capable of combining a variable number of X individuals. These individuals are selected from the population by choosing the best X individuals from the population instead of a tournament selection. Both operators use the replacement strategy introduced in Section\ref{sec:replacement} to insert the newly generated individuals.
 \subsection{Basic Combine (C1)}
 \label{sec:basiccombine}
@@ -447,6 +451,7 @@ The edge frequency operator is not using the input partitions for $H_c$. Instead
 Since this operation is generating a new initial partitioning there is no quality assurance opposed to C1.
 %\subsection{Basic Combine + Edge Frequency Information}
 \section{Mutation operations}
+\label{sec:mutations}
 The main objective of mutations is to create more diverse solutions and to improve current solutions to avoid population convergence towards a local optimum.
 We propose three different mutation operations. The first operator M1 is intended to increase the solution quality of a partition by reapplying local search algorithms. The second operator M2 is a variation of M1, capable of generating new features. The third operator M3 is intentionally enforcing new characteristics, trying to provide diversity.
 
@@ -704,8 +709,9 @@ ACG-20-5p1               & \numprint{662392} & \numprint{1416850} & \numprint{33
 % To emphasize the first issue, lets assume two hypergraph instances $s$ and $l$. For the small hypergraph $s$ the evolutionary algorithm may perform thousands of iterations, and for the large hypergraph $l$ only 10. When using the absolute time as comparison we have no guarantee how many iterations the evolutionary algorithm has performed in average at a given time point. Similarly when using the iterations of the evolutionary algorithm as comparsion we cannot display the time required by the iterations. The Operator C$_x$ may produce slightly better results than operator C$_y$ per iteration, but also require 1000 times the time per iteration. 
 %END MOTIVATION
 Sanders and Schulz \cite{sanders2012distributed} present an approach using normalized time as a comparison tool for evolutionary algorithms. We choose one of the partitioning algorithms as baseline and determine the average duration $t_I$ to partition a given instance $I$ one time. We then can calculate for each absolute timestamp $t$ of an instance $I$ the normalized time by $t_n = \frac{t}{t_I}$. By doing so we can adjust the variation of iteration times, without dropping the duration information. 
+Each set of data performs seperate runs on multiple seeds to balance out outlier performance due to randomization.
 
-Each set of data performs seperate runs on multiple seeds to balance out outlier performance due to randomization. We determine the average best solution for an instance $I$ at the time point $t_n$ as follows. For each seed we create a variable $a_s$ storing the best solution so far. These variables $a_s$ are filled with the first solution created by the corresponding seed. Then the average over all $a_s$ is calculated, determining the first average best solution. Each time a seed $s$ is improving its best solution at a timepoint $t_n$ the corresponding value $a_s$ is updated, and a new average is calculated with the time point $t_n$. This process is illustrated in figure \ref{fig:averagingseeds}. The improvements are processed by ascending order of $t_n$. The result is a list of averaged improvements for Instance $I$, containing elements of the following structure $(avg(a_s), t_n)$. By ordering the list of averaged improvements by $t_n$ we can calculate the average best solution at a timepoint $t_n$.
+We determine the average best solution for an instance $I$ at the time point $t_n$ as follows. For each seed we create a variable $a_s$ storing the best solution so far. These variables $a_s$ are filled with the first solution created by the corresponding seed. Then the average over all $a_s$ is calculated, determining the first average best solution. Each time a seed $s$ is improving its best solution at a timepoint $t_n$ the corresponding value $a_s$ is updated, and a new average is calculated with the time point $t_n$. This process is illustrated in figure \ref{fig:averagingseeds}. The improvements are processed by ascending order of $t_n$. The result is a list of averaged improvements for Instance $I$, containing elements of the following structure $(avg(a_s), t_n)$. By ordering the list of averaged improvements by $t_n$ we can calculate the average best solution at a timepoint $t_n$.
 
 \begin{figure}[H] 
     
@@ -722,7 +728,7 @@ Next we need to average the different instances. Because different instances hav
     
   \begin{center}
    \includegraphics[width=.9\textwidth]{Ipe/instanceaveragingexample.pdf}
-  \caption{An example for averaging the seeds of an Instance $I$}\label{fig:averaginginstances} %TODO u nicht gestrichelt; pünktchen
+  \caption{An example for averaging multiple Instances $I$}\label{fig:averaginginstances} %TODO u nicht gestrichelt; pünktchen
   \end{center}
     Similar to seed averaging the lists of averaged improvement are run through by ascending normalized time $t_n$ (a)-(f). Then a pair of solution quality and current time is appended to the result every time an improvement is found (b)-(f). The only exception is (a) since there are no existing values to replace. In this case the first values of all seeds are used and the maximum normalized time is used for the first pair.
 \end{figure}
