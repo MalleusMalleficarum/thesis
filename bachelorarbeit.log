@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.11.10)  22 NOV 2017 00:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.11.10)  22 NOV 2017 18:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1351,7 +1351,11 @@ subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
 \c@algocf=\count160
 \algocf@algoframe=\box54
 \algocf@algobox=\box55
-) (./bachelorarbeit.aux)
+) (./bachelorarbeit.aux
+
+LaTeX Warning: Label `fig:differentpartitions' multiply defined.
+
+)
 \openout1 = `bachelorarbeit.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 81.
@@ -1368,8 +1372,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 81.
 LaTeX Font Info:    ... okay on input line 81.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 81.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 81.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 81.
@@ -1416,22 +1419,24 @@ File: kit_logo_de.pdf Graphic file (type pdf)
 Package pdftex.def Info: kit_logo_de.pdf used on input line 94.
 (pdftex.def)             Requested size: 105.06189pt x 48.36967pt.
 
-Runaway argument?
-{\huge Evolutionary Hypergraph Partitioning 
-! Paragraph ended before \text@command was complete.
-<to be read again> 
-                   \par 
-l.106 ...olutionary Hypergraph Partitioning  \par}
-                                                  }
-? 
+
+Class scrbook Warning: Usage of deprecated font command `\bf'!
+(scrbook)              You should note, that in 1994 font command `\bf' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\bf' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrbook)              by `\normalfont \bfseries ' on input line 106.
+
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 106.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 106.
-! Extra }, or forgotten \endgroup.
-l.106 ...lutionary Hypergraph Partitioning  \par}}
-                                                  
-? 
 LaTeX Font Info:    Try loading font information for U+lasy on input line 119.
 (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
@@ -1447,44 +1452,44 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 119.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 141.
+(babel)             in language  on input line 142.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 141.
+(babel)             in language  on input line 142.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 141.
+(babel)             in language  on input line 142.
  [1
 
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./kit_logo_de.pdf>]
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 148.
+(babel)             in language  on input line 149.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 148.
+(babel)             in language  on input line 149.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 148.
+(babel)             in language  on input line 149.
  [2]
-LaTeX Font Info:    Try loading font information for T1+phv on input line 151.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 152.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 151.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 152.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 151.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 152.
 
-Overfull \hbox (0.8425pt too wide) in paragraph at lines 158--159
+Overfull \hbox (0.8425pt too wide) in paragraph at lines 159--160
 \T1/ptm/m/n/12 Das NP-schwere Hy-per-gra-ph-par-ti-tio-nie-rungs-pro-blem be-si
 tzt vie-le An-wen-dungs-ge-bie-te wie
  []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 163.
+(babel)             in language  on input line 164.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 163.
+(babel)             in language  on input line 164.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 163.
+(babel)             in language  on input line 164.
 [3
 
 ] [4
@@ -1497,7 +1502,7 @@ Package babel Info: Redefining german shorthand "~
 
 ]
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 189.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 190.
  (./bachelorarbeit.toc [7])
 \tf@toc=\write5
 \openout5 = `bachelorarbeit.toc'.
@@ -1528,28 +1533,6 @@ Class scrbook Warning: \float@addtolists detected!
 
 ] [2]
 chapter 2.
-
-! LaTeX Error: \mathcal allowed only in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.271 ...set of cut edges from a partition\mathcal
-                                                  {P} The cut metric of\math...
-
-? 
-
-! LaTeX Error: \mathcal allowed only in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.271 ...tion\mathcal{P} The cut metric of\mathcal
-                                                  {P}is defined as $cut(\mat...
-
-? 
 <Ipe/Coarsening_Example.pdf, id=253, 412.97185pt x 184.87871pt>
 File: Ipe/Coarsening_Example.pdf Graphic file (type pdf)
 
@@ -1567,8 +1550,8 @@ ig-i-nat-ing from var-i-ous back-grounds
 [3
 
 
-] [4 <./Ipe/Coarsening_Example.pdf>]
-<Ipe/Memetic_process.pdf, id=341, 583.54327pt x 401.59033pt>
+ <./Ipe/Coarsening_Example.pdf>] [4]
+<Ipe/Memetic_process.pdf, id=342, 583.54327pt x 401.59033pt>
 File: Ipe/Memetic_process.pdf Graphic file (type pdf)
 
 <use Ipe/Memetic_process.pdf>
@@ -1584,7 +1567,7 @@ chapter 3.
 [7
 
 
-] <Ipe/connexample.pdf, id=386, 285.46649pt x 136.9115pt>
+] <Ipe/connexample.pdf, id=387, 285.46649pt x 136.9115pt>
 File: Ipe/connexample.pdf Graphic file (type pdf)
 
 <use Ipe/connexample.pdf>
@@ -1593,8 +1576,15 @@ Package pdftex.def Info: Ipe/connexample.pdf used on input line 408.
  [8] [9 <./Ipe/connexample.pdf>]
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 424.
- [10] [11] [12]
-[13] [14
+
+<Ipe/parent_combine.pdf, id=409, 174.68562pt x 156.99855pt>
+File: Ipe/parent_combine.pdf Graphic file (type pdf)
+
+<use Ipe/parent_combine.pdf>
+Package pdftex.def Info: Ipe/parent_combine.pdf used on input line 436.
+(pdftex.def)             Requested size: 216.59663pt x 194.67856pt.
+ [10 <./Ipe/parent_combine.pdf>] [11] [12] [13]
+[14
 
 
 ]
@@ -1606,127 +1596,129 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.526 \newline
+l.540 \newline
                ~\newline
-? 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
-Underfull \hbox (badness 10000) in paragraph at lines 526--530
+
+Underfull \hbox (badness 10000) in paragraph at lines 540--544
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 531--544
+Underfull \hbox (badness 10000) in paragraph at lines 545--558
 
  []
 
 [15] [16] [17]
-<Ipe/seed_averaging_example.pdf, id=468, 397.63556pt x 276.44179pt>
+<Ipe/seed_averaging_example.pdf, id=495, 397.63556pt x 276.44179pt>
 File: Ipe/seed_averaging_example.pdf Graphic file (type pdf)
 
 <use Ipe/seed_averaging_example.pdf>
-Package pdftex.def Info: Ipe/seed_averaging_example.pdf used on input line 719.
+Package pdftex.def Info: Ipe/seed_averaging_example.pdf used on input line 734.
 
 (pdftex.def)             Requested size: 389.87129pt x 271.0503pt.
- [18]
-<Ipe/instanceaveragingexample.pdf, id=475, 446.8695pt x 290.47171pt>
+ [18 <./Ipe/seed_averaging_example.pdf>]
+<Ipe/instanceaveragingexample.pdf, id=610, 446.8695pt x 290.47171pt>
 File: Ipe/instanceaveragingexample.pdf Graphic file (type pdf)
 
 <use Ipe/instanceaveragingexample.pdf>
-Package pdftex.def Info: Ipe/instanceaveragingexample.pdf used on input line 73
-0.
+Package pdftex.def Info: Ipe/instanceaveragingexample.pdf used on input line 74
+7.
 (pdftex.def)             Requested size: 389.87129pt x 253.43523pt.
- [19 <./Ipe/seed_averaging_example.pdf>]
-[20 <./Ipe/instanceaveragingexample.pdf>]
-<rnw/tuning_subset_plots/replace_plot-1.pdf, id=705, 408.52625pt x 258.9675pt>
+ [19 <./Ipe/instanceaveragingexample.pdf>]
+<rnw/tuning_subset_plots/replace_plot-1.pdf, id=728, 408.52625pt x 258.9675pt>
 File: rnw/tuning_subset_plots/replace_plot-1.pdf Graphic file (type pdf)
 
 <use rnw/tuning_subset_plots/replace_plot-1.pdf>
 Package pdftex.def Info: rnw/tuning_subset_plots/replace_plot-1.pdf used on inp
-ut line 754.
+ut line 771.
 (pdftex.def)             Requested size: 408.52525pt x 258.96684pt.
- [21 <./rnw/tuning_subset_plots/replace_plot-1.pdf>]
-<rnw/tuning_subset_plots/combine_plot-1.pdf, id=741, 408.52625pt x 258.9675pt>
+ [20 <./rnw/tuning_subset_plots/replace_plot-1.pdf>]
+<rnw/tuning_subset_plots/combine_plot-1.pdf, id=764, 408.52625pt x 258.9675pt>
 File: rnw/tuning_subset_plots/combine_plot-1.pdf Graphic file (type pdf)
 
 <use rnw/tuning_subset_plots/combine_plot-1.pdf>
 Package pdftex.def Info: rnw/tuning_subset_plots/combine_plot-1.pdf used on inp
-ut line 774.
+ut line 791.
 (pdftex.def)             Requested size: 408.52525pt x 258.96684pt.
- [22 <./rnw/tuning_subset_plots/combine_plot-1.pdf>]
-<rnw/tuning_subset_plots/mutation_plot-1.pdf, id=778, 408.52625pt x 258.9675pt>
+ [21 <./rnw/tuning_subset_plots/combine_plot-1.pdf>]
+<rnw/tuning_subset_plots/mutation_plot-1.pdf, id=801, 408.52625pt x 258.9675pt>
 File: rnw/tuning_subset_plots/mutation_plot-1.pdf Graphic file (type pdf)
 <use rnw/tuning_subset_plots/mutation_plot-1.pdf>
 Package pdftex.def Info: rnw/tuning_subset_plots/mutation_plot-1.pdf used on in
-put line 788.
+put line 805.
 (pdftex.def)             Requested size: 408.52525pt x 258.96684pt.
- [23] [24 <./rnw/tuning_subset_plots/mutation_plot-1.pdf>]
-<rnw/tuning_subset_plots/diverse_plot-1.pdf, id=817, 408.52625pt x 258.9675pt>
+ [22] [23 <./rnw/tuning_subset_plots/mutation_plot-1.pdf>]
+<rnw/tuning_subset_plots/diverse_plot-1.pdf, id=841, 408.52625pt x 258.9675pt>
 File: rnw/tuning_subset_plots/diverse_plot-1.pdf Graphic file (type pdf)
 
 <use rnw/tuning_subset_plots/diverse_plot-1.pdf>
 Package pdftex.def Info: rnw/tuning_subset_plots/diverse_plot-1.pdf used on inp
-ut line 809.
+ut line 826.
 (pdftex.def)             Requested size: 408.52525pt x 258.96684pt.
- [25 <./rnw/tuning_subset_plots/diverse_plot-1.pdf>]
-<rnw/tuning_subset_plots/edge_tuning_plot-1.pdf, id=853, 408.52625pt x 258.9675
+ [24 <./rnw/tuning_subset_plots/diverse_plot-1.pdf>]
+<rnw/tuning_subset_plots/edge_tuning_plot-1.pdf, id=877, 408.52625pt x 258.9675
 pt>
 File: rnw/tuning_subset_plots/edge_tuning_plot-1.pdf Graphic file (type pdf)
  <use rnw/tuning_subset_plots/edge_tuning_plot-1.pdf>
 Package pdftex.def Info: rnw/tuning_subset_plots/edge_tuning_plot-1.pdf used on
- input line 825.
+ input line 843.
 (pdftex.def)             Requested size: 408.52525pt x 258.96684pt.
- [26]
-<rnw/tuning_subset_plots/mutation_tuning_plot-1.pdf, id=862, 408.52625pt x 258.
+ [25 <./rnw/tuning_subset_plots/edge_tuning_plot-1.pdf>]
+<rnw/tuning_subset_plots/mutation_tuning_plot-1.pdf, id=915, 408.52625pt x 258.
 9675pt>
 File: rnw/tuning_subset_plots/mutation_tuning_plot-1.pdf Graphic file (type pdf
 )
  <use rnw/tuning_subset_plots/mutation_tuning_plot-1.pdf>
 Package pdftex.def Info: rnw/tuning_subset_plots/mutation_tuning_plot-1.pdf use
-d on input line 838.
+d on input line 856.
 (pdftex.def)             Requested size: 408.52525pt x 258.96684pt.
- [27 <./rnw/tuning_subset_plots/edge_tuning_plot-1.pdf>]
-<rnw/tuning_subset_plots/full_plot-1.pdf, id=896, 398.48875pt x 260.975pt>
+ [26 <./rnw/tuning_subset_plots/mutation_tuning_plot-1.pdf>]
+<rnw/tuning_subset_plots/full_plot-1.pdf, id=951, 398.48875pt x 260.975pt>
 File: rnw/tuning_subset_plots/full_plot-1.pdf Graphic file (type pdf)
 
 <use rnw/tuning_subset_plots/full_plot-1.pdf>
 Package pdftex.def Info: rnw/tuning_subset_plots/full_plot-1.pdf used on input 
-line 853.
+line 872.
 (pdftex.def)             Requested size: 433.19327pt x 283.71643pt.
- [28 <./rnw/tuning_subset_plots/mutation_tuning_plot-1.pdf>]
-<rnw/appendix_convergence-1.pdf, id=930, 433.62pt x 289.08pt>
+ [27 <./rnw/tuning_subset_plots/full_plot-1.pdf>] <rnw/appendix_convergence-1.p
+df, id=985, 433.62pt x 289.08pt>
 File: rnw/appendix_convergence-1.pdf Graphic file (type pdf)
 
 <use rnw/appendix_convergence-1.pdf>
-Package pdftex.def Info: rnw/appendix_convergence-1.pdf used on input line 876.
+Package pdftex.def Info: rnw/appendix_convergence-1.pdf used on input line 895.
 
 (pdftex.def)             Requested size: 433.19327pt x 288.81021pt.
 
-<rnw/appendix_convergence-2.pdf, id=931, 433.62pt x 289.08pt>
+<rnw/appendix_convergence-2.pdf, id=986, 433.62pt x 289.08pt>
 File: rnw/appendix_convergence-2.pdf Graphic file (type pdf)
 
 <use rnw/appendix_convergence-2.pdf>
-Package pdftex.def Info: rnw/appendix_convergence-2.pdf used on input line 877.
+Package pdftex.def Info: rnw/appendix_convergence-2.pdf used on input line 896.
 
 (pdftex.def)             Requested size: 433.19327pt x 288.81021pt.
- [29 <./rnw/tuning_subset_plots/full_plot-1.pdf>]
+ [28]
 Overfull \vbox (12.80046pt too high) has occurred while \output is active []
 
 
-[30 <./rnw/appendix_convergence-1.pdf> <./rnw/appendix_convergence-2.pdf>]
-<rnw/tuning_subset_plots/performance_plot_main-1.pdf, id=1024, 281.05pt x 177.6
+[29 <./rnw/appendix_convergence-1.pdf> <./rnw/appendix_convergence-2.pdf>]
+<rnw/tuning_subset_plots/performance_plot_main-1.pdf, id=1050, 281.05pt x 177.6
 6376pt>
 File: rnw/tuning_subset_plots/performance_plot_main-1.pdf Graphic file (type pd
 f)
  <use rnw/tuning_subset_plots/performance_plot_main-1.pdf>
 Package pdftex.def Info: rnw/tuning_subset_plots/performance_plot_main-1.pdf us
-ed on input line 934.
+ed on input line 953.
 (pdftex.def)             Requested size: 433.19327pt x 273.85513pt.
- [31] [32 <./rnw/tuning_subset_plots/performance_plot_main-1.pdf>]
+ [30] [31 <./rnw/tuning_subset_plots/performance_plot_main-1.pdf>] [32
+
+
+]
 chapter 5.
-[33
-
-
-] (./bachelorarbeit.bbl [34
+[33] (./bachelorarbeit.bbl [34
 
 
 
@@ -1776,7 +1768,12 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.5   \btxandlong
                  {}\ {\sc Sebastian Schlag}: {\em Engineering a direct k-way
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -1794,11 +1791,21 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.7 \newblock \Btxinlong
                         {}\ {\em 2017 Proceedings of the Ninteenth Workshop on
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 ! Undefined control sequence.
 l.8 ...ng and Experiments (ALENEX)}, \btxpageslong
                                                   {}\ 28--42.
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 Underfull \hbox (badness 1082) in paragraph at lines 4--10
 []\T1/ptm/m/sc/12 Akhremtsev, Yaroslav\T1/ptm/m/n/12 , \T1/ptm/m/sc/12 To-bias 
@@ -1822,12 +1829,21 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.13 \newblock \Btxinlong
                          {}\ {\em Proceedings of the 1998 international symp...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-? 
 ! Undefined control sequence.
 l.14   Physical design}, \btxpageslong
                                       {}\ 80--85. ACM, 1998.
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -1859,7 +1875,12 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.17 ...arles~J}, {\sc Jen-Hsin Huang} \btxandlong
                                                   {}\ {\sc Andrew~B
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -1891,7 +1912,12 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.23 {\sc Alpert, Charles~J} \btxandlong
                                         {}\ {\sc Andrew~B Kahng}: {\em Recent
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -1923,11 +1949,21 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.30 \newblock \Btxinlong
                          {}\ {\em GECCO 2000}, \btxpageslong{}\ 97--102, 2000.
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 ! Undefined control sequence.
 l.30 ...xinlong{}\ {\em GECCO 2000}, \btxpageslong
                                                   {}\ 97--102, 2000.
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -1973,7 +2009,12 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.33 ...G~Grewal}, {\sc Shawki Areibi} \btxandlong
                                                   {}\ {\sc
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -1991,12 +2032,21 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.36 \newblock \Btxinlong
                          {}\ {\em Electrical and Computer Engineering (CCECE...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-? 
 ! Undefined control sequence.
 l.37   23rd Canadian Conference on}, \btxpageslong
                                                   {}\ 1--6. IEEE, 2010.
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -2028,7 +2078,12 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.40 ...det}, {\sc B~Barla Cambazoglu} \btxandlong
                                                   {}\ {\sc Bora
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -2102,7 +2157,12 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.52   \btxandlong
                   {}\ {\sc Dorothea Wagner}: {\em Graph partitioning and graph
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -2120,7 +2180,12 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.53   clustering}, \btxvolumelong
                                   {}\ 588.
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -2166,7 +2231,12 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.57 ...iepold}, {\sc Marijn~JH Heule} \btxandlong
                                                   {}\
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -2198,8 +2268,12 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.62 {\sc Blickle, Tobias} \btxandlong
                                       {}\ {\sc Lothar Thiele}: {\em A compar...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-? 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -2231,8 +2305,12 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.67 {\sc Bui, Thang~Nguyen} \btxandlong
                                         {}\ {\sc Byung~Ro Moon}: {\em A fast...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-? 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -2250,12 +2328,21 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.70 \newblock \Btxinlong
                          {}\ {\em Proceedings of the 31st annual Design Auto...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-? 
 ! Undefined control sequence.
 l.71   Conference}, \btxpageslong
                                  {}\ 664--669. ACM, 1994.
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -2315,8 +2402,12 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.75   Peter Sanders} \btxandlong
                                  {}\ {\sc Christian Schulz}: {\em Recent adv...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-? 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -2334,12 +2425,21 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.77 \newblock \Btxinlong
                          {}\ {\em Algorithm Engineering}, \btxpageslong{}\ 1...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-? 
 ! Undefined control sequence.
 l.77 ...{\em Algorithm Engineering}, \btxpageslong
                                                   {}\ 117--158.
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 Underfull \hbox (badness 1661) in paragraph at lines 74--79
 []\T1/ptm/m/sc/12 Buluç, Ay-d^^Yn\T1/ptm/m/n/12 , \T1/ptm/m/sc/12 Hen-ning Mey-
@@ -2365,7 +2465,12 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.81 {\sc Catalyurek, Umit~V} \btxandlong
                                          {}\ {\sc Cevdet Aykanat}: {\em
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -2397,7 +2502,12 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.88 {\sc Chan, Heming} \btxandlong
                                    {}\ {\sc Pinaki Mazumder}: {\em A systolic
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -2415,7 +2525,12 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.91 ...in evolutionary computation, \btxpageslong
                                                   {}\ 109--126,
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -2461,7 +2576,12 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.95 ... Ke~Tang}, {\sc Guoliang Chen} \btxandlong
                                                   {}\ {\sc Xin
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -2493,8 +2613,12 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.101 {\sc Davis, Timothy~A} \btxandlong
                                         {}\ {\sc Yifan Hu}: {\em The Univers...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-? 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -2554,8 +2678,12 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.107   \btxandlong
                    {}\ {\sc Renato~F Werneck}: {\em Graph partitioning with ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-? 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -2573,12 +2701,21 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.109 \newblock \Btxinlong
                           {}\ {\em Parallel \& Distributed Processing Symposium
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-? 
 ! Undefined control sequence.
 l.110 ..., 2011 IEEE International}, \btxpageslong
                                                   {}\ 1135--1146. IEEE, 2011.
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -2638,8 +2775,12 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.114   Bisseling} \btxandlong
                               {}\ {\sc Umit~V Catalyurek}: {\em Parallel hyp...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-? 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -2657,12 +2798,21 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.116 \newblock \Btxinlong
                           {}\ {\em Parallel and Distributed Processing Sympo...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-? 
 ! Undefined control sequence.
 l.117 ... 2006. 20th International}, \btxpageslong
                                                   {}\ 10--pp. IEEE, 2006.
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -2680,8 +2830,12 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.120 {\sc Fiduccia, Charles~M} \btxandlong
                                            {}\ {\sc Robert~M Mattheyses}: {\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-? 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -2699,12 +2853,21 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.122 \newblock \Btxinlong
                           {}\ {\em Papers on Twenty-five years of electronic...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-? 
 ! Undefined control sequence.
 l.123   automation}, \btxpageslong
                                   {}\ 241--247. ACM, 1988.
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -2722,8 +2885,12 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.126 {\sc Garey, Michael~R} \btxandlong
                                         {}\ {\sc David~S Johnson}: {\em Comp...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-? 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -2741,7 +2908,12 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.127   intractability}, \btxvolumelong
                                        {}~29.
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -2759,8 +2931,12 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.131 {\sc Heuer, Tobias} \btxandlong
                                      {}\ {\sc Sebastian Schlag}: {\em Improving
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-? 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -2778,12 +2954,21 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.134 \newblock \Btxinlong
                           {}\ {\em LIPIcs-Leibniz International Proceedings in
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 ! Undefined control sequence.
 l.135   Informatics}, \btxvolumelong
                                     {}~75. Schloss Dagstuhl-Leibniz-Zentrum ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-? 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -2815,7 +3000,12 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.139 ... Manuel}, {\sc Peter Sanders} \btxandlong
                                                   {}\ {\sc Christian
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -2833,12 +3023,21 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.141 \newblock \Btxinlong
                           {}\ {\em Parallel \& Distributed Processing (IPDPS...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-? 
 ! Undefined control sequence.
 l.142 ...nternational Symposium on}, \btxpageslong
                                                   {}\ 1--12. IEEE, 2010.
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -2856,12 +3055,21 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.147 \newblock \Btxinlong
                           {}\ {\em International Conference on Parallel Problem
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-? 
 ! Undefined control sequence.
 l.148   Solving from Nature}, \btxpageslong
                                            {}\ 75--79. Springer, 1990.
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -2921,8 +3129,12 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.152   Pupyrev} \btxandlong
                             {}\ {\sc Alon Shalita}: {\em Social hash partiti...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-? 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -2982,7 +3194,12 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.157 ... Aggarwal}, {\sc Vipin Kumar} \btxandlong
                                                   {}\
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -3015,8 +3232,12 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.164 {\sc Karypis, George} \btxandlong
                                        {}\ {\sc Vipin Kumar}: {\em Multileve...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-? 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -3062,7 +3283,12 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.169 ...ong-Pil}, {\sc Yong-Hyuk Kim} \btxandlong
                                                   {}\ {\sc Byung-Ro Moon}:
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -3080,12 +3306,21 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.171 \newblock \Btxinlong
                           {}\ {\em Genetic and Evolutionary Computation--GEC...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-? 
 ! Undefined control sequence.
 l.172   \btxpageslong
                      {}\ 1054--1064. Springer, 2004.
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -3103,8 +3338,12 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.175 {\sc Kim, Yong-Hyuk} \btxandlong
                                       {}\ {\sc Byung-Ro Moon}: {\em Lock-gai...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-? 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -3150,16 +3389,30 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.180 ...Sung~Kyu}, {\sc Dongmin Xu} \btxetalshort
                                                   {.}: {\em Large scale
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 ! Undefined control sequence.
 l.183 \newblock \Btxinlong
                           {}\ {\em Computer-Aided Design, 1997. Digest of Te...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-? 
 ! Undefined control sequence.
 l.184 ...ternational Conference on}, \btxpageslong
                                                   {}\
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -3177,8 +3430,12 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.188 {\sc Moscato, Pablo} \btxetalshort
                                         {.}: {\em On evolution, search, opti...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-? 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -3196,7 +3453,12 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.193 {\sc Papa, David~A} \btxandlong
                                      {}\ {\sc Igor~L Markov}: {\em Hypergraph
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -3228,8 +3490,12 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.197 {\sc Saab, Youssef} \btxandlong
                                      {}\ {\sc Vasant Rao}: {\em An evolution...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-? 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -3247,12 +3513,21 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.199 \newblock \Btxinlong
                           {}\ {\em Proceedings of the 26th ACM/IEEE design a...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-? 
 ! Undefined control sequence.
 l.200   conference}, \btxpageslong
                                   {}\ 767--770. ACM, 1989.
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -3284,7 +3559,12 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.203 ...iq~M}, {\sc Aiman~H El-Maleh} \btxandlong
                                                   {}\ {\sc Raslan~H
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -3330,8 +3610,12 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.214 {\sc Sanders, Peter} \btxandlong
                                       {}\ {\sc Christian Schulz}: {\em Distr...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-? 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -3349,12 +3633,21 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.216 \newblock \Btxinlong
                           {}\ {\em 2012 Proceedings of the Fourteenth Worksh...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-? 
 ! Undefined control sequence.
 l.217 ... and Experiments (ALENEX)}, \btxpageslong
                                                   {}\ 16--29.
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -3428,8 +3721,12 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.222 ...erhenke}, {\sc Peter Sanders} \btxandlong
                                                   {}\ {\sc Christian Schulz}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-? 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -3447,12 +3744,21 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.224 \newblock \Btxinlong
                           {}\ {\em 2016 Proceedings of the Eighteenth Worksh...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-? 
 ! Undefined control sequence.
 l.225 ... and Experiments (ALENEX)}, \btxpageslong
                                                   {}\ 53--67.
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -3470,7 +3776,12 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.231 \newblock \btxphdthesis
                              {}, University of London, 2006.
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -3488,7 +3799,12 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.234 {\sc Vastenhouw, Brendan} \btxandlong
                                            {}\ {\sc Rob~H Bisseling}: {\em A
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -3562,8 +3878,12 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.241   Li} \btxandlong
                        {}\ {\sc Yaoguang Wei}: {\em The DAC 2012 routability...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-? 
 
 Class scrbook Warning: Usage of deprecated font command `\sc'!
 (scrbook)              You should note, that in 1994 font command `\sc' has
@@ -3581,12 +3901,21 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.243 \newblock \Btxinlong
                           {}\ {\em Proceedings of the 49th Annual Design Aut...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-? 
 ! Undefined control sequence.
 l.244   Conference}, \btxpageslong
                                   {}\ 774--782. ACM, 2012.
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 Underfull \hbox (badness 4505) in paragraph at lines 240--245
 []\T1/ptm/m/sc/12 Viswanathan, Natara-jan\T1/ptm/m/n/12 , \T1/ptm/m/sc/12 Charl
@@ -3612,30 +3941,43 @@ Class scrbook Warning: Usage of deprecated font command `\sc'!
 ! Undefined control sequence.
 l.248 \newblock \Btxinlong
                           {}\ {\em Proceedings of the 1998 IEEE/ACM internat...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-? 
 ! Undefined control sequence.
 l.249 ... on Computer-aided design}, \btxpageslong
                                                   {}\ 505--511. ACM, 1998.
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 ) [38]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 967.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 967.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 986.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 986.
  (./bachelorarbeit.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 967.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 967.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 986.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 986.
 Package rerunfilecheck Info: File `bachelorarbeit.out' has not changed.
 (rerunfilecheck)             Checksum: 7B6CF5809ED4C753C4FB85D9D7A5FE5C;2358.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 967.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 986.
  ) 
 Here is how much of TeX's memory you used:
- 22810 strings out of 493033
- 405742 string characters out of 6136454
- 10554347 words of memory out of 20501273
- 25731 multiletter control sequences out of 15000+600000
+ 22819 strings out of 493033
+ 405953 string characters out of 6136454
+ 10554603 words of memory out of 20501529
+ 25738 multiletter control sequences out of 15000+600000
  63493 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,10n,66p,2508b,518s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,10n,66p,2509b,518s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
@@ -3652,9 +3994,9 @@ live/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr
 8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bachelorarbeit.pdf (46 pages, 2953652 bytes).
+Output written on bachelorarbeit.pdf (46 pages, 2983625 bytes).
 PDF statistics:
- 1167 PDF objects out of 1200 (max. 8388607)
- 147 named destinations out of 1000 (max. 500000)
- 381 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1196 PDF objects out of 1200 (max. 8388607)
+ 148 named destinations out of 1000 (max. 500000)
+ 386 words of extra memory for PDF output out of 10000 (max. 10000000)
 

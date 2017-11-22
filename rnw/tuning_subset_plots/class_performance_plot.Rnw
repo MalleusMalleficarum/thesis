@@ -1,0 +1,121 @@
+<<set-parent, echo=FALSE, cache=FALSE>>=
+set_parent('../../bachelorarbeit.tex')
+@
+
+<<configure, echo=F,cache=FALSE>>=
+library(knitr)
+library(tikzDevice)
+library(highlight)
+knitr::opts_chunk$set(echo=F, eval=T, message = F, warning=F, cache = F, sanitize=T, fig=TRUE)
+knit_hooks$set(crop=hook_pdfcrop)
+## set global chunk options
+opts_chunk$set(fig.path='./', cache.path='./cache/-', fig.align='center', fig.show='hold', par=TRUE)
+## I use = but I can replace it with <-; set code/output width to be 68
+options(formatR.arrow=TRUE, width=68, digits=4)
+## tune details of base graphics (http://yihui.name/knitr/hooks)
+knit_hooks$set(par=function(before, options, envir){
+if (before && options$fig.show!='none') par(mar=c(4,4,.1,.1),cex.lab=.95,cex.axis=.9,mgp=c(2,.7,0),tcl=-.3) })
+@
+
+<<setup, echo=F,sanitize=T>>=
+source("/home/andre/server-home/temppap/R/plot_functions.R")
+source("/home/andre/server-home/temppap/R/final_preprocessing.R")
+################################################
+# performance plots
+################################################
+aggregation= function(df) data.frame(min_km1=min(df$connectivity),
+                                     avg_km1=mean(df$connectivity),
+                                     max_km1=max(df$connectivity),
+                                     cnt=length(df$seed))
+
+
+mins_traditional_combine = ddply(traditional_combine, c("name","k"), aggregation)
+mins_random_combine = ddply(random_combine, c("name","k"), aggregation)
+mins_trad_vcycle_mutate = ddply(trad_vcycle_mutate, c("name","k"), aggregation)
+mins_kahypar_ca_vcycle = ddply(kahypar_ca_vcycle, c("name","k"), aggregation)
+mins_kahypar_ca = ddply(kahypar_ca, c("name","k"), aggregation)
+
+mins_traditional_combine$graph = mins_traditional_combine$name
+mins_random_combine$graph = mins_random_combine$name
+mins_trad_vcycle_mutate$graph = mins_kahypar_ca_vcycle$name
+mins_kahypar_ca_vcycle$graph = mins_trad_vcycle_mutate$name
+mins_kahypar_ca$graph = mins_kahypar_ca$name
+
+mins_traditional_combine$algorithm = "$K_E$+C$_1$"
+mins_random_combine$algorithm = "$K_E$+C$_1$+C$_2$"
+mins_trad_vcycle_mutate$algorithm = "$K_E$+M$_1$+M$_2$"
+mins_kahypar_ca_vcycle$algorithm = "$K_N$-CA-V"
+mins_kahypar_ca$algorithm = "$K_N$-CA"
+
+mins_traditional_combine$class <- as.factor(apply(mins_traditional_combine, 1, function(x) graphclass(x)))
+mins_random_combine$class <- as.factor(apply(mins_random_combine, 1, function(x) graphclass(x)))
+mins_trad_vcycle_mutate$class <- as.factor(apply(mins_trad_vcycle_mutate, 1, function(x) graphclass(x)))
+mins_kahypar_ca_vcycle$class <- as.factor(apply(mins_kahypar_ca_vcycle, 1, function(x) graphclass(x)))
+mins_kahypar_ca$class <- as.factor(apply(mins_kahypar_ca, 1, function(x) graphclass(x)))
+@
+
+\begin{figure}
+\centering
+ <<class_performance_plot,dev='tikz',dev.args=list(pointsize=10),,fig.width=6,fig.height=8,out.width='.9\\textwidth',fig.show='hold', crop=TRUE,sanitize=F>>=
+#par(mar=c(4, 4, 1, .1), mgp=c(2,1,0))
+b = cuberootplot(createRatioDFsFilter(filter = "DAC2012",
+                                   avg_obj = "avg_km1", min_obj = "min_km1",
+                                   UsePenalty = FALSE,
+                             mins_kahypar_ca_vcycle = mins_kahypar_ca_vcycle,
+                                   mins_trad_vcycle_mutate = mins_trad_vcycle_mutate,
+                             mins_random_combine = mins_random_combine
+)$min_ratios, "DAC2012",legendPos = "none", xlab="\\# Instances", ylab="1-(Best/Algorithm)", xbreaks=c(1,5,10,15,20,25,30),colors=c("$K_N$-CA-V" = "#000000", "$K_E$+M$_1$+M$_2$" = "#041fed", "$K_E$+C$_1$" = "#a50026","$K_E$+C$_1$+C$_2$" = "#f2a518"))
+
+c = cuberootplot(createRatioDFsFilter(filter = "ISPD98",
+                                   avg_obj = "avg_km1", min_obj = "min_km1",
+                                   UsePenalty = FALSE,
+                               mins_kahypar_ca_vcycle = mins_kahypar_ca_vcycle,
+                                   mins_trad_vcycle_mutate = mins_trad_vcycle_mutate,
+                                mins_random_combine = mins_random_combine
+)$min_ratios, "ISPD98",legendPos = "none", xlab="\\# Instances", ylab="1-(Best/Algorithm)", xbreaks=c(1,5,10,20,30,40,50,60,70),colors=c("$K_N$-CA-V" = "#000000", "$K_E$+M$_1$+M$_2$" = "#041fed", "$K_E$+C$_1$" = "#a50026","$K_E$+C$_1$+C$_2$" = "#f2a518"))
+
+d = cuberootplot(createRatioDFsFilter(filter = "SAT14primal",
+                                   avg_obj = "avg_km1", min_obj = "min_km1",
+                                   UsePenalty = FALSE,
+                              mins_kahypar_ca_vcycle = mins_kahypar_ca_vcycle,
+                                    mins_trad_vcycle_mutate = mins_trad_vcycle_mutate,
+                                mins_random_combine = mins_random_combine
+)$min_ratios, "SAT14 Primal",legendPos = "none", xlab="\\# Instances", ylab="1-(Best/Algorithm)",xbreaks=c(1,5,10,25,50,75,100,120,140),colors=c("$K_N$-CA-V" = "#000000", "$K_E$+M$_1$+M$_2$" = "#041fed", "$K_E$+C$_1$" = "#a50026","$K_E$+C$_1$+C$_2$" = "#f2a518"))
+
+e = cuberootplot(createRatioDFsFilter(filter = "SAT14literal",
+                                   avg_obj = "avg_km1", min_obj = "min_km1",
+                                   UsePenalty = FALSE,
+                               mins_kahypar_ca_vcycle = mins_kahypar_ca_vcycle,
+                                     mins_trad_vcycle_mutate = mins_trad_vcycle_mutate,
+                                mins_random_combine = mins_random_combine
+)$min_ratios, "SAT14 Literal",legendPos = "none", xlab="\\# Instances", ylab="1-(Best/Algorithm)",xbreaks=c(1,5,10,25,50,75,100,120,140),colors=c("$K_N$-CA-V" = "#000000", "$K_E$+M$_1$+M$_2$" = "#041fed", "$K_E$+C$_1$" = "#a50026","$K_E$+C$_1$+C$_2$" = "#f2a518"))
+
+f = cuberootplot(createRatioDFsFilter(filter = "SAT14dual",
+                                   avg_obj = "avg_km1", min_obj = "min_km1",
+                                   UsePenalty = FALSE,
+                              mins_kahypar_ca_vcycle = mins_kahypar_ca_vcycle,
+                                    mins_trad_vcycle_mutate = mins_trad_vcycle_mutate,
+                                mins_random_combine = mins_random_combine
+)$min_ratios, "SAT14 Dual",legendPos = "none", xlab="\\# Instances", ylab="1-(Best/Algorithm)", xbreaks=c(1,5,10,25,50,75,100,120,140),colors=c("$K_N$-CA-V" = "#000000", "$K_E$+M$_1$+M$_2$" = "#041fed", "$K_E$+C$_1$" = "#a50026","$K_E$+C$_1$+C$_2$" = "#f2a518"))
+
+g = cuberootplot(createRatioDFsFilter(filter = "SPM",
+                                   avg_obj = "avg_km1", min_obj = "min_km1",
+                                   UsePenalty = FALSE,
+                              mins_kahypar_ca_vcycle = mins_kahypar_ca_vcycle,
+                                    mins_trad_vcycle_mutate = mins_trad_vcycle_mutate,
+                                mins_random_combine = mins_random_combine
+)$min_ratios, "Sparse Matrices",legendPos = "none", xlab="\\# Instances", ylab="1-(Best/Algorithm)", xbreaks=c(1,5,10,25,50,75,100,125,150,175),colors=c("$K_N$-CA-V" = "#000000", "$K_E$+M$_1$+M$_2$" = "#041fed", "$K_E$+C$_1$" = "#a50026","$K_E$+C$_1$+C$_2$" = "#f2a518"))
+
+library(gridExtra)
+library(grid)
+library(ggplot2)
+library(lattice)
+
+#devtools::install_github("baptiste/egg") 
+#grid.draw(egg::ggarrange(plots=plots, ncol=2, nrow=4))
+grid.arrange(b,c,d,e,f,g, ncol=2)
+
+@
+\caption{Min-Cut performance plots comparing KaHyPar-CA with KaHyPar and other systems.The y-axis shows the ratio between the smallest cut of all algorithms and the cut produced by the corresponding algorithm.}\label{fig:full}
+\end{figure}
+
