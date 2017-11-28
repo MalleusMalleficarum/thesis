@@ -97,6 +97,11 @@
   algorithms}.
 \newblock Theoretical Computer Science, 436:54--70, 2012.
 
+\bibitem{cohoon2003evolutionary}
+{\sc Cohoon, James}, {\sc John Kairo} \btxandlong{}\ {\sc Jens Lienig}: {\em
+  Evolutionary algorithms for the physical design of VLSI circuits}.
+\newblock Advances in evolutionary computing, \btxpageslong{}\ 683--711, 2003.
+
 \bibitem{davis2011university}
 {\sc Davis, Timothy~A} \btxandlong{}\ {\sc Yifan Hu}: {\em The University of
   Florida sparse matrix collection}.
@@ -128,12 +133,10 @@
 \newblock wh freeman New York, 2002.
 
 \bibitem{heuer2017improving}
-{\sc Heuer, Tobias} \btxandlong{}\ {\sc Sebastian Schlag}: {\em Improving
-  Coarsening Schemes for Hypergraph Partitioning by Exploiting Community
-  Structure}.
-\newblock \Btxinlong{}\ {\em LIPIcs-Leibniz International Proceedings in
-  Informatics}, \btxvolumelong{}~75. Schloss Dagstuhl-Leibniz-Zentrum fuer
-  Informatik, 2017.
+{\sc Heuer, T.} \btxandlong{}\ {\sc S.~Schlag}: {\em {Improving Coarsening
+  Schemes for Hypergraph Partitioning by Exploiting Community Structure}}.
+\newblock \Btxinlong{}\ {\em {16th International Symposium on Experimental
+  Algorithms, (SEA)}}, \btxpagelong{}\ 21:1–21:19, 2017.
 
 \bibitem{holtgrewe2010engineering}
 {\sc Holtgrewe, Manuel}, {\sc Peter Sanders} \btxandlong{}\ {\sc Christian

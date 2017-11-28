@@ -150,13 +150,20 @@
 \clearpage
 
 \section*{Abstract}
-The NP-hard hypergraph partitioning problem has many applications like processor load balance or VLSI design. As such meta heuristics are used as approximation to increase solution quality. In this thesis we create an effective evolutionary algorithm 
-improving the existing multilevel hypergraph partitioner KaHyPar. We introduce operations using both the evolutionary and multilevel heuristic. The benefits of the algorithm are evaluated on 90 hypergraphs, showing that the evolutionary component improves solution quality by 2.2\% on average.
+The hypergraph partitioning problem has many applications like processor load balance or VLSI design.
+For most applications a good solution quality is crucial. Since the problem is NP-hard, heuristics and meta heuristics are used in practice for quality improvements. In this thesis we combine the commonly used multilevel heuristic with an evolutionary algorithm. Experimental results show that our new algorithm improves solution quality by 2.2\% on average. Moreover, it computes the best solutions on 597 out of 630 instances.
+
+
+
+%As such meta heuristics are used as approximation to increase solution quality. In this thesis we create an effective evolutionary algorithm 
+%improving the existing multilevel hypergraph partitioner KaHyPar. We introduce operations using both the evolutionary and multilevel heuristic. The benefits of %the algorithm are evaluated on 90 hypergraphs, showing that the evolutionary component improves solution quality by 2.2\% on average.
 
 
 
 \section*{Abstrakt}
-Das NP-schwere Hypergraphpartitionierungsproblem besitzt viele Anwendungsgebiete wie Prozessorlastverteilung oder Schaltkreisdesign. Die gängige Strategie ist es Metaheuristiken einzusetzen, um eine Verbessung der Lösungsqualität zu erreichen. In dieser Thesis entwickeln wir einen effektiven evolutionären Algorithmus, der den bestehenden Multilevelpartitionierer KaHyPar verbessert. Wir führen Operationen ein, die sowohl den evolutionären Aspekt als auch den Multilevelaspekt benutzen. Die Vorteile des evolutionären Algorithmus werden  auf 90 Hypergraphen evaluiert, wobei wir zeigen dass eine Verbesserung von durchschnittlich 2.2\% erzielt wird.
+Das Hypergraphpartitionierungsproblem besitzt viele Anwendungsgebiete wie Prozessorlastverteilung oder Schaltkreisdesign. Für die meisten Anwendungen ist eine gute Lösungsqualität entscheidend. Da das Problem NP-schwer ist, werden Heuristiken und Metaheuristik eingesetzt, um Verbesserungen der Lösungen zu erreichen.
+In dieser Thesis kombinieren wir die häufig verwendete Multilevel-Heuristik mit einem evolutionären Algorithmus. Experimente zeigen dass unser Algorithmus eine Verbesserung von durchschnittlich 2.2\% erzielt. Darüber hinaus berechnet der Algorithmus die besten Lösungen für 597 von 630 Instanzen.
+%Die gängige Strategie ist es Metaheuristiken einzusetzen, um eine Verbessung der Lösungsqualität zu erreichen. In dieser Thesis entwickeln wir einen effektiven evolutionären Algorithmus, der den bestehenden Multilevelpartitionierer KaHyPar verbessert. Wir führen Operationen ein, die sowohl den evolutionären Aspekt als auch den Multilevelaspekt benutzen. Die Vorteile des evolutionären Algorithmus werden  auf 90 Hypergraphen evaluiert, wobei wir zeigen dass eine Verbesserung von durchschnittlich 2.2\% erzielt wird.
 
 
 
@@ -174,8 +181,13 @@ Das NP-schwere Hypergraphpartitionierungsproblem besitzt viele Anwendungsgebiete
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Acknowledgments}
+Big thanks my supervisors for showing enormous patience and assistance, without them this thesis would still be an unfinished mess. 
 
-I'd like to thank Timo Bingmann for the supply of Club-Mate. And my supervisors for showing superhuman patience.
+I'd like to thank the Institute of Theoretical Informatics for providing a nice workspace, Maximilian Bischoff for proof reading this thesis, 
+the pool room people for helping me set up experiments and Timo Bingmann for the supply of Club-Mate. 
+
+Special thanks to my family and dog for their mental support and continuous efforts to understand what this thesis is actually about. 
+
 \vfill\vfill\vfill
 Hiermit versichere ich, dass ich diese Arbeit selbständig verfasst und keine anderen, als die angegebenen Quellen und Hilfsmittel benutzt, die wörtlich oder inhaltlich übernommenen Stellen als solche kenntlich gemacht und die Satzung des Karlsruher Instituts für Technologie zur Sicherung guter wissenschaftlicher Praxis in der jeweils gültigen Fassung beachtet habe.
 
@@ -197,10 +209,10 @@ Ort, den Datum
 \chapter{Introduction}
 \pagestyle{headings}
 Evolutionary algorithms are inspired by evolution. Similar to the biological counterpart they attempt to simulate 
-an enclosed space where several actors, or individuals, try to compete for survival and reproduction in an isolated setting over the time span of multiple generations.
+an enclosed space where several actors or individuals try to compete for survival and reproduction in an isolated setting over multiple generations.
 Evolution theory states that individuals having more helpful traits, like special beaks to assist in acquiring food, are more likely to survive longer and 
 thus more likely to pass these helpful traits onto the next generation. Additionally some traits occur randomly through changing the genetic information erratically. These are called mutations and are even present in humans. Some can be harmful like the sickle-cell disease or beneficial like the ability to consume lactose. In evolution theory mutations 
-are usually a factor that introduces previously nonexistent traits, which would not be able to be recreated using reproduction alone. Repeating the cycle of survival and reproduction the mutations that are helpful will more likely be passed on and established. Based on this principle evolutionary algorithms are essentially applying the process described above onto a mathematical problem. 
+are usually a factor that introduces previously nonexistent traits. Repeating the cycle of survival and reproduction, the mutations that are helpful will more likely be passed on and established. Based on this principle evolutionary algorithms are essentially applying the process described above onto a mathematical optimization problem. 
 %
 %
 %
@@ -208,11 +220,9 @@ are usually a factor that introduces previously nonexistent traits, which would 
 %
 %
 
-Evolutionary algorithms are a faithful recreation of the basic evolutionary concept. They implement a system which mimics all of the actions found in a gene pool. Mutation, reproduction and selection. In Darwin's theory the individuals ability to survive and reproduce is strictly based on the benefits and detriments of the genes. However, this is not considering the fact that the survival chance of the individual may improve beyond the biological constraint. We humans learn to interpret the world around us, what berries are poisonous, what animals should be hunted, when can the road safely be crossed. All of these factors are improving the survival chance, independent from biological information. A similar concept in computer science are memetic algorithms~\cite{moscato1989evolution}, enhancing the solutions of the evolutionary algorithm by additionally applying local search algorithms to improve the solution. 
+Evolutionary algorithms are a faithful recreation of the basic evolutionary concept. They implement a system which mimics all of the actions found in a gene pool. Mutation, reproduction and selection. In Darwin's theory the individuals ability to survive and reproduce is strictly based on the benefits and detriments of the genes. However, this is not considering the fact that the survival chance of the individual may improve beyond the biological constraint. We humans learn to interpret the world around us, what berries are poisonous, what animals should be hunted, when can the road safely be crossed. All of these factors are improving the survival chance, independent from biological information. A similar concept in computer science are memetic algorithms~\cite{moscato1989evolution}, which improve the solutions of the evolutionary algorithm by additionally incorporating local search algorithms. 
 
-Evolutionary algorithms are primarily used as a meta-heuristic to generate good solutions for difficult problems. In this thesis we present a memetic algorithm to tackle one of those difficult, NP-hard problems~\cite{garey2002computers} - hypergraph partitioning. 
 
-Additionally, we integrate our memetic algorithm into an existing hypergraph partitioner, which is already utilizing the multilevel heuristic~\cite{bulucc2016recent} and capable of generating solutions of very high quality in comparison to other hypergraph partitioning tools~\cite{schlag2016k}. 
 
 %
 %
@@ -249,28 +259,32 @@ Additionally, we integrate our memetic algorithm into an existing hypergraph par
 % One of the most effective heuristic in regard to graph/hypergraph partitioning is the multilevel paradigm \cite{bulucc2016recent}. By reducing the hypergraph whilst maintaining the hypergraph structure the original problem is translated to a smaller problem which shares similarities of the original problem. Due to the decreased size a good initial solution can be created and additionally be improved on during the recreation of the original problem using local search algorithms. While this approach is capable of generating a high quality solution within one execution it falls short on further improving this solution due to the limited solution space evaluated. This problem can be counteracted using meta heuristics such as evolutionary algorithms specifically designed to allow a more efficient traversal of the solution space and avoidance of local optima. 
 
 \section{Contribution}
-In this thesis we augment the existing hypergraph partitioner KaHyPar \cite{schlag2016k} with an evolutionary framework designed to further improve the solution quality generated by KaHyPar. Using ideas presented in the evolutionary graph partitioner KaffPaE \cite{sanders2012distributed}, we add combination and mutation operations as well as selection and replacement strategies to create an evolutionary algorithm.  
+Evolutionary algorithms are primarily used as a meta heuristic to generate good solutions for difficult problems. % In this thesis we present a memetic algorithm to tackle one of those difficult, NP-hard problems - hypergraph partitioning. 
+In this thesis we present a memetic algorithm to tackle the NP-hard~\cite{garey2002computers} hypergraph partitioning problem.
+
+Additionally, we integrate our memetic algorithm into an existing hypergraph partitioner, which is already utilizing the multilevel heuristic~\cite{bulucc2016recent} and capable of generating solutions of very high quality~\cite{schlag2016k}. Using ideas presented in the evolutionary graph partitioner KaffPaE \cite{sanders2012distributed}, we add combination and mutation operations as well as selection and replacement strategies to create an evolutionary algorithm. Our algorithm produces the best partitions on 597 of 630 instances with an average improvement of 2.2\%.
 %we add new operators to improve the solution quality by evaluating and modifying the structures of solutions generated by KaHyPar in a more effective manner. 
 \section{Structure of Thesis}
 We establish definitions required to understand hypergraph partitioning, related work on the hypergraph partitioning problem as well as the basic work flow of KaHyPar in Chapter \ref{chapter:preliminaries}.
 Afterwards we introduce and explain the algorithmic components that augment KaHyPar to a memetic algorithm in Chapter \ref{chapter:kahypare}. 
-Then these algorithmic components are analyzed regarding their usefulness in Chapter \ref{chapter:experimentalevaluation}.
-Finally we conclude the thesis and give a preview of further improvements to the memetic algorithm in Chapter \ref{chapter:discussion}.
+%Then these algorithmic components are analyzed regarding their usefulness in Chapter \ref{chapter:experimentalevaluation}.
+The different algorithmic components are evaluated experimentally in Chapter~\ref{chapter:experimentalevaluation}.
+Finally we conclude the thesis and give a preview of further improvements in Chapter \ref{chapter:discussion}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Preliminaries}
 \label{chapter:preliminaries}
-In this chapter we establish the mathematical concept of a hypergraph used in this thesis, as well as an overview of related work in the field of evolutionary hypergraph partitioning. We also present the workflow of the partitioner KaHyPar to allow a deeper understanding how the evolutionary algorithm integrates into KaHyPar.
+In this chapter we establish hypergraph-related definitions used in this thesis, and give an overview of related work in the field of evolutionary hypergraph partitioning. We also introduce the hypergraph partitioning framework KaHyPar, which will be used as a central building block of our evolutionary algorithm.% to allow a deeper understanding how the evolutionary algorithm integrates into KaHyPar.
 \section{General Definitions}
 
-A hypergraph $H = (V, E, c, w)$ is defined as a set of vertices $V$, a set of hyperedges $E$ where each hyperedge is a subset of the vertices $\ e \subseteq V$.
+A hypergraph $H = (V, E, c, w)$ is defined as a set of vertices $V$ and a set of hyperedges $E$, where each hyperedge is a subset of the vertices $\ e \subseteq V$.
 The weight of a vertex is measured by $c: V \rightarrow  \mathbb R_{> 0}$. Similarly the weight of a hyperedge is defined by $w: E \rightarrow  \mathbb R_{> 0}$. 
 The set extensions of $c$ and $w$ are defined as $c(V') = \sum_{v \in V'} c(v)$ and $w(E') = \sum_{e \in E'} w(e)$. 
-Two vertices $u, v$ are adjacent if $\exists\ e \in E\ :\ u, v \in e$. The vertices in $e$ are called pins. A vertex $u$ is incident to a hyperedge $e$ if $ u \in e$. $I(u)$ is the set of all incident hyperedges of node $u$. The size $|e|$ of a hyperedge $e$ is the number of pins in $e$. A $k$-way partition of a hypergraph $H$ is a partition of $V$ into k disjoint blocks $V_1, ..., V_k$. A vertex $u$ is assigned a partition block by the function $part(u): V \rightarrow [1, k]$.
-A $k$-way partition is balanced when $\forall\  1 \le i \le k\ :\ c(V_i) \le (1 + \epsilon) \lceil \frac{c(V)}{k} \rceil $ for an imbalance parameter $\epsilon$.
+Two vertices $u, v$ are adjacent if $\exists\ e \in E\ :\ u, v \in e$. The vertices in $e$ are called pins. A vertex $u$ is incident to a hyperedge $e$ if $ u \in e$. $I(u)$ is the set of all incident hyperedges of node $u$. The size $|e|$ of a hyperedge $e$ is the number of its pins. A $k$-way partition of a hypergraph $H$ is a partition of $V$ into k disjoint blocks $V_1, ..., V_k$. A vertex $u$ is assigned a block by the function $part(u): V \rightarrow [1, k]$.
+A $k$-way partition is balanced if $\forall\  1 \le i \le k\ :\ c(V_i) \le (1 + \epsilon) \lceil \frac{c(V)}{k} \rceil $ for an imbalance parameter $\epsilon$.
 A valid solution is a balanced $k$-way partition. An invalid solution is a partition where the balance criterion is not met.
-The number of vertices in a hyperedge that are located in $V_i$ are measured by $\Psi(e,V_i) := |\{v \in V_i \ |\ v \in e \}|$. Given a partition $\mathcal{P}$ the connectivity set of a hyperedge e is $\Phi(e, \mathcal{P}) :=  \{V_i\ |\ \Psi(e, V_i) > 0\}$. 
-A hyperedge $e$ is a cut edge in a partition $\mathcal{P}$ when $\Phi(e, \mathcal{P}) > 1$. 
-Let $\mathcal{E}$ be the set of cut edges from a partition $\mathcal{P}$. The cut metric of $\mathcal{P}$ is defined as $cut(\mathcal{P}) := w(\mathcal{E})$.
+The number of vertices in a hyperedge located in block $V_i$ is measured by $\Psi(e,V_i) := |\{v \in V_i \ |\ v \in e \}|$. Given a partition $\mathcal{P}$ the connectivity set $\mathcal{I}$ of a hyperedge e is $\Phi(e, \mathcal{P}) :=  \{V_i\ |\ \Psi(e, V_i) > 0\}$. 
+A hyperedge $e$ is a cut edge in a partition $\mathcal{P}$ if $\Phi(e, \mathcal{P}) > 1$. 
+Let $\mathcal{E}$ be the set of cut edges of a partition $\mathcal{P}$. The cut metric of $\mathcal{P}$ is defined as $cut(\mathcal{P}) := w(\mathcal{E})$.
 The connectivity metric $(\lambda - 1)$ is defined as $(\lambda - 1)(\mathcal{P}) := \sum_{e \in \mathcal{E}}(\Psi(e) - 1)w(e)$.
 Both metrics can be used to measure the quality of a solution. We use the connectivity as metric. 
 
@@ -301,10 +315,12 @@ Both metrics can be used to measure the quality of a solution. We use the connec
 %Panter \cite{trifunovic2008parallel}
 % Warum Hypergraphen keine Graphen sind catalyurek1999hypergraph
 
-There are several hypergraph partitioning algorithms, originating from various backgrounds such as processor communication balancing \cite{catalyurek1999hypergraph}, circuit partitioning \cite{alpert1998multilevel} or database storage sharding \cite{kabiljo2017social}.
+There are several hypergraph partitioning algorithms, originating from various application areas such as processor communication balancing \cite{catalyurek1999hypergraph}, circuit partitioning \cite{alpert1998multilevel} or database storage sharding \cite{kabiljo2017social}.
 
-Two approaches are used for hypergraph partitioning. The first approach is the bisectioning of the hypergraph, where the partition is fixed to $k=2$ as in MLPart~\cite{alpert1998multilevel}. By recursively bisecting the resulting partitions, $k$ can assume values other than $2$. This is implemented in tools like PaToH~\cite{catalyurek1999hypergraph}, Mondrian~\cite{vastenhouw2005two}, Zoltan~\cite{devine2006parallel} and hMetis~\cite{karypis1999multilevel}%(allowing imbalanced bipartitions to create partitions of arbitrary k)
+Two approaches are used for hypergraph partitioning. The first approach is the bisectioning of the hypergraph, where the partition is fixed to $k=2$ as in MLPart~\cite{alpert1998multilevel}. By recursively bisecting the resulting partitions, $k$ can assume values other than $2$. This is implemented in tools like PaToH~\cite{catalyurek1999hypergraph}, Mondrian~\cite{vastenhouw2005two}, Zoltan~\cite{devine2006parallel}, and hMetis~\cite{karypis1999multilevel}%(allowing imbalanced bipartitions to create partitions of arbitrary k)
 . The other approach is to skip the recursion and directly partition the hypergraph into $k$ blocks. This is called a direct $k$-way partition and is used in hMetis-Kway~\cite{karypis2000multilevel}, kPatoH~\cite{aykanat2008multi} and SHP~\cite{kabiljo2017social} (also implementing a recursive bisection). Note that except SHP~\cite{kabiljo2017social} all tools are utilizing the multilevel paradigm~\cite{bulucc2016recent}. 
+
+The multilevel heuristic \cite{bulucc2016recent} begins by reducing the original problem to a smaller problem with a similar structure. Due to the reduced complexity, the smaller problem can be solved efficiently. To convert the solution of the small problem on the original problem, the reduction is undone. To further improve the solution, local search can be applied during this process. Because the reduction retains some structure and the local search improves the solution, the resulting solution for the original problem is of high quality.
 
 Of course this is only a collection of the most common hypergraph partitioners, which is why we would like to refer to the %surveys~(\cite{alpert1995recent}\cite{bader2013graph}\cite{papa2007hypergraph}\cite{trifunovic2006parallel}).
 surveys~\cite{alpert1995recent,bader2013graph,papa2007hypergraph,trifunovic2006parallel} for an extensive overview.
@@ -318,20 +334,20 @@ surveys~\cite{alpert1995recent,bader2013graph,papa2007hypergraph,trifunovic2006p
 % vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 
 Saab and Rao \cite{saab1989evolution} present one of the first evolutionary approaches to hypergraph partitioning %by iteratively performing vertex moves comparing the gain to a random threshold and are using bin packing with iterative improvement to determine the destination of the vertex moves.
-by comparing the gain of a vertex move to a random threshold. They utilize bin packing with iterative improvement to determine the vertex moves. 
-Hulin \cite{hulin1990circuit} presents a genetic algorithm maintaining multiple solutions using a two dimensional representation of circuits and introduces a problem specific crossover operator as well as a mutation operator. A more sophisticated memetic algorithm for the hypergraph partitioning problem was created by Bui and Moon~\cite{bui1994fast}, in which solutions are preprocessed and optimized using the Fiduccia-Mattheyses~\cite{fiduccia1988linear} local search algorithm as well as a new replacement strategy both considering the bit-wise difference of the child and the parent partitions as well as solution quality. 
+by comparing the gain of a vertex move to a random threshold. %They utilize bin packing with iterative improvement to determine the vertex moves. 
+Hulin \cite{hulin1990circuit} presents a genetic algorithm maintaining multiple solutions using a two dimensional representation of circuits and introduces a problem specific crossover operator as well as a mutation operator. A more sophisticated memetic algorithm for the hypergraph partitioning problem was created by Bui and Moon~\cite{bui1994fast}, in which solutions are preprocessed and optimized using the Fiduccia-Mattheyses~\cite{fiduccia1988linear} local search algorithm. They also use a new replacement strategy considering the bit-wise difference of the child and the parent partitions in addition to solution quality. 
 
-Chan and Mazmudner~\cite{chan1995systolic} provide an genetic algorithm for bipartitioning that assigns better solutions a higher chance to be selected for the crossover operation. The crossover operation splits both input partitions at the same point, combining the first split of the first partition and the second split of the second partition.
+Chan and Mazmudner~\cite{chan1995systolic} provide a genetic algorithm for bipartitioning that assigns better solutions a higher chance to be selected for the crossover operation. The crossover operation splits both input partitions at the same point, combining the first split of the first partition and the second split of the second partition.
 Areibi~\cite{areibi2000integrated} gives another memetic algorithm for the $k$-way hypergraph partitioning problem. Using a variation of FM (Fiduccia-Mattheyses) designed for $k$-way optimization~\cite{sanchis1989multiple} as well as a 4-point crossover operation, which splits the input partitions at 4 points and alternates between the blocks.
-Kim et al.~\cite{kim2004hybrid} translate the lock gain local search~\cite{kim2004lock} for graphs to hypergraphs and use solution quality and hamming distance as a more potent replacement strategy as well as roulette selection to determine the solutions used in the crossover.
- Sait et al.~\cite{sait2006evolutionary} compare the meta-heuristics tabu search, simulated annealing and genetic algorithms for $k$-way hypergraph partitioning. Their result is that tabu search is outperforming a genetic algorithm in quality and running time.
-Armstrong et al.~\cite{armstrong2010investigation} analyze the quality and running time performance of parallel memetic algorithms comparing a bounded amount of local search against an unbounded local search, stopping only when no improvement can be made. All referenced works that use a crossover operator do so by splitting the input partitions and selecting alternating block fragments.
+Kim et al.~\cite{kim2004hybrid} translate the lock gain local search~\cite{kim2004lock} for graphs to hypergraphs and use solution quality and hamming distance as a more potent replacement strategy as well as roulette selection to determine the solutions used in the crossover. All referenced works that use a crossover operator do so by splitting the input partitions and selecting alternating block fragments. 
+
+Armstrong et al.~\cite{armstrong2010investigation} analyze the quality and running time performance of parallel memetic algorithms comparing a bounded amount of local search against an unbounded local search, stopping only when no improvement can be made. Sait et al.~\cite{sait2006evolutionary} compare the meta heuristics tabu search, simulated annealing and genetic algorithms for $k$-way hypergraph partitioning. Their result is that tabu search is outperforming a genetic algorithm in quality and running time.
+Cohoon et al.~\cite{cohoon2003evolutionary} compare evolutionary hypergraph partitioners to other hypergraph partitioning tools. Their result is that none of the existing evolutionary algorithms are to be considered competitive.
 
 % ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
 % EVOLUTIONARY RELATED WORK END
 
-Sanders and Schulz present an evolutionary framework~\cite{sanders2012distributed} for the existing graph partitioner KaFFPa~\cite{holtgrewe2010engineering}, introducing different combination and mutation operations for graph partitioning.  Their approach modifies a multilevel
-framework to provide effective combine and mutation operations.
+Sanders and Schulz present an evolutionary framework~\cite{sanders2012distributed} for the existing graph partitioner KaFFPa~\cite{holtgrewe2010engineering}, introducing different combination and mutation operations for graph partitioning, which are integrated with the multilevel approach.
 
 \section{KaHyPar}
 \begin{figure}[t!] 
@@ -343,13 +359,13 @@ framework to provide effective combine and mutation operations.
 \end{figure}
 
 The hypergraph partitioner KaHyPar optimizes the connectivity metric using direct $k$-way partitioning~\cite{akhremtsev2017engineering} as well as the cut metric using recursive bisection~\cite{schlag2016k}.  
-KaHyPar also uses a multilevel approach for partitioning (see Figure \ref{fig:coarseningexample}). The original hypergraph $H$ is coarsened by repeatedly contracting nodes $u,v$ until either no more contractions are possible or that the minimum number of nodes required has been reached. The coarsened hypergraph is referenced as $H_c$. KaHyPar is a $n$-level algorithm meaning that during each step of the coarsening only one pair of nodes $u, v$ is contracted. All of hyperedges containing $v$ are mapped to $u$ in the process. See Figure \ref{fig:coarsening_example} for an example. 
+KaHyPar also uses a multilevel approach for partitioning (see Figure \ref{fig:coarseningexample}). The original hypergraph $H$ is coarsened by repeatedly contracting nodes $u,v$ until either no more contractions are possible or that the minimum number of nodes required has been reached. The coarsened hypergraph is referenced as $H_c$. KaHyPar is a $n$-level algorithm meaning that during each step of the coarsening only one pair of nodes $u, v$ is contracted. All of hyperedges containing $v$ are mapped to $u$ in the process (see Figure \ref{fig:coarsening_example} for an example). 
 %TODO explain node selection for coarsening 
-On $H_c$ a partitioning algorithm is generates an initial partitioning for the coarsened hypergraph. Afterwards contractions are reversed and 
-during each step of the uncoarsening phase local search algorithms are used to improve the solution quality of $H$. The local search is using a variant of the Fiduccia-Mattheysis algorithm~\cite{fiduccia1988linear}. 
+On $H_c$ a partitioning algorithm generates an initial partitioning for the coarsened hypergraph. Afterwards contractions are reversed and 
+during each step of the uncoarsening phase local search algorithms are used to improve the solution quality. The local search is using a variant of the Fiduccia-Mattheysis algorithm~\cite{fiduccia1988linear}. 
 Heuer and Schlag~\cite{heuer2017improving} improved KaHyPar by analyzing and exploiting community structures in hypergraphs, showing that KaHyPar-CA (community aware KaHyPar) generates solutions of superior quality compared to other established hypergraph partitioners.
-\newline
-\begin{figure}[H] 
+
+\begin{figure}[H]
     \vspace*{-.25cm}
   \centering
    \includegraphics[width=.8\textwidth]{Ipe/Memetic_process.pdf}
@@ -357,7 +373,8 @@ Heuer and Schlag~\cite{heuer2017improving} improved KaHyPar by analyzing and exp
     %\vspace*{-.5cm}
 
 \end{figure}
-In Figure \ref{fig:coarseningexample} the multilevel approach of KaHyPar is displayed. The multilevel heuristic \cite{bulucc2016recent} begins by reducing the original problem to a smaller problem with a similar structure. Due to the reduced complexity, the smaller problem can be solved efficiently. To convert the solution of the small problem on the original problem, the reduction is undone. To further improve the solution, local search can be applied during this process. Because of the reduction that retains some structure and the local search improvement, the resulting solution for the original problem is of high quality. For hypergraph partitioning the reduction is to contract nodes until the resulting hypergraph is sufficiently small. The solution generation for the small problem is called initial partitioning. The reduction is undone by reverting the process of contraction.
+In Figure \ref{fig:coarseningexample} the multilevel approach of KaHyPar is displayed. For hypergraph partitioning the reduction is to contract nodes until the resulting hypergraph is sufficiently small. An initial partitioning is performed on the coarsened hypergraph. The reduction is undone by uncontracting the nodes and applying local search.
+
 
 
 %KaHyPar
@@ -368,7 +385,7 @@ In Figure \ref{fig:coarseningexample} the multilevel approach of KaHyPar is disp
 %TODO explain evolutionary algorithms, or at least show that this is one
 \chapter{KaHyPar-E}
 \label{chapter:kahypare}
-In this Chapter we first outline the general procedure of an evolutionary algorithm. Then we explain the methodology used to represent hypergraph partitioning in an evolutionary framework. We also describe the concept of diversity to compare two different partitions on similar properties. Finally operators for combination and mutation are introduced as well as strategies for selection and replacement.
+In this chapter we first outline the general procedure of an evolutionary algorithm. Then we explain the methodology used to transfer hypergraph partitioning into an evolutionary framework. We also describe the concept of diversity to compare two different partitions on similar properties. Finally operators for combination and mutation are introduced as well as strategies for selection and replacement.
 \section{Overview}
 %Place this section in the introduction
 %Evolutionary algorithms are inspired by the theory of evolution. Much like the biological counterpart they attempt to simulate 
@@ -380,31 +397,31 @@ In this Chapter we first outline the general procedure of an evolutionary algori
 In order to apply an evolutionary algorithm we first have to generate an initial population. 
 Following the principle of evolutionary algorithms after the initial solutions are generated  the same steps are repeated until a stopping criterion has been met.
 Evolutionary algorithms are usually repeating 4 steps that attempt to simulate evolution. First some individuals have to be chosen for recombination. Then the chosen individuals have to be combined with each other generating offspring. As third step mutations are performed on some individuals and as fourth step the individuals surviving the iteration (generation) are selected by a corresponding metric, also called fitness. For hypergraph partitioning we consider a partition as an individual and the fitness of said individual is the cut or connectivity metric. We alternate the evolutionary scheme a bit in a sense that we perform combination or mutation exclusively during an iteration and additionally only generate one new solution during said iteration and then replace an existing individual with the new offspring. 
-In Sections \ref{sec:population} - \ref{sec:selectionstrategies} we explain the tools required for maintaining and selecting individuals from the population.% and evicting individuals from the population. 
-In Section \ref{sec:combines} we introduce the two combine operators used to generate offspring. In Section \ref{sec:mutations} we describe the mutation operations implemented in KaHyPar-E to complete the evolutionary framework. Finally we explain in Section \ref{sec:replacement} the process to insert the solutions generated by combination and mutation into the population.
+In Sections \ref{sec:population} - \ref{sec:selectionstrategies} we explain the tools required for maintaining and selecting individuals from the population. % and evicting individuals from the population. 
+In Section \ref{sec:combines} we introduce two combine operators used to generate offspring. In Section \ref{sec:mutations} we describe the mutation operations implemented in KaHyPar-E to complete the evolutionary framework. Finally in Section \ref{sec:replacement} we explain the process to insert the solutions generated by combination and mutation back into the population.
 
 \section{Population}
 \label{sec:population}
-For the purposes of evolutionary algorithms we will begin to use the term individual. For hypergraph partitioning we reference a partition of a hypergraph as individual. KaHyPar-E will produce multiple individuals, which are inserted and removed from the population. Only a fixed number of
+KaHyPar-E will produce multiple individuals, which are inserted and removed from the population. Only a fixed number of
 individuals are in the population. This number is the maximum population size. Further individuals have to compete for a place in the population. 
 The population size is an important parameter, as a small value limits the exploration capability and a high value limits convergence~\cite{chen2012large}.
 We use KaHyPar to create the initial population. This means that unlike most evolutionary algorithms we use high quality solutions instead of random solutions as initial population. However generating an initial population is time consuming and needs a time bound to ensure that the evolutionary components are used within the running time limit for the algorithm.
 In order to select a proper population size for the running time we attempt to allocate a fair amount of time towards the creation of the initial population. 
 
 By measuring the duration of one iteration $t_1$ and comparing it to the total running time ${t_{total}}$ we can estimate the amount of iterations $\frac{t_{total}}{t_1}$. Since hypergraph instances
-vary greatly in time required to partition, using a fixed population size will most likely be inadequate for most instances. As a solution we try to use a fixed percentage of the total time for generating 
+vary greatly in time required to partition, using a fixed population size will most likely be inadequate for most instances. As a solution we use a fixed percentage of the total time for generating 
 individuals for the initial population. Evaluating the value calculated above we spend approximately 15\% of the allotted time towards creating the initial population and consequently the population size is determined by $\delta = 0.15\cdot\frac{t_{total}}{t_1}$.
 However, we introduce lower and upper bounds for the population size to ensure a proper size for evolutionary operators as well as convergence. That being said the population size has to be at least 3 and 50 at most.
 \section{Diversity}
 \label{sec:diversity}
 %By measuring the difference between two individuals we can gain some knowledge over their internal structure and similarities.
-In biological evolution a population with a highly miscellaneous gene pool is considered healthy, because the variation between the individuals ensures that few to none characteristics are carried by every individual and a high diversity of the gene pool is assured. In that case bad characteristics can be removed through means of reproduction. As reverse conclusion bad characteristics will not be removed if each individual shares said characteristics. 
-The same principle is applicable to evolutionary algorithms in a sense that bad characteristics are unable to be removed if they are shared by all solutions. For the hypergraph partitioning problem such a characteristic would be a hyperedge that is a cut edge in \emph{every} solution. 
+In biological evolution a population with a highly miscellaneous gene pool is considered healthy, because the variation between the individuals ensures that multiple different characteristics are carried by different individuals and a high diversity of the gene pool is assured. In that case bad characteristics can be removed through means of reproduction. As reverse conclusion bad characteristics will not be removed if each individual shares said characteristics. 
+The same principle is applicable to evolutionary algorithms in a sense that bad characteristics are unable to be removed if they are shared by all solutions. For the hypergraph partitioning problem such a characteristic would be a suboptimal hyperedge that is a cut edge in \emph{every} solution. 
 
 Maintaining diversity is highly recommended~\cite{back1996evolutionary}, as it ensures a strong perturbation of the solutions and therefore allows for a greater exploration of the solution space.
 Additionally it prevents characteristics from manifesting in the entire population.
 We introduce diversity as a tool for measuring the different characteristics of two individuals. 
-As described above the characteristic influencing the quality of a partition are the cut edges. In evolutionary graph partitioning, KaffPaE~\cite{sanders2012distributed} determines the difference of two partitions $\mathcal{P}_1$, $\mathcal{P}_2$ by counting the edges that are cut edges in exclusively one of the partitions $cutdiff(\mathcal{P}_1,\mathcal{P}_2) :=\sum_{e \in E} |cut(e,\mathcal{P}_1) - cut(e,\mathcal{P}_2)|$. This approach can be used for hypergraphs, but is not entirely accurate for hypergraphs because cut hyperedges might extend into multiple blocks,( see Figure \ref{fig:differentpartitions}). Instead we also count the amount of blocks that are different between the hyperedges $conndiff(\mathcal{P}_1,\mathcal{P}_2) :=\sum_{e \in E} ||\Phi(e,\mathcal{P}_1)| - |\Phi(e,\mathcal{P}_2)||$. This is a more natural representation for the connectivity metric than cut edges.
+As described above the characteristic influencing the quality of a partition are the cut edges. In evolutionary graph partitioning, KaffPaE~\cite{sanders2012distributed} determines the difference of two partitions $\mathcal{P}_1$, $\mathcal{P}_2$ by counting the edges that are cut edges in exclusively one of the partitions $cutdiff(\mathcal{P}_1,\mathcal{P}_2) :=\sum_{e \in E} |cut(e,\mathcal{P}_1) - cut(e,\mathcal{P}_2)|$. This approach can be used for hypergraphs, but is not entirely accurate for hypergraphs because cut hyperedges might extend into multiple blocks(see Figure \ref{fig:differentpartitions}). Instead we count the number of blocks that are different between the hyperedges $conndiff(\mathcal{P}_1,\mathcal{P}_2) :=\sum_{e \in E} ||\Phi(e,\mathcal{P}_1)| - |\Phi(e,\mathcal{P}_2)||$. This is a more natural representation for the connectivity metric than cut edges.
 
 \begin{figure}[H] 
 
@@ -421,18 +438,18 @@ As described above the characteristic influencing the quality of a partition are
 \section{Selection Strategies}
 \label{sec:selectionstrategies}
 For an evolutionary algorithm we attempt to generate new, improved solutions by using existing solutions. A logical conclusion is that good individuals have good characteristics that may be passed on to child individuals.
-We select our individuals using tournament selection~\cite{blickle1996comparison}, meaning that the individuals are competing for their chance of recombination based on their fitness. In a long term perspective this ensures that good individuals have a higher chance of reproduction as stated by the evolutionary theory.  By then selecting two random individuals and choosing the one with the better solution quality we extract one individual~$I_1$. For operators requiring two separate individuals, we can simply repeat this step to select a new individual~$I_2$. In the unlikely case that the two selected individuals are the same we instead use the worse individual from the second tournament selection round.
+We select our individuals using tournament selection~\cite{blickle1996comparison}, meaning that the individuals are competing for their chance of recombination based on their fitness. In a long term perspective this ensures that good individuals have a higher chance of reproduction. By selecting two random individuals and choosing the one with the better solution quality we extract one individual~$I_1$, where better individuals have a higher chance of being selected. For operators requiring two individuals, we can simply repeat this step to select a new individual~$I_2$. In the unlikely case that the two selected individuals are the same we instead use the worse individual from the second tournament selection round.
 \section{Combine Operations}
 \label{sec:combines}
-Combine operations generate a new individual by using two or more individuals as input. We present two different combine operators. The first operator C1 combines two partitions which are determined using tournament selection. While C1 uses two parents, the second operator C2 is capable of combining a variable number of X individuals. These individuals are selected from the population by choosing the best X individuals from the population instead of a tournament selection. Both operators use the replacement strategy introduced in Section \ref{sec:replacement} to insert the newly generated individuals.
+Combine operations generate a new individual by using two or more individuals as input. We present two different combine operators. While the first operator C1 combines two partitions, the second operator C2 is capable of combining a variable number of X individuals. These individuals are selected by choosing the best X individuals from the population. Both operators use the replacement strategy introduced in Section \ref{sec:replacement} to insert the newly generated individuals.
 \subsection{Basic Combine (C1)}
 \label{sec:basiccombine}
-The basic combine operator C1 uses two parent partitions $\mathcal{P}_1$, $\mathcal{P}_2$ in order to create a child individual~$C$. This is achieved by only allowing contractions of nodes $u, v$ when these nodes are in the same block for both parent partitions as seen in Figure \ref{fig:parent_combine}. Contractions performed in the same block do not modify the quality of a partition, because the block assignments cannot change, and as a result the connectivity sets remain stable.
+The basic combine operator C1 combines two parent partitions $\mathcal{P}_1$, $\mathcal{P}_2$ to one child individual~$C$. This is achieved by only allowing contractions of nodes $u, v$ when these nodes are in the same block for both parent partitions as seen in Figure \ref{fig:parent_combine}. Contractions performed in the same block do not modify the quality of a partition, because the block assignments cannot change, and as a result the connectivity sets remain stable.
 This ensures that the solution quality for the coarsened hypergraph~$H_c$ does not fluctuate for either parent partition.  
-After coarsening we do not perform an initial partitioning. Instead we consider the coarsened hypergraph $H_c$ and apply the parent partition with better solution quality to $H_c$.
+After coarsening we do not perform initial partitioning. Instead we consider the coarsened hypergraph $H_c$ and apply the parent partition with better solution quality to $H_c$.
 
 This operation is different than a V-cycle in Section~\ref{sec:vcycles}, since the coarsening condition is more strict due to the consideration of both parents partitions. The local search algorithms during the refinement phase do not worsen the solution quality.
-This local search assurance in combination with using the better partition of the two parents ensures that the child solution is at least as good as the best parent solution. \label{qualityassurance} The basic combine is benefiting from highly diverse parent partitions since it passes on more characteristic cut edges, resulting in more exploration of the solution space. This operation results in high convergence due to the quality assurance and strong limitation during the coarsening. 
+This local search assurance in combination with using the better partition of the two parents ensures that the child solution is at least as good as the best parent solution. \label{qualityassurance} The basic combine is benefiting from highly diverse parent partitions since it passes on more characteristic cut edges, resulting in more exploration of the solution space. %This operation results in high convergence due to the quality assurance and strong limitation during the coarsening. 
 
 \begin{figure}[H] 
 
@@ -447,12 +464,12 @@ This local search assurance in combination with using the better partition of th
 In Figure~\ref{fig:parent_combine} we explain the limitation used during the coarsening of operator C1. The only possible contractions are vertices 1 \& 2, as well as 4 \& 5. Other contractions will violate the restriction. The vertices 2 \& 3 for example cannot be contracted because it violates $\mathcal{P}_2$, even though they share the same block in partition $\mathcal{P}_1$. 
 \subsection{Edge Frequency Multicombine (C2)}
 \label{sec:edgefrequency}
-Our multi-combine operator is capable of combining multiple individuals $I_1.. I_n, n \le |P|$ into a new child individual. By analyzing whether an edge $e$ is a cut edge in $I_1 ..I_n$ we can calculate the edge frequency $f(e) := \sum_{i=1}^n cut(e,I_i)$~\cite{wichlund1998multilevel} of an edge $e$. We use the best $n = \sqrt{|P|}$ individuals from $P$ for determining edge frequency as a standard parameter~\cite{delling2011graph}. 
+Our multi-combine operator is capable of combining multiple individuals $I_1,...,I_{\mathcal{N}}, \mathcal{N} \le |P|$ into a new child individual. By analyzing whether an edge $e$ is a cut edge in $I_1,...,I_{\mathcal{N}}$ we can calculate the edge frequency $f(e) := \sum_{i=1}^{\mathcal{N}} cut(e,I_i)$~\cite{wichlund1998multilevel} of an edge $e$. We use the best $\mathcal{N} = \sqrt{|P|}$ individuals from $P$ for determining edge frequency as a standard parameter~\cite{delling2011graph}. 
 
 Assuming that the frequent cut edges of the best solutions are most likely a good characteristic, these edges should remain cut edges.
 %By prolonging the contraction of nodes in these frequent cut edges, other contractions may attach more hyperedges to those nodes. As a result the hyperedges are more probable to become cut edges.
-The contraction of the nodes in a frequent cut edge is most likely not able to push the edge out of the cut, because the cut edge is sufficiently influencing the solution quality. Therefore the most likely result is the limitation or unenforceability of other possible contractions.
-By prolonging the contraction of nodes in these frequent cut edges, other contractions may be performed before contracting the nodes in the cut edge.
+The contraction of the nodes in a frequent cut edge is most likely not beneficial, because the edge appears to be beneficial for the solution quality. Therefore such a contraction is probably harmful for the solution quality and additionally causes limitation or unenforceability of other possible contractions.
+By prolonging the contraction of nodes in these frequent cut edges, more favorable contractions may be performed.
  Therefore we penalize contractions of nodes incident to a high frequency edge during the multilevel partition approach by using the rating function
 \begin{center}
 $r(u,v) = \sum_{e \in I(u) \cap I(v)}\dfrac{\mathrm{e}^{-\gamma*f(e)}}{(w(u)w(v))^{\rho}}$ 
@@ -470,8 +487,8 @@ Since this operation is generating a new initial partitioning there is no qualit
 %\subsection{Basic Combine + Edge Frequency Information}
 \section{Mutation operations}
 \label{sec:mutations}
-The main objective of mutations is to create more diverse solutions and to avoid premature population convergence towards a local optimum.
-We propose three different mutation operations. The first operator M1 is intended to improve the solution quality of a partition by reapplying local search algorithms. The second operator M2 is a variation of M1, capable of generating new features. The third operator M3 is intentionally enforcing new characteristics, trying to provide diversity.
+The main objective of mutations is to create more diverse solutions and to avoid premature convergence towards a local optimum.
+We propose three different mutation operations. The first operator M1 is intended to improve the solution quality of a partition by reapplying local search algorithms. The second operator M2 is a variation of M1, capable of generating new features. The third operator M3 is intentionally enforcing new characteristics, trying to increase diversity.
 
 
 
@@ -484,24 +501,24 @@ Using an individual $I$ as partition for the hypergraph this operation results i
 %This operation is also used in KaHyPar-CA + vcycle as the strongest configuration of KaHyPar-CA. However the number of v-cycles performed during one evolutionary iteration is 1, whereas the number of v-cycles performed during one iteration of KaHyPar-CA + vcycle is arbitrarily high to only stop when no further improvements have been found.
 \subsection{V-Cycle + New Initial Partitioning (M2)}
 Similar to a V-cycle, we coarsen an already partitioned hypergraph $H$, but instead of immediately starting the refinement we drop the partition and perform a new initial partitioning on the coarsened hypergraph. This operation perturbs the original more strongly because the vertices are no longer forced to keep their assigned block. Since the partition is
-dropped the algorithm used to generate a new partition might produce a worse solution as before. Therefore this operator can create worse solutions and as a result the operator is capable of increasing diversity in the population. 
+dropped the algorithm used to generate a new partition might produce a worse solution as before. Therefore this operator can create worse solutions and as a result the operator is capable of increasing diversity. 
 \subsection{Stable Nets (M3)}
-Lim et al.~\cite{lim1997large} introduce the concept of stable net removal, stating that hyperedges that remain cut edges throughout successive multilevel iterations are trapping the FM-algorithm in a local minimum. Their solution is to force these hyperedges from the cut by forcing them into one block. 
+Lim et al.~\cite{lim1997large} introduce the concept of stable net removal, stating that hyperedges remaining in the cut of the partition throughout successive multilevel iterations are trapping the FM-algorithm in a local minimum. Their solution is to force these hyperedges from the cut by forcing them into one block. 
 We use this approach to similarly force recurring cut edges into one block. 
-Opposed to edge frequency operator where the recurring cut edges should remain cut edges, we attempt to force the high frequency edges from the cut.
+Opposed to edge frequency operator where the recurring cut edges should remain cut edges, we attempt to force the stable edges from the cut.
 Again the $\sqrt{|P|}$ best individuals are analyzed regarding edges most frequent in these solutions. 
 
 We consider an edge stable if it is in the cut in at least 75\% of individuals inspected.
-These edges are then attempted to be forced into the block with the smallest weight in order to maintain the balance constraint. This is done by assigning all nodes $ v \in e$ the block id of the smallest block.
+These edges are then attempted to be forced into the block with the smallest weight in order to maintain the balance constraint. This is done by moving all nodes $ v \in e$ to the smallest block.
 Each node may only be moved once.
-These solutions have most likely significantly worse quality.% Due to the nature of our selection strategy these solutions are very unlikely to be used in any combine operator. 
+These solutions have most likely significantly worse quality. % Due to the nature of our selection strategy these solutions are very unlikely to be used in any combine operator. 
 In order to keep these solutions competitive we therefore perform a V-cycle after removing the stable nets. This operator is intended to create individuals with significantly different characteristics. 
 \section{Replacement Strategies}
 \label{sec:replacement}
-Regardless of the operator, the new individuals have to be inserted into the population in order to be used in upcoming iterations. The replacement strategy is the only method of removing an individual from the population.
+Regardless of the operator, new individuals have to be inserted into the population in order to be used in upcoming iterations. The replacement strategy is the only method of removing an individual from the population.
 Therefore the replacement strategy is the driving factor of selection pressure and must maintain a strict constraint on the fitness of the individuals to ensure convergence towards good solutions. 
-The naive approach is to remove the worst element from the population and insert the individual in its place, with the intention to ensure a vast majority of the best generated solutions.
-The consequence is that the population is rapidly converging towards a local optimum and only covering a small part of the solution space. Another approach is to replace one of the elements used in the operator.% This strategy was originally used for mutations, as the theory behind evolutionary algorithm mutations is to perturb an existing solution.
+The naive approach is to remove the worst element from the population and insert the new individual in its place.
+The consequence is that the population is rapidly converging towards a local optimum and only covering a small part of the solution space. Another approach is to replace one of the elements used in the operator. % This strategy was originally used for mutations, as the theory behind evolutionary algorithm mutations is to perturb an existing solution.
 But this approach neglects fitness and is suboptimal for operators using more than one parent element. 
 
 
@@ -532,38 +549,36 @@ which boosts the combine operator effectiveness and avoids premature convergence
 %Vcycle Mutations
 %All following plots are using KaHyPar for generating an initial population and perform some of the mentioned operators.
 %base with nonevo and random combines
-In this chapter the previously described algorithmic components are tested in an experimental setting. At first the conditions of the experiment are established and the methodology for evaluating the results is described. Then the experimental results are presented and discussed. 
+In this chapter the previously described algorithmic components are tested in an experimental setting. First the conditions of the experiment are established and the methodology for evaluating the results is described. Then the experimental results are presented and discussed. 
 
 
 
 \section{Experimental Setup}
 \label{sec:experimental_setup}
-We use two benchmark sets for evaluation. Both sets are using instances from the benchmark set of Heuer and Schlag~\cite{heuer2017improving}, which consists of various hypergraphs from the ISPD98 benchmark~\cite{alpert1998ispd98}, university of Florida Sparse Matrices~\cite{davis2011university}, the DAC benchmark~\cite{viswanathan2012dac} and SAT competition instances~\cite{belov2014proceedings}. 
+We use two benchmark sets for evaluation. Both sets use instances from the benchmark set of Heuer and Schlag~\cite{heuer2017improving}, which consists of various hypergraphs from the ISPD98 benchmark~\cite{alpert1998ispd98}, the university of Florida Sparse Matrices~\cite{davis2011university}, the DAC benchmark~\cite{viswanathan2012dac} and SAT competition instances~\cite{belov2014proceedings}. 
 
 %The sparse matrices are converted by row-net model \cite{row net model}, whereas the SAT instances are converted to hypergraphs using three approaches \cite{}
 
 
 %Describe the tuning benchmark set
 \newline ~\newline
-The first set is called the \emph{tuning subset}. It consists of 25 hypergraph instances. The instances were chosen to accurately represent the complete benchmark set. However no instance requiring a high partition time was chosen. This was done to ensure that the instances of the tuning subset can display the effects of the evolutionary algorithm within a smaller time window. The running time for partitions on the tuning subset is 2 hours. The instances are partitioned for $k = 32$ and $\epsilon = 0.03$. Each partitioning run of the tuning subset is repeated 3 times with a different seed for the randomization. This results in 150 CPU-hours required for each data set produced on the tuning subset.
+The first set is called the \emph{tuning subset}. It consists of 25 hypergraphs. The instances are chosen to accurately represent the complete benchmark set. However no instance requiring a high partition time is chosen. This is done to ensure that the instances of the tuning subset can display the effects of the evolutionary algorithm within a smaller time window. The running time for partitions on the tuning subset is 2 hours. The instances are partitioned into $k = 32$ blocks with $\epsilon = 0.03$. Each partitioning run of the tuning subset is repeated 3 times with a different seed. This results in 150 CPU-hours required for each experiment performed on the tuning subset.
 %Describe the benchmark set
 \newline
 
-The second set is called the \emph{benchmark subset}. It consists of 90 hypergraph instances from the benchmark set. All instances in the benchmark subset are partitioned for $\epsilon = 0.03$ and $k = \{2,4,8,16,32,64,128\}$. The running time for each partitioning on the benchmark subset is 8 hours, and each run is repeated 5 times. This results in 25200 CPU-hours necessary for each data set produced on the benchmark subset.
+The second set is called the \emph{benchmark subset}. It consists of 90 hypergraphs from the benchmark set. All instances in the benchmark subset are partitioned with $\epsilon = 0.03$ and $k = \{2,4,8,16,32,64,128\}$. The running time for each partitioning on the benchmark subset is 8 hours, and each run is repeated 5 times. This results in 25200 CPU-hours necessary for each experiment performed on the benchmark subset.
 \newline ~ \newline
-%Why there is fluctuation
-Due to the high time requirements of the experiments, we use simple parallelization to generate results within reasonable time. As such all physical cores of the machines are performing a separate partition instance. Due to shared memory access the time stamps are not completely synchronized. This causes slight fluctuation in the plots. 
 %Describe why repetitions are performed
 The reason for repeating the runs is to balance out possible outliers due to randomization. This process is described more detailed in Section~\ref{sec:methodology}.
+%Why there is fluctuation
+Due to the high time requirements of the experiments, we use simple parallelization to generate results within reasonable time. As such all physical cores of the machines are performing a separate partition instance. Due to shared memory access the time stamps are not completely synchronized. This causes slight fluctuation in the plots. 
 %Describe the reason for using two different sets
 The tuning subset is used to evaluate the algorithmic components and tune the respective parameters within a reasonable amount of time while avoiding overtuning. 
-The benchmark subset is used to replicate the results of the tuning subsets, ensuring statistical significance by using a higher amount hypergraphs and more detailed analysis. 
-The purpose of using two different sets is that the tuning subset is capable of analyzing multiple algorithmic components within a reasonable amount of time, whereas the benchmark subset is able to express more powerful conclusions due to its size.
-
+The benchmark subset is used to replicate the results of the tuning subsets, ensuring statistical significance by using a higher amount hypergraphs. 
 %WIlcoxon
-We use the Wilcoxon Signed Rank Test~\cite{wilcoxon1945individual} to evaluate statistical significance between separate experiments. The $Z$-value and $p$-value will be listed in the corresponding experiments. We consider $p \le 0.05$ significant.
+We use the Wilcoxon Signed Rank Test~\cite{wilcoxon1945individual} to evaluate statistical significance between separate experiments. The $Z$-value and $p$-value will be listed in the corresponding experiments. We consider $p \le 0.01$ significant.
 %Describe the configuration of KaHyPar which we are comparing against
-The purpose of this experimental evaluation is to show an improvement of solution quality when comparing the evolutionary algorithm with KaHyPar. (And due to the results of~\cite{akhremtsev2017engineering} indirectly with other hypergraph partitioning tools)
+The purpose of this experimental evaluation is to show an improvement of solution quality when comparing the evolutionary algorithm with KaHyPar (And due to the results of~\cite{akhremtsev2017engineering} indirectly with other hypergraph partitioning tools).
 %Describe KaHyPar-CA-vcycle. 
 We compare our algorithms with the nonevolutionary algorithm KaHyPar-CA~\cite{heuer2017improving}, which will be referenced as $K_N$-CA for readability purposes.
 %We compare against $K_N$-CA, which is an abbreviation for nonevolutionary community aware KaHyPar, which uses communities during coarsening to increase the quality of KaHyPar.
@@ -576,8 +591,6 @@ Neither $K_N$-CA nor $K_N$-CA-V are designed to produce multiple solutions withi
 \section{Instances \& Methodology}
 \label{sec:methodology}
 %Table of instances of the tuning subset
-Table \ref{tbl:instancessmall} displays the instances in the tuning subset, as well as their basic properties. $n$ is the number of vertices, $m$ is the number of hyperedges and $p$ is the number of pins. The instances are sorted by their respective classes. 
-Similarly Table \ref{tbl:instanceslarge} displays the instances of the benchmark subset.
 \begin{table}[H]
         \caption{Properties of the hypergraphs used in the tuning subset.}
 \label{tbl:instancessmall}
@@ -728,6 +741,8 @@ ACG-20-5p1               & \numprint{662392} & \numprint{1416850} & \numprint{33
 \end{tabular}
 \end{adjustbox}
 \end{table}
+Table \ref{tbl:instancessmall} displays the instances in the tuning subset, as well as their basic properties. $n$ is the number of vertices, $m$ is the number of hyperedges and $p$ is the number of pins. The instances are sorted by their respective classes. 
+Similarly Table \ref{tbl:instanceslarge} displays the instances of the benchmark subset.
 %Description how the plots are generated
 %MOTIVATION BEGIN
 % The main interest is to show how the best solution of the population is increasing compared to the time used by the evolutionary algorithm. There are three inherent issues that need to be dealt with. 
@@ -739,14 +754,16 @@ ACG-20-5p1               & \numprint{662392} & \numprint{1416850} & \numprint{33
 % \end{enumerate}
 % To emphasize the first issue, lets assume two hypergraph instances $s$ and $l$. For the small hypergraph $s$ the evolutionary algorithm may perform thousands of iterations, and for the large hypergraph $l$ only 10. When using the absolute time as comparison we have no guarantee how many iterations the evolutionary algorithm has performed in average at a given time point. Similarly when using the iterations of the evolutionary algorithm as comparsion we cannot display the time required by the iterations. The Operator C$_x$ may produce slightly better results than operator C$_y$ per iteration, but also require 1000 times the time per iteration. 
 %END MOTIVATION
+
+
 Similar to Sanders and Schulz~\cite{sanders2012distributed}% present an approach using normalized time as a comparison tool for evolutionary algorithms. 
 , we use convergence plots to compare the improvement of solution quality over time. We choose one of the partitioning algorithms as baseline and determine the average duration $t_I$ to partition a given instance $I$.
 We then can calculate for each absolute time stamp $t$ of an instance $I$ the normalized time by $t_n = \frac{t}{t_I}$. By doing so we can % adjust the variation of iteration times, without dropping the duration information. 
 compare instances requiring different partition times, as well as time differences in algorithmic components for the same instance.
-The separate runs on each instance are performed to generate an average solution.
+%The separate runs on each instance are performed to generate an average solution.
 %Each set of data performs separate runs on multiple seeds to balance out outlier performance due to randomization.
 
-We determine the average solution for an instance $I$ at the time point $t_n$ as follows. For each seed we create a variable $a_s$ storing the best solution so far. These variables $a_s$ are filled with the first solution created by the corresponding seed. Then the average over all $a_s$ is calculated, determining the first average solution. Each time a seed $s$ is improving its best solution at a time point $t_n$ the corresponding value $a_s$ is updated, and a new average is calculated with the time point $t_n$. This process is illustrated in Figure \ref{fig:averagingseeds}. The improvements are processed by ascending order of $t_n$. The result is a list of averaged improvements for instance $I$, containing tuples of the following structure $(avg(a_s), t_n)$. By ordering the list of averaged improvements by $t_n$ we can calculate the average solution at a time point $t_n$.
+We determine the average solution for an instance $I$ at the time point $t_n$ as follows. For each seed we create a variable $a_s$ storing the best solution so far. These variables $a_s$ are filled with the first solution created by the corresponding seed. Then the average over all $a_s$ is calculated, determining the first average solution. Each time a seed $s$ is improving its best solution at a time point $t_n$ the corresponding value $a_s$ is updated, and a new average is calculated with the time point $t_n$. This process is illustrated in Figure \ref{fig:averagingseeds}. The result is a list of averaged improvements for instance $I$, containing tuples of the following structure $(avg(a_s), t_n)$. By ordering the list of averaged improvements by $t_n$ we can calculate the average solution at a time point $t_n$.
 
 \begin{figure}[H] 
     
@@ -756,18 +773,18 @@ We determine the average solution for an instance $I$ at the time point $t_n$ as
   \end{center}
     
 \end{figure}
-The solution improvements of the different seeds are sorted by normalized time $t_n$ and afterwards scanned (a)-(f). A pair of solution quality and current time is appended to the result every time an improvement is found (b)-(f). The only exception is (a) since there are no existing values to replace. In this case the first values of all seeds are used and the maximum normalized time is used for the first pair.
+The solution improvements of the different seeds are sorted by normalized time $t_n$ and afterwards scanned (see Figure \ref{fig:averagingseeds} (a)-(f)). A pair of solution quality and current time is appended to the result every time an improvement is found (b)-(f). The only exception is (a) since there are no existing values to replace. In this case the first values of all seeds are used and the maximum normalized time is used for the first pair.
 
 
-Next we need to average over different instances. Different instances have highly varying connectivity. To give each instance a comparable influence on the final result we use the geometric mean. Other than that the process is similar to averaging the seeds. For each instance $I$ we create a variable $a_I$ containing the best solution so far. We use the previously generated lists of averaged improvement $l_I$ as input data. Following the same procedure, each time an improvement is found in one of the $l_I$ the corresponding value $a_I$ is updated and a tuple $(geoMean(a_I), t_n)$ is appended to the final result. An example for this procedure can be found in Figure \ref{fig:averaginginstances}
+Next we need to average over different instances. Different instances have highly varying connectivity. To give each instance a comparable influence on the final result we use the geometric mean. Other than that the process is similar to averaging the seeds. For each instance $I$ we create a variable $a_I$ containing the best solution so far. We use the previously generated lists of averaged improvement $l_I$ as input data. Following the same procedure, each time an improvement is found in one of the $l_I$ the corresponding value $a_I$ is updated and a tuple $(geoMean(a_I), t_n)$ is appended to the final result. An example for this procedure can be found in Figure \ref{fig:averaginginstances}.
 
 \begin{figure}[H] 
     
   \begin{center}
    \includegraphics[width=.9\textwidth]{Ipe/instanceaveragingexample.pdf}
   \caption{An example for averaging multiple instances $I$}\label{fig:averaginginstances} %TODO u nicht gestrichelt; pünktchen
-  \end{center}I
-    Similar to seed averaging the lists of averaged improvement are processed in order of increasing normalized time $t_n$ (a)-(f). Then a pair of solution quality and current time is appended to the result every time an improvement is found (b)-(f). The only exception is (a) since there are no existing values to replace. In this case the first values of all seeds are used and the maximum normalized time is used for the first pair.
+  \end{center}
+Similar to seed averaging the lists of averaged improvement are processed in order of increasing normalized time $t_n$ (a)-(f). Then a pair of solution quality and current time is appended to the result every time an improvement is found (b)-(f). The only exception is (a) since there are no existing values to replace. In this case the first values of all seeds are used and the maximum normalized time is used for the first pair.
 \end{figure}
 
 %Reference to KaffPaE because of normalized time
@@ -775,7 +792,7 @@ Next we need to average over different instances. Different instances have highl
 %Graphic explaining the averaging of the seeds
 %Graphic explaining the averaging of the instances
 \newpage
-\section{Evaluation of Algorithmic components} 
+\section{Evaluation of Algorithmic Components} 
 All experiments in this section are based on the tuning subset. The experiments were run on an Ubuntu 14.04 machine with four Intel Xeon E5-4640 Octa-Core processors  with 2.4 GHz, 512 GB main memory, 20 MB L3- and 8x256 KB L2-Cache. The following parameters are used as default: Dynamic population size using $\delta = 0.15$ and $[3,50]$ as lower/upper bound of the population size, $\gamma = 0.5$ as dampening factor for C2, C2 and M3 are using $\sqrt{|P|}$ as default number of individuals. The threshold of M3 is set to $0.75$. The parameters of KaHyPar are set to the default configuration for direct $k$-way partitioning. \footnote{https://github.com/SebastianSchlag/kahypar/blob/master/config/km1\_direct\_kway\_sea17.ini}
 % And some on i130 with worse specs
 %Say that this is done on the tuning subset
@@ -792,14 +809,14 @@ We begin by evaluating the different replacement strategies presented in Section
 \end{center}
 
 \end{figure}
-In Figure~\ref{fig:replacement} we compare the effectiveness of the three different replacement strategies. As expected in Section~\ref{sec:replacement} replacing the worst individual in the population leads to premature convergence and should be avoided. Using the diversity replacement for graph partitioning~\cite{sanders2012distributed} from Section~\ref{sec:diversity} shows that trying to maintain diversity prevents early plateauing and is thus capable of generating better solutions. However the connectivity approach for diversity results in a slightly better solution quality. This confirms the assumption formulated in Section~\ref{sec:diversity} that connectivity difference is a more appropriate approach in expressing different characteristics of two partitions. Comparing connectivity replacement against worst replacement results in $Z = 3.14$ with error margin $p = 0.0017$. Based on these results we will use connectivity difference as default replacement strategy in all upcoming evaluations.
+In Figure~\ref{fig:replacement} we compare the effectiveness of the three different replacement strategies. As expected in Section~\ref{sec:replacement} replacing the worst individual in the population leads to premature convergence and should be avoided. Using the diversity replacement for graph partitioning~\cite{sanders2012distributed} from Section~\ref{sec:diversity} shows that trying to maintain diversity prevents early plateauing and is thus capable of generating better solutions. However the connectivity approach for diversity results in a slightly better solution quality. This confirms the assumption formulated in Section~\ref{sec:diversity} that connectivity difference is a more appropriate approach in expressing different characteristics of two partitions. The difference between connectivity replacement and worst replacement is statistically significant $Z = 3.14$, $p = 0.0017$. Based on these results we will use connectivity difference as default replacement strategy in all upcoming evaluations.
 %Explain why we only use the basic combine operator
 %Say that replacing the worst element leads to premature convergence as in Section X
 %Say that using the connectivity difference is a better approach as cut difference, as expected in Section X
 %Say that all following plots are using the replacement strategy
 %%^^^^^^^^^^^^^^^^^^^^^^
 %%REPLACEMENT STRATEGIES
-\subsection{Combine Operator}
+\subsection{Combine Operators}
 \label{sec:combineoperatorevaluation}
 Next we evaluate the different combine operators and compare the solution quality with the solution quality of $K_N$-CA and $K_N$-CA-V. We evaluate two configurations of the evolutionary algorithm. The specification $K_E$+C$_x$ means that the configuration uses the combine operator C$_x$. The configuration $K_E$+C$_1$+C$_2$ chooses one of the two combine strategies uniformly at random for each iteration.
 %%COMBINE OPERATORS
@@ -812,12 +829,12 @@ Next we evaluate the different combine operators and compare the solution qualit
 \end{center} 
 
 \end{figure}
-In Figure \ref{fig:combineop} we evaluate the results of KaHyPar-E using only basic combines as evolutionary operation against repeated repetitions of the nonevolutionary algorithms $K_N$-CA and $K_N$-CA-V. The plot lines of $K_N$-CA, $K_E$+C$_1$ and $K_E$+C$_1$+C$_2$ are nearly identical up to the time point of 10 $t_n$ normalized time. This is due to the fact that KaHyPar-E is using $K_N$-CA to generate the initial population. The minor fluctuations are caused by the shared memory parallelization explained in the experimental setup \ref{sec:experimental_setup}. However the values generated are the same since $K_N$-CA is configured with the same seed during each of those experiments. $K_N$-CA-V is not sharing the same starting curve. Since V-cycles are time consuming the algorithm steps of $K_N$-CA-V are slower than the steps of $K_N$-CA, resulting in an offset of the starting point for the plot line. As expected $K_N$-CA-V produces better solutions than $K_N$-CA, which also extends to repeated repetitions. Both variations of KaHyPar-E gain a significant amount of improvement after generating the initial population. This is due to the combine schemes being able to exploit structural improvements of different partitions as described in \ref{sec:basiccombine}, allowing for a more efficient traversal of the solution space. However $K_E$ + C$_1$ is eventually converging into a local optima since the combine operation is causing convergence and reduces diversity. The multicombine operation C2 however is not causing premature convergence. This operator is profiting from a stable population generated by the operator C1 in a sense that the best solutions in the population can most likely be considered good solutions. This is visible in the plot since $K_E$+C$_1$+C$_2$ is not drastically different from $K_E$+C$_1$ in the beginning but allows for an improvement of solution quality when $K_E$+C$_1$ is already plateauing. Comparing $K_E$+C$_1$ with $K_N$-CA-V generates a $Z$-Value of 4.37 ($p = 0.000012$) indicating that $K_E$+C$_1$ is computing better solutions. Comparing $K_E$+C$_1$ with $K_E$+C$_1$+C$_2$ results in $Z = 2.58$ and $p = 0.0098$. 
+In Figure \ref{fig:combineop} we evaluate the results of KaHyPar-E using only basic combines as evolutionary operation against repeated repetitions of the nonevolutionary algorithms $K_N$-CA and $K_N$-CA-V. The plot lines of $K_N$-CA, $K_E$+C$_1$ and $K_E$+C$_1$+C$_2$ are nearly identical up to the time point of 10 $t_n$ normalized time. This is due to the fact that KaHyPar-E is using $K_N$-CA to generate the initial population. The minor fluctuations are caused by the shared memory parallelization explained in Section \ref{sec:experimental_setup}. However the values generated are the same since $K_N$-CA is configured with the same seed during each of those experiments. $K_N$-CA-V is not sharing the same starting curve. Since V-cycles are time consuming the algorithm steps of $K_N$-CA-V are slower than the steps of $K_N$-CA, resulting in an offset of the starting point for the plot line. As expected $K_N$-CA-V produces better solutions than $K_N$-CA, which also extends to repeated repetitions. Both variations of KaHyPar-E gain a significant amount of improvement after generating the initial population. This is due to the combine schemes being able to exploit structural benefits of different partitions as described in \ref{sec:basiccombine}, while also allowing for a more efficient exploration of the solution space. However $K_E$ + C$_1$ is eventually converging into a local optima since the combine operation is causing convergence and reduces diversity. The multicombine operation C2 however is not causing premature convergence. This operator is profiting from a stable population generated by the operator C1 in a sense that the best solutions in the population can most likely be considered good solutions. This is visible in the plot since $K_E$+C$_1$+C$_2$ is not drastically different from $K_E$+C$_1$ in the beginning but allows for an improvement of solution quality when $K_E$+C$_1$ is already plateauing. Comparing $K_E$+C$_1$ with $K_N$-CA-V generates a $Z$-Value of 4.37 ($p = 0.000012$) indicating that $K_E$+C$_1$ is computing better solutions. Comparing $K_E$+C$_1$ with $K_E$+C$_1$+C$_2$ results in $Z = 2.58$ and $p = 0.0098$. 
 %%^^^^^^^^^^^^^^^^^
 %%COMBINE OPERATORS
 %%MUTATION OPERATORS
 %%vvvvvvvvvvvvvvvvvv
-\subsection{Mutation Operator}
+\subsection{Mutation Operators}
 
 \begin{figure}[H]
 
@@ -826,7 +843,8 @@ In Figure \ref{fig:combineop} we evaluate the results of KaHyPar-E using only ba
 \end{center}
 
 \end{figure}
-In Figure~\ref{fig:mutateoperatorevaluation} the effectiveness of the different mutation operators is evaluated. KaHyPar-E uses a 50\% chance of C1 and a 50\% chance of the respective mutation operations. In the specific case M1 + M2 the mutation operation performed is selected uniformly at random. Adding mutation operator M1 to the already existing combine operator is in fact performing worse. This is due to the fact that V-cycles share the same quality assurance as C1 and are thus incapable of preventing premature convergence and introducing diversity. Individuals that have been optimized during the execution of the algorithm also often have been improved by V-cycles or already have a good enough quality so that V-cycles cannot find improvements. In conclusion this means that V-cycles alone are unable to prevent premature convergence. In contrast using V-cycles with new initial partitioning M2 or a combination of both mutation operators will generate better solutions. Since M2 is not limited by the quality assurance of C1 and M1, worse solutions can be created and the solution space can be explored more effectively. Stable net detection M3 is generating worse solutions or using up more time to generate individuals and therefore not further inspected in upcoming experiments. Interestingly when considering how often the different mutation operations have been able to generate a new best solution M3 has only been able to do so for 2 instances out of 25 whereas any combination of M1 and M2 have created a new best solution in all 25 instances. This suggests that M3 is an operation depending on the hypergraph structure and not easily applicable to a generic hypergraph. Due to the replacement strategy newly generated solutions are only considered for insertion if the solution quality is better than the worst individual in the population and will lead to convergence regardless of which mutation operators are applied. 
+In Figure~\ref{fig:mutateoperatorevaluation} the effectiveness of the different mutation operators is evaluated. KaHyPar-E uses a 50\% chance of C1 and a 50\% chance of the respective mutation operations. In the specific case of M1 + M2, the mutation operation performed is selected uniformly at random. Adding mutation operator M1 to the already existing combine operator is in fact performing worse. This is due to the fact that V-cycles share the same quality assurance as C1 and are thus incapable of preventing premature convergence and introducing diversity. Individuals that have been optimized during the execution of the algorithm also often have been improved by V-cycles or already have a good enough quality so that V-cycles cannot find improvements. In conclusion this means that V-cycles alone are unable to prevent premature convergence. In contrast using V-cycles with new initial partitioning M2 or a combination of both mutation operators will generate better solutions. Since M2 is not limited by the quality assurance of C1 and M1, worse solutions can be created and the solution space can be explored more effectively. Stable net detection M3 is generating worse solutions or using up more time to generate individuals and therefore not further inspected in upcoming experiments. Interestingly when considering how often the different mutation operations have been able to generate a new best solution M3 has only been able to do so for 2 instances out of 25 whereas any combination of M1 and M2 have created a new best solution in all 25 instances. %This suggests that M3 is an operation depending on the hypergraph structure and not easily applicable to a generic hypergraph.
+Due to the replacement strategy newly generated solutions are only considered for insertion if the solution quality is better than the worst individual in the population and will lead to convergence regardless of which mutation operators are applied. 
 
 
 
@@ -835,7 +853,7 @@ In Figure~\ref{fig:mutateoperatorevaluation} the effectiveness of the different 
 
 %%DIFFERENT REPLACEMENT OPERATORS FOR MUTATIONS
 %%vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-\subsection{Mutation Replacement}
+\subsection{Mutation Replacement Strategy}
 
 
 Mutated individuals can be inserted into the population in two different ways. Replacing the element used for the mutation in the classical sense of evolutionary algorithms, or using the diversity replacement approach. We evaluate whether the different replacement strategies are influencing the solution quality.
@@ -852,8 +870,9 @@ As seen in Figure~\ref{fig:rep_strat} the different replacement strategies are d
 %Say that using diverse replacement is good
 %%^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 %%DIFFERENT REPLACEMENT OPERATORS FOR MUTATIONS
-\section{Tuning Parameters}
-KaHyPar-E is adding the following parameters to KaHyPar: dynamic population size $\delta = 0.15$, upper and lower bound limits for the population size $[3,50]$, the edge frequency dampening parameter $\gamma = 0.5$ as well as the amount of individuals used by C2 \& M3 $\mathcal{N} = \sqrt{|P|}$. Additional parameters are the replacement strategy, as well as the distribution of combine operators and mutation operators. Most importantly, KaHyPar-E adds the time limit $t$. %The dampening factor for edge frequency (C1) is set to $\gamma = 0.5$ as in \cite{wichlund1998multilevel}. The time allocation for creating the population is set to 15\% of the total time. The time limit was set to 8 hours on the benchmark subset and 2 hours on the tuning subset.
+\section{Parameter Tuning}
+We introduced different combination and mutation operations which are selected by the algorithm using probability distributions. In this section we analyze how the selection ratio between the two combine operators is influencing the solution, as well as the ratio between combination and mutation. 
+%KaHyPar-E is adding the following parameters to KaHyPar: dynamic population size $\delta = 0.15$, upper and lower bound limits for the population size $[3,50]$, the edge frequency dampening parameter $\gamma = 0.5$ as well as the amount of individuals used by C2 \& M3 $\mathcal{N} = \sqrt{|P|}$. Additional parameters are the replacement strategy, as well as the distribution of combine operators and mutation operators. Most importantly, KaHyPar-E adds the time limit $t$. %The dampening factor for edge frequency (C1) is set to $\gamma = 0.5$ as in \cite{wichlund1998multilevel}. The time allocation for creating the population is set to 15\% of the total time. The time limit was set to 8 hours on the benchmark subset and 2 hours on the tuning subset.
 \subsection{Configuring Combine Operators}
 
 \begin{figure}[H]
@@ -863,7 +882,7 @@ KaHyPar-E is adding the following parameters to KaHyPar: dynamic population size
 \end{center}
 \end{figure}
 As seen in Section \ref{sec:combineoperatorevaluation} combining operators C1 + C2 produces better results than using each operator alone. We therefore analyze how the fraction of operator distribution affects solution quality.
-In Figure \ref{edge_tuning} the chances of performing an edge frequency combine C2 instead of a basic combine C1 are displayed. Clearly recognizable is that a proper application of both operators will lead to improvements. The optimal values are in a range from 20\% to 50\%, however similar no significant difference can be observed between the tuned values. We choose 50\% as distribution parameter when using both combine operators in an algorithm configuration.
+In Figure \ref{edge_tuning} the chances of performing an edge frequency combine C2 instead of a basic combine C1 are displayed. Clearly recognizable is that a proper application of both operators will lead to improvements. The optimal values are in a range from 20\% to 50\%, however no significant difference can be observed between the tuned values. We choose 50\% as distribution parameter when using both combine operators in an algorithm configuration.
 
 
 
@@ -877,9 +896,9 @@ Next we determine an appropriate ratio for choosing combine and mutation operati
 \end{center}
 
 \end{figure}
-Figure~\ref{fig:mutationchancetuning} shows the different mutation ratios. The percentages represent the chance of performing a new initial partitioning V-cycle. If not performing a new initial partitioning a basic combine is performed. It is visible that choosing either 0\% mutation chance or 100\% mutation chance are both not viable for generating good solutions. A combination of both operators is increasing solution quality. As seen in this experiment a mutation chance of 30\% -50\% for new initial partitioning is generating the best solutions. This is drastically diverging from the chance used in evolutionary graph partitioning which is around 10\%~\cite{sanders2012distributed}. We choose a ratio of 50\% between combine operators and mutation operators. 
+Figure~\ref{fig:mutationchancetuning} shows the different mutation ratios. The percentages represent the chance of performing a new initial partitioning V-cycle. If not performing a new initial partitioning a basic combine is performed. It is visible that choosing either 0\% mutation chance or 100\% mutation chance are both not viable for generating good solutions. A combination of both operators is increasing solution quality. As seen in this experiment a mutation chance of 30\% to 50\% for new initial partitioning is generating the best solutions. This is drastically diverging from the chance used in evolutionary graph partitioning which is around 10\%~\cite{sanders2012distributed}. We choose a ratio of 50\% between combine operators and mutation operators. 
 \section{Final Evaluation}
-Now we use the results form the tuning subset and transfer them on the benchmark subset. The following data sets are evaluated on the benchmark subset: $K_N$-CA, $K_N$-CA-V, $K_E$ + C$_1$, $K_E$ + C$_1$ + C$_2$ and $K_E$ + C$_1$ + M$_1$ + M$_2$. The experiments were performed on a cluster consisting of 512 16-way Intel Xeon compute nodes. All nodes contain two Octa-core Intel Xeon processors E5-2670 (Sandy Bridge) @ 2.6 GHz and have 8x256 KB of level 2 cache and 20 MB level 3 cache. Each node has 64 GB of main memory. The nodes were allocated exclusively to avoid CPU time interference. $K_E$ + C$_1$ + C$_2$ is using C1 or C2 with a probability of 50\%. $K_E$ + C$_1$ + M$_1$ + M$_2$ is choosing between a combine operation or a mutation operation with 50\% chance. The mutation strategy is selected uniformly at random.
+Now we use the results form the tuning subset and transfer them on the benchmark subset. The following algorithms are evaluated on the benchmark subset: $K_N$-CA, $K_N$-CA-V, $K_E$ + C$_1$, $K_E$ + C$_1$ + C$_2$ and $K_E$ + C$_1$ + M$_1$ + M$_2$. The experiments were performed on a cluster consisting of 512 16-way Intel Xeon compute nodes. All nodes contain two Octa-core Intel Xeon processors E5-2670 (Sandy Bridge) @ 2.6 GHz and have 8x256 KB of level 2 cache and 20 MB level 3 cache. Each node has 64 GB of main memory. The nodes were allocated exclusively to avoid CPU time interference. $K_E$ + C$_1$ + C$_2$ is using C1 or C2 with a probability of 50\%. $K_E$ + C$_1$ + M$_1$ + M$_2$ is choosing between a combine operation or a mutation operation with 50\% chance. The mutation strategy is selected uniformly at random.
 %List Configuartions for final evaluation
 %Convergence plot for all k
 %Convergence plot split by k 
@@ -995,10 +1014,10 @@ In Figure \ref{fig:performanceplot} we analyze the performance of the algorithms
 \label{chapter:discussion}
 
 \section{Conclusion}
-This thesis presents an evolutionary framework for KaHyPar resulting in a quality improvement of up to 5\%. We used combine operators different from usual crossover approaches to detect and exploit good solution qualities in partitions, as well as mutation operations to increase the solution scope compared to KaHyPar. Additionally we created a diversity strategy suited for hypergraph. Our operators are heavily integrated into the standard procedure of KaHyPar, to the point where all operators make use of the multilevel partition steps provided by KaHyPar. To the best of our knowledge this work is the first combination of multilevel and memetic algorithms in the field of hypergraph partitioning.
+This thesis presents an evolutionary framework for KaHyPar resulting in a quality improvement of up to 5\%. We used combine operators different from usual crossover approaches to generate better solutions from existing partitions, as well as mutation operations to increase the solution space compared to KaHyPar. Additionally we created a diversity strategy suitable for hypergraph. Our operators are heavily integrated into the standard procedure of KaHyPar, to the point where all operators make use of the multilevel partition steps provided by KaHyPar. To the best of our knowledge this work is the first combination of multilevel and evolutionary algorithms in the field of hypergraph partitioning.
 As expected of an evolutionary algorithm, the quality improvement needs multiple iterations to show significance. KaHyPar-E was designed with that mentality to improve the best possible solution for the partition of a hypergraph where the time constraint is of secondary relevance. 
 \section{Future Work}
-KaHyPar-E can be augmented using a distributed implementation similar to KaffPaE~\cite{sanders2012distributed}. Adding a layer of parallelization would allow a significant speedup by creating multiple individuals during an iteration. Another interesting approach is a time cost analysis for the different operators. There is a strong indication that the basic combine operator is significantly faster than a regular iteration in KaHyPar. If this indication is true, a faster population generation would be a valid approach to increase performance. Also the V-cycle mutation operator might turn out to be more beneficial if the number of cycles is increased. Other than that more sophisticated selection strategies for parent selection as well as edge frequency might also be helpful. A more detailed analysis and exploitation of hypergraph structures may enhance the performance of the current evolutionary operators, or perhaps even inspire the addition of new operators.
+KaHyPar-E can be augmented using a distributed implementation similar to KaffPaE~\cite{sanders2012distributed}. Adding a layer of parallelization would allow a significant speedup by creating multiple individuals during an iteration. Another interesting approach is a time cost analysis for the different operators. There is a strong indication that the basic combine operator is significantly faster than a regular iteration in KaHyPar. If this indication is true, a faster population generation would be a valid approach to increase performance. Also the V-cycle mutation operator might turn out to be more beneficial if the number of cycles is increased. Other than that more sophisticated selection strategies for parent selection as well as edge frequency might also be helpful. %A more detailed analysis and exploitation of hypergraph structures may enhance the performance of the current evolutionary operators, or perhaps even inspire the addition of new operators.
 
 \clearpage
 \begin{appendix}

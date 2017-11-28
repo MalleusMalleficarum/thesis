@@ -2,7 +2,7 @@
 
 @Book{Cormen2001introduction,
   title = {Introduction to Algorithms},
-  author = {T. H. Cormen, C. E. Leiserson, R. L. Rivest and C. Stein},
+  author = {Thomas H. Cormen and Charles E. Leiserson and Ronald L. Rivest and Clifford Stein},
   edition = 2,
   keywords = {},
   publisher = {The MIT Press},
@@ -11,12 +11,12 @@
 }
 
 @inproceedings{heuer2017improving,
- author    = {T. Heuer and
-              S. Schlag},
- title     = {{Improving Coarsening Schemes for Hypergraph Partitioning by Exploiting Community Structure}},
- booktitle = {{16th International Symposium on Experimental Algorithms, (SEA)}},
- pages     = {21:1–21:19},
- year      = {2017},
+  title={Improving Coarsening Schemes for Hypergraph Partitioning by Exploiting Community Structure},
+  author={Heuer, Tobias and Schlag, Sebastian},
+  booktitle={LIPIcs-Leibniz International Proceedings in Informatics},
+  volume={75},
+  year={2017},
+  organization={Schloss Dagstuhl-Leibniz-Zentrum fuer Informatik}
 }
 
 @inproceedings{Wichlund98,

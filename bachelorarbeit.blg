@@ -4,45 +4,45 @@ The top-level auxiliary file: bachelorarbeit.aux
 The style file: gerplain.bst
 Database file #1: literatur.bib
 Warning--empty journal in belov2014proceedings
-You've used 42 entries,
+You've used 43 entries,
             2343 wiz_defined-function locations,
-            791 strings with 12462 characters,
-and the built_in function-call counts, 17712 in all, are:
-= -- 1893
-> -- 678
-< -- 22
-+ -- 279
-- -- 224
-* -- 1352
-:= -- 2604
-add.period$ -- 101
-call.type$ -- 42
-change.case$ -- 194
+            796 strings with 12600 characters,
+and the built_in function-call counts, 18440 in all, are:
+= -- 1977
+> -- 696
+< -- 23
++ -- 286
+- -- 230
+* -- 1385
+:= -- 2685
+add.period$ -- 102
+call.type$ -- 43
+change.case$ -- 199
 chr.to.int$ -- 0
-cite$ -- 43
-duplicate$ -- 799
-empty$ -- 1473
-format.name$ -- 224
-if$ -- 4057
+cite$ -- 44
+duplicate$ -- 847
+empty$ -- 1522
+format.name$ -- 230
+if$ -- 4243
 int.to.chr$ -- 0
-int.to.str$ -- 42
-missing$ -- 61
-newline$ -- 170
-num.names$ -- 84
-pop$ -- 276
+int.to.str$ -- 43
+missing$ -- 63
+newline$ -- 174
+num.names$ -- 86
+pop$ -- 283
 preamble$ -- 1
-purify$ -- 194
+purify$ -- 199
 quote$ -- 0
-skip$ -- 628
+skip$ -- 689
 stack$ -- 0
-substring$ -- 1091
-swap$ -- 346
-text.length$ -- 22
+substring$ -- 1152
+swap$ -- 383
+text.length$ -- 23
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 162
+type$ -- 166
 warning$ -- 1
-while$ -- 171
-width$ -- 44
-write$ -- 434
+while$ -- 177
+width$ -- 45
+write$ -- 443
 (There was 1 warning)
