@@ -248,4 +248,8 @@
 \newblock \Btxinlong{}\ {\em Proceedings of the 1998 IEEE/ACM international
   conference on Computer-aided design}, \btxpageslong{}\ 505--511. ACM, 1998.
 
+\bibitem{wilcoxon1945individual}
+{\sc Wilcoxon, Frank}: {\em Individual comparisons by ranking methods}.
+\newblock Biometrics bulletin, 1(6):80--83, 1945.
+
 \end{thebibliography}

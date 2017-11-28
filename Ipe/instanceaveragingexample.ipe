@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70206" creator="Ipe 7.2.7">
-<info created="D:20171012151220" modified="D:20171109155629"/>
+<info created="D:20171012151220" modified="D:20171128131502"/>
 <ipestyle name="basic">
 <symbol name="arrow/arc(spx)">
 <path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
@@ -448,13 +448,13 @@ h
 <text matrix="1 0 0 1 64 -428" transformations="translations" pos="128 696" stroke="black" type="label" width="17.711" height="6.42" depth="0" halign="center" valign="center">1.98</text>
 <text matrix="1 0 0 1 64 -428" transformations="translations" pos="336 696" stroke="black" type="label" width="4.981" height="6.42" depth="0" halign="center" valign="center">4</text>
 <text matrix="1 0 0 1 64 -428" transformations="translations" pos="384 696" stroke="black" type="label" width="4.981" height="6.42" depth="0" halign="center" valign="center">3</text>
-<text matrix="1 0 0 1 92 -428" transformations="translations" pos="64 768" stroke="black" type="label" width="43.78" height="6.654" depth="0" halign="center" valign="center">instance 1</text>
-<text matrix="1 0 0 1 224 -428" transformations="translations" pos="64 768" stroke="black" type="label" width="43.78" height="6.654" depth="0" halign="center" valign="center">instance 2</text>
-<text matrix="1 0 0 1 352 -428" transformations="translations" pos="64 768" stroke="black" type="label" width="43.78" height="6.654" depth="0" halign="center" valign="center">instance 3</text>
-<text matrix="1 0 0 1 -28 0" transformations="translations" pos="48 340" stroke="black" type="minipage" width="129.681" height="12.891" depth="7.92" halign="center" valign="center">list of averaged \\
+<text matrix="1 0 0 1 92 -428" transformations="translations" pos="64 768" stroke="black" type="label" width="44.611" height="6.808" depth="0" halign="center" valign="center">Instance 1</text>
+<text matrix="1 0 0 1 224 -428" transformations="translations" pos="64 768" stroke="black" type="label" width="44.611" height="6.808" depth="0" halign="center" valign="center">Instance 2</text>
+<text matrix="1 0 0 1 352 -428" transformations="translations" pos="64 768" stroke="black" type="label" width="44.611" height="6.808" depth="0" halign="center" valign="center">Instance 3</text>
+<text matrix="1 0 0 1 -28 0" transformations="translations" pos="48 340" stroke="black" type="minipage" width="129.681" height="12.891" depth="7.92" halign="center" valign="center">List of averaged \\
  improvements</text>
 <text matrix="1 0 0 1 120 -492" transformations="translations" pos="40 728" stroke="black" type="label" width="12.73" height="7.473" depth="2.49" halign="center" valign="center">(a)</text>
-<text matrix="1 0 0 1 76 -476" transformations="translations" pos="36 656" stroke="black" type="label" width="43.78" height="6.654" depth="0" halign="center" valign="center">instance 1</text>
+<text matrix="1 0 0 1 76 -476" transformations="translations" pos="36 656" stroke="black" type="label" width="44.611" height="6.808" depth="0" halign="center" valign="center">Instance 1</text>
 <path matrix="1 0 0 1 88 -476" stroke="black">
 56 664 m
 88 664 l
@@ -479,8 +479,8 @@ h
 56 664 l
 56 664 l
 </path>
-<text matrix="1 0 0 1 76 -492" transformations="translations" pos="36 656" stroke="black" type="label" width="43.78" height="6.654" depth="0" halign="center" valign="center">instance 2</text>
-<text matrix="1 0 0 1 76 -508" transformations="translations" pos="36 656" stroke="black" type="label" width="43.78" height="6.654" depth="0" halign="center" valign="center">instance 3</text>
+<text matrix="1 0 0 1 76 -492" transformations="translations" pos="36 656" stroke="black" type="label" width="44.611" height="6.808" depth="0" halign="center" valign="center">Instance 2</text>
+<text matrix="1 0 0 1 76 -508" transformations="translations" pos="36 656" stroke="black" type="label" width="44.611" height="6.808" depth="0" halign="center" valign="center">Instance 3</text>
 <text matrix="1 0 0 1 84 -392" transformations="translations" pos="56 600" stroke="black" type="label" width="9.021" height="6.132" depth="1.49" halign="center" valign="center" style="math">t_n</text>
 <text matrix="1 0 0 1 84 -392" transformations="translations" pos="80 600" stroke="black" type="label" width="17.711" height="6.42" depth="0" halign="center" valign="center">0.12</text>
 <path matrix="1 0 0 1 84 -392" stroke="black">
@@ -500,7 +500,7 @@ h
 56 552 l
 56 568 l
 </path>
-<text matrix="1 0 0 1 68 -436" transformations="translations" pos="36 560" stroke="black" type="label" width="59.584" height="7.473" depth="2.49" halign="center" valign="center" style="math">avg(s_1,s_2,s_3)</text>
+<text matrix="1 0 0 1 56 -436" transformations="translations" pos="36 560" stroke="black" type="label" width="85.236" height="7.473" depth="2.49" halign="center" valign="center" style="math">geoMean(s_1,s_2,s_3)</text>
 <text matrix="1 0 0 1 80 -604" transformations="translations" pos="80 728" stroke="black" type="label" width="22.693" height="6.42" depth="0" halign="center" valign="center">219.5</text>
 <text matrix="1 0 0 1 132 -392" transformations="translations" pos="80 600" stroke="black" type="label" width="12.73" height="6.42" depth="0" halign="center" valign="center">1.5</text>
 <path matrix="1 0 0 1 132 -392" stroke="black">
@@ -757,13 +757,13 @@ h
 <text matrix="1 0 0 1 -48 -580" transformations="translations" pos="304 728" stroke="black" type="label" width="4.981" height="6.42" depth="0" halign="center" valign="center">9</text>
 <text matrix="1 0 0 1 0 -580" transformations="translations" pos="304 728" stroke="black" type="label" width="4.981" height="6.42" depth="0" halign="center" valign="center">9</text>
 <text matrix="1 0 0 1 32 0" transformations="translations" pos="64 80" stroke="black" type="label" width="47.295" height="6.918" depth="0" halign="center" valign="center">Result list:</text>
-<text matrix="1 0 0 1 60 -428" transformations="translations" pos="40 728" stroke="black" type="label" halign="center" valign="center">(a)</text>
-<text matrix="1 0 0 1 192 -428" transformations="translations" pos="40 728" stroke="black" type="label" halign="center" valign="center">(a)</text>
-<text matrix="1 0 0 1 320 -428" transformations="translations" pos="40 728" stroke="black" type="label" halign="center" valign="center">(a)</text>
-<text matrix="1 0 0 1 192 -428" transformations="translations" pos="40 712" stroke="black" type="label" halign="center" valign="center">(b)</text>
-<text matrix="1 0 0 1 60 -428" transformations="translations" pos="40 712" stroke="black" type="label" halign="center" valign="center">(c)</text>
-<text matrix="1 0 0 1 60 -444" transformations="translations" pos="40 712" stroke="black" type="label" halign="center" valign="center">(d)</text>
-<text matrix="1 0 0 1 320 -428" transformations="translations" pos="40 712" stroke="black" type="label" halign="center" valign="center">(e)</text>
-<text matrix="1 0 0 1 320 -444" transformations="translations" pos="40 712" stroke="black" type="label" halign="center" valign="center">(f)</text>
+<text matrix="1 0 0 1 60 -428" transformations="translations" pos="40 728" stroke="black" type="label" width="12.73" height="7.473" depth="2.49" halign="center" valign="center">(a)</text>
+<text matrix="1 0 0 1 192 -428" transformations="translations" pos="40 728" stroke="black" type="label" width="12.73" height="7.473" depth="2.49" halign="center" valign="center">(a)</text>
+<text matrix="1 0 0 1 320 -428" transformations="translations" pos="40 728" stroke="black" type="label" width="12.73" height="7.473" depth="2.49" halign="center" valign="center">(a)</text>
+<text matrix="1 0 0 1 192 -428" transformations="translations" pos="40 712" stroke="black" type="label" width="13.284" height="7.473" depth="2.49" halign="center" valign="center">(b)</text>
+<text matrix="1 0 0 1 60 -428" transformations="translations" pos="40 712" stroke="black" type="label" width="12.177" height="7.473" depth="2.49" halign="center" valign="center">(c)</text>
+<text matrix="1 0 0 1 60 -444" transformations="translations" pos="40 712" stroke="black" type="label" width="13.284" height="7.473" depth="2.49" halign="center" valign="center">(d)</text>
+<text matrix="1 0 0 1 320 -428" transformations="translations" pos="40 712" stroke="black" type="label" width="12.177" height="7.473" depth="2.49" halign="center" valign="center">(e)</text>
+<text matrix="1 0 0 1 320 -444" transformations="translations" pos="40 712" stroke="black" type="label" width="11.568" height="7.473" depth="2.49" halign="center" valign="center">(f)</text>
 </page>
 </ipe>

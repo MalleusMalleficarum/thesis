@@ -6,7 +6,7 @@
 \contentsline {section}{\numberline {1.2}Structure of Thesis}{2}{section.1.2}
 \contentsline {chapter}{\numberline {2}Preliminaries}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}General Definitions}{3}{section.2.1}
-\contentsline {section}{\numberline {2.2}Related Work}{4}{section.2.2}
+\contentsline {section}{\numberline {2.2}Related Work}{3}{section.2.2}
 \contentsline {section}{\numberline {2.3}KaHyPar}{5}{section.2.3}
 \contentsline {chapter}{\numberline {3}KaHyPar-E}{7}{chapter.3}
 \contentsline {section}{\numberline {3.1}Overview}{7}{section.3.1}
@@ -16,22 +16,22 @@
 \contentsline {section}{\numberline {3.5}Combine Operations}{9}{section.3.5}
 \contentsline {subsection}{\numberline {3.5.1}Basic Combine (C1)}{10}{subsection.3.5.1}
 \contentsline {subsection}{\numberline {3.5.2}Edge Frequency Multicombine (C2)}{11}{subsection.3.5.2}
-\contentsline {section}{\numberline {3.6}Mutation operations}{11}{section.3.6}
+\contentsline {section}{\numberline {3.6}Mutation operations}{12}{section.3.6}
 \contentsline {subsection}{\numberline {3.6.1}V-Cycle (M1)}{12}{subsection.3.6.1}
 \contentsline {subsection}{\numberline {3.6.2}V-Cycle + New Initial Partitioning (M2)}{12}{subsection.3.6.2}
-\contentsline {subsection}{\numberline {3.6.3}Stable Nets (M3)}{12}{subsection.3.6.3}
+\contentsline {subsection}{\numberline {3.6.3}Stable Nets (M3)}{13}{subsection.3.6.3}
 \contentsline {section}{\numberline {3.7}Replacement Strategies}{13}{section.3.7}
 \contentsline {chapter}{\numberline {4}Experimental Evaluation}{15}{chapter.4}
 \contentsline {section}{\numberline {4.1}Experimental Setup}{15}{section.4.1}
 \contentsline {section}{\numberline {4.2}Instances \& Methodology}{16}{section.4.2}
-\contentsline {section}{\numberline {4.3}First Evaluation}{20}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Replacement strategy evaluation}{20}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Combine operator evaluation}{21}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Mutation operator evaluation}{23}{subsection.4.3.3}
-\contentsline {subsection}{\numberline {4.3.4}Mutation replacement strategies}{24}{subsection.4.3.4}
-\contentsline {section}{\numberline {4.4}Tuning Parameters}{25}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Combine chance distribution}{25}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Mutation chance distribution}{26}{subsection.4.4.2}
+\contentsline {section}{\numberline {4.3}Evaluation of Algorithmic components}{21}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Replacement Strategy}{21}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Combine Operator}{22}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Mutation Operator}{24}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}Mutation Replacement}{25}{subsection.4.3.4}
+\contentsline {section}{\numberline {4.4}Tuning Parameters}{26}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Configuring Combine Operators}{26}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Configuring Mutation Operators}{27}{subsection.4.4.2}
 \contentsline {section}{\numberline {4.5}Final Evaluation}{27}{section.4.5}
 \contentsline {chapter}{\numberline {5}Discussion}{33}{chapter.5}
 \contentsline {section}{\numberline {5.1}Conclusion}{33}{section.5.1}

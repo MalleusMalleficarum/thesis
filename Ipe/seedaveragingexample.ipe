@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70206" creator="Ipe 7.2.7">
-<info created="D:20171012151220" modified="D:20171109153806"/>
+<info created="D:20171012151220" modified="D:20171128130953"/>
 <ipestyle name="basic">
 <symbol name="arrow/arc(spx)">
 <path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
@@ -759,17 +759,17 @@ h
 100 532 l
 </path>
 <text matrix="1 0 0 1 256 0" transformations="translations" pos="84 520" stroke="black" type="label" width="34.869" height="7.473" depth="2.49" halign="center" valign="center" style="math">(41,2.8)</text>
-<text matrix="1 0 0 1 28 0" transformations="translations" pos="64 768" stroke="black" type="label" width="112.716" height="6.926" depth="1.93" halign="center" valign="center">$\lambda-1$ improvement seed 1</text>
-<text matrix="1 0 0 1 160 0" transformations="translations" pos="64 768" stroke="black" type="label" width="112.716" height="6.926" depth="1.93" halign="center" valign="center">$\lambda-1$ improvement seed 2</text>
-<text matrix="1 0 0 1 288 0" transformations="translations" pos="64 768" stroke="black" type="label" width="112.716" height="6.926" depth="1.93" halign="center" valign="center">$\lambda-1$ improvement seed 3</text>
+<text matrix="1 0 0 1 28 0" transformations="translations" pos="64 768" stroke="black" type="label" width="104.442" height="6.926" depth="1.93" halign="center" valign="center">solution quality - seed 1</text>
+<text matrix="1 0 0 1 160 0" transformations="translations" pos="64 768" stroke="black" type="label" width="104.442" height="6.926" depth="1.93" halign="center" valign="center">solution quality - seed 2</text>
+<text matrix="1 0 0 1 288 0" transformations="translations" pos="64 768" stroke="black" type="label" width="104.442" height="6.926" depth="1.93" halign="center" valign="center">solution quality - seed 3</text>
 <text matrix="1 0 0 1 32 16" transformations="translations" pos="32 448" stroke="black" type="label" width="101.066" height="6.926" depth="1.93" halign="center" valign="center">averaged improvement
 </text>
 <text transformations="translations" pos="64 448" stroke="black" type="label" width="43.78" height="6.654" depth="0" halign="center" valign="center">instance 1</text>
 <text transformations="translations" pos="64 432" stroke="black" type="label" width="47.101" height="6.654" depth="0" halign="center" valign="center">instance 2
 </text>
 <text transformations="translations" pos="64 416" stroke="black" type="label" width="43.78" height="6.654" depth="0" halign="center" valign="center">instance 3</text>
-<text matrix="1 0 0 1 68 -72" transformations="translations" pos="84 520" stroke="black" type="label" halign="center" valign="center" style="math">(42,0.11)</text>
-<text matrix="1 0 0 1 128 -72" transformations="translations" pos="84 520" stroke="black" type="label" halign="center" valign="center" style="math">(40.66,1.69)</text>
-<text matrix="1 0 0 1 196 -72" transformations="translations" pos="84 520" stroke="black" type="label" halign="center" valign="center" style="math">(39.66,1.98)</text>
+<text matrix="1 0 0 1 68 -72" transformations="translations" pos="84 520" stroke="black" type="label" width="39.851" height="7.473" depth="2.49" halign="center" valign="center" style="math">(42,0.11)</text>
+<text matrix="1 0 0 1 128 -72" transformations="translations" pos="84 520" stroke="black" type="label" width="52.581" height="7.473" depth="2.49" halign="center" valign="center" style="math">(40.66,1.69)</text>
+<text matrix="1 0 0 1 196 -72" transformations="translations" pos="84 520" stroke="black" type="label" width="52.581" height="7.473" depth="2.49" halign="center" valign="center" style="math">(39.66,1.98)</text>
 </page>
 </ipe>

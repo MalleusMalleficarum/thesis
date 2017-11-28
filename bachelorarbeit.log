@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.11.10)  22 NOV 2017 18:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.11.10)  28 NOV 2017 15:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1351,11 +1351,7 @@ subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
 \c@algocf=\count160
 \algocf@algoframe=\box54
 \algocf@algobox=\box55
-) (./bachelorarbeit.aux
-
-LaTeX Warning: Label `fig:differentpartitions' multiply defined.
-
-)
+) (./bachelorarbeit.aux)
 \openout1 = `bachelorarbeit.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 81.
@@ -1372,7 +1368,8 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 81.
 LaTeX Font Info:    ... okay on input line 81.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 81.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 81.
- (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 81.
@@ -1533,16 +1530,8 @@ Class scrbook Warning: \float@addtolists detected!
 
 ] [2]
 chapter 2.
-<Ipe/Coarsening_Example.pdf, id=253, 412.97185pt x 184.87871pt>
-File: Ipe/Coarsening_Example.pdf Graphic file (type pdf)
 
-<use Ipe/Coarsening_Example.pdf>
-Package pdftex.def Info: Ipe/Coarsening_Example.pdf used on input line 278.
-(pdftex.def)             Requested size: 346.55592pt x 155.1447pt.
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 279.
-
-Overfull \hbox (0.66315pt too wide) in paragraph at lines 308--309
+Overfull \hbox (0.66315pt too wide) in paragraph at lines 304--305
 \T1/ptm/m/n/12 There are sev-eral hy-per-graph par-ti-tion-ing al-go-rithms, or
 ig-i-nat-ing from var-i-ous back-grounds
  []
@@ -1550,40 +1539,48 @@ ig-i-nat-ing from var-i-ous back-grounds
 [3
 
 
- <./Ipe/Coarsening_Example.pdf>] [4]
-<Ipe/Memetic_process.pdf, id=342, 583.54327pt x 401.59033pt>
+] <Ipe/Coarsening_Example.pdf, id=299, 412.97185pt x 184.87871pt>
+File: Ipe/Coarsening_Example.pdf Graphic file (type pdf)
+
+<use Ipe/Coarsening_Example.pdf>
+Package pdftex.def Info: Ipe/Coarsening_Example.pdf used on input line 340.
+(pdftex.def)             Requested size: 346.55592pt x 155.1447pt.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 341.
+ [4]
+<Ipe/Memetic_process.pdf, id=331, 583.54327pt x 401.59033pt>
 File: Ipe/Memetic_process.pdf Graphic file (type pdf)
 
 <use Ipe/Memetic_process.pdf>
-Package pdftex.def Info: Ipe/Memetic_process.pdf used on input line 350.
+Package pdftex.def Info: Ipe/Memetic_process.pdf used on input line 355.
 (pdftex.def)             Requested size: 346.55592pt x 238.49881pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 340--354
+Underfull \hbox (badness 10000) in paragraph at lines 345--359
 
  []
 
-[5] [6 <./Ipe/Memetic_process.pdf>]
+[5 <./Ipe/Coarsening_Example.pdf>] [6 <./Ipe/Memetic_process.pdf>]
 chapter 3.
 [7
 
 
-] <Ipe/connexample.pdf, id=387, 285.46649pt x 136.9115pt>
+] [8] <Ipe/connexample.pdf, id=397, 285.46649pt x 136.9115pt>
 File: Ipe/connexample.pdf Graphic file (type pdf)
 
 <use Ipe/connexample.pdf>
-Package pdftex.def Info: Ipe/connexample.pdf used on input line 408.
+Package pdftex.def Info: Ipe/connexample.pdf used on input line 413.
 (pdftex.def)             Requested size: 346.55592pt x 166.22537pt.
- [8] [9 <./Ipe/connexample.pdf>]
+ [9 <./Ipe/connexample.pdf>]
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 424.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 428.
 
-<Ipe/parent_combine.pdf, id=409, 174.68562pt x 156.99855pt>
+<Ipe/parent_combine.pdf, id=412, 174.68562pt x 156.99855pt>
 File: Ipe/parent_combine.pdf Graphic file (type pdf)
 
 <use Ipe/parent_combine.pdf>
-Package pdftex.def Info: Ipe/parent_combine.pdf used on input line 436.
+Package pdftex.def Info: Ipe/parent_combine.pdf used on input line 440.
 (pdftex.def)             Requested size: 216.59663pt x 194.67856pt.
- [10 <./Ipe/parent_combine.pdf>] [11] [12] [13]
+ [10] [11 <./Ipe/parent_combine.pdf>] [12] [13]
 [14
 
 
@@ -1596,129 +1593,146 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.540 \newline
+l.547 \newline
                ~\newline
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 540--544
+Underfull \hbox (badness 10000) in paragraph at lines 547--551
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 545--558
+Underfull \hbox (badness 10000) in paragraph at lines 552--562
 
  []
 
-[15] [16] [17]
-<Ipe/seed_averaging_example.pdf, id=495, 397.63556pt x 276.44179pt>
+[15] [16] [17] [18]
+<Ipe/seed_averaging_example.pdf, id=505, 397.63556pt x 276.44179pt>
 File: Ipe/seed_averaging_example.pdf Graphic file (type pdf)
 
 <use Ipe/seed_averaging_example.pdf>
-Package pdftex.def Info: Ipe/seed_averaging_example.pdf used on input line 734.
+Package pdftex.def Info: Ipe/seed_averaging_example.pdf used on input line 754.
 
 (pdftex.def)             Requested size: 389.87129pt x 271.0503pt.
- [18 <./Ipe/seed_averaging_example.pdf>]
-<Ipe/instanceaveragingexample.pdf, id=610, 446.8695pt x 290.47171pt>
+ [19 <./Ipe/seed_averaging_example.pdf>]
+<Ipe/instanceaveragingexample.pdf, id=620, 446.8695pt x 290.47171pt>
 File: Ipe/instanceaveragingexample.pdf Graphic file (type pdf)
 
 <use Ipe/instanceaveragingexample.pdf>
-Package pdftex.def Info: Ipe/instanceaveragingexample.pdf used on input line 74
+Package pdftex.def Info: Ipe/instanceaveragingexample.pdf used on input line 76
 7.
 (pdftex.def)             Requested size: 389.87129pt x 253.43523pt.
- [19 <./Ipe/instanceaveragingexample.pdf>]
-<rnw/tuning_subset_plots/replace_plot-1.pdf, id=728, 408.52625pt x 258.9675pt>
+ [20 <./Ipe/instanceaveragingexample.pdf>]
+<rnw/tuning_subset_plots/replace_plot-1.pdf, id=738, 408.52625pt x 258.9675pt>
 File: rnw/tuning_subset_plots/replace_plot-1.pdf Graphic file (type pdf)
 
 <use rnw/tuning_subset_plots/replace_plot-1.pdf>
 Package pdftex.def Info: rnw/tuning_subset_plots/replace_plot-1.pdf used on inp
-ut line 771.
+ut line 791.
 (pdftex.def)             Requested size: 408.52525pt x 258.96684pt.
- [20 <./rnw/tuning_subset_plots/replace_plot-1.pdf>]
-<rnw/tuning_subset_plots/combine_plot-1.pdf, id=764, 408.52625pt x 258.9675pt>
+
+Overfull \hbox (15.95065pt too wide) in paragraph at lines 786--794
+\T1/ptm/m/n/12 We be-gin by eval-u-at-ing the dif-fer-ent re-place-ment strate-
+gies pre-sented in Sec-tion []3.3[]. KaHyPar-
+ []
+
+[21 <./rnw/tuning_subset_plots/replace_plot-1.pdf>]
+<rnw/tuning_subset_plots/combine_plot-1.pdf, id=774, 408.52625pt x 258.9675pt>
 File: rnw/tuning_subset_plots/combine_plot-1.pdf Graphic file (type pdf)
 
 <use rnw/tuning_subset_plots/combine_plot-1.pdf>
 Package pdftex.def Info: rnw/tuning_subset_plots/combine_plot-1.pdf used on inp
-ut line 791.
+ut line 811.
 (pdftex.def)             Requested size: 408.52525pt x 258.96684pt.
- [21 <./rnw/tuning_subset_plots/combine_plot-1.pdf>]
-<rnw/tuning_subset_plots/mutation_plot-1.pdf, id=801, 408.52625pt x 258.9675pt>
+ [22 <./rnw/tuning_subset_plots/combine_plot-1.pdf>]
+<rnw/tuning_subset_plots/mutation_plot-1.pdf, id=811, 408.52625pt x 258.9675pt>
 File: rnw/tuning_subset_plots/mutation_plot-1.pdf Graphic file (type pdf)
 <use rnw/tuning_subset_plots/mutation_plot-1.pdf>
 Package pdftex.def Info: rnw/tuning_subset_plots/mutation_plot-1.pdf used on in
-put line 805.
+put line 825.
 (pdftex.def)             Requested size: 408.52525pt x 258.96684pt.
- [22] [23 <./rnw/tuning_subset_plots/mutation_plot-1.pdf>]
-<rnw/tuning_subset_plots/diverse_plot-1.pdf, id=841, 408.52625pt x 258.9675pt>
+ [23] [24 <./rnw/tuning_subset_plots/mutation_plot-1.pdf>]
+<rnw/tuning_subset_plots/diverse_plot-1.pdf, id=851, 408.52625pt x 258.9675pt>
 File: rnw/tuning_subset_plots/diverse_plot-1.pdf Graphic file (type pdf)
 
 <use rnw/tuning_subset_plots/diverse_plot-1.pdf>
 Package pdftex.def Info: rnw/tuning_subset_plots/diverse_plot-1.pdf used on inp
-ut line 826.
+ut line 846.
 (pdftex.def)             Requested size: 408.52525pt x 258.96684pt.
- [24 <./rnw/tuning_subset_plots/diverse_plot-1.pdf>]
-<rnw/tuning_subset_plots/edge_tuning_plot-1.pdf, id=877, 408.52625pt x 258.9675
+ [25 <./rnw/tuning_subset_plots/diverse_plot-1.pdf>]
+<rnw/tuning_subset_plots/edge_tuning_plot-1.pdf, id=886, 408.52625pt x 258.9675
 pt>
 File: rnw/tuning_subset_plots/edge_tuning_plot-1.pdf Graphic file (type pdf)
  <use rnw/tuning_subset_plots/edge_tuning_plot-1.pdf>
 Package pdftex.def Info: rnw/tuning_subset_plots/edge_tuning_plot-1.pdf used on
- input line 843.
+ input line 862.
 (pdftex.def)             Requested size: 408.52525pt x 258.96684pt.
- [25 <./rnw/tuning_subset_plots/edge_tuning_plot-1.pdf>]
-<rnw/tuning_subset_plots/mutation_tuning_plot-1.pdf, id=915, 408.52625pt x 258.
+
+<rnw/tuning_subset_plots/mutation_tuning_plot-1.pdf, id=889, 408.52625pt x 258.
 9675pt>
 File: rnw/tuning_subset_plots/mutation_tuning_plot-1.pdf Graphic file (type pdf
 )
  <use rnw/tuning_subset_plots/mutation_tuning_plot-1.pdf>
 Package pdftex.def Info: rnw/tuning_subset_plots/mutation_tuning_plot-1.pdf use
-d on input line 856.
+d on input line 876.
 (pdftex.def)             Requested size: 408.52525pt x 258.96684pt.
- [26 <./rnw/tuning_subset_plots/mutation_tuning_plot-1.pdf>]
-<rnw/tuning_subset_plots/full_plot-1.pdf, id=951, 398.48875pt x 260.975pt>
+ [26 <./rnw/tuning_subset_plots/edge_tuning_plot-1.pdf>]
+<rnw/tuning_subset_plots/full_plot-1.pdf, id=925, 398.48875pt x 260.975pt>
 File: rnw/tuning_subset_plots/full_plot-1.pdf Graphic file (type pdf)
 
 <use rnw/tuning_subset_plots/full_plot-1.pdf>
 Package pdftex.def Info: rnw/tuning_subset_plots/full_plot-1.pdf used on input 
-line 872.
+line 892.
 (pdftex.def)             Requested size: 433.19327pt x 283.71643pt.
- [27 <./rnw/tuning_subset_plots/full_plot-1.pdf>] <rnw/appendix_convergence-1.p
-df, id=985, 433.62pt x 289.08pt>
+ [27 <./rnw/tuning_subset_plots/mutation_tuning_plot-1.pdf>] [28 <./rnw/tuning_
+subset_plots/full_plot-1.pdf>]
+<rnw/appendix_convergence-1.pdf, id=995, 433.62pt x 289.08pt>
 File: rnw/appendix_convergence-1.pdf Graphic file (type pdf)
 
 <use rnw/appendix_convergence-1.pdf>
-Package pdftex.def Info: rnw/appendix_convergence-1.pdf used on input line 895.
+Package pdftex.def Info: rnw/appendix_convergence-1.pdf used on input line 950.
 
 (pdftex.def)             Requested size: 433.19327pt x 288.81021pt.
 
-<rnw/appendix_convergence-2.pdf, id=986, 433.62pt x 289.08pt>
+<rnw/appendix_convergence-2.pdf, id=996, 433.62pt x 289.08pt>
 File: rnw/appendix_convergence-2.pdf Graphic file (type pdf)
 
 <use rnw/appendix_convergence-2.pdf>
-Package pdftex.def Info: rnw/appendix_convergence-2.pdf used on input line 896.
+Package pdftex.def Info: rnw/appendix_convergence-2.pdf used on input line 951.
 
 (pdftex.def)             Requested size: 433.19327pt x 288.81021pt.
- [28]
+ [29]
 Overfull \vbox (12.80046pt too high) has occurred while \output is active []
 
 
-[29 <./rnw/appendix_convergence-1.pdf> <./rnw/appendix_convergence-2.pdf>]
-<rnw/tuning_subset_plots/performance_plot_main-1.pdf, id=1050, 281.05pt x 177.6
+[30 <./rnw/appendix_convergence-1.pdf> <./rnw/appendix_convergence-2.pdf>]
+<rnw/tuning_subset_plots/performance_plot_main-1.pdf, id=1058, 281.05pt x 177.6
 6376pt>
 File: rnw/tuning_subset_plots/performance_plot_main-1.pdf Graphic file (type pd
 f)
  <use rnw/tuning_subset_plots/performance_plot_main-1.pdf>
 Package pdftex.def Info: rnw/tuning_subset_plots/performance_plot_main-1.pdf us
-ed on input line 953.
+ed on input line 976.
 (pdftex.def)             Requested size: 433.19327pt x 273.85513pt.
- [30] [31 <./rnw/tuning_subset_plots/performance_plot_main-1.pdf>] [32
 
-
-]
+<rnw/tuning_subset_plots/class_performance_plot-1.pdf, id=1062, 427.5975pt x 53
+1.9875pt>
+File: rnw/tuning_subset_plots/class_performance_plot-1.pdf Graphic file (type p
+df)
+ <use rnw/tuning_subset_plots/class_performance_plot-1.pdf>
+Package pdftex.def Info: rnw/tuning_subset_plots/class_performance_plot-1.pdf u
+sed on input line 986.
+(pdftex.def)             Requested size: 433.19327pt x 538.95099pt.
+ [31 <./rnw/tuning_subset_plots/performance_plot_main-1.pdf>] [32 <./rnw/tuning
+_subset_plots/class_performance_plot-1.pdf>]
 chapter 5.
-[33] (./bachelorarbeit.bbl [34
+[33
+
+
+] (./bachelorarbeit.bbl [34
 
 
 
@@ -3956,28 +3970,39 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+
+Class scrbook Warning: Usage of deprecated font command `\sc'!
+(scrbook)              You should note, that in 1994 font command `\sc' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\sc' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\sc' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\sc'
+(scrbook)              by `\normalfont \scshape ' on input line 252.
+
 ) [38]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 986.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 986.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1015.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1015.
  (./bachelorarbeit.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 986.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 986.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1015.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1015.
+
 Package rerunfilecheck Info: File `bachelorarbeit.out' has not changed.
-(rerunfilecheck)             Checksum: 7B6CF5809ED4C753C4FB85D9D7A5FE5C;2358.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 986.
+(rerunfilecheck)             Checksum: FEEA7E21EDC73C28C6EAFFD43BCE3E7F;2338.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1015.
  ) 
 Here is how much of TeX's memory you used:
- 22819 strings out of 493033
- 405953 string characters out of 6136454
- 10554603 words of memory out of 20501529
- 25738 multiletter control sequences out of 15000+600000
+ 22828 strings out of 493033
+ 406311 string characters out of 6136454
+ 10554737 words of memory out of 20501663
+ 25745 multiletter control sequences out of 15000+600000
  63493 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,10n,66p,2509b,518s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,10n,66p,2219b,518s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
@@ -3994,9 +4019,9 @@ live/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr
 8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bachelorarbeit.pdf (46 pages, 2983625 bytes).
+Output written on bachelorarbeit.pdf (46 pages, 3156730 bytes).
 PDF statistics:
- 1196 PDF objects out of 1200 (max. 8388607)
- 148 named destinations out of 1000 (max. 500000)
- 386 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1211 PDF objects out of 1440 (max. 8388607)
+ 149 named destinations out of 1000 (max. 500000)
+ 391 words of extra memory for PDF output out of 10000 (max. 10000000)
 

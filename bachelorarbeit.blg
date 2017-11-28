@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: bachelorarbeit.aux
+The style file: gerplain.bst
+Database file #1: literatur.bib
+Warning--empty journal in belov2014proceedings
+You've used 42 entries,
+            2343 wiz_defined-function locations,
+            791 strings with 12462 characters,
+and the built_in function-call counts, 17712 in all, are:
+= -- 1893
+> -- 678
+< -- 22
++ -- 279
+- -- 224
+* -- 1352
+:= -- 2604
+add.period$ -- 101
+call.type$ -- 42
+change.case$ -- 194
+chr.to.int$ -- 0
+cite$ -- 43
+duplicate$ -- 799
+empty$ -- 1473
+format.name$ -- 224
+if$ -- 4057
+int.to.chr$ -- 0
+int.to.str$ -- 42
+missing$ -- 61
+newline$ -- 170
+num.names$ -- 84
+pop$ -- 276
+preamble$ -- 1
+purify$ -- 194
+quote$ -- 0
+skip$ -- 628
+stack$ -- 0
+substring$ -- 1091
+swap$ -- 346
+text.length$ -- 22
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 162
+warning$ -- 1
+while$ -- 171
+width$ -- 44
+write$ -- 434
+(There was 1 warning)
