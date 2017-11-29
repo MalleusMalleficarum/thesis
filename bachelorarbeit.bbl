@@ -1,136 +1,137 @@
 \begin{thebibliography}{10}
 
 \bibitem{akhremtsev2017engineering}
-{\sc Akhremtsev, Yaroslav}, {\sc Tobias Heuer}, {\sc Peter Sanders}
-  \btxandlong{}\ {\sc Sebastian Schlag}: {\em Engineering a direct k-way
-  Hypergraph Partitioning Algorithm}.
-\newblock \Btxinlong{}\ {\em 2017 Proceedings of the Ninteenth Workshop on
-  Algorithm Engineering and Experiments (ALENEX)}, \btxpageslong{}\ 28--42.
-  SIAM, 2017.
+{\sc Akhremtsev, Y.}, {\sc T.~Heuer}, {\sc P.~Sanders} \btxandlong{}\ {\sc
+  S.~Schlag}: {\em Engineering a direct \emph{k}-way Hypergraph Partitioning
+  Algorithm}.
+\newblock \Btxinlong{}\ {\em 19th Workshop on Algorithm Engineering and
+  Experiments, (ALENEX)}, \btxpageslong{}\ 28--42, 2017.
 
 \bibitem{alpert1998ispd98}
-{\sc Alpert, Charles~J}: {\em The ISPD98 circuit benchmark suite}.
-\newblock \Btxinlong{}\ {\em Proceedings of the 1998 international symposium on
-  Physical design}, \btxpageslong{}\ 80--85. ACM, 1998.
+{\sc Alpert, C.~J.}: {\em {The ISPD98 Circuit Benchmark Suite}}.
+\newblock \Btxinlong{}\ {\em Proceedings of the 1998 International Symposium on
+  Physical Design}, \btxpageslong{}\ 80--85. ACM, 1998.
 
 \bibitem{alpert1998multilevel}
-{\sc Alpert, Charles~J}, {\sc Jen-Hsin Huang} \btxandlong{}\ {\sc Andrew~B
-  Kahng}: {\em Multilevel circuit partitioning}.
+{\sc Alpert, C.~J.}, {\sc J.-H. Huang} \btxandlong{}\ {\sc A.~B. Kahng}: {\em
+  {Multilevel Circuit Partitioning}}.
 \newblock IEEE Transactions on Computer-Aided Design of Integrated Circuits and
   Systems, 17(8):655--667, 1998.
 
 \bibitem{alpert1995recent}
-{\sc Alpert, Charles~J} \btxandlong{}\ {\sc Andrew~B Kahng}: {\em Recent
-  directions in netlist partitioning: a survey}.
-\newblock Integration, the VLSI journal, 19(1-2):1--81, 1995.
+{\sc Alpert, C.~J.} \btxandlong{}\ {\sc A.~B. Kahng}: {\em {Recent Directions
+  in Netlist Partitioning: a Survey}}.
+\newblock {Integration, the VLSI Journal}, 19(1--2):1 -- 81, 1995.
 
 \bibitem{areibi2000integrated}
-{\sc Areibi, Shawki}: {\em An integrated genetic algorithm with dynamic hill
-  climbing for VLSI circuit partitioning}.
-\newblock \Btxinlong{}\ {\em GECCO 2000}, \btxpageslong{}\ 97--102, 2000.
+{\sc Areibi, S.}: {\em {An Integrated Genetic Algorithm With Dynamic Hill
+  Climbing for VLSI Circuit Partitioning}}.
+\newblock \Btxinlong{}\ {\em Genetic and Evolutionary Computation Conference
+  (GECCO)}, \btxpageslong{}\ 97--102, 2000.
 
 \bibitem{armstrong2010investigation}
-{\sc Armstrong, Ed}, {\sc G~Grewal}, {\sc Shawki Areibi} \btxandlong{}\ {\sc
-  Gerarda Darlington}: {\em An investigation of parallel memetic algorithms for
-  VLSI circuit partitioning on multi-core computers}.
-\newblock \Btxinlong{}\ {\em Electrical and Computer Engineering (CCECE), 2010
-  23rd Canadian Conference on}, \btxpageslong{}\ 1--6. IEEE, 2010.
+{\sc Armstrong, E.}, {\sc G.~W. Grewal}, {\sc S.~Areibi} \btxandlong{}\ {\sc
+  G.~Darlington}: {\em {An investigation of parallel memetic algorithms for
+  {VLSI} circuit partitioning on multi-core computers}}.
+\newblock \Btxinlong{}\ {\em Proceedings of the 23rd Canadian Conference on
+  Electrical and Computer Engineering, {CCECE}}, \btxpageslong{}\ 1--6, 2010.
 
 \bibitem{aykanat2008multi}
-{\sc Aykanat, Cevdet}, {\sc B~Barla Cambazoglu} \btxandlong{}\ {\sc Bora
-  U{\c{c}}ar}: {\em Multi-level direct k-way hypergraph partitioning with
-  multiple constraints and fixed vertices}.
+{\sc Aykanat, C.}, {\sc B.~B. Cambazoglu} \btxandlong{}\ {\sc B.~U\c{c}ar}:
+  {\em {Multi-level Direct K-way Hypergraph Partitioning with Multiple
+  Constraints and Fixed Vertices}}.
 \newblock Journal of Parallel and Distributed Computing, 68(5):609--625, 2008.
 
 \bibitem{back1996evolutionary}
-{\sc Back, Thomas}: {\em Evolutionary algorithms in theory and practice:
+{\sc B\"ack, T.}: {\em Evolutionary algorithms in theory and practice :
   evolution strategies, evolutionary programming, genetic algorithms}.
-\newblock Oxford university press, 1996.
+\newblock \btxphdthesis{}, 1996.
 
 \bibitem{bader2013graph}
-{\sc Bader, David~A}, {\sc Henning Meyerhenke}, {\sc Peter Sanders}
-  \btxandlong{}\ {\sc Dorothea Wagner}: {\em Graph partitioning and graph
-  clustering}, \btxvolumelong{}\ 588.
+{\sc Bader, D.~A.}, {\sc H.~Meyerhenke}, {\sc P.~Sanders} \btxandlong{}\ {\sc
+  D.~Wagner}: {\em Graph partitioning and graph clustering}, \btxvolumelong{}\
+  588.
 \newblock American Mathematical Soc., 2013.
 
 \bibitem{belov2014proceedings}
-{\sc Belov, Anton}, {\sc Daniel Diepold}, {\sc Marijn~JH Heule} \btxandlong{}\
-  {\sc Matti J{\"a}rvisalo}: {\em Proceedings of SAT Competition 2014}.
-\newblock 2014.
+{\sc Belov, A.}, {\sc D.~Diepold}, {\sc M.~Heule} \btxandlong{}\ {\sc
+  M.~J{\"{a}}rvisalo}: {\em {The SAT Competition 2014}}.
+\newblock \url{http://www.satcompetition.org/2014/}, 2014.
 
 \bibitem{blickle1996comparison}
-{\sc Blickle, Tobias} \btxandlong{}\ {\sc Lothar Thiele}: {\em A comparison of
-  selection schemes used in evolutionary algorithms}.
+{\sc Blickle, T.} \btxandlong{}\ {\sc L.~Thiele}: {\em {A Comparison of
+  Selection Schemes used in Evolutionary Algorithms}}.
 \newblock Evolutionary Computation, 4(4):361--394, 1996.
 
 \bibitem{bui1994fast}
-{\sc Bui, Thang~Nguyen} \btxandlong{}\ {\sc Byung~Ro Moon}: {\em A fast and
-  stable hybrid genetic algorithm for the ratio-cut partitioning problem on
-  hypergraphs}.
-\newblock \Btxinlong{}\ {\em Proceedings of the 31st annual Design Automation
-  Conference}, \btxpageslong{}\ 664--669. ACM, 1994.
+{\sc Bui, T.~N.} \btxandlong{}\ {\sc B.~R. Moon}: {\em {A Fast and Stable
+  Hybrid Genetic Algorithm for the Ratio-Cut Partitioning Problem on
+  Hypergraphs}}.
+\newblock \Btxinlong{}\ {\em Proceedings of the 31st Conference on Design
+  Automation}, \btxpageslong{}\ 664--669, 1994.
 
 \bibitem{bulucc2016recent}
-{\sc Bulu{\c{c}}, Ayd{\i}n}, {\sc Henning Meyerhenke}, {\sc Ilya Safro}, {\sc
-  Peter Sanders} \btxandlong{}\ {\sc Christian Schulz}: {\em Recent advances in
-  graph partitioning}.
-\newblock \Btxinlong{}\ {\em Algorithm Engineering}, \btxpageslong{}\ 117--158.
-  Springer, 2016.
+{\sc Bulu\c{c}, A.}, {\sc H.~Meyerhenke}, {\sc I.~Safro}, {\sc P.~Sanders}
+  \btxandlong{}\ {\sc C.~Schulz}: {\em {Recent Advances in Graph
+  Partitioning}}.
+\newblock \Btxinlong{}\ {\em Algorithm Engineering - Selected Results and
+  Surveys}, \btxpageslong{}\ 117--158. Springer, 2016.
 
 \bibitem{catalyurek1999hypergraph}
-{\sc Catalyurek, Umit~V} \btxandlong{}\ {\sc Cevdet Aykanat}: {\em
-  Hypergraph-partitioning-based decomposition for parallel sparse-matrix vector
-  multiplication}.
-\newblock IEEE Transactions on parallel and distributed systems,
-  10(7):673--693, 1999.
+{\sc Cataly{\"u}rek, {\"{U}}.~V.} \btxandlong{}\ {\sc C.~Aykanat}: {\em
+  {Hypergraph-Partitioning-Based Decomposition for Parallel Sparse-Matrix
+  Vector Multiplication}}.
+\newblock IEEE Transactions on Parallel and Distributed Systems,
+  10(7):673--693, Jul 1999.
 
 \bibitem{chan1995systolic}
-{\sc Chan, Heming} \btxandlong{}\ {\sc Pinaki Mazumder}: {\em A systolic
-  architecture for high speed hypergraph partitioning using a genetic
-  algorithm}.
+{\sc Chan, H.} \btxandlong{}\ {\sc P.~Mazumder}: {\em A systolic architecture
+  for high speed hypergraph partitioning using a genetic algorithm}.
 \newblock Progress in evolutionary computation, \btxpageslong{}\ 109--126,
   1995.
 
-\bibitem{chen2012large}
-{\sc Chen, Tianshi}, {\sc Ke~Tang}, {\sc Guoliang Chen} \btxandlong{}\ {\sc Xin
-  Yao}: {\em A large population size can be unhelpful in evolutionary
-  algorithms}.
-\newblock Theoretical Computer Science, 436:54--70, 2012.
-
 \bibitem{cohoon2003evolutionary}
-{\sc Cohoon, James}, {\sc John Kairo} \btxandlong{}\ {\sc Jens Lienig}: {\em
-  Evolutionary algorithms for the physical design of VLSI circuits}.
-\newblock Advances in evolutionary computing, \btxpageslong{}\ 683--711, 2003.
+{\sc Cohoon, J.}, {\sc J.~Kairo} \btxandlong{}\ {\sc J.~Lienig}: {\em
+  {Evolutionary Algorithms for the Physical Design of VLSI Circuits}},
+  \btxpageslong{}\ 683--711.
+\newblock Springer, 2003.
+
+\bibitem{lim1997large}
+{\sc Cong, J.}, {\sc H.~J. Li}, {\sc Lim.~S. K.}, {\sc T.~Shibuya}
+  \btxandlong{}\ {\sc D.~Xu}: {\em {Large Scale Circuit Partitioning With
+  Loose/Stable Net Removal and Signal Flow Based Clustering}}.
+\newblock \Btxinlong{}\ {\em Proceedings of the {IEEE/ACM} International
+  Conference on Computer-Aided Design ({ICCAD})}, \btxpageslong{}\ 441--446,
+  1997.
 
 \bibitem{davis2011university}
-{\sc Davis, Timothy~A} \btxandlong{}\ {\sc Yifan Hu}: {\em The University of
-  Florida sparse matrix collection}.
-\newblock ACM Transactions on Mathematical Software (TOMS), 38(1):1, 2011.
+{\sc Davis, T.~A.} \btxandlong{}\ {\sc Y.~Hu}: {\em {The University of Florida
+  Sparse Matrix Collection}}.
+\newblock ACM Transactions on Mathematical Software, 38(1):1:1--1:25, 2011.
 
 \bibitem{delling2011graph}
-{\sc Delling, Daniel}, {\sc Andrew~V Goldberg}, {\sc Ilya Razenshteyn}
-  \btxandlong{}\ {\sc Renato~F Werneck}: {\em Graph partitioning with natural
-  cuts}.
-\newblock \Btxinlong{}\ {\em Parallel \& Distributed Processing Symposium
-  (IPDPS), 2011 IEEE International}, \btxpageslong{}\ 1135--1146. IEEE, 2011.
+{\sc Delling, D.}, {\sc A.~V. Goldberg}, {\sc I.~Razenshteyn} \btxandlong{}\
+  {\sc R.~F. Werneck}: {\em {Graph Partitioning with Natural Cuts}}.
+\newblock \Btxinlong{}\ {\em Proceedings of the 25th International Parallel and
+  Distributed Processing Symposium}, \btxpageslong{}\ 1135--1146, 2011.
 
 \bibitem{devine2006parallel}
-{\sc Devine, Karen~D}, {\sc Erik~G Boman}, {\sc Robert~T Heaphy}, {\sc Rob~H
-  Bisseling} \btxandlong{}\ {\sc Umit~V Catalyurek}: {\em Parallel hypergraph
-  partitioning for scientific computing}.
-\newblock \Btxinlong{}\ {\em Parallel and Distributed Processing Symposium,
-  2006. IPDPS 2006. 20th International}, \btxpageslong{}\ 10--pp. IEEE, 2006.
+{\sc Devine, K.~D.}, {\sc E.~G. Boman}, {\sc R.~T. Heaphy}, {\sc R.~H.
+  Bisseling} \btxandlong{}\ {\sc {\"{U}}.~V. Cataly{\"u}rek}: {\em {Parallel
+  Hypergraph Partitioning for Scientific Computing}}.
+\newblock \Btxinlong{}\ {\em 20th International Conference on Parallel and
+  Distributed Processing}, IPDPS, \btxpageslong{}\ 124--124. IEEE, 2006.
 
 \bibitem{fiduccia1988linear}
-{\sc Fiduccia, Charles~M} \btxandlong{}\ {\sc Robert~M Mattheyses}: {\em A
-  linear-time heuristic for improving network partitions}.
-\newblock \Btxinlong{}\ {\em Papers on Twenty-five years of electronic design
-  automation}, \btxpageslong{}\ 241--247. ACM, 1988.
+{\sc Fiduccia, C.M.} \btxandlong{}\ {\sc R.M. Mattheyses}: {\em A Linear-Time
+  Heuristic for Improving Network Partitions}.
+\newblock \Btxinlong{}\ {\em 19th Conference on Design Automation},
+  \btxpageslong{}\ 175--181, June 1982.
 
 \bibitem{garey2002computers}
-{\sc Garey, Michael~R} \btxandlong{}\ {\sc David~S Johnson}: {\em Computers and
+{\sc Garey, M.~R.} \btxandlong{}\ {\sc D.~S. Johnson}: {\em Computers and
   intractability}, \btxvolumelong{}~29.
-\newblock wh freeman New York, 2002.
+\newblock W.H. Freeman, New York, 2002.
 
 \bibitem{heuer2017improving}
 {\sc Heuer, T.} \btxandlong{}\ {\sc S.~Schlag}: {\em {Improving Coarsening
@@ -138,121 +139,119 @@
 \newblock \Btxinlong{}\ {\em {16th International Symposium on Experimental
   Algorithms, (SEA)}}, \btxpagelong{}\ 21:1–21:19, 2017.
 
-\bibitem{holtgrewe2010engineering}
-{\sc Holtgrewe, Manuel}, {\sc Peter Sanders} \btxandlong{}\ {\sc Christian
-  Schulz}: {\em Engineering a scalable high quality graph partitioner}.
-\newblock \Btxinlong{}\ {\em Parallel \& Distributed Processing (IPDPS), 2010
-  IEEE International Symposium on}, \btxpageslong{}\ 1--12. IEEE, 2010.
-
 \bibitem{hulin1990circuit}
-{\sc Hulin, Martin}: {\em Circuit partitioning with genetic algorithms using a
-  coding scheme to preserve the structure of a circuit}.
-\newblock \Btxinlong{}\ {\em International Conference on Parallel Problem
-  Solving from Nature}, \btxpageslong{}\ 75--79. Springer, 1990.
+{\sc Hulin, M.}: {\em Circuit partitioning with genetic algorithms using a
+  coding scheme to preserve the structure of a circuit}, \btxpageslong{}\
+  75--79.
+\newblock Springer, 1991.
 
 \bibitem{kabiljo2017social}
-{\sc Kabiljo, Igor}, {\sc Brian Karrer}, {\sc Mayank Pundir}, {\sc Sergey
-  Pupyrev} \btxandlong{}\ {\sc Alon Shalita}: {\em Social hash partitioner: a
-  scalable distributed hypergraph partitioner}.
-\newblock Proceedings of the VLDB Endowment, 10(11):1418--1429, 2017.
+{\sc Kabiljo, I.}, {\sc B.~Karrer}, {\sc M.~Pundir}, {\sc S.~Pupyrev}, {\sc
+  A.~Shalita}, {\sc A.~Presta} \btxandlong{}\ {\sc Y.~Akhremtsev}: {\em {Social
+  Hash Partitioner: A Scalable Distributed Hypergraph Partitioner}}.
+\newblock \btxpageslong{}\ 1--23, 2017.
 
 \bibitem{karypis1999multilevel}
-{\sc Karypis, George}, {\sc Rajat Aggarwal}, {\sc Vipin Kumar} \btxandlong{}\
-  {\sc Shashi Shekhar}: {\em Multilevel hypergraph partitioning: applications
-  in VLSI domain}.
-\newblock IEEE Transactions on Very Large Scale Integration (VLSI) Systems,
+{\sc Karypis, G.}, {\sc R.~Aggarwal}, {\sc V.~Kumar} \btxandlong{}\ {\sc
+  S.~Shekhar}: {\em {Multilevel Hypergraph Partitioning: Applications in VLSI
+  Domain}}.
+\newblock {IEEE Transactions on Very Large Scale Integration VLSI Systems},
   7(1):69--79, 1999.
 
 \bibitem{karypis2000multilevel}
-{\sc Karypis, George} \btxandlong{}\ {\sc Vipin Kumar}: {\em Multilevel k-way
-  hypergraph partitioning}.
-\newblock VLSI design, 11(3):285--300, 2000.
+{\sc Karypis, G.} \btxandlong{}\ {\sc V.~Kumar}: {\em {Multilevel $K$-way
+  Hypergraph Partitioning}}.
+\newblock \Btxinlong{}\ {\em Proceedings of the 36th ACM/IEEE Design Automation
+  Conference}, \btxpageslong{}\ 343--348. ACM, 1999.
 
 \bibitem{kim2004hybrid}
-{\sc Kim, Jong-Pil}, {\sc Yong-Hyuk Kim} \btxandlong{}\ {\sc Byung-Ro Moon}:
-  {\em A hybrid genetic approach for circuit bipartitioning}.
-\newblock \Btxinlong{}\ {\em Genetic and Evolutionary Computation--GECCO 2004},
-  \btxpageslong{}\ 1054--1064. Springer, 2004.
+{\sc Kim, J.-P.}, {\sc Y.-H. Kim} \btxandlong{}\ {\sc B.-R. Moon}: {\em {A
+  Hybrid Genetic Approach for Circuit Bipartitioning}}, \btxpageslong{}\
+  1054--1064.
+\newblock Springer, 2004.
 
 \bibitem{kim2004lock}
-{\sc Kim, Yong-Hyuk} \btxandlong{}\ {\sc Byung-Ro Moon}: {\em Lock-gain based
-  graph partitioning}.
+{\sc Kim, Y.{-}H.} \btxandlong{}\ {\sc B.~R. Moon}: {\em {Lock-Gain Based Graph
+  Partitioning}}.
 \newblock Journal of Heuristics, 10(1):37--57, 2004.
 
-\bibitem{lim1997large}
-{\sc Lim, Sung~Kyu}, {\sc Dongmin Xu} \btxetalshort{.}: {\em Large scale
-  circuit partitioning with loose/stable net removal and signal flow based
-  clustering}.
-\newblock \Btxinlong{}\ {\em Computer-Aided Design, 1997. Digest of Technical
-  Papers., 1997 IEEE/ACM International Conference on}, \btxpageslong{}\
-  441--446. IEEE, 1997.
+\bibitem{holtgrewe2010engineering}
+{\sc M.~Holtgrewe, P.~Sanders} \btxandlong{}\ {\sc C.~Schulz}: {\em Engineering
+  a scalable high quality graph partitioner}.
+\newblock \Btxinlong{}\ {\em IEEE International Symposium on Parallel &
+  Distributed Processing (IPDPS)}, \btxpageslong{}\ 1--12, 2010.
 
 \bibitem{moscato1989evolution}
-{\sc Moscato, Pablo} \btxetalshort{.}: {\em On evolution, search, optimization,
-  genetic algorithms and martial arts: Towards memetic algorithms}.
-\newblock Caltech concurrent computation program, C3P Report, 826:1989, 1989.
+{\sc Moscato, P.}: {\em {On Evolution, Search, Optimization, Genetic Algorithms
+  and Martial Arts: Towards Memetic Algorithms}}.
+\newblock \Btxtechreplong{}\ C3P Report 826, California Institute of
+  Technology, 1989.
 
 \bibitem{papa2007hypergraph}
-{\sc Papa, David~A} \btxandlong{}\ {\sc Igor~L Markov}: {\em Hypergraph
-  Partitioning and Clustering.}, 2007.
-
-\bibitem{saab1989evolution}
-{\sc Saab, Youssef} \btxandlong{}\ {\sc Vasant Rao}: {\em An evolution-based
-  approach to partitioning ASIC systems}.
-\newblock \Btxinlong{}\ {\em Proceedings of the 26th ACM/IEEE design automation
-  conference}, \btxpageslong{}\ 767--770. ACM, 1989.
+{\sc Papa, D.~A.} \btxandlong{}\ {\sc I.~L. Markov}: {\em {Hypergraph
+  Partitioning and Clustering}}.
+\newblock \Btxinlong{}\ {\em {Handbook of Approximation Algorithms and
+  Metaheuristics.}} 2007.
 
 \bibitem{sait2006evolutionary}
-{\sc Sait, Sadiq~M}, {\sc Aiman~H El-Maleh} \btxandlong{}\ {\sc Raslan~H
-  Al-Abaji}: {\em Evolutionary algorithms for VLSI multi-objective netlist
-  partitioning}.
+{\sc S.~M.~Sait, A. H. El-Maleh} \btxandlong{}\ {\sc R.~H. Al-Abaji}: {\em
+  Evolutionary algorithms for VLSI multi-objective netlist partitioning}.
 \newblock Engineering applications of artificial intelligence, 19(3):257--268,
   2006.
 
+\bibitem{saab1989evolution}
+{\sc Saab, Y.} \btxandlong{}\ {\sc V.~B. Rao}: {\em {An Evolution-Based
+  Approach to Partitioning {ASIC} Systems}}.
+\newblock \Btxinlong{}\ {\em Proceedings of the 26th {ACM/IEEE} Design
+  Automation Conference}, \btxpageslong{}\ 767--770, 1989.
+
 \bibitem{sanchis1989multiple}
-{\sc Sanchis, Laura~A}: {\em Multiple-way network partitioning}.
+{\sc Sanchis, L.~A.}: {\em {Multiple-way Network Partitioning}}.
 \newblock IEEE Transactions on Computers, 38(1):62--81, 1989.
 
 \bibitem{sanders2012distributed}
-{\sc Sanders, Peter} \btxandlong{}\ {\sc Christian Schulz}: {\em Distributed
-  evolutionary graph partitioning}.
-\newblock \Btxinlong{}\ {\em 2012 Proceedings of the Fourteenth Workshop on
-  Algorithm Engineering and Experiments (ALENEX)}, \btxpageslong{}\ 16--29.
-  SIAM, 2012.
+{\sc Sanders, P.} \btxandlong{}\ {\sc C.~Schulz}: {\em {Distributed
+  Evolutionary Graph Partitioning}}.
+\newblock \Btxinlong{}\ {\em 12th Workshop on Algorithm Engineering and
+  Experimentation (ALENEX)}, \btxpageslong{}\ 16--29, 2012.
 
 \bibitem{schlag2016k}
-{\sc Schlag, Sebastian}, {\sc Vitali Henne}, {\sc Tobias Heuer}, {\sc Henning
-  Meyerhenke}, {\sc Peter Sanders} \btxandlong{}\ {\sc Christian Schulz}: {\em
-  k-way Hypergraph Partitioning via n-Level Recursive Bisection}.
-\newblock \Btxinlong{}\ {\em 2016 Proceedings of the Eighteenth Workshop on
-  Algorithm Engineering and Experiments (ALENEX)}, \btxpageslong{}\ 53--67.
-  SIAM, 2016.
+{\sc Schlag, S.}, {\sc V.~Henne}, {\sc T.~Heuer}, {\sc H.~Meyerhenke}, {\sc
+  P.~Sanders} \btxandlong{}\ {\sc C.~Schulz}: {\em {k-way Hypergraph
+  Partitioning via n-Level Recursive Bisection}}.
+\newblock \Btxtechreplong{}\ arXiv:1511.03137, KIT, November 2015.
+
+\bibitem{chen2012large}
+{\sc T.~Chen, K.~Tang, G.~Chen} \btxandlong{}\ {\sc X.~Yao}: {\em A large
+  population size can be unhelpful in evolutionary algorithms}.
+\newblock Theoretical Computer Science, 436:54--70, 2012.
 
 \bibitem{trifunovic2006parallel}
-{\sc Trifunovic, Aleksandar}: {\em Parallel algorithms for hypergraph
-  partitioning}.
+{\sc Trifunovic, A.}: {\em Parallel algorithms for hypergraph partitioning}.
 \newblock \btxphdthesis{}, University of London, 2006.
 
 \bibitem{vastenhouw2005two}
-{\sc Vastenhouw, Brendan} \btxandlong{}\ {\sc Rob~H Bisseling}: {\em A
-  two-dimensional data distribution method for parallel sparse matrix-vector
-  multiplication}.
-\newblock SIAM review, 47(1):67--95, 2005.
+{\sc Vastenhouw, B.} \btxandlong{}\ {\sc R.~H. Bisseling}: {\em {A
+  Two-Dimensional Data Distribution Method for Parallel Sparse Matrix-Vector
+  Multiplication}}.
+\newblock SIAM Review, 47(1):67--95, 2005.
 
 \bibitem{viswanathan2012dac}
-{\sc Viswanathan, Natarajan}, {\sc Charles Alpert}, {\sc Cliff Sze}, {\sc Zhuo
-  Li} \btxandlong{}\ {\sc Yaoguang Wei}: {\em The DAC 2012 routability-driven
-  placement contest and benchmark suite}.
-\newblock \Btxinlong{}\ {\em Proceedings of the 49th Annual Design Automation
-  Conference}, \btxpageslong{}\ 774--782. ACM, 2012.
+{\sc Viswanathan, N.}, {\sc C.~Alpert}, {\sc C.~Sze}, {\sc Z.~Li}
+  \btxandlong{}\ {\sc Y.~Wei}: {\em {The DAC 2012 Routability-driven Placement
+  Contest and Benchmark Suite}}.
+\newblock \Btxinlong{}\ {\em 49th Annual Design Automation Conference}, DAC,
+  \btxpageslong{}\ 774--782. ACM, 2012.
 
 \bibitem{wichlund1998multilevel}
-{\sc Wichlund, Sverre}: {\em On multilevel circuit partitioning}.
-\newblock \Btxinlong{}\ {\em Proceedings of the 1998 IEEE/ACM international
-  conference on Computer-aided design}, \btxpageslong{}\ 505--511. ACM, 1998.
+{\sc Wichlund, S.} \btxandlong{}\ {\sc E.~Aas}: {\em {On Multilevel Circuit
+  Partitioning}}.
+\newblock \Btxinlong{}\ {\em Proceedings of the{IEEE/ACM} International
+  Conference on Computer-Aided Design ({ICCAD})}, \btxpageslong{}\ 505--511,
+  1998.
 
 \bibitem{wilcoxon1945individual}
-{\sc Wilcoxon, Frank}: {\em Individual comparisons by ranking methods}.
-\newblock Biometrics bulletin, 1(6):80--83, 1945.
+{\sc Wilcoxon, F.}: {\em {Individual Comparisons by Ranking Methods}}.
+\newblock Biometrics Bulletin, 1(6):80--83, 1945.
 
 \end{thebibliography}

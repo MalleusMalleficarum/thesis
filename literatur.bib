@@ -1,5 +1,5 @@
 
-
+%Not in lib (not referenced)
 @Book{Cormen2001introduction,
   title = {Introduction to Algorithms},
   author = {T. H. Cormen, C. E. Leiserson, R. L. Rivest and C. Stein},
@@ -20,7 +20,7 @@
 }
 
 @inproceedings{Wichlund98,
-  author    = {Wichlund, S. and Aas, E.},
+  author    = {S. Wichlund and E. Aas},
   title     = {{On Multilevel Circuit Partitioning}},
   booktitle = {Proceedings of the{IEEE/ACM} International Conference on Computer-Aided
                Design ({ICCAD})},
@@ -29,57 +29,64 @@
 }
 
 @inproceedings{lim1997large,
-  title={Large scale circuit partitioning with loose/stable net removal and signal flow based clustering},
-  author={Lim, Sung Kyu and Xu, Dongmin and others},
-  booktitle={Computer-Aided Design, 1997. Digest of Technical Papers., 1997 IEEE/ACM International Conference on},
-  pages={441--446},
-  year={1997},
-  organization={IEEE}
+  author    = {Cong, J. and
+               Li, H. J. and
+               Lim. S. K. and
+               Shibuya, T. and
+               Xu, D.},
+  title     = {{Large Scale Circuit Partitioning With Loose/Stable Net Removal and
+               Signal Flow Based Clustering}},
+  booktitle = {Proceedings of the {IEEE/ACM} International Conference on Computer-Aided
+               Design ({ICCAD})},
+  pages     = {441--446},
+  year      = {1997}
 }
 
-@inproceedings{schlag2016k,
-  title={k-way Hypergraph Partitioning via n-Level Recursive Bisection},
-  author={Schlag, Sebastian and Henne, Vitali and Heuer, Tobias and Meyerhenke, Henning and Sanders, Peter and Schulz, Christian},
-  booktitle={2016 Proceedings of the Eighteenth Workshop on Algorithm Engineering and Experiments (ALENEX)},
-  pages={53--67},
-  year={2016},
-  organization={SIAM}
+@TECHREPORT{schlag2016k,
+  AUTHOR =        {Schlag, S. and Henne, V. and Heuer, T. and Meyerhenke, H. and Sanders, P. and  Schulz, C.},
+  TITLE =         {{k-way Hypergraph Partitioning via n-Level Recursive Bisection}},
+  NUMBER =        {arXiv:1511.03137},
+  INSTITUTION =   {KIT},
+  MONTH =         {November},
+  YEAR  =         {2015},
+  PAGES =         {10},
 }
 
 @inproceedings{akhremtsev2017engineering,
-  title={Engineering a direct k-way Hypergraph Partitioning Algorithm},
-  author={Akhremtsev, Yaroslav and Heuer, Tobias and Sanders, Peter and Schlag, Sebastian},
-  booktitle={2017 Proceedings of the Ninteenth Workshop on Algorithm Engineering and Experiments (ALENEX)},
-  pages={28--42},
-  year={2017},
-  organization={SIAM}
+ author    = {Y. Akhremtsev and
+              T. Heuer and
+              P. Sanders and
+              S. Schlag},
+ title     = {Engineering a direct \emph{k}-way Hypergraph Partitioning Algorithm},
+ booktitle = {19th Workshop on Algorithm Engineering and Experiments, (ALENEX)},
+ pages     = {28--42},
+ year      = {2017},
 }
 
 @inproceedings{sanders2012distributed,
-  title={Distributed evolutionary graph partitioning},
-  author={Sanders, Peter and Schulz, Christian},
-  booktitle={2012 Proceedings of the Fourteenth Workshop on Algorithm Engineering and Experiments (ALENEX)},
-  pages={16--29},
-  year={2012},
-  organization={SIAM}
+        author    = {P. Sanders and C. Schulz},
+        title     = {{Distributed Evolutionary Graph Partitioning}},
+        booktitle = {12th Workshop on Algorithm Engineering and Experimentation (ALENEX)},
+        year      = {2012},
+        pages     = {16--29}
 }
 
-@book{back1996evolutionary,
-  title={Evolutionary algorithms in theory and practice: evolution strategies, evolutionary programming, genetic algorithms},
-  author={Back, Thomas},
-  year={1996},
-  publisher={Oxford university press}
+@phdthesis{back1996evolutionary,
+        title = {Evolutionary algorithms in theory and practice : evolution strategies, evolutionary programming, genetic algorithms},
+        author = {B\"ack, T.},
+        publisher = {Oxford University Press},
+        year = {1996},
+        ISBN = {0-19-509971-0}
 }
-
-
+% Not in bib (done)
 @book{garey2002computers,
   title={Computers and intractability},
-  author={Garey, Michael R and Johnson, David S},
+  author={M. R. Garey and D. S. Johnson},
   volume={29},
   year={2002},
-  publisher={wh freeman New York}
+  publisher={W.H. Freeman, New York}
 }
-
+%Not in bib (not cited - graph to hypergraph conversion)
 @article{ihler1993modeling,
   title={Modeling hypergraphs by graphs with the same mincut properties},
   author={Ihler, Edmund and Wagner, Dorothea and Wagner, Frank},
@@ -92,36 +99,38 @@
 }
 
 @inproceedings{cong1993parallel,
-  title={A parallel bottom-up clustering algorithm with applications to circuit partitioning in VLSI design},
-  author={Cong, Jason and Smith, M'Lissa},
-  booktitle={Proceedings of the 30th international Design Automation Conference},
-  pages={755--760},
-  year={1993},
-  organization={ACM}
+  author    = {Jason Cong and
+               M'Lissa Smith},
+  title     = {{A Parallel Bottom-Up Clustering Algorithm with Applications to Circuit
+               Partitioning in {VLSI} Design}},
+  booktitle = {{DAC}},
+  pages     = {755--760},
+  year      = {1993},
+  doi       = {10.1145/157485.165119},
 }
 
-@article{catalyurek1999hypergraph,
-  title={Hypergraph-partitioning-based decomposition for parallel sparse-matrix vector multiplication},
-  author={Catalyurek, Umit V and Aykanat, Cevdet},
-  journal={IEEE Transactions on parallel and distributed systems},
-  volume={10},
-  number={7},
-  pages={673--693},
-  year={1999},
-  publisher={IEEE}
-}
+@ARTICLE{catalyurek1999hypergraph, 
+author={Cataly{\"u}rek, {\"{U}}. V. and Aykanat, C.}, 
+journal={IEEE Transactions on Parallel and Distributed Systems}, 
+title={{Hypergraph-Partitioning-Based Decomposition for Parallel Sparse-Matrix Vector Multiplication}}, 
+year={1999}, 
+month={Jul}, 
+volume={10}, 
+number={7}, 
+pages={673-693}, 
+ISSN={1045-9219}}
 
-@article{karypis1999multilevel,
-  title={Multilevel hypergraph partitioning: applications in VLSI domain},
-  author={Karypis, George and Aggarwal, Rajat and Kumar, Vipin and Shekhar, Shashi},
-  journal={IEEE Transactions on Very Large Scale Integration (VLSI) Systems},
-  volume={7},
-  number={1},
-  pages={69--79},
-  year={1999},
-  publisher={IEEE}
-}
+@ARTICLE{karypis1999multilevel, 
+author={Karypis, G. and Aggarwal, R. and Kumar, V. and S. Shekhar}, 
+journal={{IEEE Transactions on Very Large Scale Integration VLSI Systems}}, 
+title={{Multilevel Hypergraph Partitioning: Applications in VLSI Domain}}, 
+year={1999}, 
+volume={7}, 
+number={1}, 
+pages={69-79}, 
+ISSN={1063-8210}}
 
+%Not in bib (not cited - VLSI analysis)
 @inproceedings{boese1992high,
   title={On high-speed VLSI interconnects: Analysis and design},
   author={Boese, Kenneth D and Cong, Jason and Kahng, Andrew B and Leung, Kwok-Shing and Zhou, Dian},
@@ -131,16 +140,17 @@
 }
 
 @incollection{bulucc2016recent,
-  title={Recent advances in graph partitioning},
-  author={Bulu{\c{c}}, Ayd{\i}n and Meyerhenke, Henning and Safro, Ilya and Sanders, Peter and Schulz, Christian},
-  booktitle={Algorithm Engineering},
-  pages={117--158},
-  year={2016},
-  publisher={Springer}
+  author    = {A. Bulu\c{c} and H. Meyerhenke and I. Safro and P. Sanders and C. Schulz},
+  title     = {{Recent Advances in Graph Partitioning}},
+  publisher = {Springer},
+  booktitle = {Algorithm Engineering - Selected Results and Surveys},
+  pages     = {117--158},
+  year      = {2016},
 }
-
+%Not in bib
 @article{sait2006evolutionary,
   title={Evolutionary algorithms for VLSI multi-objective netlist partitioning},
+  author={S. M. Sait, A. H. El-Maleh and R. H. Al-Abaji},
   author={Sait, Sadiq M and El-Maleh, Aiman H and Al-Abaji, Raslan H},
   journal={Engineering applications of artificial intelligence},
   volume={19},
@@ -150,7 +160,7 @@
   publisher={Elsevier}
 }
 
-
+% Not in bib (not cited)
 @inproceedings{bouloutas1989some,
   title={Some graph partitioning problems and algorithms related to routing in large computer networks},
   author={Bouloutas, A and Gopal, Prabandham M},
@@ -161,47 +171,48 @@
 }
 
 @inproceedings{saab1989evolution,
-  title={An evolution-based approach to partitioning ASIC systems},
-  author={Saab, Youssef and Rao, Vasant},
-  booktitle={Proceedings of the 26th ACM/IEEE design automation conference},
-  pages={767--770},
-  year={1989},
-  organization={ACM}
+  author    = {Y. Saab and
+               V. B. Rao},
+  title     = {{An Evolution-Based Approach to Partitioning {ASIC} Systems}},
+  booktitle = {Proceedings of the 26th {ACM/IEEE} Design Automation Conference},
+  pages     = {767--770},
+  year      = {1989},
+  crossref  = {DBLP:conf/dac/1989}
 }
 
 @article{blickle1996comparison,
-  title={A comparison of selection schemes used in evolutionary algorithms},
-  author={Blickle, Tobias and Thiele, Lothar},
-  journal={Evolutionary Computation},
-  volume={4},
-  number={4},
-  pages={361--394},
-  year={1996},
-  publisher={MIT Press}
+  author    = {Blickle, T. and
+               Thiele, L.},
+  title     = {{A Comparison of Selection Schemes used in Evolutionary Algorithms}},
+  journal   = {Evolutionary Computation},
+  volume    = {4},
+  number    = {4},
+  pages     = {361--394},
+  year      = {1996},
 }
 
-@inproceedings{delling2011graph,
-  title={Graph partitioning with natural cuts},
-  author={Delling, Daniel and Goldberg, Andrew V and Razenshteyn, Ilya and Werneck, Renato F},
-  booktitle={Parallel \& Distributed Processing Symposium (IPDPS), 2011 IEEE International},
-  pages={1135--1146},
-  year={2011},
-  organization={IEEE}
+@INPROCEEDINGS{delling2011graph,
+        AUTHOR    = {D. Delling and A. V. Goldberg and I. Razenshteyn and R. F. Werneck},
+        TITLE     = {{Graph Partitioning with Natural Cuts}},
+        BOOKTITLE = {Proceedings of the 25th International Parallel and Distributed Processing Symposium},
+        KEY       = {IPDPS'11},
+        pages     = {1135--1146},
+        YEAR      = {2011}
 }
 
 @inproceedings{wichlund1998multilevel,
-  title={On multilevel circuit partitioning},
-  author={Wichlund, Sverre},
-  booktitle={Proceedings of the 1998 IEEE/ACM international conference on Computer-aided design},
-  pages={505--511},
-  year={1998},
-  organization={ACM}
+  author    = {S. Wichlund and E. Aas},
+  title     = {{On Multilevel Circuit Partitioning}},
+  booktitle = {Proceedings of the{IEEE/ACM} International Conference on Computer-Aided
+               Design ({ICCAD})},
+  pages     = {505--511},
+  year      = {1998}
 }
 
-
+% Not in bib (done)
 @article{chen2012large,
   title={A large population size can be unhelpful in evolutionary algorithms},
-  author={Chen, Tianshi and Tang, Ke and Chen, Guoliang and Yao, Xin},
+  author={T. Chen, K. Tang, G. Chen and X. Yao},
   journal={Theoretical Computer Science},
   volume={436},
   pages={54--70},
@@ -210,56 +221,65 @@
 }
 
 @inproceedings{armstrong2010investigation,
-  title={An investigation of parallel memetic algorithms for VLSI circuit partitioning on multi-core computers},
-  author={Armstrong, Ed and Grewal, G and Areibi, Shawki and Darlington, Gerarda},
-  booktitle={Electrical and Computer Engineering (CCECE), 2010 23rd Canadian Conference on},
-  pages={1--6},
-  year={2010},
-  organization={IEEE}
+  author    = {E. Armstrong and
+               G. W. Grewal and
+               S. Areibi and
+               G. Darlington},
+  title     = {{An investigation of parallel memetic algorithms for {VLSI} circuit
+               partitioning on multi-core computers}},
+  booktitle = {Proceedings of the 23rd Canadian Conference on Electrical and Computer
+               Engineering, {CCECE}},
+  pages     = {1--6},
+  year      = {2010},
+  crossref  = {DBLP:conf/ccece/2010}
 }
 
-@inproceedings{kim2004hybrid,
-  title={A hybrid genetic approach for circuit bipartitioning},
-  author={Kim, Jong-Pil and Kim, Yong-Hyuk and Moon, Byung-Ro},
-  booktitle={Genetic and Evolutionary Computation--GECCO 2004},
-  pages={1054--1064},
-  year={2004},
-  organization={Springer}
+
+@Inbook{kim2004hybrid,
+author="Kim, J.-P.
+and Kim, Y.-H.
+and Moon, B.-R.",
+title= {{A Hybrid Genetic Approach for Circuit Bipartitioning}},
+bookTitle={{Genetic and Evolutionary Computation (GECCO)}},
+year="2004",
+publisher="Springer",
+pages="1054--1064"
 }
 
 @article{kim2004lock,
-  title={Lock-gain based graph partitioning},
-  author={Kim, Yong-Hyuk and Moon, Byung-Ro},
-  journal={Journal of Heuristics},
-  volume={10},
-  number={1},
-  pages={37--57},
-  year={2004},
-  publisher={Springer}
+  author    = {Y.{-}H. Kim and
+               B. R. Moon},
+  title     = {{Lock-Gain Based Graph Partitioning}},
+  journal   = {Journal of Heuristics},
+  volume    = {10},
+  number    = {1},
+  pages     = {37--57},
+  year      = {2004}
 }
 
-@inproceedings{areibi2000integrated,
-  title={An integrated genetic algorithm with dynamic hill climbing for VLSI circuit partitioning},
-  author={Areibi, Shawki},
-  booktitle={GECCO 2000},
-  pages={97--102},
-  year={2000}
+
+@INPROCEEDINGS{areibi2000integrated,
+    author = {S. Areibi},
+    title = {{An Integrated Genetic Algorithm With Dynamic Hill Climbing for VLSI Circuit Partitioning}},
+    booktitle = {Genetic and Evolutionary Computation Conference (GECCO)},
+    year = {2000},
+     pages     = {97--102},
 }
 
-@article{sanchis1989multiple,
-  title={Multiple-way network partitioning},
-  author={Sanchis, Laura A},
-  journal={IEEE Transactions on Computers},
-  volume={38},
-  number={1},
-  pages={62--81},
-  year={1989},
-  publisher={IEEE}
+@ARTICLE{sanchis1989multiple, 
+author={Sanchis, L. A.}, 
+journal={IEEE Transactions on Computers}, 
+title={{Multiple-way Network Partitioning}}, 
+year={1989}, 
+volume={38}, 
+number={1}, 
+pages={62-81}
 }
 
+%Not in bib (done)
 @article{chan1995systolic,
   title={A systolic architecture for high speed hypergraph partitioning using a genetic algorithm},
-  author={Chan, Heming and Mazumder, Pinaki},
+  author={H. Chan and P. Mazumder},
   journal={Progress in evolutionary computation},
   pages={109--126},
   year={1995},
@@ -267,200 +287,237 @@
 }
 
 @inproceedings{bui1994fast,
-  title={A fast and stable hybrid genetic algorithm for the ratio-cut partitioning problem on hypergraphs},
-  author={Bui, Thang Nguyen and Moon, Byung Ro},
-  booktitle={Proceedings of the 31st annual Design Automation Conference},
-  pages={664--669},
-  year={1994},
-  organization={ACM}
+  author    = {Bui, T. N. and
+               Moon, B. R.},
+  title     = {{A Fast and Stable Hybrid Genetic Algorithm for the Ratio-Cut Partitioning
+               Problem on Hypergraphs}},
+  booktitle = {Proceedings of the 31st Conference on Design Automation},
+  pages     = {664--669},
+  year      = {1994},
 }
 
-@inproceedings{fiduccia1988linear,
-  title={A linear-time heuristic for improving network partitions},
-  author={Fiduccia, Charles M and Mattheyses, Robert M},
-  booktitle={Papers on Twenty-five years of electronic design automation},
-  pages={241--247},
-  year={1988},
-  organization={ACM}
+@INPROCEEDINGS{fiduccia1988linear, 
+author={Fiduccia, C.M. and Mattheyses, R.M.}, 
+booktitle={19th Conference on Design Automation}, 
+title={A Linear-Time Heuristic for Improving Network Partitions}, 
+year={1982}, 
+month={June}, 
+pages={175-181}, 
+ISSN={0146-7123},}
+
+@Inbook{hulin1990circuit,
+author="Hulin, M.",
+title="Circuit partitioning with genetic algorithms using a coding scheme to preserve the structure of a circuit",
+bookTitle="Proceedings of the 1st Workshop on Parallel Problem Solving from Nature",
+year="1991",
+publisher="Springer",
+pages="75--79"
 }
 
 
-@inproceedings{hulin1990circuit,
-  title={Circuit partitioning with genetic algorithms using a coding scheme to preserve the structure of a circuit},
-  author={Hulin, Martin},
-  booktitle={International Conference on Parallel Problem Solving from Nature},
-  pages={75--79},
-  year={1990},
-  organization={Springer}
-}
-
-@article{alpert1998multilevel,
-  title={Multilevel circuit partitioning},
-  author={Alpert, Charles J and Huang, Jen-Hsin and Kahng, Andrew B},
-  journal={IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems},
-  volume={17},
-  number={8},
-  pages={655--667},
-  year={1998},
-  publisher={IEEE}
+@ARTICLE{alpert1998multilevel, 
+author={Alpert, C. J. and J.-H. Huang and Kahng, A. B.}, 
+journal={IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems}, 
+title={{Multilevel Circuit Partitioning}}, 
+year={1998}, 
+volume={17}, 
+number={8}, 
+pages={655-667}, 
 }
 
 @article{kabiljo2017social,
-  title={Social hash partitioner: a scalable distributed hypergraph partitioner},
-  author={Kabiljo, Igor and Karrer, Brian and Pundir, Mayank and Pupyrev, Sergey and Shalita, Alon},
-  journal={Proceedings of the VLDB Endowment},
-  volume={10},
-  number={11},
-  pages={1418--1429},
-  year={2017},
-  publisher={VLDB Endowment}
+archivePrefix = {arXiv},
+arxivId = {1707.06665},
+author = {Kabiljo, I. and Karrer, B. and Pundir, M. and Pupyrev, S. and Shalita, A. and Presta, A. and Akhremtsev, Y.},
+eprint = {1707.06665},
+pages = {1--23},
+title = {{Social Hash Partitioner: A Scalable Distributed Hypergraph Partitioner}},
+year = {2017}
 }
 
 @article{vastenhouw2005two,
-  title={A two-dimensional data distribution method for parallel sparse matrix-vector multiplication},
-  author={Vastenhouw, Brendan and Bisseling, Rob H},
-  journal={SIAM review},
-  volume={47},
-  number={1},
-  pages={67--95},
-  year={2005},
-  publisher={SIAM}
+ author = {Vastenhouw, B. and Bisseling, R. H.},
+ title = {{A Two-Dimensional Data Distribution Method for Parallel Sparse Matrix-Vector  Multiplication}},
+ journal = {SIAM Review},
+ issue_date = {2005},
+ volume = {47},
+ number = {1},
+ year = {2005},
+ issn = {0036-1445},
+ pages = {67--95},
+ numpages = {29},
+ acmid = {1055397},
 }
 
 @inproceedings{devine2006parallel,
-  title={Parallel hypergraph partitioning for scientific computing},
-  author={Devine, Karen D and Boman, Erik G and Heaphy, Robert T and Bisseling, Rob H and Catalyurek, Umit V},
-  booktitle={Parallel and Distributed Processing Symposium, 2006. IPDPS 2006. 20th International},
-  pages={10--pp},
-  year={2006},
-  organization={IEEE}
+ author = {Devine, K. D. and Boman, E. G. and Heaphy, R. T. and Bisseling, R. H. and Cataly{\"u}rek, {\"{U}}. V.},
+ title = {{Parallel Hypergraph Partitioning for Scientific Computing}},
+ booktitle = {20th International Conference on Parallel and Distributed Processing},
+ series = {IPDPS},
+ year = {2006},
+ isbn = {1-4244-0054-6},
+ location = {Rhodes Island, Greece},
+ pages = {124--124},
+ numpages = {1},
+ acmid = {1899056},
+ publisher = {IEEE},
 }
 
-@article{karypis2000multilevel,
-  title={Multilevel k-way hypergraph partitioning},
-  author={Karypis, George and Kumar, Vipin},
-  journal={VLSI design},
-  volume={11},
-  number={3},
-  pages={285--300},
-  year={2000},
-  publisher={Hindawi Publishing Corporation}
-}
+@inproceedings{karypis2000multilevel,
+ author = {Karypis, G. and Kumar, V.},
+ title = {{Multilevel $K$-way Hypergraph Partitioning}},
+ booktitle = {Proceedings of the 36th ACM/IEEE Design Automation Conference},
+ year = {1999},
+ isbn = {1-58113-109-7},
+ location = {New Orleans, Louisiana, USA},
+ pages = {343--348},
+ numpages = {6},
+ acmid = {309954},
+ publisher = {ACM}
+} 
 
 @article{aykanat2008multi,
-  title={Multi-level direct k-way hypergraph partitioning with multiple constraints and fixed vertices},
-  author={Aykanat, Cevdet and Cambazoglu, B Barla and U{\c{c}}ar, Bora},
-  journal={Journal of Parallel and Distributed Computing},
-  volume={68},
-  number={5},
-  pages={609--625},
-  year={2008},
-  publisher={Elsevier}
+ author = {Aykanat, C. and Cambazoglu, B. B. and U\c{c}ar, B. },
+ title = {{Multi-level Direct K-way Hypergraph Partitioning with Multiple Constraints and Fixed Vertices}},
+ journal = {Journal of Parallel and Distributed Computing},
+ issue_date = {May, 2008},
+ volume = {68},
+ number = {5},
+ year = {2008},
+ issn = {0743-7315},
+ pages = {609--625},
+ numpages = {17},
+ acmid = {1360734},
+ publisher = {Academic Press, Inc.},
+ address = {Orlando, FL, USA}
 }
 
 @article{alpert1995recent,
-  title={Recent directions in netlist partitioning: a survey},
-  author={Alpert, Charles J and Kahng, Andrew B},
-  journal={Integration, the VLSI journal},
-  volume={19},
-  number={1-2},
-  pages={1--81},
-  year={1995},
-  publisher={Elsevier}
+  Author = {Alpert, C. J. and Kahng, A. B. },
+  Issn = {0167-9260},
+  Journal = {{Integration, the VLSI Journal}},
+  Number = {1--2},
+  Pages = {1 - 81},
+  Title = {{Recent Directions in Netlist Partitioning: a Survey}},
+  Volume = {19},
+  Year = {1995}
 }
 
 @book{bader2013graph,
   title={Graph partitioning and graph clustering},
-  author={Bader, David A and Meyerhenke, Henning and Sanders, Peter and Wagner, Dorothea},
+  author={Bader, D. A. and Meyerhenke, H. and Sanders, P. and Wagner, D.},
   volume={588},
   year={2013},
   publisher={American Mathematical Soc.}
 }
 
-@misc{papa2007hypergraph,
-  title={Hypergraph Partitioning and Clustering.},
-  author={Papa, David A and Markov, Igor L},
-  year={2007}
+@incollection{papa2007hypergraph,
+  author    = {Papa, D. A. and Markov, I. L.},
+  title     = {{Hypergraph Partitioning and Clustering}},
+  booktitle = {{Handbook of Approximation Algorithms and Metaheuristics.}},
+  year      = {2007},
+  crossref  = {DBLP:reference/crc/2007aam},
+  timestamp = {Tue, 02 Jun 2015 10:52:06 +0200},
 }
+
 @phdthesis{trifunovic2006parallel,
   title={Parallel algorithms for hypergraph partitioning},
-  author={Trifunovic, Aleksandar},
+  author={Trifunovic, A.},
   year={2006},
   school={University of London}
 }
-
+%Not in bib (done)
 @inproceedings{holtgrewe2010engineering,
   title={Engineering a scalable high quality graph partitioner},
-  author={Holtgrewe, Manuel and Sanders, Peter and Schulz, Christian},
-  booktitle={Parallel \& Distributed Processing (IPDPS), 2010 IEEE International Symposium on},
+  author={M. Holtgrewe, P. Sanders and C. Schulz},
+  booktitle={IEEE International Symposium on Parallel & Distributed Processing (IPDPS)},
   pages={1--12},
   year={2010},
-  organization={IEEE}
 }
 
 @inproceedings{alpert1998ispd98,
-  title={The ISPD98 circuit benchmark suite},
-  author={Alpert, Charles J},
-  booktitle={Proceedings of the 1998 international symposium on Physical design},
-  pages={80--85},
-  year={1998},
-  organization={ACM}
+ author = {Alpert, C. J.},
+ title = {{The ISPD98 Circuit Benchmark Suite}},
+ booktitle = {Proceedings of the 1998 International Symposium on Physical Design},
+ year = {1998},
+ isbn = {1-58113-021-X},
+ location = {Monterey, California, USA},
+ pages = {80--85},
+ numpages = {6},
+ acmid = {274546},
+ publisher = {ACM},
 }
 
 @article{davis2011university,
-  title={The University of Florida sparse matrix collection},
-  author={Davis, Timothy A and Hu, Yifan},
-  journal={ACM Transactions on Mathematical Software (TOMS)},
-  volume={38},
-  number={1},
-  pages={1},
-  year={2011},
-  publisher={ACM}
+ author = {Davis, T. A. and Hu, Y.},
+ title = {{The University of Florida Sparse Matrix Collection}},
+ journal = {ACM Transactions on Mathematical Software},
+ issue_date = {November 2011},
+ volume = {38},
+ number = {1},
+ year = {2011},
+ issn = {0098-3500},
+ pages = {1:1--1:25},
+ articleno = {1},
+ numpages = {25},
+ acmid = {2049663},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {Graph drawing, multilevel algorithms, performance evaluation, sparse matrices},
 }
 
 @inproceedings{viswanathan2012dac,
-  title={The DAC 2012 routability-driven placement contest and benchmark suite},
-  author={Viswanathan, Natarajan and Alpert, Charles and Sze, Cliff and Li, Zhuo and Wei, Yaoguang},
-  booktitle={Proceedings of the 49th Annual Design Automation Conference},
-  pages={774--782},
-  year={2012},
-  organization={ACM}
+ author = {Viswanathan, N. and Alpert, C. and Sze, C. and Li, Z. and Wei, Y.},
+ title = {{The DAC 2012 Routability-driven Placement Contest and Benchmark Suite}},
+ booktitle = {49th Annual Design Automation Conference},
+ series = {DAC},
+ year = {2012},
+ isbn = {978-1-4503-1199-1},
+ pages = {774--782},
+ numpages = {9},
+ acmid = {2228500},
+ publisher = {ACM}
 }
 
-@article{belov2014proceedings,
-  title={Proceedings of SAT Competition 2014},
-  author={Belov, Anton and Diepold, Daniel and Heule, Marijn JH and J{\"a}rvisalo, Matti},
-  year={2014},
-  publisher={University of Helsinki}
-}
+ @misc{belov2014proceedings,
+   author = {Belov, A. and Diepold, D. and Heule, M. and J{\"{a}}rvisalo, M.},
+   title = {{The SAT Competition 2014}},
+   year = {2014},
+   howpublished = {\url{http://www.satcompetition.org/2014/}}
+ }
 
-@article{moscato1989evolution,
-  title={On evolution, search, optimization, genetic algorithms and martial arts: Towards memetic algorithms},
-  author={Moscato, Pablo and others},
-  journal={Caltech concurrent computation program, C3P Report},
-  volume={826},
-  pages={1989},
-  year={1989}
+@techreport{moscato1989evolution,
+  author = {Moscato, P.},
+  institution = {California Institute of Technology},
+  interhash = {11f24431550d9f578c99a34422645319},
+  intrahash = {18302012af50e788fbfe1774282607bf},
+  keywords = {imported},
+  number = {C3P Report 826},
+  timestamp = {2009-06-23T10:19:15.000+0200},
+  title = {{On Evolution, Search, Optimization, Genetic Algorithms and Martial Arts: Towards Memetic Algorithms}},
+  year = 1989
 }
 
 @article{wilcoxon1945individual,
-  title={Individual comparisons by ranking methods},
-  author={Wilcoxon, Frank},
-  journal={Biometrics bulletin},
-  volume={1},
-  number={6},
-  pages={80--83},
-  year={1945},
-  publisher={JSTOR}
+ ISSN = {00994987},
+ author = {F. Wilcoxon},
+ journal = {Biometrics Bulletin},
+ number = {6},
+ pages = {80-83},
+ publisher = {International Biometric Society},
+ title = {{Individual Comparisons by Ranking Methods}},
+ volume = {1},
+ year = {1945}
 }
 
-@article{cohoon2003evolutionary,
-  title={Evolutionary algorithms for the physical design of VLSI circuits},
-  author={Cohoon, James and Kairo, John and Lienig, Jens},
-  journal={Advances in evolutionary computing},
-  pages={683--711},
-  year={2003},
-  publisher={Springer}
+@Inbook{cohoon2003evolutionary,
+author="Cohoon, J.
+and Kairo, J.
+and Lienig, J.",
+title={{Evolutionary Algorithms for the Physical Design of VLSI Circuits}},
+bookTitle="Advances in Evolutionary Computing: Theory and Applications",
+year="2003",
+publisher="Springer",
+pages="683--711"
 }
-
 
