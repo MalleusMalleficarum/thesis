@@ -1,0 +1,568 @@
+\nonstopmode
+\expandafter\ifx\csname pdfobjcompresslevel\endcsname\relax\else\pdfobjcompresslevel0\fi
+\ifnum\the\pdftexversion<140\errmessage{Pdftex is too old. Set IPEANCIENTPDFTEX environment variable!}\fi
+\documentclass{article}
+\usepackage{xcolor}
+\newdimen\ipefs
+\newcounter{ipePage}\newcounter{ipeView}
+\newcounter{ipePages}\newcounter{ipeViews}
+\newcommand{\PageTitle}[1]{#1}
+\newcommand{\ipesymbol}[4]{$\bullet$}
+\definecolor{KITgreen}{rgb}{0,0.588,0.509}
+\definecolor{KITgreen70}{rgb}{0.3,0.711,0.656}
+\definecolor{KITgreen50}{rgb}{0.5,0.794,0.754}
+\definecolor{KITgreen30}{rgb}{0.7,0.876,0.852}
+\definecolor{KITgreen15}{rgb}{0.85,0.938,0.926}
+\definecolor{KITblue}{rgb}{0.274,0.392,0.666}
+\definecolor{KITblue70}{rgb}{0.492,0.574,0.766}
+\definecolor{KITblue50}{rgb}{0.637,0.696,0.833}
+\definecolor{KITblue30}{rgb}{0.782,0.817,0.9}
+\definecolor{KITblue15}{rgb}{0.891,0.908,0.95}
+\definecolor{KITblack}{gray}{0}
+\definecolor{KITblack70}{gray}{0.3}
+\definecolor{KITblack50}{gray}{0.5}
+\definecolor{KITblack30}{gray}{0.7}
+\definecolor{KITblack15}{gray}{0.85}
+\definecolor{KITpalegreen}{rgb}{0.509,0.745,0.235}
+\definecolor{KITpalegreen70}{rgb}{0.656,0.821,0.464}
+\definecolor{KITpalegreen50}{rgb}{0.754,0.872,0.617}
+\definecolor{KITpalegreen30}{rgb}{0.852,0.923,0.77}
+\definecolor{KITpalegreen15}{rgb}{0.926,0.961,0.885}
+\definecolor{KITyellow}{rgb}{0.98,0.901,0.078}
+\definecolor{KITyellow70}{rgb}{0.986,0.931,0.354}
+\definecolor{KITyellow50}{rgb}{0.99,0.95,0.539}
+\definecolor{KITyellow30}{rgb}{0.994,0.97,0.723}
+\definecolor{KITyellow15}{rgb}{0.997,0.985,0.861}
+\definecolor{KITorange}{rgb}{0.862,0.627,0.117}
+\definecolor{KITorange70}{rgb}{0.903,0.739,0.382}
+\definecolor{KITorange50}{rgb}{0.931,0.813,0.558}
+\definecolor{KITorange30}{rgb}{0.958,0.888,0.735}
+\definecolor{KITorange15}{rgb}{0.979,0.944,0.867}
+\definecolor{KITbrown}{rgb}{0.627,0.509,0.196}
+\definecolor{KITbrown70}{rgb}{0.739,0.656,0.437}
+\definecolor{KITbrown50}{rgb}{0.813,0.754,0.598}
+\definecolor{KITbrown30}{rgb}{0.888,0.852,0.758}
+\definecolor{KITbrown15}{rgb}{0.944,0.926,0.879}
+\definecolor{KITred}{rgb}{0.627,0.117,0.156}
+\definecolor{KITred70}{rgb}{0.739,0.382,0.409}
+\definecolor{KITred50}{rgb}{0.813,0.558,0.578}
+\definecolor{KITred30}{rgb}{0.888,0.735,0.747}
+\definecolor{KITred15}{rgb}{0.944,0.867,0.873}
+\definecolor{KITlilac}{rgb}{0.627,0,0.47}
+\definecolor{KITlilac70}{rgb}{0.739,0.3,0.629}
+\definecolor{KITlilac50}{rgb}{0.813,0.5,0.735}
+\definecolor{KITlilac30}{rgb}{0.888,0.7,0.841}
+\definecolor{KITlilac15}{rgb}{0.944,0.85,0.92}
+\definecolor{KITcyanblue}{rgb}{0.313,0.666,0.901}
+\definecolor{KITcyanblue70}{rgb}{0.519,0.766,0.931}
+\definecolor{KITcyanblue50}{rgb}{0.656,0.833,0.95}
+\definecolor{KITcyanblue30}{rgb}{0.794,0.9,0.97}
+\definecolor{KITcyanblue15}{rgb}{0.897,0.95,0.985}
+\definecolor{KITseablue}{rgb}{0.196,0.313,0.549}
+\definecolor{KITseablue70}{rgb}{0.437,0.519,0.684}
+\definecolor{KITseablue50}{rgb}{0.598,0.656,0.774}
+\definecolor{KITseablue30}{rgb}{0.758,0.794,0.864}
+\definecolor{KITseablue15}{rgb}{0.879,0.897,0.932}
+\definecolor{red}{rgb}{1,0,0}
+\definecolor{green}{rgb}{0,1,0}
+\definecolor{blue}{rgb}{0,0,1}
+\definecolor{yellow}{rgb}{1,1,0}
+\definecolor{orange}{rgb}{1,0.647,0}
+\definecolor{gold}{rgb}{1,0.843,0}
+\definecolor{purple}{rgb}{0.627,0.125,0.941}
+\definecolor{gray}{gray}{0.745}
+\definecolor{brown}{rgb}{0.647,0.165,0.165}
+\definecolor{navy}{rgb}{0,0,0.502}
+\definecolor{pink}{rgb}{1,0.753,0.796}
+\definecolor{seagreen}{rgb}{0.18,0.545,0.341}
+\definecolor{turquoise}{rgb}{0.251,0.878,0.816}
+\definecolor{violet}{rgb}{0.933,0.51,0.933}
+\definecolor{darkblue}{rgb}{0,0,0.545}
+\definecolor{darkcyan}{rgb}{0,0.545,0.545}
+\definecolor{darkgray}{gray}{0.663}
+\definecolor{darkgreen}{rgb}{0,0.666,0}
+\definecolor{darkmagenta}{rgb}{0.545,0,0.545}
+\definecolor{darkorange}{rgb}{1,0.549,0}
+\definecolor{darkred}{rgb}{0.545,0,0}
+\definecolor{lightblue}{rgb}{0.678,0.847,0.902}
+\definecolor{lightcyan}{rgb}{0.878,1,1}
+\definecolor{lightgray}{gray}{0.827}
+\definecolor{lightgreen}{rgb}{0.565,0.933,0.565}
+\definecolor{lightyellow}{rgb}{1,1,0.878}
+\definecolor{black}{gray}{0}
+\definecolor{white}{gray}{1}
+\def\ipesetcolor#1#2#3{\pdfcolorstack0 push{#1 #2 #3 rg #1 #2 #3 RG}}
+\def\iperesetcolor{\pdfcolorstack0 pop}
+
+
+
+    \usepackage{color}
+    \usepackage{pgf}
+    \usepackage[utf8]{inputenc}
+
+    % dorothea settings
+    \newif\ifdorothea%
+    \newcommand{\dorothea}{\dorotheatrue}%
+
+    % language settings
+    \newif\ifgerman%
+    \newcommand{\german}{\germantrue}%
+    \newcommand{\chair}{%
+      \ifdorothea%
+      Prof. Dr. Dorothea Wagner%
+      \else%
+      \ifgerman%
+      Lehrstuhl Algorithmik%
+      \else%
+      Algorithmics Group%
+      \fi%
+      \fi%
+    }
+    \newcommand{\kitlogo}[1]{%
+      \ifgerman%
+      \includegraphics[scale=#1]{img/KITlogo_4c_deutsch}
+      \else%
+      \includegraphics[scale=#1]{img/KITlogo_4c_englisch}
+      \fi%
+    }%
+    \newcommand{\helmholz}{%
+      \ifgerman%
+      KIT -- Universität des Landes Baden-Württemberg und\\
+      nationales Forschungszentrum in der Helmholtz-Gemeinschaft%
+      \else%
+      KIT -- University of the State of Baden-Wuerttemberg and\\
+      National Laboratory of the Helmholtz Association%
+      \fi%
+    }%
+    \newcommand{\algoinst}{%
+      \ifgerman%
+      {\sc Institut für Theoretische Informatik $\cdot$
+        \chair}%
+      \else%
+      {\sc Institute of Theoretical Informatics $\cdot$
+        \chair}%
+      \fi%
+    }%
+    \newcommand{\algoinstfoot}{%
+      \ifgerman%
+      Institut für Theoretische Informatik\\
+      \chair%
+      \else%
+      Institute of Theoretical Informatics\\
+      \chair%
+      \fi%
+    }%
+
+    \renewcommand{\familydefault}{\sfdefault}
+    \usepackage[scaled=.92]{helvet}
+    \usepackage[EULERGREEK,eulergreek]{sansmath}
+    \sansmath
+    % \usepackage[scaled=.92]{helvet}
+
+    % \renewcommand{\familydefault}{\sfdefault}
+    % \def\rmdefault{phv}
+    % \DeclareSymbolFont{operators}{OT1}{phv}{m}{n}
+    % \DeclareSymbolFont{letters}{OT1}{phv}{m}{it}
+    % \DeclareSymbolFont{bold}{OT1}{phv}{bx}{n}
+    % \DeclareSymbolFont{italic}{OT1}{phv}{m}{it}
+
+    \makeatletter
+    \def\@listI{
+    \leftmargin 1.5em
+    \itemsep 0.2em
+    \parsep 0.2em
+    \topsep 0.2em
+    \partopsep 0.2em}
+    \def\@listii{
+    \leftmargin 1em
+    \itemsep 0.1em
+    \parsep 0.1em
+    \topsep 0.1em
+    \partopsep 0.1em}
+    \makeatother
+
+    \newcommand{\KITItem}[2]{\begin{tikzpicture}[scale=#2]
+      \draw [color=#1, fill=#1, rotate=90] (15.32487,3.83122) .. controls (15.32487,1.71528) and (13.60958,0) .. (11.49365,0) -- (0,0) -- (0,11.49364) .. controls (0,13.60958) and (1.71528,15.32486) .. (3.83122,15.32486) -- (15.32486,15.32487) -- (15.32487,3.83122) ;
+    \end{tikzpicture}%
+    }
+    \def\labelitemi{\KITItem{\itemcolor}{0.012}}
+    \def\labelitemii{\raisebox{0.2ex}{\KITItem{\itemcolor}{0.01}}}
+    \def\labelitemiii{\raisebox{0.25ex}{\KITItem{\itemcolor}{0.008}}}
+
+  
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\renewcommand{\vec}[1]{\mathaccent"017E {#1}}
+
+% settings %%%%%%%%%%%%%%%
+\newcommand{\itemcolor}{KITgreen}
+\newcommand{\name}{Robin Andre}
+\newcommand{\prestitle}{Evolutionary Hypergraph Partitioning}
+% \german
+% \dorothea % activate this only for lecture slides
+  
+\pagestyle{empty}
+\newcount\bigpoint\dimen0=0.01bp\bigpoint=\dimen0
+\begin{document}
+\begin{picture}(500,500)
+\setbox0=\hbox{\normalsize
+\ipesetcolor{0}{0}{0}%
+\kitlogo{5}%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 1 /IpeStretch 2.45 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\begin{minipage}{216.087bp}\tiny
+\ipesetcolor{0}{0}{0}%
+\name \ -- \prestitle
+\end{minipage}\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 2 /IpeStretch 2.3 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\begin{minipage}{71.7391bp}\tiny
+\ipesetcolor{0}{0}{0}%
+\algoinstfoot
+
+      
+\end{minipage}\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 3 /IpeStretch 2.3 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\begin{minipage}{300.408bp}\normalsize
+\ipesetcolor{1}{1}{1}%
+Titel
+\end{minipage}\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 4 /IpeStretch 2.45 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\begin{minipage}{300.408bp}\normalsize
+\ipesetcolor{0}{0}{0}%
+Zweizeiliger Text -- Zweizeiliger Text -- Zweizeiliger Text -- Zweizeiliger Text -- Zweizeiliger Text
+\end{minipage}\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 5 /IpeStretch 2.45 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\Large
+\ipesetcolor{0}{0}{0}%
+\bf Template for Ipe Presentations%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 6 /IpeStretch 2.2 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\small
+\ipesetcolor{0}{0}{0}%
+\bf Lecture $\,\cdot\,$ \today%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 7 /IpeStretch 2.2 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\small
+\ipesetcolor{0}{0}{0}%
+\bf \name%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 8 /IpeStretch 2.2 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\normalsize
+\ipesetcolor{0}{0}{0}%
+\kitlogo{5}%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 9 /IpeStretch 2.45 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\begin{minipage}{179.13bp}\tiny
+\ipesetcolor{0}{0}{0}%
+\helmholz
+\end{minipage}\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 10 /IpeStretch 2.3 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\tiny
+\ipesetcolor{1}{1}{1}%
+\algoinst%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 11 /IpeStretch 2.8 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\small
+\ipesetcolor{1}{1}{1}%
+\bf www.kit.edu%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 12 /IpeStretch 2.2 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\Large
+\ipesetcolor{0}{0}{0}%
+\bf Title 2nd Row%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 13 /IpeStretch 2.2 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\tiny
+\ipesetcolor{0}{0}{0}%
+{\bf [page]}%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 14 /IpeStretch 2.3 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\tiny
+\ipesetcolor{0}{0}{0}%
+{\bf 0}%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 15 /IpeStretch 2.3 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\bf\large
+\ipesetcolor{0}{0}{0}%
+\PageTitle{Test}%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 16 /IpeStretch 2.45 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\begin{minipage}{300.408bp}\normalsize
+\ipesetcolor{0}{0}{0}%
+Settings that can be changed in the document properties\\
+(Edit$\rightarrow$Document properties or press Ctrl+Shift+P):
+\begin{itemize}
+\item change the color of the item bullets:
+  \begin{itemize}
+  \item change definition of \textbackslash{itemcolor} (for example to
+    KITgreen)
+  \end{itemize}
+\item change name and title in the footer:
+  \begin{itemize}
+  \item change definition of commands \textbackslash{}name and
+    \textbackslash{}prestitle
+  \end{itemize}
+\item change the language:
+  \begin{itemize}
+  \item comment or uncomment the command \textbackslash{german}
+  \end{itemize}
+\end{itemize}
+\end{minipage}\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 17 /IpeStretch 2.45 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\begin{minipage}{295.51bp}\normalsize
+\ipesetcolor{1}{1}{1}%
+Theorem
+\end{minipage}\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 18 /IpeStretch 2.45 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\begin{minipage}{295.51bp}\normalsize
+\ipesetcolor{0}{0}{0}%
+\textsc{FlexDraw} is NP-complete even for instances of size $n$ with
+      $O(n^\varepsilon)$ inflexible edges with pairwise distance
+      $\Omega(n^{1-\varepsilon})$.
+      
+\end{minipage}\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 19 /IpeStretch 2.45 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\begin{minipage}{300.408bp}\normalsize
+\ipesetcolor{0}{0}{0}%
+To modify the slide title, press Ctrl+P.
+\end{minipage}\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 20 /IpeStretch 2.45 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\small
+\ipesetcolor{0}{0}{0}%
+box created with the presentation ipelet%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 21 /IpeStretch 2.2 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\footnotesize
+\ipesetcolor{0}{0}{0}%
+https://sourceforge.net/p/ipe7/wiki/Graph\_Ipelet/\#presentation-ipelet%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 22 /IpeStretch 2 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\small
+\ipesetcolor{0}{0}{0}%
+page numbers created with the Pagenumbers Ipelet%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 23 /IpeStretch 2.2 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\footnotesize
+\ipesetcolor{0}{0}{0}%
+https://sourceforge.net/p/ipe7/wiki/Pagenumbers\_Ipelet/%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 24 /IpeStretch 2 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\begin{minipage}{293.878bp}\normalsize
+\ipesetcolor{0}{0}{0}%
+To (semi-)automatically surround objects with simple KIT boxes use the
+decorator ipelet.  You can even define your own box types.
+\end{minipage}\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 25 /IpeStretch 2.45 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\footnotesize
+\ipesetcolor{0}{0}{0}%
+https://sourceforge.net/p/ipe7/wiki/Decorator\_Ipelet/%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 26 /IpeStretch 2 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\tiny
+\ipesetcolor{0}{0}{0}%
+{\bf 1}%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 27 /IpeStretch 2.3 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\bf\large
+\ipesetcolor{0}{0}{0}%
+\PageTitle{Some Tests}%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 28 /IpeStretch 2.45 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\small
+\ipesetcolor{0}{0}{0}%
+testtext small%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 29 /IpeStretch 2.2 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\Large
+\ipesetcolor{0}{0}{0}%
+testtext Large%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 30 /IpeStretch 2.2 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\LARGE
+\ipesetcolor{0}{0}{0}%
+testtext LARGE%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 31 /IpeStretch 2.2 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\huge
+\ipesetcolor{0}{0}{0}%
+testtext huge%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 32 /IpeStretch 2.2 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\Huge
+\ipesetcolor{0}{0}{0}%
+testtext Huge%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 33 /IpeStretch 2.2 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\normalsize
+\ipesetcolor{0}{0}{0}%
+testtext normal%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 34 /IpeStretch 2.45 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\large
+\ipesetcolor{0}{0}{0}%
+testtext large%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 35 /IpeStretch 2.45 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\tiny
+\ipesetcolor{0}{0}{0}%
+testtext tiny%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 36 /IpeStretch 2.8 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\footnotesize
+\ipesetcolor{0}{0}{0}%
+testtext footnote%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 37 /IpeStretch 2 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\tiny
+\ipesetcolor{0}{0}{0}%
+testtext verytiny%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 38 /IpeStretch 2.3 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\tiny
+\ipesetcolor{0}{0}{0}%
+{\bf 2}%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 39 /IpeStretch 2.3 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\bf\large
+\ipesetcolor{0}{0}{0}%
+\PageTitle{KaHyPar - Multilevel Partitioner}%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 40 /IpeStretch 2.45 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\begin{minipage}{117.551bp}\normalsize
+\ipesetcolor{0}{0}{0}%
+Coarsening: 
+\begin{itemize}
+\item $H$ is reduced to a smaller problem $H_C$
+\item only one node is contracted per step
+\item until $H_C$ is sufficiently small
+\end{itemize}
+\end{minipage}\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 41 /IpeStretch 2.45 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\begin{minipage}{117.551bp}\normalsize
+\ipesetcolor{0}{0}{0}%
+Initial Partitioning: 
+\begin{itemize}
+\item An algorithm generates an Initial Partitioning for $H_C$
+\end{itemize}
+\end{minipage}\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 42 /IpeStretch 2.45 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\begin{minipage}{117.551bp}\normalsize
+\ipesetcolor{0}{0}{0}%
+Refinement
+\begin{itemize}
+\item The coarsening steps are reverted
+\item Local search algorithms try to improve the solution
+\end{itemize}
+\end{minipage}\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 43 /IpeStretch 2.45 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\tiny
+\ipesetcolor{0}{0}{0}%
+{\bf 3}%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 44 /IpeStretch 2.3 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\bf\large
+\ipesetcolor{0}{0}{0}%
+\PageTitle{Evolutionary Algorithm}%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 45 /IpeStretch 2.45 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\tiny
+\ipesetcolor{0}{0}{0}%
+{\bf 4}%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 46 /IpeStretch 2.3 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\bf\large
+\ipesetcolor{0}{0}{0}%
+\PageTitle{Combine Operator}%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 47 /IpeStretch 2.45 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\begin{minipage}{189.388bp}\normalsize
+\ipesetcolor{0}{0}{0}%
+\begin{itemize}
+\item Integrated into multilevel
+\item quality assurance
+\item balanced solutions
+\end{itemize}
+\end{minipage}\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 48 /IpeStretch 2.45 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\tiny
+\ipesetcolor{0}{0}{0}%
+{\bf 5}%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 49 /IpeStretch 2.3 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\bf\large
+\ipesetcolor{0}{0}{0}%
+\PageTitle{Replacement Strategy}%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 50 /IpeStretch 2.45 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\tiny
+\ipesetcolor{0}{0}{0}%
+{\bf 6}%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 51 /IpeStretch 2.3 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\bf\large
+\ipesetcolor{0}{0}{0}%
+\PageTitle{Replacement Strategy Results}%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 52 /IpeStretch 2.45 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\tiny
+\ipesetcolor{0}{0}{0}%
+{\bf 7}%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 53 /IpeStretch 2.3 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\end{picture}
+\end{document}
